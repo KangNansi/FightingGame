@@ -20,8 +20,9 @@ namespace FightingGame
             state = t.state;
         }
     }
+    [CreateAssetMenu(fileName = "MoveSet", menuName = "MoveSet", order = 42)]
     public class MoveSet : ScriptableObject {
-        List<Action> actions;
+        List<Action> actions = new List<Action>();
 	
         List<Action> GetInputs()
         {

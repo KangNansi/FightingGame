@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2015
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FightingGame", "FightingGame.csproj", "{DA3FD02F-E0B3-B8CE-5280-0AD28708783C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FightingGame.Editor", "FightingGame.Editor.csproj", "{3DC80B5F-926B-72B1-7AA3-5354F9A66C03}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DA3FD02F-E0B3-B8CE-5280-0AD28708783C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA3FD02F-E0B3-B8CE-5280-0AD28708783C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA3FD02F-E0B3-B8CE-5280-0AD28708783C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA3FD02F-E0B3-B8CE-5280-0AD28708783C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3DC80B5F-926B-72B1-7AA3-5354F9A66C03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DC80B5F-926B-72B1-7AA3-5354F9A66C03}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DC80B5F-926B-72B1-7AA3-5354F9A66C03}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DC80B5F-926B-72B1-7AA3-5354F9A66C03}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

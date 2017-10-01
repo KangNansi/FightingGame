@@ -4,6 +4,7 @@ using UnityEngine;
 
 namespace FightingGame
 {
+    [System.Serializable]
     public class HitBox {
         public Vector2 _position;
         public Vector2 _size;
@@ -15,7 +16,7 @@ namespace FightingGame
             Attack,
             Body
         }
-
+        [SerializeField]
         public Type _type;
         public Type _Type {
             set
@@ -24,6 +25,7 @@ namespace FightingGame
                 SetColor();
             }
         }
+        [SerializeField]
         Color color;
 
         public HitBox(Type type, Vector2 position, Vector2 size)
@@ -32,6 +34,20 @@ namespace FightingGame
             _position = position;
             _size = size;
             SetColor();
+        }
+
+        public HitBox(HitBox h, Transform t)
+        {
+            _type = h._type;
+            _size = h._size;
+            _position = h._position;
+            _position.x *= t.localScale.x;
+            _position.y *= t.localScale.y;
+            if (t.localScale.x < 0)
+                _position.x -= _size.x;
+            if (t.localScale.y < 0)
+                _position.x -= _size.x;
+            _position += (Vector2)t.position;
         }
 
         protected void SetColor()
@@ -43,10 +59,18 @@ namespace FightingGame
             }
         }
 
+        public bool Hit(Transform root, HitBox t, Transform troot)
+        {
+            Vector2 p = _position;
+            Vector2 s = _size;
+            Vector2 pt = t._position;
+            return false;
+        }
+
         public bool Hit(HitBox t)
         {
-            if (t._position.x < _position.x + _size.x && t._position.x + t._size.x < _position.x
-                && t._position.y < _position.y + _size.y && t._position.y + t._size.y < _position.y)
+            if (t._position.x < _position.x + _size.x && t._position.x + t._size.x > _position.x
+                && t._position.y < _position.y + _size.y && t._position.y + t._size.y > _position.y)
                 return true;
             return false;
         }
@@ -70,7 +94,6 @@ namespace FightingGame
 
         public void Draw(Matrix4x4 p)
         {
-            Debug.Log("Drawing");
             CreateMaterial();
             GL.PushMatrix();
             debugMat.SetPass(0);

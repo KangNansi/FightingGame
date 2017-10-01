@@ -34,7 +34,7 @@ namespace FightingGame
             GUILayout.EndHorizontal();
             GUILayout.BeginHorizontal();
             GUILayout.Label("State:");
-            addSet.state = EditorGUILayout.Popup(addSet.state, _fighter.GetStateList());
+            addSet.state = EditorGUILayout.Popup(addSet.state, _fighter.GetMoveList());
             GUILayout.EndHorizontal();
             if (GUILayout.Button("Add"))
             {
