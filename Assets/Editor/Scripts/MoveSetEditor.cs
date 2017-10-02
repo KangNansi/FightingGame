@@ -8,39 +8,72 @@ namespace FightingGame
 {
     public class MoveSetEditor : EditorWindow {
         public Rect windowRect = new Rect(100, 100, 20, 20);
-        MoveSet _set;
         Fighter _fighter;
-        Action addSet = new Action();
-        public static void Init(MoveSet set, Fighter fighter)
+        int selectedNode = 0;
+        int selectedMove = 0;
+
+        public static void Init(Fighter fighter)
         {
             MoveSetEditor window = (MoveSetEditor)EditorWindow.GetWindow(typeof(MoveSetEditor));
             window.Show();
-            window._set = set;
             window._fighter = fighter;
         }
 
         private void OnGUI()
         {
-            BeginWindows();
-            windowRect = GUILayout.Window(1, windowRect, AddWindow, "Add");
-            EndWindows();
+            MoveSet set = _fighter.moveSet;
+            EditorGUILayout.BeginHorizontal();
+            if(GUILayout.Button("Add Set"))
+            {
+                if(set.nodes.FindAll((Node n) => n.moveId == selectedMove).Count<=0)
+                {
+                    Node n = new Node();
+                    n.moveId = selectedMove;
+                    set.nodes.Add(n);
+                }
+            }
+            selectedMove = EditorGUILayout.Popup(selectedMove, _fighter.GetMoveList());
+            EditorGUILayout.EndHorizontal();
+            EditorGUILayout.BeginHorizontal();
+            if (GUILayout.Button("Remove"))
+            {
+                set.nodes.RemoveAt(selectedNode);
+                selectedNode = -1;
+            }
+            selectedNode = EditorGUILayout.Popup(selectedNode, NodeToString());
+            EditorGUILayout.EndHorizontal();
+            if(selectedNode>=0 && selectedNode < set.nodes.Count)
+            {
+                DrawNode(set.nodes[selectedNode]);
+            }
         }
 
-        private void AddWindow(int id)
+        void DrawNode(Node n)
         {
-            GUILayout.BeginHorizontal();
-            GUILayout.Label("Input:");
-            addSet.input = GUILayout.TextField(addSet.input);
-            GUILayout.EndHorizontal();
-            GUILayout.BeginHorizontal();
-            GUILayout.Label("State:");
-            addSet.state = EditorGUILayout.Popup(addSet.state, _fighter.GetMoveList());
-            GUILayout.EndHorizontal();
-            if (GUILayout.Button("Add"))
+            if(GUILayout.Button("Add Move Action"))
             {
-                _set.AddAction(new Action(addSet));
+                n.actions.Add(new Action());
             }
-            GUI.DragWindow();
+            foreach(Action a in n.actions)
+            {
+                EditorGUILayout.BeginHorizontal();
+                a.input = (VirtualController.Keys)EditorGUILayout.EnumPopup(a.input);
+                a.state = EditorGUILayout.Popup(a.state, _fighter.GetMoveList());
+                EditorGUILayout.EndHorizontal();
+            }
         }
+
+        string[] NodeToString()
+        {
+            MoveSet set = _fighter.moveSet;
+            List<string> r = new List<string>();
+            foreach(Node n in set.nodes)
+            {
+                r.Add(_fighter.moves[n.moveId].name);
+            }
+            return r.ToArray();
+        }
+
+
     }
 }

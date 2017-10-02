@@ -59,14 +59,6 @@ namespace FightingGame
             }
         }
 
-        public bool Hit(Transform root, HitBox t, Transform troot)
-        {
-            Vector2 p = _position;
-            Vector2 s = _size;
-            Vector2 pt = t._position;
-            return false;
-        }
-
         public bool Hit(HitBox t)
         {
             if (t._position.x < _position.x + _size.x && t._position.x + t._size.x > _position.x

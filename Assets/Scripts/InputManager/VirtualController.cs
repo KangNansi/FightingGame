@@ -4,6 +4,16 @@ using UnityEngine;
 
 public class VirtualController {
 
+    public enum Keys
+    {
+        LP,
+        MP,
+        HP,
+        LK,
+        MK,
+        HK
+    }
+
     KeyCode LP;
     KeyCode MP;
     KeyCode HP;
@@ -17,7 +27,7 @@ public class VirtualController {
     {
         if(joystick == 1)
         {
-            LP = KeyCode.Joystick1Button2;
+            LP = KeyCode.L;// KeyCode.Joystick1Button2;
             MP = KeyCode.Joystick1Button3;
             HP = KeyCode.Joystick1Button4;
             LK = KeyCode.Joystick1Button0;
@@ -67,6 +77,20 @@ public class VirtualController {
     public bool GetHKDown()
     {
         return Input.GetKeyDown(HK);
+    }
+
+    public bool GetKeyDown(Keys k)
+    {
+        switch (k)
+        {
+            case Keys.LP: return GetLPDown();
+            case Keys.MP: return GetMPDown();
+            case Keys.HP: return GetHPDown();
+            case Keys.LK: return GetLKDown();
+            case Keys.MK: return GetMKDown();
+            case Keys.HK: return GetHKDown();
+        }
+        return false;
     }
 
     public float GetHorizontal()

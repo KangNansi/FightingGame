@@ -4,20 +4,28 @@ using UnityEngine;
 
 namespace FightingGame
 {
-    [ExecuteInEditMode]
+
+
     public class Fighter : MonoBehaviour {
         public int controllerNumber = 1;
         VirtualController controller = VirtualController.GetController(1);
         public float speed;
+        public int currentState = 0;
+        public GameObject opponent;
+        bool Grounded = false;
+
+        [SerializeField]
+        public MoveSet moveSet = new MoveSet();
         [SerializeField]
         public List<Move> moves = new List<Move>();
-        public int currentState = 0;
         public int Stand = 0;
         public int Crouch = 0;
-        public GameObject opponent;
 
-        public MoveSet moveSet;
-        private bool running = false;
+        bool running = false;
+
+        Vector3 velocity = new Vector3();
+        public float jumpStrength = 30;
+        private bool jumped = false;
        
 
         // Use this for initialization
@@ -38,7 +46,6 @@ namespace FightingGame
 	
 	    // Update is called once per frame
 	    void Update () {
-            
             if (!running) return;
             if (moves[currentState].Compute(Time.deltaTime))
             {
@@ -54,16 +61,24 @@ namespace FightingGame
             else v = 0;
             Debug.Log(v);
             //Crouch
-            if (v < 0)
+            if (v <= 0 && jumped) jumped = false;
+            if (v < 0 && Grounded)
             {
                 SetMove(Crouch);
+            }
+            else if (v > 0 && Grounded && !jumped)
+            {
+                Grounded = false;
+                velocity.y = jumpStrength;
+                jumped = true;
             }
             else
             {
                 SetMove(Stand);
             }
+            if (Grounded) velocity = Vector3.zero;
             //Movement
-            if(currentState == Stand) transform.position += h * Time.deltaTime * speed * Vector3.right;
+            if(currentState == Stand && Grounded) velocity += h * speed * Vector3.right;
             //Direction
             if (opponent)
             {
@@ -71,9 +86,26 @@ namespace FightingGame
                 else transform.localScale = new Vector3(1, 1, 1);
             }
             //Attack
-            if (Standing() && controller.GetLPDown())
+            Node node = moveSet.nodes.Find((Node n) => n.moveId == currentState);
+            if (node != null)
             {
-                SetMove(1);
+                foreach(Action a in node.actions)
+                {
+                    if (controller.GetKeyDown(a.input))
+                    {
+                        SetMove(a.state);
+                    }
+                }
+            }
+
+            //Apply gravity
+            float g = FightManager.gravity;
+            velocity += Vector3.down * g;
+            transform.position += velocity * Time.deltaTime;
+            if (transform.position.y < FightManager.groundHeight)
+            {
+                transform.position = new Vector3(transform.position.x, FightManager.groundHeight, 0);
+                Grounded = true;
             }
 	    }
 
@@ -92,6 +124,11 @@ namespace FightingGame
         public void OnRenderObject()
         {
             moves[currentState].Draw(transform.localToWorldMatrix);
+        }
+
+        private void OnDrawGizmos()
+        {
+            OnRenderObject();
         }
 
         public static void Hit(Fighter a, Fighter b)

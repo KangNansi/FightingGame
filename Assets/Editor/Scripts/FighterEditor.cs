@@ -9,7 +9,8 @@ namespace FightingGame
     public class FighterEditor : Editor {
         Fighter f;
         int currentMove = 0;
-        MoveEditor move;
+        int currentFrame = 0;
+        
         private void OnEnable()
         {
             f = target as Fighter;
@@ -19,14 +20,18 @@ namespace FightingGame
 
         public override void OnInspectorGUI()
         {
+            Undo.RecordObject(target, "obj");
             //base.OnInspectorGUI();
             f.controllerNumber = EditorGUILayout.IntField(f.controllerNumber);
             f.opponent = (GameObject)EditorGUILayout.ObjectField(f.opponent, typeof(GameObject), true);
-            f.moveSet = (MoveSet)EditorGUILayout.ObjectField(f.moveSet, typeof(MoveSet), false);
+            //f.moveSet = (MoveSet)EditorGUILayout.ObjectField(f.moveSet, typeof(MoveSet), false);
             if(GUILayout.Button("Edit MoveSet"))
             {
-                MoveSetEditor.Init(f.moveSet, f);
+                MoveSetEditor.Init(f);
             }
+
+            f.jumpStrength = EditorGUILayout.FloatField("Jump Strength", f.jumpStrength);
+            f.speed = EditorGUILayout.FloatField("Speed", f.speed);
 
             f.Stand = EditorGUILayout.Popup("Stand:", f.Stand, f.GetMoveList());
             f.Crouch = EditorGUILayout.Popup("Crouch:", f.Crouch, f.GetMoveList());
@@ -34,7 +39,7 @@ namespace FightingGame
             EditorGUILayout.BeginHorizontal();
             if (GUILayout.Button("Add"))
             {
-                Move m = ScriptableObject.CreateInstance<Move>();
+                Move m = new Move();
                 m.name += Random.Range(0, 1000);
                 f.moves.Add(m);
             }
@@ -43,28 +48,78 @@ namespace FightingGame
                 f.moves.RemoveAt(currentMove);
                 currentMove = 0;
                 f.currentState = 0;
-                move = (MoveEditor)Editor.CreateEditor(f.moves[currentMove]);
             }
             int n = EditorGUILayout.Popup(currentMove, f.GetMoveList());
-            if (n != currentMove || move == null)
+            if (n != currentMove)
             {
+                Debug.Log("lol");
                 currentMove = n;
                 f.currentState = currentMove;
-                move = (MoveEditor)Editor.CreateEditor(f.moves[currentMove]);
+
             }
+            Debug.Log(f.currentState);
             EditorGUILayout.EndHorizontal();
-            move.OnInspectorGUI();
-            
+            DrawMove(f.moves[currentMove]);
+
             if (GUI.changed)
             {
+                EditorUtility.SetDirty(target);
                 SceneView.RepaintAll();
+                UnityEditor.SceneManagement.EditorSceneManager.MarkAllScenesDirty();
+                serializedObject.ApplyModifiedProperties();
             }
         }
 
         private void OnSceneGUI()
         {
-            Fighter f = target as Fighter;
+
             
+        }
+
+        private void DrawMove(Move t)
+        {
+            t.name = EditorGUILayout.TextField("Name:", t.name);
+            string[] frames = new string[t.frames.Count];
+            for (int i = 0; i < t.frames.Count; i++)
+            {
+                frames[i] = "Frame " + i;
+            }
+            EditorGUILayout.BeginHorizontal();
+            if (GUILayout.Button("Add"))
+            {
+                t.frames.Add(new FighterState());
+            }
+            if (GUILayout.Button("Remove"))
+            {
+                t.frames.RemoveAt(currentFrame);
+                currentFrame = 0;
+            }
+            currentFrame = EditorGUILayout.Popup(currentFrame, frames);
+            t.currentFrame = currentFrame;
+            EditorGUILayout.EndHorizontal();
+            if (t.frames.Count > 0 && currentFrame < t.frames.Count)
+                DrawFrame(t.frames[currentFrame]);
+        }
+
+        void DrawFrame(FighterState state)
+        {
+            state.time = EditorGUILayout.Slider(state.time, 0, 10);
+            if (GUILayout.Button("Add Hitbox"))
+            {
+                state.hitboxes.Add(new HitBox(HitBox.Type.Attack, Vector2.zero, Vector2.one));
+            }
+            for (int i = state.hitboxes.Count - 1; i >= 0; i--)
+            {
+                HitBox h = state.hitboxes[i];
+                EditorGUILayout.Separator();
+                h._Type = (HitBox.Type)EditorGUILayout.Popup((int)h._type, System.Enum.GetNames(typeof(HitBox.Type)));
+                h._position = EditorGUILayout.Vector2Field("Pos:", h._position);
+                h._size = EditorGUILayout.Vector2Field("Size:", h._size);
+                if (GUILayout.Button("Remove"))
+                {
+                    state.hitboxes.Remove(h);
+                }
+            }
         }
         /*
         private void DrawState()

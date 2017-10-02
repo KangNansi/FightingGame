@@ -5,7 +5,7 @@ using UnityEngine;
 namespace FightingGame
 {
     [System.Serializable]
-    public class FighterState : ScriptableObject {
+    public class FighterState {
         public string name = "";
         [SerializeField]
         public List<HitBox> hitboxes = new List<HitBox>();

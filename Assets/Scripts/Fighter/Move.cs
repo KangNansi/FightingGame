@@ -5,7 +5,7 @@ using UnityEngine;
 namespace FightingGame
 {
     [System.Serializable]
-    public class Move : ScriptableObject
+    public class Move
     {
         [SerializeField]
         public List<FighterState> frames = new List<FighterState>();
