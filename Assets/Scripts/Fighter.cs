@@ -6,19 +6,24 @@ namespace FightingGame
 {
     [ExecuteInEditMode]
     public class Fighter : MonoBehaviour {
+        public int controllerNumber = 1;
+        VirtualController controller = VirtualController.GetController(1);
         public float speed;
         [SerializeField]
         public List<Move> moves = new List<Move>();
         public int currentState = 0;
         public int Stand = 0;
+        public int Crouch = 0;
         public GameObject opponent;
 
         public MoveSet moveSet;
         private bool running = false;
+       
 
         // Use this for initialization
         void Start () {
             running = true;
+            controller = VirtualController.GetController(controllerNumber);
 	    }
 
         public string[] GetMoveList()
@@ -33,19 +38,40 @@ namespace FightingGame
 	
 	    // Update is called once per frame
 	    void Update () {
+            
             if (!running) return;
             if (moves[currentState].Compute(Time.deltaTime))
             {
                 SetMove(Stand);
             }
-            float h = Input.GetAxis("Horizontal");
+            float h = controller.GetHorizontal();
+            float v = -controller.GetVertical();
+            //clamp to 1
+            if (h < -0.5) h = -1;
+            else if (h > 0.5) h = 1;
+            if (v < -0.5) v = -1;
+            else if (v > 0.5) v = 1;
+            else v = 0;
+            Debug.Log(v);
+            //Crouch
+            if (v < 0)
+            {
+                SetMove(Crouch);
+            }
+            else
+            {
+                SetMove(Stand);
+            }
+            //Movement
             if(currentState == Stand) transform.position += h * Time.deltaTime * speed * Vector3.right;
+            //Direction
             if (opponent)
             {
                 if (opponent.transform.position.x < transform.position.x) transform.localScale = new Vector3(-1, 1, 1);
                 else transform.localScale = new Vector3(1, 1, 1);
             }
-            if (Standing() && Input.GetButtonDown("Punch"))
+            //Attack
+            if (Standing() && controller.GetLPDown())
             {
                 SetMove(1);
             }

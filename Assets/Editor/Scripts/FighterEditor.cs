@@ -20,6 +20,7 @@ namespace FightingGame
         public override void OnInspectorGUI()
         {
             //base.OnInspectorGUI();
+            f.controllerNumber = EditorGUILayout.IntField(f.controllerNumber);
             f.opponent = (GameObject)EditorGUILayout.ObjectField(f.opponent, typeof(GameObject), true);
             f.moveSet = (MoveSet)EditorGUILayout.ObjectField(f.moveSet, typeof(MoveSet), false);
             if(GUILayout.Button("Edit MoveSet"))
@@ -27,7 +28,8 @@ namespace FightingGame
                 MoveSetEditor.Init(f.moveSet, f);
             }
 
-            f.Stand = EditorGUILayout.Popup(f.Stand, f.GetMoveList());
+            f.Stand = EditorGUILayout.Popup("Stand:", f.Stand, f.GetMoveList());
+            f.Crouch = EditorGUILayout.Popup("Crouch:", f.Crouch, f.GetMoveList());
 
             EditorGUILayout.BeginHorizontal();
             if (GUILayout.Button("Add"))
