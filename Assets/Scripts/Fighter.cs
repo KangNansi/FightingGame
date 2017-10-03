@@ -21,6 +21,7 @@ namespace FightingGame
         public List<Move> moves = new List<Move>();
         public int Stand = 0;
         public int Crouch = 0;
+        public int Walk = 0;
 
         bool running = false;
 
@@ -60,7 +61,6 @@ namespace FightingGame
             if (v < -0.5) v = -1;
             else if (v > 0.5) v = 1;
             else v = 0;
-            Debug.Log(v);
             //Crouch
             if (v <= 0 && jumped) jumped = false;
             if (v < 0 && Grounded && Standing())
@@ -79,7 +79,14 @@ namespace FightingGame
             }
             if (Grounded) velocity = Vector3.zero;
             //Movement
-            if(currentState == Stand && Grounded) velocity += h * speed * Vector3.right;
+            if ((currentState == Stand || currentState == Walk) && Grounded)
+            {
+                velocity += h * speed * Vector3.right;
+                if (currentState != Walk && h!= 0)
+                    SetMove(Walk);
+                if (currentState == Walk && h == 0)
+                    SetMove(Stand);
+            }
             //Direction
             if (opponent)
             {
@@ -87,13 +94,16 @@ namespace FightingGame
                 else transform.localScale = new Vector3(1, 1, 1);
             }
             //Attack
-            Node node = moveSet.nodes.Find((Node n) => n.moveId == currentState);
+            int curState = currentState;
+            if (curState == Walk) curState = Stand;
+            Node node = moveSet.nodes.Find((Node n) => n.moveId == curState);
             if (node != null)
             {
                 foreach(Action a in node.actions)
                 {
                     if (controller.GetKeyDown(a.input))
                     {
+
                         SetMove(a.state);
                     }
                 }
@@ -112,7 +122,7 @@ namespace FightingGame
 
         bool Standing()
         {
-            if (currentState == Stand) return true;
+            if (currentState == Stand || currentState == Walk) return true;
             return false;
         }
 
@@ -134,6 +144,11 @@ namespace FightingGame
             OnRenderObject();
         }
 
+        void Hit(int dmg)
+        {
+            Debug.Log("Hit!");
+        }
+
         public static void Hit(Fighter a, Fighter b)
         {
             FighterState aframe = a.moves[a.currentState].GetFrame(), bframe = b.moves[b.currentState].GetFrame();
@@ -145,12 +160,9 @@ namespace FightingGame
                 {
                     HitBox attack = new HitBox(h, a.transform);
                     HitBox def = new HitBox(d, b.transform);
-                    Debug.Log("attack"+attack._position+" "+attack._size);
-                    Debug.Log("defense"+def._position+" "+def._size);
                     if (attack.Hit(def))
                     {
-                        //Attack link
-                        Debug.Log("Hit!");
+                        b.Hit(0);
                     }
                 }
                 
@@ -164,8 +176,7 @@ namespace FightingGame
                     HitBox def = new HitBox(d, a.transform);
                     if (attack.Hit(def))
                     {
-                        //Attack link
-
+                        a.Hit(0);
                     }
                 }
 

@@ -36,6 +36,7 @@ namespace FightingGame
 
             f.Stand = EditorGUILayout.Popup("Stand:", f.Stand, f.GetMoveList());
             f.Crouch = EditorGUILayout.Popup("Crouch:", f.Crouch, f.GetMoveList());
+            f.Walk = EditorGUILayout.Popup("Walk:", f.Walk, f.GetMoveList());
 
             EditorGUILayout.BeginHorizontal();
             if (GUILayout.Button("Add"))
