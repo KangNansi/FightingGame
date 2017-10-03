@@ -46,6 +46,11 @@ namespace FightingGame
             {
                 DrawNode(set.nodes[selectedNode]);
             }
+
+            if (GUI.changed)
+            {
+                EditorUtility.SetDirty(_fighter);
+            }
         }
 
         void DrawNode(Node n)

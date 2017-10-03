@@ -21,6 +21,7 @@ namespace FightingGame
         public override void OnInspectorGUI()
         {
             Undo.RecordObject(target, "obj");
+            f.drawHitbox = EditorGUILayout.Toggle(f.drawHitbox);
             //base.OnInspectorGUI();
             f.controllerNumber = EditorGUILayout.IntField(f.controllerNumber);
             f.opponent = (GameObject)EditorGUILayout.ObjectField(f.opponent, typeof(GameObject), true);
@@ -103,6 +104,7 @@ namespace FightingGame
 
         void DrawFrame(FighterState state)
         {
+            state.sprite = (Sprite)EditorGUILayout.ObjectField("Sprite:", state.sprite, typeof(Sprite), false);
             state.time = EditorGUILayout.Slider(state.time, 0, 10);
             if (GUILayout.Button("Add Hitbox"))
             {

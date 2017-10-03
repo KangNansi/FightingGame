@@ -5,12 +5,13 @@ using UnityEngine;
 namespace FightingGame
 {
 
-
+    [RequireComponent(typeof(SpriteRenderer))]
     public class Fighter : MonoBehaviour {
         public int controllerNumber = 1;
         VirtualController controller = VirtualController.GetController(1);
         public float speed;
         public int currentState = 0;
+        public bool drawHitbox = true;
         public GameObject opponent;
         bool Grounded = false;
 
@@ -62,7 +63,7 @@ namespace FightingGame
             Debug.Log(v);
             //Crouch
             if (v <= 0 && jumped) jumped = false;
-            if (v < 0 && Grounded)
+            if (v < 0 && Grounded && Standing())
             {
                 SetMove(Crouch);
             }
@@ -74,7 +75,7 @@ namespace FightingGame
             }
             else
             {
-                SetMove(Stand);
+                //SetMove(Stand);
             }
             if (Grounded) velocity = Vector3.zero;
             //Movement
@@ -123,7 +124,9 @@ namespace FightingGame
 
         public void OnRenderObject()
         {
-            moves[currentState].Draw(transform.localToWorldMatrix);
+            GetComponent<SpriteRenderer>().sprite = moves[currentState].GetFrame().sprite;
+            if(drawHitbox)
+                moves[currentState].Draw(transform.localToWorldMatrix);
         }
 
         private void OnDrawGizmos()
