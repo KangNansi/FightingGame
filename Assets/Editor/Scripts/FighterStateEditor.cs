@@ -65,12 +65,12 @@ namespace FightingGame
 
             }
 
-            state.time = EditorGUILayout.Slider(state.time, 0, 10);
+            state.time = EditorGUILayout.Slider(state.time, 0, 1);
             //Hitboxes
             GUILayout.BeginHorizontal();
             if(GUILayout.Button("Add Hitbox"))
             {
-                state.hitboxes.Add(new HitBox(HitBox.Type.Attack, new Vector2(0,0), new Vector2(40,40)));
+                state.hitboxes.Add(new HitBox(HitBox.Type.Attack, new Vector2(0,0), new Vector2(1,1)));
             }
             
             GUILayout.EndHorizontal();

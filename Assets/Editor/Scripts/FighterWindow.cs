@@ -24,6 +24,7 @@ namespace FightingGame
             {
                 FighterWindow window = EditorWindow.GetWindow<FighterWindow>();
                 window.SetFighter((FighterObject)obj);
+                window.states.Clear();
                 return true;
             }
             return false; // we did not handle the open
@@ -46,7 +47,8 @@ namespace FightingGame
         [MenuItem("Window/Fighter Editor %#e")]
         static void Init()
         {
-            EditorWindow.GetWindow(typeof(FighterWindow));
+            FighterWindow window = EditorWindow.GetWindow<FighterWindow>();
+            window.states.Clear();
         }
 
         void SetFighter(FighterObject f)
