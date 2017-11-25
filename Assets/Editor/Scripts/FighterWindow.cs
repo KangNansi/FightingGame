@@ -11,7 +11,8 @@ namespace FightingGame
     {
 
         public FighterObject fighter;
-        private List<FighterStateEditor> states = new List<FighterStateEditor>(); 
+        private List<FighterStateEditor> states = new List<FighterStateEditor>();
+        Vector2 windowPos = new Vector2();
 
         private int selectedMove = -1;
 
@@ -65,6 +66,8 @@ namespace FightingGame
             {
                 return;
             }
+
+            windowPos = GUILayout.BeginScrollView(windowPos);
 
             fighter.jumpStrength = EditorGUILayout.FloatField("Jump Strength", fighter.jumpStrength);
             fighter.speed = EditorGUILayout.FloatField("Speed", fighter.speed);
@@ -132,6 +135,8 @@ namespace FightingGame
                 }
                 GUILayout.EndHorizontal();
             }
+
+            GUILayout.EndScrollView();
             EditorUtility.SetDirty(fighter);
         }
 
