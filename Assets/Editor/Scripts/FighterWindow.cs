@@ -129,6 +129,11 @@ namespace FightingGame
                 GUILayout.BeginHorizontal();
                 for(int i = 0; i < states.Count; i++)
                 {
+                    if (i > 0 && GUILayout.Button("<"))
+                    {
+                        states.Insert(i - 1, states[i]);
+                        states.RemoveAt(i + 1);
+                    }
                     if (GUILayout.Button("Remove"))
                     {
                         fighter.moves[selectedMove].frames.RemoveAt(i);
@@ -138,6 +143,12 @@ namespace FightingGame
                     else
                     {
                         states[i].OnGUI();
+                    }
+                    if (i < states.Count-1 && GUILayout.Button(">"))
+                    {
+                        Debug.Log("insert");
+                        states.Insert(i+2, states[i]);
+                        states.RemoveAt(i);
                     }
                 }
                 GUILayout.EndHorizontal();

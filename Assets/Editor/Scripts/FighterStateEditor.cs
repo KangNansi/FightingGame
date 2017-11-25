@@ -35,6 +35,11 @@ namespace FightingGame
 
 	    public void OnGUI()
         {
+            Rect r = EditorGUILayout.GetControlRect();
+            if (state.sprite)
+            {
+                r.width = state.sprite.rect.width;
+            }
             GUILayout.BeginVertical();
 
             state.name = EditorGUILayout.TextField(state.name);
