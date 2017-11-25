@@ -41,6 +41,43 @@ namespace FightingGame
             return frames[currentFrame];
         }
 
+        float GetTotalTime()
+        {
+            float time = 0;
+            foreach(FighterState fs in frames)
+            {
+                time += fs.time;
+            }
+            return time;
+        }
+
+        public FighterState GetFrame(float time)
+        {
+            time %= GetTotalTime();
+            foreach(FighterState fs in frames)
+            {
+                time -= fs.time;
+                if (time < 0)
+                {
+                    return fs;
+                }
+            }
+            return null;
+        }
+
+        public float GetMaxHeight()
+        {
+            float height = 0;
+            foreach(FighterState fs in frames)
+            {
+                if (fs.sprite && height < fs.sprite.rect.height)
+                {
+                    height = fs.sprite.rect.height;
+                }
+            }
+            return height;
+        }
+
         public void Draw(Matrix4x4 position)
         {
             if (frames.Count > 0)

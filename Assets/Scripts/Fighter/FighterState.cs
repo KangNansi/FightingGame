@@ -14,7 +14,7 @@ namespace FightingGame
 
         public FighterState()
         {
-            hitboxes.Add(new HitBox(HitBox.Type.Body, Vector2.zero, Vector2.one));
+            //hitboxes.Add(new HitBox(HitBox.Type.Body, Vector2.zero, Vector2.one));
         }
 
         public void Hit()

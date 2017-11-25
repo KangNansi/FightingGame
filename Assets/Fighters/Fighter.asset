@@ -1,0 +1,136 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e57d16a7c677934ca4c5dff8b14258f, type: 3}
+  m_Name: Fighter
+  m_EditorClassIdentifier: 
+  moveSet:
+    actions: []
+    nodes: []
+  moves:
+  - frames:
+    - name: Stand1
+      hitboxes:
+      - _position: {x: 0, y: 0.04}
+        _size: {x: 40, y: 0.77}
+        _type: 0
+        color: {r: 1, g: 0, b: 0, a: 0.5}
+      sprite: {fileID: 21300000, guid: fa9bff244b8104c41bc538aaaafc0836, type: 3}
+      time: 0.1
+    - name: 
+      hitboxes:
+      - _position: {x: 7.7, y: 0}
+        _size: {x: 40, y: 75.74}
+        _type: 1
+        color: {r: 1, g: 0, b: 0, a: 0.5}
+      sprite: {fileID: 21300002, guid: fa9bff244b8104c41bc538aaaafc0836, type: 3}
+      time: 0.1
+    - name: 
+      hitboxes:
+      - _position: {x: 0, y: 0}
+        _size: {x: 40, y: 40}
+        _type: 1
+        color: {r: 1, g: 0, b: 0, a: 0.5}
+      sprite: {fileID: 21300004, guid: fa9bff244b8104c41bc538aaaafc0836, type: 3}
+      time: 0.1
+    - name: 
+      hitboxes:
+      - _position: {x: 0, y: 0}
+        _size: {x: 40, y: 40}
+        _type: 1
+        color: {r: 1, g: 0, b: 0, a: 0.5}
+      sprite: {fileID: 21300006, guid: fa9bff244b8104c41bc538aaaafc0836, type: 3}
+      time: 0.1
+    - name: 
+      hitboxes:
+      - _position: {x: 0, y: 0}
+        _size: {x: 40, y: 40}
+        _type: 1
+        color: {r: 1, g: 0, b: 0, a: 0.5}
+      sprite: {fileID: 21300008, guid: fa9bff244b8104c41bc538aaaafc0836, type: 3}
+      time: 0.1
+    currentFrame: 0
+    name: Stand
+  - frames: []
+    currentFrame: 0
+    name: Stand
+  - frames:
+    - name: 
+      hitboxes:
+      - _position: {x: 0, y: 0}
+        _size: {x: 1, y: 1}
+        _type: 1
+        color: {r: 0, g: 0, b: 1, a: 0.5}
+      sprite: {fileID: 21300018, guid: fa9bff244b8104c41bc538aaaafc0836, type: 3}
+      time: 0.5
+    currentFrame: 0
+    name: Crouch
+  - frames:
+    - name: 
+      hitboxes:
+      - _position: {x: 0, y: 0}
+        _size: {x: 1, y: 1}
+        _type: 1
+        color: {r: 0, g: 0, b: 1, a: 0.5}
+      sprite: {fileID: 21300038, guid: fa9bff244b8104c41bc538aaaafc0836, type: 3}
+      time: 0.1
+    - name: 
+      hitboxes:
+      - _position: {x: 0, y: 0}
+        _size: {x: 1, y: 1}
+        _type: 1
+        color: {r: 0, g: 0, b: 1, a: 0.5}
+      sprite: {fileID: 21300040, guid: fa9bff244b8104c41bc538aaaafc0836, type: 3}
+      time: 0.1
+    - name: 
+      hitboxes:
+      - _position: {x: 0, y: 0}
+        _size: {x: 1, y: 1}
+        _type: 1
+        color: {r: 0, g: 0, b: 1, a: 0.5}
+      sprite: {fileID: 21300042, guid: fa9bff244b8104c41bc538aaaafc0836, type: 3}
+      time: 0.1
+    - name: 
+      hitboxes:
+      - _position: {x: 0, y: 0}
+        _size: {x: 1, y: 1}
+        _type: 1
+        color: {r: 0, g: 0, b: 1, a: 0.5}
+      sprite: {fileID: 21300044, guid: fa9bff244b8104c41bc538aaaafc0836, type: 3}
+      time: 0.1
+    - name: 
+      hitboxes:
+      - _position: {x: 0, y: 0}
+        _size: {x: 1, y: 1}
+        _type: 1
+        color: {r: 0, g: 0, b: 1, a: 0.5}
+      sprite: {fileID: 21300046, guid: fa9bff244b8104c41bc538aaaafc0836, type: 3}
+      time: 0.1
+    - name: 
+      hitboxes:
+      - _position: {x: 0, y: 0}
+        _size: {x: 1, y: 1}
+        _type: 1
+        color: {r: 0, g: 0, b: 1, a: 0.5}
+      sprite: {fileID: 21300048, guid: fa9bff244b8104c41bc538aaaafc0836, type: 3}
+      time: 0.1
+    currentFrame: 0
+    name: Walk
+  speed: 5
+  currentState: 0
+  drawHitbox: 1
+  Grounded: 0
+  Stand: 0
+  Crouch: 2
+  Walk: 3
+  running: 0
+  velocity: {x: 0, y: 0, z: 0}
+  jumpStrength: 10
+  jumped: 0
