@@ -117,18 +117,6 @@ GameObject:
   m_PrefabParentObject: {fileID: 1892164184255626, guid: 1607a7bd89fedde4dbece692d7fea47d,
     type: 2}
   m_PrefabInternal: {fileID: 1912315224}
---- !u!114 &234403302 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114551728859201012, guid: 1607a7bd89fedde4dbece692d7fea47d,
-    type: 2}
-  m_PrefabInternal: {fileID: 1912315224}
-  m_Script: {fileID: 11500000, guid: e11d4c07fe9fb024091aebc6763ff771, type: 3}
---- !u!114 &289340108 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114551728859201012, guid: 1607a7bd89fedde4dbece692d7fea47d,
-    type: 2}
-  m_PrefabInternal: {fileID: 797701417}
-  m_Script: {fileID: 11500000, guid: e11d4c07fe9fb024091aebc6763ff771, type: 3}
 --- !u!1001 &797701417
 Prefab:
   m_ObjectHideFlags: 0
@@ -237,8 +225,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c92932d2abf1de247bbe56cd04d586fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player1: {fileID: 234403302}
-  player2: {fileID: 289340108}
+  player1: {fileID: 0}
+  player2: {fileID: 0}
 --- !u!4 &979557525
 Transform:
   m_ObjectHideFlags: 0

@@ -165,11 +165,11 @@ MonoBehaviour:
     - name: 
       hitboxes: []
       sprite: {fileID: 21300000, guid: a7ba209f71c09594bbc07f6b0e73244e, type: 3}
-      time: 0.08
+      time: 0.04
     - name: 
       hitboxes: []
       sprite: {fileID: 21300002, guid: a7ba209f71c09594bbc07f6b0e73244e, type: 3}
-      time: 0.08
+      time: 0.04
     - name: 
       hitboxes: []
       sprite: {fileID: 21300004, guid: a7ba209f71c09594bbc07f6b0e73244e, type: 3}
@@ -189,7 +189,7 @@ MonoBehaviour:
     - name: 
       hitboxes: []
       sprite: {fileID: 21300012, guid: a7ba209f71c09594bbc07f6b0e73244e, type: 3}
-      time: 0.08
+      time: 0.5
     - name: 
       hitboxes: []
       sprite: {fileID: 21300014, guid: a7ba209f71c09594bbc07f6b0e73244e, type: 3}
@@ -197,13 +197,345 @@ MonoBehaviour:
     - name: 
       hitboxes: []
       sprite: {fileID: 21300016, guid: a7ba209f71c09594bbc07f6b0e73244e, type: 3}
-      time: 0.08
+      time: 0.06
     - name: 
       hitboxes: []
       sprite: {fileID: 21300018, guid: a7ba209f71c09594bbc07f6b0e73244e, type: 3}
+      time: 0.04
+    - name: 
+      hitboxes: []
+      sprite: {fileID: 21300020, guid: a7ba209f71c09594bbc07f6b0e73244e, type: 3}
+      time: 0.12
+    - name: 
+      hitboxes: []
+      sprite: {fileID: 21300022, guid: a7ba209f71c09594bbc07f6b0e73244e, type: 3}
+      time: 0.08
+    - name: 
+      hitboxes: []
+      sprite: {fileID: 21300024, guid: a7ba209f71c09594bbc07f6b0e73244e, type: 3}
+      time: 0.04
+    - name: 
+      hitboxes: []
+      sprite: {fileID: 21300026, guid: a7ba209f71c09594bbc07f6b0e73244e, type: 3}
+      time: 0.04
+    - name: 
+      hitboxes: []
+      sprite: {fileID: 21300028, guid: a7ba209f71c09594bbc07f6b0e73244e, type: 3}
       time: 0.08
     currentFrame: 0
     name: taunt
+  - frames:
+    - name: 
+      hitboxes: []
+      sprite: {fileID: 21300000, guid: f2746e7a8badbef4fb6b5a5648ed1817, type: 3}
+      time: 0.04
+    - name: 
+      hitboxes: []
+      sprite: {fileID: 21300002, guid: f2746e7a8badbef4fb6b5a5648ed1817, type: 3}
+      time: 0.04
+    - name: 
+      hitboxes: []
+      sprite: {fileID: 21300004, guid: f2746e7a8badbef4fb6b5a5648ed1817, type: 3}
+      time: 0.12
+    - name: 
+      hitboxes: []
+      sprite: {fileID: 21300006, guid: f2746e7a8badbef4fb6b5a5648ed1817, type: 3}
+      time: 0.08
+    - name: 
+      hitboxes: []
+      sprite: {fileID: 21300008, guid: f2746e7a8badbef4fb6b5a5648ed1817, type: 3}
+      time: 0.08
+    - name: 
+      hitboxes: []
+      sprite: {fileID: 21300010, guid: f2746e7a8badbef4fb6b5a5648ed1817, type: 3}
+      time: 0.04
+    - name: 
+      hitboxes: []
+      sprite: {fileID: 21300012, guid: f2746e7a8badbef4fb6b5a5648ed1817, type: 3}
+      time: 0.04
+    - name: 
+      hitboxes: []
+      sprite: {fileID: 21300014, guid: f2746e7a8badbef4fb6b5a5648ed1817, type: 3}
+      time: 0.12
+    - name: 
+      hitboxes: []
+      sprite: {fileID: 21300016, guid: f2746e7a8badbef4fb6b5a5648ed1817, type: 3}
+      time: 0.08
+    currentFrame: 0
+    name: high kick
+  - frames:
+    - name: 
+      hitboxes: []
+      sprite: {fileID: 21300020, guid: f2746e7a8badbef4fb6b5a5648ed1817, type: 3}
+      time: 0.08
+    - name: 
+      hitboxes: []
+      sprite: {fileID: 21300022, guid: f2746e7a8badbef4fb6b5a5648ed1817, type: 3}
+      time: 0.08
+    - name: 
+      hitboxes: []
+      sprite: {fileID: 21300024, guid: f2746e7a8badbef4fb6b5a5648ed1817, type: 3}
+      time: 0.08
+    - name: 
+      hitboxes: []
+      sprite: {fileID: 21300024, guid: f2746e7a8badbef4fb6b5a5648ed1817, type: 3}
+      time: 0.08
+    - name: 
+      hitboxes: []
+      sprite: {fileID: 21300028, guid: f2746e7a8badbef4fb6b5a5648ed1817, type: 3}
+      time: 0.08
+    - name: 
+      hitboxes: []
+      sprite: {fileID: 21300030, guid: f2746e7a8badbef4fb6b5a5648ed1817, type: 3}
+      time: 0.08
+    - name: 
+      hitboxes: []
+      sprite: {fileID: 21300032, guid: f2746e7a8badbef4fb6b5a5648ed1817, type: 3}
+      time: 0.08
+    currentFrame: 0
+    name: low kick
+  - frames:
+    - name: 
+      hitboxes: []
+      sprite: {fileID: 21300000, guid: fe19d07866fcd5b47a80cd5d5c835373, type: 3}
+      time: 0.08
+    - name: 
+      hitboxes: []
+      sprite: {fileID: 21300002, guid: fe19d07866fcd5b47a80cd5d5c835373, type: 3}
+      time: 0.04
+    - name: 
+      hitboxes: []
+      sprite: {fileID: 21300004, guid: fe19d07866fcd5b47a80cd5d5c835373, type: 3}
+      time: 0.08
+    - name: 
+      hitboxes: []
+      sprite: {fileID: 21300006, guid: fe19d07866fcd5b47a80cd5d5c835373, type: 3}
+      time: 0.04
+    - name: 
+      hitboxes: []
+      sprite: {fileID: 21300008, guid: fe19d07866fcd5b47a80cd5d5c835373, type: 3}
+      time: 0.08
+    - name: 
+      hitboxes: []
+      sprite: {fileID: 21300010, guid: fe19d07866fcd5b47a80cd5d5c835373, type: 3}
+      time: 0.04
+    - name: 
+      hitboxes: []
+      sprite: {fileID: 21300012, guid: fe19d07866fcd5b47a80cd5d5c835373, type: 3}
+      time: 0.04
+    - name: 
+      hitboxes: []
+      sprite: {fileID: 21300014, guid: fe19d07866fcd5b47a80cd5d5c835373, type: 3}
+      time: 0.04
+    - name: 
+      hitboxes: []
+      sprite: {fileID: 21300016, guid: fe19d07866fcd5b47a80cd5d5c835373, type: 3}
+      time: 0.04
+    - name: 
+      hitboxes: []
+      sprite: {fileID: 21300018, guid: fe19d07866fcd5b47a80cd5d5c835373, type: 3}
+      time: 0.08
+    - name: 
+      hitboxes: []
+      sprite: {fileID: 21300020, guid: fe19d07866fcd5b47a80cd5d5c835373, type: 3}
+      time: 0.08
+    - name: 
+      hitboxes: []
+      sprite: {fileID: 21300022, guid: fe19d07866fcd5b47a80cd5d5c835373, type: 3}
+      time: 0.08
+    - name: 
+      hitboxes: []
+      sprite: {fileID: 21300024, guid: fe19d07866fcd5b47a80cd5d5c835373, type: 3}
+      time: 0.08
+    currentFrame: 0
+    name: back kick
+  - frames:
+    - name: 
+      hitboxes: []
+      sprite: {fileID: 21300000, guid: 2c1cc1f9066b72b43a85b94b142b5a86, type: 3}
+      time: 0.08
+    - name: 
+      hitboxes: []
+      sprite: {fileID: 21300002, guid: 2c1cc1f9066b72b43a85b94b142b5a86, type: 3}
+      time: 0.12
+    - name: 
+      hitboxes: []
+      sprite: {fileID: 21300004, guid: 2c1cc1f9066b72b43a85b94b142b5a86, type: 3}
+      time: 0.04
+    - name: 
+      hitboxes: []
+      sprite: {fileID: 21300006, guid: 2c1cc1f9066b72b43a85b94b142b5a86, type: 3}
+      time: 0.08
+    - name: 
+      hitboxes: []
+      sprite: {fileID: 21300008, guid: 2c1cc1f9066b72b43a85b94b142b5a86, type: 3}
+      time: 0.12
+    - name: 
+      hitboxes: []
+      sprite: {fileID: 21300010, guid: 2c1cc1f9066b72b43a85b94b142b5a86, type: 3}
+      time: 0.08
+    - name: 
+      hitboxes: []
+      sprite: {fileID: 21300012, guid: 2c1cc1f9066b72b43a85b94b142b5a86, type: 3}
+      time: 0.08
+    - name: 
+      hitboxes: []
+      sprite: {fileID: 21300014, guid: 2c1cc1f9066b72b43a85b94b142b5a86, type: 3}
+      time: 0.12
+    - name: 
+      hitboxes: []
+      sprite: {fileID: 21300016, guid: 2c1cc1f9066b72b43a85b94b142b5a86, type: 3}
+      time: 0.08
+    - name: 
+      hitboxes: []
+      sprite: {fileID: 21300018, guid: 2c1cc1f9066b72b43a85b94b142b5a86, type: 3}
+      time: 0.08
+    - name: 
+      hitboxes: []
+      sprite: {fileID: 21300020, guid: 2c1cc1f9066b72b43a85b94b142b5a86, type: 3}
+      time: 0.12
+    - name: 
+      hitboxes: []
+      sprite: {fileID: 21300022, guid: 2c1cc1f9066b72b43a85b94b142b5a86, type: 3}
+      time: 0.08
+    - name: 
+      hitboxes: []
+      sprite: {fileID: 21300024, guid: 2c1cc1f9066b72b43a85b94b142b5a86, type: 3}
+      time: 0.08
+    - name: 
+      hitboxes: []
+      sprite: {fileID: 21300026, guid: 2c1cc1f9066b72b43a85b94b142b5a86, type: 3}
+      time: 0.12
+    - name: 
+      hitboxes: []
+      sprite: {fileID: 21300028, guid: 2c1cc1f9066b72b43a85b94b142b5a86, type: 3}
+      time: 0.04
+    - name: 
+      hitboxes: []
+      sprite: {fileID: 21300030, guid: 2c1cc1f9066b72b43a85b94b142b5a86, type: 3}
+      time: 0.04
+    currentFrame: 0
+    name: forward attack
+  - frames:
+    - name: 
+      hitboxes: []
+      sprite: {fileID: 21300000, guid: ba00f26b33f16c746bf077a2d2ceaec6, type: 3}
+      time: 0.08
+    - name: 
+      hitboxes: []
+      sprite: {fileID: 21300002, guid: ba00f26b33f16c746bf077a2d2ceaec6, type: 3}
+      time: 0.12
+    - name: 
+      hitboxes: []
+      sprite: {fileID: 21300004, guid: ba00f26b33f16c746bf077a2d2ceaec6, type: 3}
+      time: 0.08
+    - name: 
+      hitboxes: []
+      sprite: {fileID: 21300006, guid: ba00f26b33f16c746bf077a2d2ceaec6, type: 3}
+      time: 0.04
+    - name: 
+      hitboxes: []
+      sprite: {fileID: 21300008, guid: ba00f26b33f16c746bf077a2d2ceaec6, type: 3}
+      time: 0.04
+    - name: 
+      hitboxes: []
+      sprite: {fileID: 21300010, guid: ba00f26b33f16c746bf077a2d2ceaec6, type: 3}
+      time: 0.04
+    currentFrame: 0
+    name: dash
+  - frames:
+    - name: 
+      hitboxes: []
+      sprite: {fileID: 21300000, guid: 1db9929fb04bcba4a91e432e1ba59e61, type: 3}
+      time: 0.04
+    - name: 
+      hitboxes: []
+      sprite: {fileID: 21300002, guid: 1db9929fb04bcba4a91e432e1ba59e61, type: 3}
+      time: 0.08
+    - name: 
+      hitboxes: []
+      sprite: {fileID: 21300004, guid: 1db9929fb04bcba4a91e432e1ba59e61, type: 3}
+      time: 0.12
+    - name: 
+      hitboxes: []
+      sprite: {fileID: 21300006, guid: 1db9929fb04bcba4a91e432e1ba59e61, type: 3}
+      time: 0.08
+    - name: 
+      hitboxes: []
+      sprite: {fileID: 21300010, guid: 1db9929fb04bcba4a91e432e1ba59e61, type: 3}
+      time: 0.04
+    - name: 
+      hitboxes: []
+      sprite: {fileID: 21300012, guid: 1db9929fb04bcba4a91e432e1ba59e61, type: 3}
+      time: 0.08
+    - name: 
+      hitboxes: []
+      sprite: {fileID: 21300014, guid: 1db9929fb04bcba4a91e432e1ba59e61, type: 3}
+      time: 0.12
+    - name: 
+      hitboxes: []
+      sprite: {fileID: 21300016, guid: 1db9929fb04bcba4a91e432e1ba59e61, type: 3}
+      time: 0.08
+    - name: 
+      hitboxes: []
+      sprite: {fileID: 21300018, guid: 1db9929fb04bcba4a91e432e1ba59e61, type: 3}
+      time: 0.04
+    - name: 
+      hitboxes: []
+      sprite: {fileID: 21300020, guid: 1db9929fb04bcba4a91e432e1ba59e61, type: 3}
+      time: 0.04
+    - name: 
+      hitboxes: []
+      sprite: {fileID: 21300022, guid: 1db9929fb04bcba4a91e432e1ba59e61, type: 3}
+      time: 0.08
+    - name: 
+      hitboxes: []
+      sprite: {fileID: 21300024, guid: 1db9929fb04bcba4a91e432e1ba59e61, type: 3}
+      time: 0.08
+    - name: 
+      hitboxes: []
+      sprite: {fileID: 21300028, guid: 1db9929fb04bcba4a91e432e1ba59e61, type: 3}
+      time: 0.04
+    - name: 
+      hitboxes: []
+      sprite: {fileID: 21300026, guid: 1db9929fb04bcba4a91e432e1ba59e61, type: 3}
+      time: 0.08
+    - name: 
+      hitboxes: []
+      sprite: {fileID: 21300008, guid: 1db9929fb04bcba4a91e432e1ba59e61, type: 3}
+      time: 0.04
+    currentFrame: 0
+    name: fall
+  - frames:
+    - name: 
+      hitboxes: []
+      sprite: {fileID: 21300030, guid: 1db9929fb04bcba4a91e432e1ba59e61, type: 3}
+      time: 0.08
+    currentFrame: 0
+    name: onGround
+  - frames:
+    - name: 
+      hitboxes: []
+      sprite: {fileID: 21300032, guid: 1db9929fb04bcba4a91e432e1ba59e61, type: 3}
+      time: 0.04
+    - name: 
+      hitboxes: []
+      sprite: {fileID: 21300034, guid: 1db9929fb04bcba4a91e432e1ba59e61, type: 3}
+      time: 0.04
+    - name: 
+      hitboxes: []
+      sprite: {fileID: 21300036, guid: 1db9929fb04bcba4a91e432e1ba59e61, type: 3}
+      time: 0.08
+    - name: 
+      hitboxes: []
+      sprite: {fileID: 21300038, guid: 1db9929fb04bcba4a91e432e1ba59e61, type: 3}
+      time: 0.04
+    - name: 
+      hitboxes: []
+      sprite: {fileID: 21300000, guid: 59fb37fc39a7cf94cb7d564533cbb230, type: 3}
+      time: 0.08
+    currentFrame: 0
+    name: get up
   speed: 0
   currentState: 0
   drawHitbox: 1
