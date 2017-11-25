@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e57d16a7c677934ca4c5dff8b14258f, type: 3}
+  m_Name: montaine
+  m_EditorClassIdentifier: 
+  moveSet:
+    actions: []
+    nodes: []
+  moves:
+  - frames:
+    - name: 
+      hitboxes: []
+      sprite: {fileID: 21300000, guid: 59fb37fc39a7cf94cb7d564533cbb230, type: 3}
+      time: 0.08
+    - name: 
+      hitboxes: []
+      sprite: {fileID: 21300002, guid: 59fb37fc39a7cf94cb7d564533cbb230, type: 3}
+      time: 0.08
+    - name: 
+      hitboxes: []
+      sprite: {fileID: 21300004, guid: 59fb37fc39a7cf94cb7d564533cbb230, type: 3}
+      time: 0.08
+    - name: 
+      hitboxes: []
+      sprite: {fileID: 21300006, guid: 59fb37fc39a7cf94cb7d564533cbb230, type: 3}
+      time: 0.08
+    - name: 
+      hitboxes: []
+      sprite: {fileID: 21300008, guid: 59fb37fc39a7cf94cb7d564533cbb230, type: 3}
+      time: 0.08
+    - name: 
+      hitboxes: []
+      sprite: {fileID: 21300010, guid: 59fb37fc39a7cf94cb7d564533cbb230, type: 3}
+      time: 0.08
+    - name: 
+      hitboxes: []
+      sprite: {fileID: 21300012, guid: 59fb37fc39a7cf94cb7d564533cbb230, type: 3}
+      time: 0.08
+    - name: 
+      hitboxes: []
+      sprite: {fileID: 21300014, guid: 59fb37fc39a7cf94cb7d564533cbb230, type: 3}
+      time: 0.08
+    currentFrame: 0
+    name: idle
+  speed: 0
+  currentState: 0
+  drawHitbox: 1
+  Grounded: 0
+  Stand: 0
+  Crouch: 0
+  Walk: 0
+  running: 0
+  velocity: {x: 0, y: 0, z: 0}
+  jumpStrength: 30
+  jumped: 0
