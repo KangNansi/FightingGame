@@ -10,7 +10,7 @@ namespace FightingGame
         [SerializeField]
         public List<HitBox> hitboxes = new List<HitBox>();
         public Sprite sprite;
-        public float time = 0.04f;
+        public float time = 0.08f;
 
         public FighterState()
         {
@@ -33,6 +33,16 @@ namespace FightingGame
             {
                 h.Draw(position);
             }
+        }
+
+        public void CopyFrom(FighterState fs)
+        {
+            foreach(HitBox hb in fs.hitboxes)
+            {
+                hitboxes.Add(new HitBox(hb));
+            }
+            sprite = fs.sprite;
+            time = fs.time;
         }
     }
 }

@@ -11,6 +11,7 @@ namespace FightingGame
         public int controllerNumber = 1;
         VirtualController controller = VirtualController.GetController(1);
         public GameObject opponent;
+        public float life = 100;
 
         void Start () {
             fighter = Instantiate(fighter);

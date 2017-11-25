@@ -5,8 +5,8 @@ using UnityEngine;
 namespace FightingGame
 {
     public class FightManager : MonoBehaviour {
-        public Fighter player1;
-        public Fighter player2;
+        public FighterController player1;
+        public FighterController player2;
         public static float groundHeight = 0;
         public static float gravity = 1;
 
@@ -17,7 +17,7 @@ namespace FightingGame
 	
 	    // Update is called once per frame
 	    void Update () {
-            Fighter.Hit(player1, player2);
+            FighterController.Hit(player1, player2);
 	    }
     }
 }
