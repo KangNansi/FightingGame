@@ -85,27 +85,23 @@ MonoBehaviour:
     - name: 
       hitboxes: []
       sprite: {fileID: 21300028, guid: ba00f26b33f16c746bf077a2d2ceaec6, type: 3}
-      time: 0.08
+      time: 0.04
     - name: 
       hitboxes: []
       sprite: {fileID: 21300030, guid: ba00f26b33f16c746bf077a2d2ceaec6, type: 3}
-      time: 0.08
+      time: 0.02
     - name: 
       hitboxes: []
       sprite: {fileID: 21300032, guid: ba00f26b33f16c746bf077a2d2ceaec6, type: 3}
-      time: 0.16
+      time: 0.1
     - name: 
       hitboxes: []
       sprite: {fileID: 21300030, guid: ba00f26b33f16c746bf077a2d2ceaec6, type: 3}
-      time: 0.08
+      time: 0.04
     - name: 
       hitboxes: []
       sprite: {fileID: 21300028, guid: ba00f26b33f16c746bf077a2d2ceaec6, type: 3}
-      time: 0.08
-    - name: 
-      hitboxes: []
-      sprite: {fileID: 21300012, guid: ba00f26b33f16c746bf077a2d2ceaec6, type: 3}
-      time: 0.16
+      time: 0.02
     currentFrame: 0
     name: teabag
   - frames:
