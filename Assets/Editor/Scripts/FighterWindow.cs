@@ -118,6 +118,11 @@ namespace FightingGame
                 if(GUILayout.Button("Add State"))
                 {
                     FighterState s = new FighterState();
+                    List<FighterState> st = fighter.moves[selectedMove].frames;
+                    if (st.Count > 0)
+                    {
+                        s.CopyFrom(st[st.Count-1]);
+                    }
                     fighter.moves[selectedMove].frames.Add(s);
                     states.Add(new FighterStateEditor(s));
                 }

@@ -36,6 +36,13 @@ namespace FightingGame
             SetColor();
         }
 
+        public HitBox(HitBox h)
+        {
+            _type = h._type;
+            _size = h._size;
+            _position = h._position;
+        }
+
         public HitBox(HitBox h, Transform t)
         {
             _type = h._type;

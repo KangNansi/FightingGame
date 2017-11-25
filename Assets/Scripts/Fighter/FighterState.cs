@@ -34,5 +34,15 @@ namespace FightingGame
                 h.Draw(position);
             }
         }
+
+        public void CopyFrom(FighterState fs)
+        {
+            foreach(HitBox hb in fs.hitboxes)
+            {
+                hitboxes.Add(new HitBox(hb));
+            }
+            sprite = fs.sprite;
+            time = fs.time;
+        }
     }
 }
