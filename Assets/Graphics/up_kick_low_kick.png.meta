@@ -1,25 +1,28 @@
 fileFormatVersion: 2
-guid: a7ba209f71c09594bbc07f6b0e73244e
-timeCreated: 1511633454
+guid: f2746e7a8badbef4fb6b5a5648ed1817
+timeCreated: 1511633629
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: taunt_0
-    21300002: taunt_1
-    21300004: taunt_2
-    21300006: taunt_3
-    21300008: taunt_4
-    21300010: taunt_5
-    21300012: taunt_6
-    21300014: taunt_7
-    21300016: taunt_8
-    21300018: taunt_9
-    21300020: taunt_10
-    21300022: taunt_11
-    21300024: taunt_12
-    21300026: taunt_13
-    21300028: taunt_14
-    21300030: taunt_15
+    21300000: up_kick_low_kick_0
+    21300002: up_kick_low_kick_1
+    21300004: up_kick_low_kick_2
+    21300006: up_kick_low_kick_3
+    21300008: up_kick_low_kick_4
+    21300010: up_kick_low_kick_5
+    21300012: up_kick_low_kick_6
+    21300014: up_kick_low_kick_7
+    21300016: up_kick_low_kick_8
+    21300018: up_kick_low_kick_9
+    21300020: up_kick_low_kick_10
+    21300022: up_kick_low_kick_11
+    21300024: up_kick_low_kick_12
+    21300026: up_kick_low_kick_14
+    21300028: up_kick_low_kick_15
+    21300030: up_kick_low_kick_16
+    21300032: up_kick_low_kick_17
+    21300034: up_kick_low_kick_18
+    21300036: up_kick_low_kick_19
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -94,7 +97,63 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: taunt_0
+      name: up_kick_low_kick_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2048
+        width: 512
+        height: 512
+      alignment: 9
+      pivot: {x: 0.5, y: 0.07}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: up_kick_low_kick_1
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 2048
+        width: 512
+        height: 512
+      alignment: 9
+      pivot: {x: 0.5, y: 0.035}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: up_kick_low_kick_2
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 2048
+        width: 512
+        height: 512
+      alignment: 9
+      pivot: {x: 0.5, y: 0.07}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: up_kick_low_kick_3
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 2048
+        width: 512
+        height: 512
+      alignment: 9
+      pivot: {x: 0.5, y: 0.07}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: up_kick_low_kick_4
       rect:
         serializedVersion: 2
         x: 0
@@ -108,7 +167,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: taunt_1
+      name: up_kick_low_kick_5
       rect:
         serializedVersion: 2
         x: 512
@@ -122,7 +181,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: taunt_2
+      name: up_kick_low_kick_6
       rect:
         serializedVersion: 2
         x: 1024
@@ -136,7 +195,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: taunt_3
+      name: up_kick_low_kick_7
       rect:
         serializedVersion: 2
         x: 1536
@@ -150,7 +209,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: taunt_4
+      name: up_kick_low_kick_8
       rect:
         serializedVersion: 2
         x: 0
@@ -164,7 +223,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: taunt_5
+      name: up_kick_low_kick_9
       rect:
         serializedVersion: 2
         x: 512
@@ -178,7 +237,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: taunt_6
+      name: up_kick_low_kick_10
       rect:
         serializedVersion: 2
         x: 1024
@@ -192,7 +251,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: taunt_7
+      name: up_kick_low_kick_11
       rect:
         serializedVersion: 2
         x: 1536
@@ -206,12 +265,12 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: taunt_8
+      name: up_kick_low_kick_12
       rect:
         serializedVersion: 2
         x: 0
         y: 512
-        width: 512
+        width: 1024
         height: 512
       alignment: 9
       pivot: {x: 0.5, y: 0.07}
@@ -220,21 +279,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: taunt_9
-      rect:
-        serializedVersion: 2
-        x: 512
-        y: 512
-        width: 512
-        height: 512
-      alignment: 9
-      pivot: {x: 0.5, y: 0.07}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: taunt_10
+      name: up_kick_low_kick_14
       rect:
         serializedVersion: 2
         x: 1024
@@ -248,7 +293,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: taunt_11
+      name: up_kick_low_kick_15
       rect:
         serializedVersion: 2
         x: 1536
@@ -262,7 +307,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: taunt_12
+      name: up_kick_low_kick_16
       rect:
         serializedVersion: 2
         x: 0
@@ -276,7 +321,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: taunt_13
+      name: up_kick_low_kick_17
       rect:
         serializedVersion: 2
         x: 512
@@ -290,7 +335,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: taunt_14
+      name: up_kick_low_kick_18
       rect:
         serializedVersion: 2
         x: 1024
@@ -304,7 +349,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: taunt_15
+      name: up_kick_low_kick_19
       rect:
         serializedVersion: 2
         x: 1536

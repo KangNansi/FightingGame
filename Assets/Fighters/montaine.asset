@@ -50,13 +50,167 @@ MonoBehaviour:
       time: 0.08
     currentFrame: 0
     name: idle
+  - frames:
+    - name: 
+      hitboxes: []
+      sprite: {fileID: 21300016, guid: 59fb37fc39a7cf94cb7d564533cbb230, type: 3}
+      time: 0.08
+    - name: 
+      hitboxes: []
+      sprite: {fileID: 21300018, guid: 59fb37fc39a7cf94cb7d564533cbb230, type: 3}
+      time: 0.08
+    - name: 
+      hitboxes: []
+      sprite: {fileID: 21300020, guid: 59fb37fc39a7cf94cb7d564533cbb230, type: 3}
+      time: 0.08
+    - name: 
+      hitboxes: []
+      sprite: {fileID: 21300022, guid: 59fb37fc39a7cf94cb7d564533cbb230, type: 3}
+      time: 0.08
+    - name: 
+      hitboxes: []
+      sprite: {fileID: 21300024, guid: 59fb37fc39a7cf94cb7d564533cbb230, type: 3}
+      time: 0.08
+    - name: 
+      hitboxes: []
+      sprite: {fileID: 21300026, guid: 59fb37fc39a7cf94cb7d564533cbb230, type: 3}
+      time: 0.08
+    - name: 
+      hitboxes: []
+      sprite: {fileID: 21300028, guid: 59fb37fc39a7cf94cb7d564533cbb230, type: 3}
+      time: 0.08
+    currentFrame: 0
+    name: walk
+  - frames:
+    - name: 
+      hitboxes: []
+      sprite: {fileID: 21300028, guid: ba00f26b33f16c746bf077a2d2ceaec6, type: 3}
+      time: 0.08
+    - name: 
+      hitboxes: []
+      sprite: {fileID: 21300030, guid: ba00f26b33f16c746bf077a2d2ceaec6, type: 3}
+      time: 0.08
+    - name: 
+      hitboxes: []
+      sprite: {fileID: 21300032, guid: ba00f26b33f16c746bf077a2d2ceaec6, type: 3}
+      time: 0.16
+    - name: 
+      hitboxes: []
+      sprite: {fileID: 21300030, guid: ba00f26b33f16c746bf077a2d2ceaec6, type: 3}
+      time: 0.08
+    - name: 
+      hitboxes: []
+      sprite: {fileID: 21300028, guid: ba00f26b33f16c746bf077a2d2ceaec6, type: 3}
+      time: 0.08
+    - name: 
+      hitboxes: []
+      sprite: {fileID: 21300012, guid: ba00f26b33f16c746bf077a2d2ceaec6, type: 3}
+      time: 0.16
+    currentFrame: 0
+    name: teabag
+  - frames:
+    - name: 
+      hitboxes: []
+      sprite: {fileID: 21300034, guid: 59fb37fc39a7cf94cb7d564533cbb230, type: 3}
+      time: 0.04
+    - name: 
+      hitboxes: []
+      sprite: {fileID: 21300036, guid: 59fb37fc39a7cf94cb7d564533cbb230, type: 3}
+      time: 0.16
+    - name: 
+      hitboxes: []
+      sprite: {fileID: 21300038, guid: 59fb37fc39a7cf94cb7d564533cbb230, type: 3}
+      time: 0.04
+    currentFrame: 0
+    name: jab
+  - frames:
+    - name: 
+      hitboxes: []
+      sprite: {fileID: 21300014, guid: ba00f26b33f16c746bf077a2d2ceaec6, type: 3}
+      time: 0.04
+    - name: 
+      hitboxes: []
+      sprite: {fileID: 21300016, guid: ba00f26b33f16c746bf077a2d2ceaec6, type: 3}
+      time: 0.08
+    - name: 
+      hitboxes: []
+      sprite: {fileID: 21300018, guid: ba00f26b33f16c746bf077a2d2ceaec6, type: 3}
+      time: 0.12
+    - name: 
+      hitboxes: []
+      sprite: {fileID: 21300020, guid: ba00f26b33f16c746bf077a2d2ceaec6, type: 3}
+      time: 0.08
+    - name: 
+      hitboxes: []
+      sprite: {fileID: 21300022, guid: ba00f26b33f16c746bf077a2d2ceaec6, type: 3}
+      time: 0.04
+    - name: 
+      hitboxes: []
+      sprite: {fileID: 21300024, guid: ba00f26b33f16c746bf077a2d2ceaec6, type: 3}
+      time: 0.08
+    currentFrame: 0
+    name: hit
+  - frames:
+    - name: 
+      hitboxes: []
+      sprite: {fileID: 21300028, guid: fe19d07866fcd5b47a80cd5d5c835373, type: 3}
+      time: 0.04
+    - name: 
+      hitboxes: []
+      sprite: {fileID: 21300030, guid: fe19d07866fcd5b47a80cd5d5c835373, type: 3}
+      time: 0.12
+    currentFrame: 0
+    name: block
+  - frames:
+    - name: 
+      hitboxes: []
+      sprite: {fileID: 21300000, guid: a7ba209f71c09594bbc07f6b0e73244e, type: 3}
+      time: 0.08
+    - name: 
+      hitboxes: []
+      sprite: {fileID: 21300002, guid: a7ba209f71c09594bbc07f6b0e73244e, type: 3}
+      time: 0.08
+    - name: 
+      hitboxes: []
+      sprite: {fileID: 21300004, guid: a7ba209f71c09594bbc07f6b0e73244e, type: 3}
+      time: 0.08
+    - name: 
+      hitboxes: []
+      sprite: {fileID: 21300006, guid: a7ba209f71c09594bbc07f6b0e73244e, type: 3}
+      time: 0.08
+    - name: 
+      hitboxes: []
+      sprite: {fileID: 21300008, guid: a7ba209f71c09594bbc07f6b0e73244e, type: 3}
+      time: 0.08
+    - name: 
+      hitboxes: []
+      sprite: {fileID: 21300010, guid: a7ba209f71c09594bbc07f6b0e73244e, type: 3}
+      time: 0.08
+    - name: 
+      hitboxes: []
+      sprite: {fileID: 21300012, guid: a7ba209f71c09594bbc07f6b0e73244e, type: 3}
+      time: 0.08
+    - name: 
+      hitboxes: []
+      sprite: {fileID: 21300014, guid: a7ba209f71c09594bbc07f6b0e73244e, type: 3}
+      time: 0.08
+    - name: 
+      hitboxes: []
+      sprite: {fileID: 21300016, guid: a7ba209f71c09594bbc07f6b0e73244e, type: 3}
+      time: 0.08
+    - name: 
+      hitboxes: []
+      sprite: {fileID: 21300018, guid: a7ba209f71c09594bbc07f6b0e73244e, type: 3}
+      time: 0.08
+    currentFrame: 0
+    name: taunt
   speed: 0
   currentState: 0
   drawHitbox: 1
   Grounded: 0
   Stand: 0
-  Crouch: 0
-  Walk: 0
+  Crouch: 2
+  Walk: 1
   running: 0
   velocity: {x: 0, y: 0, z: 0}
   jumpStrength: 30
