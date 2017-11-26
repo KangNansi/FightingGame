@@ -48,6 +48,8 @@ MonoBehaviour:
         state: 10
       - input: 2
         state: 9
+      - input: 0
+        state: 3
     - moveId: 10
       actions:
       - input: 0
@@ -66,15 +68,32 @@ MonoBehaviour:
         state: 7
       - input: 0
         state: 3
+    - moveId: 11
+      actions:
+      - input: 0
+        state: 3
+      - input: 7
+        state: 6
+      - input: 5
+        state: 2
+      - input: 1
+        state: 10
+      - input: 3
+        state: 7
   moves:
   - frames:
     - name: 
       frameType: 2
       hitboxes:
-      - _position: {x: -1.18, y: 0}
-        _size: {x: 2.62, y: 3.75}
+      - _position: {x: -0.87, y: 1.13}
+        _size: {x: 2.2, y: 2.24}
         _type: 1
         color: {r: 1, g: 0, b: 0, a: 0.5}
+        dmg: 0
+      - _position: {x: -1.36, y: -0.21}
+        _size: {x: 2.34, y: 1.34}
+        _type: 1
+        color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 0
       sprite: {fileID: 21300000, guid: 59fb37fc39a7cf94cb7d564533cbb230, type: 3}
       time: 0.08
@@ -82,10 +101,15 @@ MonoBehaviour:
     - name: 
       frameType: 2
       hitboxes:
-      - _position: {x: -1.18, y: 0}
-        _size: {x: 2.62, y: 3.75}
+      - _position: {x: -0.87, y: 1.3}
+        _size: {x: 2.2, y: 2.13}
         _type: 1
-        color: {r: 1, g: 0, b: 0, a: 0.5}
+        color: {r: 0, g: 0, b: 0, a: 0}
+        dmg: 0
+      - _position: {x: -1.36, y: -0.21}
+        _size: {x: 2.38, y: 1.49}
+        _type: 1
+        color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 0
       sprite: {fileID: 21300002, guid: 59fb37fc39a7cf94cb7d564533cbb230, type: 3}
       time: 0.08
@@ -93,10 +117,15 @@ MonoBehaviour:
     - name: 
       frameType: 2
       hitboxes:
-      - _position: {x: -1.18, y: 0}
-        _size: {x: 2.62, y: 3.75}
+      - _position: {x: -0.87, y: 1.13}
+        _size: {x: 2.11, y: 2.37}
         _type: 1
-        color: {r: 1, g: 0, b: 0, a: 0.5}
+        color: {r: 0, g: 0, b: 0, a: 0}
+        dmg: 0
+      - _position: {x: -1.36, y: -0.21}
+        _size: {x: 2.34, y: 1.34}
+        _type: 1
+        color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 0
       sprite: {fileID: 21300004, guid: 59fb37fc39a7cf94cb7d564533cbb230, type: 3}
       time: 0.08
@@ -104,10 +133,15 @@ MonoBehaviour:
     - name: 
       frameType: 2
       hitboxes:
-      - _position: {x: -1.18, y: 0}
-        _size: {x: 2.62, y: 3.75}
+      - _position: {x: -0.87, y: 1.13}
+        _size: {x: 2.14, y: 2.36}
         _type: 1
-        color: {r: 1, g: 0, b: 0, a: 0.5}
+        color: {r: 0, g: 0, b: 0, a: 0}
+        dmg: 0
+      - _position: {x: -1.36, y: -0.21}
+        _size: {x: 2.34, y: 1.34}
+        _type: 1
+        color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 0
       sprite: {fileID: 21300006, guid: 59fb37fc39a7cf94cb7d564533cbb230, type: 3}
       time: 0.08
@@ -115,10 +149,15 @@ MonoBehaviour:
     - name: 
       frameType: 2
       hitboxes:
-      - _position: {x: -1.18, y: 0}
-        _size: {x: 2.62, y: 3.75}
+      - _position: {x: -0.62, y: 1.13}
+        _size: {x: 1.88, y: 2.24}
         _type: 1
-        color: {r: 1, g: 0, b: 0, a: 0.5}
+        color: {r: 0, g: 0, b: 0, a: 0}
+        dmg: 0
+      - _position: {x: -1.36, y: -0.21}
+        _size: {x: 2.44, y: 1.34}
+        _type: 1
+        color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 0
       sprite: {fileID: 21300008, guid: 59fb37fc39a7cf94cb7d564533cbb230, type: 3}
       time: 0.08
@@ -126,10 +165,15 @@ MonoBehaviour:
     - name: 
       frameType: 2
       hitboxes:
-      - _position: {x: -1.18, y: 0}
-        _size: {x: 2.62, y: 3.75}
+      - _position: {x: -0.87, y: 1.13}
+        _size: {x: 2.2, y: 2.05}
         _type: 1
-        color: {r: 1, g: 0, b: 0, a: 0.5}
+        color: {r: 0, g: 0, b: 0, a: 0}
+        dmg: 0
+      - _position: {x: -1.36, y: -0.21}
+        _size: {x: 2.51, y: 1.34}
+        _type: 1
+        color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 0
       sprite: {fileID: 21300010, guid: 59fb37fc39a7cf94cb7d564533cbb230, type: 3}
       time: 0.08
@@ -137,10 +181,15 @@ MonoBehaviour:
     - name: 
       frameType: 2
       hitboxes:
-      - _position: {x: -1.18, y: 0}
-        _size: {x: 2.62, y: 3.75}
+      - _position: {x: -0.87, y: 1.13}
+        _size: {x: 2.2, y: 1.81}
         _type: 1
-        color: {r: 1, g: 0, b: 0, a: 0.5}
+        color: {r: 0, g: 0, b: 0, a: 0}
+        dmg: 0
+      - _position: {x: -1.36, y: -0.21}
+        _size: {x: 2.54, y: 1.34}
+        _type: 1
+        color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 0
       sprite: {fileID: 21300012, guid: 59fb37fc39a7cf94cb7d564533cbb230, type: 3}
       time: 0.08
@@ -148,10 +197,15 @@ MonoBehaviour:
     - name: 
       frameType: 2
       hitboxes:
-      - _position: {x: -1.18, y: 0}
-        _size: {x: 2.62, y: 3.75}
+      - _position: {x: -0.87, y: 1.13}
+        _size: {x: 2.2, y: 1.9}
         _type: 1
-        color: {r: 1, g: 0, b: 0, a: 0.5}
+        color: {r: 0, g: 0, b: 0, a: 0}
+        dmg: 0
+      - _position: {x: -1.36, y: -0.21}
+        _size: {x: 2.47, y: 1.34}
+        _type: 1
+        color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 0
       sprite: {fileID: 21300014, guid: 59fb37fc39a7cf94cb7d564533cbb230, type: 3}
       time: 0.08
@@ -387,8 +441,8 @@ MonoBehaviour:
     - name: 
       frameType: 1
       hitboxes:
-      - _position: {x: 2.29, y: 2.04}
-        _size: {x: 1, y: 0.53}
+      - _position: {x: 1.67, y: 1.96}
+        _size: {x: 1.5, y: 0.71}
         _type: 0
         color: {r: 1, g: 0, b: 0, a: 0.5}
         dmg: 5
@@ -456,19 +510,34 @@ MonoBehaviour:
       velocity: {x: 0, y: 0}
     - name: 
       frameType: 2
-      hitboxes: []
+      hitboxes:
+      - _position: {x: -1.47, y: 1.66}
+        _size: {x: 1.51, y: 1.45}
+        _type: 1
+        color: {r: 1, g: 0, b: 0, a: 0.5}
+        dmg: 1
       sprite: {fileID: 21300020, guid: ba00f26b33f16c746bf077a2d2ceaec6, type: 3}
       time: 0.04
       velocity: {x: 0, y: 0}
     - name: 
       frameType: 2
-      hitboxes: []
+      hitboxes:
+      - _position: {x: -1, y: 1.53}
+        _size: {x: 1.51, y: 1.45}
+        _type: 1
+        color: {r: 0, g: 0, b: 0, a: 0}
+        dmg: 1
       sprite: {fileID: 21300022, guid: ba00f26b33f16c746bf077a2d2ceaec6, type: 3}
       time: 0.04
       velocity: {x: 0, y: 0}
     - name: 
       frameType: 2
-      hitboxes: []
+      hitboxes:
+      - _position: {x: -0.29, y: 1.36}
+        _size: {x: 1.51, y: 1.45}
+        _type: 1
+        color: {r: 0, g: 0, b: 0, a: 0}
+        dmg: 1
       sprite: {fileID: 21300024, guid: ba00f26b33f16c746bf077a2d2ceaec6, type: 3}
       time: 0.08
       velocity: {x: 0, y: 0}
@@ -678,84 +747,114 @@ MonoBehaviour:
     - name: 
       frameType: 1
       hitboxes:
-      - _position: {x: -1.62, y: 0}
+      - _position: {x: -1.23, y: 0}
         _size: {x: 1.77, y: 3.46}
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
-      - _position: {x: 0.69, y: 2.92}
-        _size: {x: 1.39, y: 2.19}
+      - _position: {x: 0.75, y: 4.11}
+        _size: {x: 1.29, y: 1.33}
         _type: 0
         color: {r: 1, g: 0, b: 0, a: 0.5}
         dmg: 1
+      - _position: {x: 0.64, y: 3.34}
+        _size: {x: 1.2, y: 0.78}
+        _type: 0
+        color: {r: 0, g: 0, b: 0, a: 0}
+        dmg: 1
+      - _position: {x: 0.48, y: 1.94}
+        _size: {x: 0.84, y: 1.51}
+        _type: 0
+        color: {r: 0, g: 0, b: 0, a: 0}
+        dmg: 1
       sprite: {fileID: 21300002, guid: f2746e7a8badbef4fb6b5a5648ed1817, type: 3}
       time: 0.04
-      velocity: {x: 0, y: 0}
+      velocity: {x: 4, y: 0}
     - name: 
       frameType: 1
       hitboxes:
-      - _position: {x: -1.62, y: 0}
-        _size: {x: 1.77, y: 3.46}
+      - _position: {x: -1.18, y: 0}
+        _size: {x: 1.65, y: 3.46}
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
-      - _position: {x: 0.69, y: 2.92}
-        _size: {x: 1.39, y: 2.19}
+      - _position: {x: 0.9, y: 4.01}
+        _size: {x: 1.07, y: 1.31}
+        _type: 0
+        color: {r: 0, g: 0, b: 0, a: 0}
+        dmg: 1
+      - _position: {x: 0.71, y: 3.46}
+        _size: {x: 0.87, y: 0.54}
+        _type: 0
+        color: {r: 0, g: 0, b: 0, a: 0}
+        dmg: 1
+      - _position: {x: 0.4, y: 2.1}
+        _size: {x: 0.87, y: 1.51}
         _type: 0
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
       sprite: {fileID: 21300004, guid: f2746e7a8badbef4fb6b5a5648ed1817, type: 3}
       time: 0.12
-      velocity: {x: 0, y: 0}
+      velocity: {x: 3, y: 0}
     - name: 
       frameType: 1
       hitboxes:
-      - _position: {x: -1.62, y: 0}
+      - _position: {x: -1.12, y: 0}
         _size: {x: 1.77, y: 3.46}
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
-      - _position: {x: 0.69, y: 2.92}
-        _size: {x: 1.39, y: 1.46}
+      - _position: {x: 0.69, y: 3.1}
+        _size: {x: 1.2, y: 1.56}
+        _type: 0
+        color: {r: 0, g: 0, b: 0, a: 0}
+        dmg: 1
+      - _position: {x: 0.55, y: 2.04}
+        _size: {x: 0.81, y: 1.09}
         _type: 0
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
       sprite: {fileID: 21300006, guid: f2746e7a8badbef4fb6b5a5648ed1817, type: 3}
       time: 0.08
-      velocity: {x: 3, y: 0}
+      velocity: {x: 0, y: 0}
     - name: 
       frameType: 2
       hitboxes:
-      - _position: {x: -1.5, y: 0}
+      - _position: {x: -1.18, y: 0}
         _size: {x: 1.77, y: 3.46}
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
       sprite: {fileID: 21300008, guid: f2746e7a8badbef4fb6b5a5648ed1817, type: 3}
       time: 0.08
-      velocity: {x: 3, y: 0}
+      velocity: {x: 2, y: 0}
     - name: 
       frameType: 2
       hitboxes:
-      - _position: {x: -1.29, y: 0}
+      - _position: {x: -1.26, y: 0}
         _size: {x: 1.77, y: 3.46}
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
       sprite: {fileID: 21300010, guid: f2746e7a8badbef4fb6b5a5648ed1817, type: 3}
       time: 0.04
-      velocity: {x: 6, y: 0}
+      velocity: {x: 2, y: 0}
     - name: 
       frameType: 2
       hitboxes:
       - _position: {x: -0.67, y: 0}
-        _size: {x: 1.77, y: 3.46}
+        _size: {x: 1.8, y: 3.46}
         _type: 1
+        color: {r: 0, g: 0, b: 0, a: 0}
+        dmg: 1
+      - _position: {x: 0.33, y: -0.07}
+        _size: {x: 1.52, y: 0.85}
+        _type: 0
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
       sprite: {fileID: 21300012, guid: f2746e7a8badbef4fb6b5a5648ed1817, type: 3}
       time: 0.04
-      velocity: {x: 6, y: 0}
+      velocity: {x: 1, y: 0}
     - name: 
       frameType: 2
       hitboxes:
@@ -814,17 +913,17 @@ MonoBehaviour:
       frameType: 1
       hitboxes:
       - _position: {x: 0.45, y: 0}
-        _size: {x: 2.41, y: 0.99}
+        _size: {x: 2.5, y: 0.99}
         _type: 0
         color: {r: 1, g: 0, b: 0, a: 0.5}
         dmg: 1
       - _position: {x: -1.98, y: 1.35}
-        _size: {x: 1.93, y: 1.53}
+        _size: {x: 1.6, y: 1.53}
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
       - _position: {x: -1.19, y: 0.07}
-        _size: {x: 1.71, y: 2.06}
+        _size: {x: 2.19, y: 1.73}
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
@@ -840,12 +939,12 @@ MonoBehaviour:
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
       - _position: {x: -1.98, y: 1.35}
-        _size: {x: 1.93, y: 1.53}
+        _size: {x: 1.64, y: 1.53}
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
       - _position: {x: -1.19, y: 0.07}
-        _size: {x: 1.71, y: 2.06}
+        _size: {x: 2.09, y: 1.64}
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
@@ -855,13 +954,13 @@ MonoBehaviour:
     - name: 
       frameType: 2
       hitboxes:
-      - _position: {x: -1.98, y: 1.77}
-        _size: {x: 1.57, y: 1.53}
+      - _position: {x: -2.02, y: 1.33}
+        _size: {x: 1.74, y: 1.6}
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
-      - _position: {x: -1.67, y: 0.07}
-        _size: {x: 2.3, y: 2.06}
+      - _position: {x: -1.66, y: -0.06}
+        _size: {x: 2.73, y: 1.39}
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
@@ -871,12 +970,12 @@ MonoBehaviour:
     - name: 
       frameType: 2
       hitboxes:
-      - _position: {x: -0.85, y: 2.2}
+      - _position: {x: -0.94, y: 2.07}
         _size: {x: 1.51, y: 1.41}
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
-      - _position: {x: -1.48, y: 0.07}
+      - _position: {x: -1.29, y: 0.07}
         _size: {x: 1.71, y: 2.06}
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
@@ -892,8 +991,8 @@ MonoBehaviour:
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
-      - _position: {x: -0.85, y: 0.07}
-        _size: {x: 2.03, y: 2.36}
+      - _position: {x: -0.72, y: -0.03}
+        _size: {x: 1.91, y: 2.36}
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
@@ -919,7 +1018,7 @@ MonoBehaviour:
     - name: 
       frameType: 0
       hitboxes:
-      - _position: {x: -0.92, y: 0}
+      - _position: {x: -1.23, y: 0}
         _size: {x: 1.77, y: 3.46}
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
@@ -930,8 +1029,13 @@ MonoBehaviour:
     - name: 
       frameType: 0
       hitboxes:
-      - _position: {x: -0.92, y: 0}
-        _size: {x: 1.77, y: 3.46}
+      - _position: {x: -1.19, y: 0}
+        _size: {x: 1.77, y: 1.79}
+        _type: 1
+        color: {r: 0, g: 0, b: 0, a: 0}
+        dmg: 1
+      - _position: {x: -0.56, y: 1.68}
+        _size: {x: 1.77, y: 1.91}
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
@@ -941,7 +1045,7 @@ MonoBehaviour:
     - name: 
       frameType: 0
       hitboxes:
-      - _position: {x: -0.92, y: 0}
+      - _position: {x: -1.37, y: 0}
         _size: {x: 1.77, y: 3.46}
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
@@ -952,7 +1056,7 @@ MonoBehaviour:
     - name: 
       frameType: 0
       hitboxes:
-      - _position: {x: -1.51, y: 0}
+      - _position: {x: -1.57, y: 0}
         _size: {x: 1.77, y: 3.46}
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
@@ -979,6 +1083,11 @@ MonoBehaviour:
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
+      - _position: {x: -0.18, y: 0.47}
+        _size: {x: 1.65, y: 2.63}
+        _type: 0
+        color: {r: 0, g: 0, b: 0, a: 0}
+        dmg: 1
       sprite: {fileID: 21300012, guid: fe19d07866fcd5b47a80cd5d5c835373, type: 3}
       time: 0.04
       velocity: {x: 0, y: 0}
@@ -990,10 +1099,15 @@ MonoBehaviour:
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
-      - _position: {x: 0.64, y: 1.93}
-        _size: {x: 1.86, y: 1.66}
+      - _position: {x: -0.34, y: 1.14}
+        _size: {x: 1.45, y: 2.22}
         _type: 0
         color: {r: 1, g: 0, b: 0, a: 0.5}
+        dmg: 1
+      - _position: {x: 0.86, y: 2.14}
+        _size: {x: 1.47, y: 1.41}
+        _type: 0
+        color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
       sprite: {fileID: 21300014, guid: fe19d07866fcd5b47a80cd5d5c835373, type: 3}
       time: 0.04
@@ -1006,8 +1120,13 @@ MonoBehaviour:
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
-      - _position: {x: 0.64, y: 1.93}
-        _size: {x: 1.86, y: 1.66}
+      - _position: {x: 1.02, y: 2.19}
+        _size: {x: 1.33, y: 1.32}
+        _type: 0
+        color: {r: 0, g: 0, b: 0, a: 0}
+        dmg: 1
+      - _position: {x: 0.01, y: 1.32}
+        _size: {x: 1.2, y: 1.95}
         _type: 0
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
@@ -1017,7 +1136,7 @@ MonoBehaviour:
     - name: 
       frameType: 1
       hitboxes:
-      - _position: {x: -1.8, y: 0}
+      - _position: {x: -1.53, y: 0}
         _size: {x: 1.77, y: 3.46}
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
@@ -1028,7 +1147,7 @@ MonoBehaviour:
     - name: 
       frameType: 2
       hitboxes:
-      - _position: {x: -0.92, y: 0}
+      - _position: {x: -0.66, y: 0}
         _size: {x: 1.77, y: 3.46}
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
@@ -1040,7 +1159,7 @@ MonoBehaviour:
       frameType: 2
       hitboxes:
       - _position: {x: -0.92, y: 0}
-        _size: {x: 1.77, y: 3.46}
+        _size: {x: 1.77, y: 2.99}
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
@@ -1051,7 +1170,7 @@ MonoBehaviour:
       frameType: 2
       hitboxes:
       - _position: {x: -0.92, y: 0}
-        _size: {x: 1.77, y: 3.46}
+        _size: {x: 1.77, y: 3.16}
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
@@ -1066,8 +1185,13 @@ MonoBehaviour:
     - name: 
       frameType: 0
       hitboxes:
-      - _position: {x: -1.01, y: 0}
-        _size: {x: 1.77, y: 3.46}
+      - _position: {x: -1.17, y: 1.36}
+        _size: {x: 1.42, y: 2.44}
+        _type: 1
+        color: {r: 0, g: 0, b: 0, a: 0}
+        dmg: 1
+      - _position: {x: -1.29, y: -0.04}
+        _size: {x: 2.08, y: 1.39}
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
@@ -1077,41 +1201,46 @@ MonoBehaviour:
     - name: 
       frameType: 0
       hitboxes:
-      - _position: {x: -1.54, y: 0}
-        _size: {x: 1.77, y: 3.46}
+      - _position: {x: -1.6, y: -0.08}
+        _size: {x: 1.24, y: 3.95}
+        _type: 1
+        color: {r: 0, g: 0, b: 0, a: 0}
+        dmg: 1
+      - _position: {x: -0.4, y: -0.08}
+        _size: {x: 1.24, y: 1.71}
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
       sprite: {fileID: 21300002, guid: 2c1cc1f9066b72b43a85b94b142b5a86, type: 3}
       time: 0.12
-      velocity: {x: 0, y: 0}
+      velocity: {x: -1, y: 0}
     - name: 
       frameType: 0
       hitboxes:
-      - _position: {x: -0.92, y: 0}
-        _size: {x: 1.77, y: 3.46}
+      - _position: {x: -1.31, y: -0.13}
+        _size: {x: 1.81, y: 3.01}
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
       sprite: {fileID: 21300004, guid: 2c1cc1f9066b72b43a85b94b142b5a86, type: 3}
       time: 0.04
-      velocity: {x: 0, y: 0}
+      velocity: {x: 3, y: 0}
     - name: 
       frameType: 1
       hitboxes:
-      - _position: {x: -0.92, y: 0}
-        _size: {x: 1.77, y: 3.46}
+      - _position: {x: -1.04, y: -0.18}
+        _size: {x: 1.89, y: 3.28}
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
-      - _position: {x: 0.87, y: 1.74}
-        _size: {x: 1.38, y: 1.87}
+      - _position: {x: 0.54, y: 2.04}
+        _size: {x: 1.84, y: 1.31}
         _type: 0
         color: {r: 1, g: 0, b: 0, a: 0.5}
         dmg: 1
       sprite: {fileID: 21300006, guid: 2c1cc1f9066b72b43a85b94b142b5a86, type: 3}
       time: 0.08
-      velocity: {x: 0, y: 0}
+      velocity: {x: 6, y: 0}
     - name: 
       frameType: 1
       hitboxes:
@@ -1120,36 +1249,36 @@ MonoBehaviour:
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
-      - _position: {x: 0.87, y: 1.74}
-        _size: {x: 1.38, y: 1.87}
+      - _position: {x: 0.69, y: 2.07}
+        _size: {x: 2.3, y: 1.46}
         _type: 0
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
       sprite: {fileID: 21300008, guid: 2c1cc1f9066b72b43a85b94b142b5a86, type: 3}
       time: 0.12
-      velocity: {x: 0, y: 0}
+      velocity: {x: 2, y: 0}
     - name: 
       frameType: 1
       hitboxes:
       - _position: {x: -0.92, y: 0}
-        _size: {x: 1.77, y: 3.46}
+        _size: {x: 1.85, y: 3.17}
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
       sprite: {fileID: 21300010, guid: 2c1cc1f9066b72b43a85b94b142b5a86, type: 3}
       time: 0.08
-      velocity: {x: 0, y: 0}
+      velocity: {x: 2, y: 0}
     - name: 
       frameType: 1
       hitboxes:
-      - _position: {x: -0.92, y: 0}
-        _size: {x: 1.77, y: 3.46}
+      - _position: {x: -0.48, y: -0.08}
+        _size: {x: 1.64, y: 3.04}
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
       sprite: {fileID: 21300012, guid: 2c1cc1f9066b72b43a85b94b142b5a86, type: 3}
       time: 0.08
-      velocity: {x: 0, y: 0}
+      velocity: {x: 2, y: 0}
     - name: 
       frameType: 1
       hitboxes:
@@ -1158,25 +1287,25 @@ MonoBehaviour:
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
-      - _position: {x: 0.87, y: 1.74}
-        _size: {x: 1.38, y: 1.87}
+      - _position: {x: 0.67, y: 2}
+        _size: {x: 2.2, y: 1.5}
         _type: 0
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
       sprite: {fileID: 21300014, guid: 2c1cc1f9066b72b43a85b94b142b5a86, type: 3}
       time: 0.12
-      velocity: {x: 0, y: 0}
+      velocity: {x: 4, y: 0}
     - name: 
       frameType: 1
       hitboxes:
-      - _position: {x: -0.92, y: 0}
-        _size: {x: 1.77, y: 3.46}
+      - _position: {x: -0.27, y: 0}
+        _size: {x: 1.78, y: 3.08}
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
       sprite: {fileID: 21300016, guid: 2c1cc1f9066b72b43a85b94b142b5a86, type: 3}
       time: 0.08
-      velocity: {x: 0, y: 0}
+      velocity: {x: 6, y: 0}
     - name: 
       frameType: 1
       hitboxes:
@@ -1187,55 +1316,55 @@ MonoBehaviour:
         dmg: 1
       sprite: {fileID: 21300018, guid: 2c1cc1f9066b72b43a85b94b142b5a86, type: 3}
       time: 0.08
-      velocity: {x: 0, y: 0}
+      velocity: {x: 4, y: 0}
     - name: 
       frameType: 1
       hitboxes:
       - _position: {x: -0.92, y: 0}
-        _size: {x: 1.77, y: 3.46}
+        _size: {x: 1.77, y: 3.4}
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
-      - _position: {x: 0.87, y: 1.74}
-        _size: {x: 1.38, y: 1.87}
+      - _position: {x: 0.67, y: 2.1}
+        _size: {x: 2, y: 1.5}
         _type: 0
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
       sprite: {fileID: 21300020, guid: 2c1cc1f9066b72b43a85b94b142b5a86, type: 3}
       time: 0.12
-      velocity: {x: 0, y: 0}
+      velocity: {x: 4, y: 0}
     - name: 
       frameType: 1
       hitboxes:
       - _position: {x: -1.25, y: 0}
-        _size: {x: 1.77, y: 3.46}
+        _size: {x: 1.65, y: 3.21}
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
-      - _position: {x: 0.87, y: 1.74}
-        _size: {x: 1.38, y: 1.87}
+      - _position: {x: 0.39, y: 1.57}
+        _size: {x: 1.62, y: 1.27}
         _type: 0
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
       sprite: {fileID: 21300022, guid: 2c1cc1f9066b72b43a85b94b142b5a86, type: 3}
       time: 0.08
-      velocity: {x: 0, y: 0}
+      velocity: {x: 5, y: 0}
     - name: 
       frameType: 1
       hitboxes:
       - _position: {x: -0.92, y: 0}
-        _size: {x: 1.77, y: 3.46}
+        _size: {x: 1.77, y: 3.36}
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
-      - _position: {x: 0.87, y: 1.74}
-        _size: {x: 1.38, y: 1.87}
+      - _position: {x: 0.75, y: 2.03}
+        _size: {x: 1.38, y: 1.35}
         _type: 0
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
       sprite: {fileID: 21300024, guid: 2c1cc1f9066b72b43a85b94b142b5a86, type: 3}
       time: 0.08
-      velocity: {x: 0, y: 0}
+      velocity: {x: 6, y: 0}
     - name: 
       frameType: 1
       hitboxes:
@@ -1244,46 +1373,56 @@ MonoBehaviour:
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
-      - _position: {x: 0.87, y: 1.74}
-        _size: {x: 1.38, y: 1.87}
+      - _position: {x: 0.79, y: 2.16}
+        _size: {x: 1.65, y: 1.45}
         _type: 0
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
       sprite: {fileID: 21300026, guid: 2c1cc1f9066b72b43a85b94b142b5a86, type: 3}
       time: 0.12
-      velocity: {x: 0, y: 0}
+      velocity: {x: 2, y: 0}
     - name: 
       frameType: 2
       hitboxes:
-      - _position: {x: -1.16, y: 0}
-        _size: {x: 1.77, y: 3.46}
+      - _position: {x: -1.51, y: 1.41}
+        _size: {x: 1.59, y: 1.95}
+        _type: 1
+        color: {r: 0, g: 0, b: 0, a: 0}
+        dmg: 1
+      - _position: {x: -1.26, y: 0}
+        _size: {x: 2.71, y: 1.43}
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
       sprite: {fileID: 21300028, guid: 2c1cc1f9066b72b43a85b94b142b5a86, type: 3}
       time: 0.04
-      velocity: {x: 0, y: 0}
+      velocity: {x: 4, y: 0}
     - name: 
       frameType: 2
       hitboxes:
-      - _position: {x: -0.92, y: 0}
-        _size: {x: 1.77, y: 3.46}
+      - _position: {x: -1.14, y: 1.66}
+        _size: {x: 1.77, y: 1.55}
+        _type: 1
+        color: {r: 0, g: 0, b: 0, a: 0}
+        dmg: 1
+      - _position: {x: -1.33, y: -0}
+        _size: {x: 2.41, y: 1.65}
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
       sprite: {fileID: 21300030, guid: 2c1cc1f9066b72b43a85b94b142b5a86, type: 3}
       time: 0.04
-      velocity: {x: 0, y: 0}
+      velocity: {x: 4, y: 0}
     currentFrame: 0
     name: forward attack
     velocity: {x: 0, y: 0}
     time_modifier: 1
   - frames:
     - name: 
-      frameType: 2
+      frameType: 0
       hitboxes:
-      - _position: {x: -0.08, y: 0}
-        _size: {x: 1.77, y: 3.46}
+      - _position: {x: 0.15, y: 0}
+        _size: {x: 1.77, y: 3.29}
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
@@ -1291,10 +1430,10 @@ MonoBehaviour:
       time: 0.08
       velocity: {x: 0, y: 0}
     - name: 
-      frameType: 2
+      frameType: 1
       hitboxes:
-      - _position: {x: -0.08, y: 0}
-        _size: {x: 1.77, y: 3.46}
+      - _position: {x: -1.02, y: 0}
+        _size: {x: 2.79, y: 3.13}
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
@@ -1302,10 +1441,10 @@ MonoBehaviour:
       time: 0.12
       velocity: {x: 0, y: 0}
     - name: 
-      frameType: 2
+      frameType: 1
       hitboxes:
-      - _position: {x: -0.08, y: 0}
-        _size: {x: 1.77, y: 3.46}
+      - _position: {x: 0.15, y: 0}
+        _size: {x: 1.77, y: 2.98}
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
@@ -1313,10 +1452,10 @@ MonoBehaviour:
       time: 0.08
       velocity: {x: 0, y: 0}
     - name: 
-      frameType: 2
+      frameType: 1
       hitboxes:
-      - _position: {x: -0.08, y: 0}
-        _size: {x: 1.77, y: 3.46}
+      - _position: {x: 0.15, y: 0}
+        _size: {x: 1.77, y: 3.16}
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
@@ -1327,7 +1466,7 @@ MonoBehaviour:
       frameType: 2
       hitboxes:
       - _position: {x: -0.08, y: 0}
-        _size: {x: 1.77, y: 3.46}
+        _size: {x: 1.77, y: 3.33}
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
@@ -1337,8 +1476,8 @@ MonoBehaviour:
     - name: 
       frameType: 2
       hitboxes:
-      - _position: {x: -0.29, y: 0}
-        _size: {x: 1.77, y: 3.46}
+      - _position: {x: -0.22, y: 0}
+        _size: {x: 1.77, y: 3.36}
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
