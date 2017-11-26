@@ -116,10 +116,21 @@ MonoBehaviour:
   fighter: {fileID: 11400000, guid: 2b86dec85b2690a4a84a926c9873dda4, type: 2}
   drawHitbox: 1
   controllerNumber: 1
-  opponent: {fileID: 1979740369297006}
+  opponent: {fileID: 114484975224229398}
   life: 100
+  combo_strength: 0
+  parryTimer: 0
   sens: {x: 0, y: 0}
   hit: {fileID: 1842889166708966, guid: 2197fde14182de8489aae2167100c358, type: 2}
+  hitBlock: {fileID: 1754127957196204, guid: 0e2daf9fa19d98f4cb3e15990b7b3275, type: 2}
+  confirmSuccess: {fileID: 1279322181894742, guid: eef0aa2fd9485d74e8e122a28fad9ee5,
+    type: 2}
+  confirmBigSuccess: {fileID: 1529209976319562, guid: 21caa549f9152fc4aa239a75a92a046b,
+    type: 2}
+  parry: {fileID: 1076436157176456, guid: fef18bc75928ca3488db49cf6bc77a4b, type: 2}
+  parryPerfect: {fileID: 1666438446970906, guid: 4f5ee5485e2a13c4a942bd38fd643bd3,
+    type: 2}
+  guardBreak: {fileID: 1398323086944634, guid: 37591f896faa94541a70010089aa1fa4, type: 2}
 --- !u!114 &114484975224229398
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -134,10 +145,21 @@ MonoBehaviour:
   fighter: {fileID: 11400000, guid: 2b86dec85b2690a4a84a926c9873dda4, type: 2}
   drawHitbox: 1
   controllerNumber: 2
-  opponent: {fileID: 1600659802681082}
+  opponent: {fileID: 114018580943779924}
   life: 100
+  combo_strength: 0
+  parryTimer: 0
   sens: {x: 0, y: 0}
   hit: {fileID: 1842889166708966, guid: 2197fde14182de8489aae2167100c358, type: 2}
+  hitBlock: {fileID: 1754127957196204, guid: 0e2daf9fa19d98f4cb3e15990b7b3275, type: 2}
+  confirmSuccess: {fileID: 1279322181894742, guid: eef0aa2fd9485d74e8e122a28fad9ee5,
+    type: 2}
+  confirmBigSuccess: {fileID: 1529209976319562, guid: 21caa549f9152fc4aa239a75a92a046b,
+    type: 2}
+  parry: {fileID: 1076436157176456, guid: fef18bc75928ca3488db49cf6bc77a4b, type: 2}
+  parryPerfect: {fileID: 1666438446970906, guid: 4f5ee5485e2a13c4a942bd38fd643bd3,
+    type: 2}
+  guardBreak: {fileID: 1398323086944634, guid: 37591f896faa94541a70010089aa1fa4, type: 2}
 --- !u!114 &114625867236568980
 MonoBehaviour:
   m_ObjectHideFlags: 1
