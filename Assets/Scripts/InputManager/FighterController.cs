@@ -10,11 +10,20 @@ namespace FightingGame
         public bool drawHitbox = true;
         public int controllerNumber = 1;
         VirtualController controller = VirtualController.GetController(1);
-        public GameObject opponent;
+        public FighterController opponent;
         public float life = 100;
+        public float combo_strength = 0.0f;
         public Vector2 sens = new Vector2();
 
         public GameObject hit;
+        public GameObject hitBlock;
+        public GameObject confirmSuccess;
+        public GameObject confirmBigSuccess;
+        public GameObject parry;
+        public GameObject parryPerfect;
+        public GameObject guardBreak;
+
+        Vector3 addedVelocity = new Vector3(0, 0, 0);
 
         void Start () {
             fighter = Instantiate(fighter);
@@ -95,10 +104,17 @@ namespace FightingGame
                 }
             }
 
+            //Confirm
+            if(curState == fighter.Taunt && opponent.combo_strength>0)
+            {
+                opponent.Confirm();
+            }
+
             //Apply gravity
             float g = FightManager.gravity;
             fighter.velocity += Vector3.down * g;
             fighter.velocity += ((Vector3)fighter.GetMove().GetVelocity()*sens.x);
+            fighter.velocity += addedVelocity;
             transform.position += fighter.velocity * deltaT;
             if (transform.position.y < FightManager.groundHeight)
             {
@@ -146,19 +162,26 @@ namespace FightingGame
             if((controller.GetHorizontal() < -0.3f && sens.x > 0.1f) || (controller.GetHorizontal() > 0.3f && sens.x < -0.1f))
             {
                 fighter.SetMove(fighter.Block);
+                StartCoroutine(blockPush());
+                particleLaunch(hitBlock, (Vector3)(transform.position + Vector3.up*2f+new Vector3(sens.x,0,0)));
             }
             else
             {
                 fighter.SetMove(fighter.Hit);
-                GameObject s = Instantiate(hit);
-                s.transform.position = (Vector3)(hitting._position + hitting._size / 2f) + Vector3.back * 2f;
-                StartCoroutine(launchParticle(s));
+                particleLaunch(hit, (Vector3)(hitting._position + hitting._size/2f));
                 float t = FightManager.timeModifier;
                 FightManager.timeModifier = 0.0f;
                 StartCoroutine(freezeTime(0.1f, t));
-                life -= hitting.dmg;
+                combo_strength += hitting.dmg;
             }
             Debug.Log("Hit!");
+        }
+
+        public void Confirm()
+        {
+            life -= combo_strength;
+            combo_strength = 0;
+            fighter.SetMove(fighter.Hit);
         }
 
         public void OnRenderObject()
@@ -173,10 +196,29 @@ namespace FightingGame
             OnRenderObject();
         }
 
+        IEnumerator blockPush()
+        {
+            addedVelocity = new Vector3(-sens.x*5, 0, 0);
+            yield return new WaitForSeconds(0.3f);
+            addedVelocity = Vector3.zero;
+        }
+
         IEnumerator freezeTime(float duration, float value)
         {
             yield return new WaitForSeconds(duration);
             FightManager.timeModifier = FightManager.defaultTimeModifier;
+        }
+
+        void particleLaunch(GameObject p, Vector3 pos)
+        {
+            GameObject s = Instantiate(p);
+            s.transform.position = pos;
+            s.transform.localScale = new Vector3(s.transform.localScale.x*sens.x, s.transform.localScale.y, s.transform.localScale.z);
+            foreach(Transform g in s.transform)
+            {
+                g.localScale = new Vector3(g.localScale.x * sens.x, g.localScale.y, g.localScale.z);
+            }
+            StartCoroutine(launchParticle(s));
         }
 
         IEnumerator launchParticle(GameObject p)

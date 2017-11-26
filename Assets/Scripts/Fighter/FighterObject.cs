@@ -22,6 +22,7 @@ namespace FightingGame
         public int Walk = 0;
         public int Hit = 0;
         public int Block = 0;
+        public int Taunt = 0;
 
         public bool running = false;
 

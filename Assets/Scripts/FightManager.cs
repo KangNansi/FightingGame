@@ -28,6 +28,8 @@ namespace FightingGame
         {
             float l1 = Mathf.Max(player1.life, 0.0f);
             float l2 = Mathf.Max(player2.life, 0.0f);
+            float c1 = player1.combo_strength;
+            float c2 = player2.combo_strength;
 
             Matrix4x4 scale = Matrix4x4.Scale(new Vector3(0.05f, 0.05f, 0.05f));
             Material debug = HitBox.GetDebugMaterial();
@@ -45,6 +47,12 @@ namespace FightingGame
             GL.Color(Color.green);
             GL.Vertex(Vector3.zero);
             GL.Vertex3(0, 20, 0);
+            GL.Vertex3(l1, 20, 0);
+            GL.Vertex3(l1, 0, 0);
+
+            GL.Color(Color.blue);
+            GL.Vertex3(l1 - c1, 0, 0);
+            GL.Vertex3(l1 - c1, 20, 0);
             GL.Vertex3(l1, 20, 0);
             GL.Vertex3(l1, 0, 0);
 
@@ -67,6 +75,12 @@ namespace FightingGame
             GL.Color(Color.green);
             GL.Vertex(Vector3.zero);
             GL.Vertex3(0, 20, 0);
+            GL.Vertex3(l2, 20, 0);
+            GL.Vertex3(l2, 0, 0);
+
+            GL.Color(Color.blue);
+            GL.Vertex3(l2 - c2, 0, 0);
+            GL.Vertex3(l2 - c2, 20, 0);
             GL.Vertex3(l2, 20, 0);
             GL.Vertex3(l2, 0, 0);
 
