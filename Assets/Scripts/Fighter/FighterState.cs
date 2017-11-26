@@ -7,10 +7,18 @@ namespace FightingGame
     [System.Serializable]
     public class FighterState {
         public string name = "";
+        public enum Type
+        {
+            StartingFrame,
+            AttackFrame,
+            RecoveryFrame
+        }
+        public Type frameType = Type.RecoveryFrame;
         [SerializeField]
         public List<HitBox> hitboxes = new List<HitBox>();
         public Sprite sprite;
         public float time = 0.08f;
+        public Vector2 velocity = new Vector2();
 
         public FighterState()
         {

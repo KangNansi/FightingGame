@@ -26,10 +26,10 @@ namespace FightingGame
             f.controllerNumber = EditorGUILayout.IntField(f.controllerNumber);
             f.opponent = (GameObject)EditorGUILayout.ObjectField(f.opponent, typeof(GameObject), true);
             //f.moveSet = (MoveSet)EditorGUILayout.ObjectField(f.moveSet, typeof(MoveSet), false);
-            if(GUILayout.Button("Edit MoveSet"))
+            /*if(GUILayout.Button("Edit MoveSet"))
             {
                 MoveSetEditor.Init(f);
-            }
+            }*/
 
             f.jumpStrength = EditorGUILayout.FloatField("Jump Strength", f.jumpStrength);
             f.speed = EditorGUILayout.FloatField("Speed", f.speed);

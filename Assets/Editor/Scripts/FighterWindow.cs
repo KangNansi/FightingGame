@@ -13,6 +13,7 @@ namespace FightingGame
         public FighterObject fighter;
         private List<FighterStateEditor> states = new List<FighterStateEditor>();
         Vector2 windowPos = new Vector2();
+        Vector2 statesScroll = new Vector2();
 
         private int selectedMove = -1;
 
@@ -62,7 +63,10 @@ namespace FightingGame
             GUILayout.Label("Fighter Editor", EditorStyles.boldLabel);
 
             fighter = (FighterObject)EditorGUILayout.ObjectField(fighter, typeof(FighterObject), true);
-
+            if (GUILayout.Button("Edit MoveSet"))
+            {
+                MoveSetEditor.Init(fighter);
+            }
             GUILayout.EndHorizontal();
             if (!fighter)
             {
@@ -79,6 +83,8 @@ namespace FightingGame
             fighter.Stand = EditorGUILayout.Popup("Stand", fighter.Stand, fighter.moves.ConvertAll<string>(MoveToName).ToArray());
             fighter.Crouch = EditorGUILayout.Popup("Crouch", fighter.Crouch, fighter.moves.ConvertAll<string>(MoveToName).ToArray());
             fighter.Walk = EditorGUILayout.Popup("Walk", fighter.Walk, fighter.moves.ConvertAll<string>(MoveToName).ToArray());
+            fighter.Hit = EditorGUILayout.Popup("Hit", fighter.Hit, fighter.moves.ConvertAll<string>(MoveToName).ToArray());
+            fighter.Block = EditorGUILayout.Popup("Block", fighter.Block, fighter.moves.ConvertAll<string>(MoveToName).ToArray());
             GUILayout.EndHorizontal();
 
             GUILayout.BeginHorizontal();
@@ -113,8 +119,8 @@ namespace FightingGame
             if (selectedMove >= 0)
             {
                 //Draw Preview
-                FighterStateEditor.DrawState(fighter.moves[selectedMove].GetFrame(Time.time), fighter.moves[selectedMove].GetMaxHeight());
-
+                FighterStateEditor.DrawState(fighter.moves[selectedMove].GetFrame((Time.time* fighter.moves[selectedMove].time_modifier)), fighter.moves[selectedMove].GetMaxHeight());
+                fighter.moves[selectedMove].time_modifier = EditorGUILayout.Slider(fighter.moves[selectedMove].time_modifier, 0.0f, 5.0f);
                 if(GUILayout.Button("Add State"))
                 {
                     FighterState s = new FighterState();
@@ -126,9 +132,13 @@ namespace FightingGame
                     fighter.moves[selectedMove].frames.Add(s);
                     states.Add(new FighterStateEditor(s));
                 }
+                //statesScroll = GUILayout.BeginScrollView(statesScroll);
+
                 GUILayout.BeginHorizontal();
                 for(int i = 0; i < states.Count; i++)
                 {
+                    GUILayout.BeginVertical();
+                    GUILayout.BeginHorizontal();
                     if (i > 0 && GUILayout.Button("<"))
                     {
                         states.Insert(i - 1, states[i]);
@@ -140,18 +150,19 @@ namespace FightingGame
                         states.RemoveAt(i);
                         i--;
                     }
-                    else
-                    {
-                        states[i].OnGUI();
-                    }
                     if (i < states.Count-1 && GUILayout.Button(">"))
                     {
                         Debug.Log("insert");
                         states.Insert(i+2, states[i]);
                         states.RemoveAt(i);
                     }
+                    GUILayout.EndHorizontal();
+                    states[i].OnGUI();
+                    GUILayout.EndVertical();
                 }
                 GUILayout.EndHorizontal();
+
+               // GUILayout.EndScrollView();
             }
 
             GUILayout.EndScrollView();

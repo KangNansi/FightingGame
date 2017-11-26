@@ -7,6 +7,7 @@ namespace FightingGame
 {
     public class FighterStateEditor {
         FighterState state;
+        static float scale = 0.3f;
 
         static Material lineMaterial;
         static void CreateLineMaterial()
@@ -35,14 +36,15 @@ namespace FightingGame
 
 	    public void OnGUI()
         {
+            GUILayout.BeginVertical();
             Rect r = EditorGUILayout.GetControlRect();
             if (state.sprite)
             {
                 r.width = state.sprite.rect.width;
             }
-            GUILayout.BeginVertical();
 
             state.name = EditorGUILayout.TextField(state.name);
+            state.frameType = (FighterState.Type)EditorGUILayout.EnumPopup("Frame Type:", state.frameType);
 
             
 
@@ -50,9 +52,9 @@ namespace FightingGame
             if (state.sprite)
             {
                 Rect rect = EditorGUILayout.GetControlRect();
-                rect.width = state.sprite.rect.width;
-                rect.height = state.sprite.rect.height;
-                GUILayout.Space(state.sprite.rect.height);
+                rect.width = state.sprite.rect.width*scale;
+                rect.height = state.sprite.rect.height*scale;
+                GUILayout.Space(state.sprite.rect.height*scale);
                 GUI.DrawTextureWithTexCoords(rect, state.sprite.texture, GetSpriteRect(state.sprite));
             
                 switch (Event.current.type)
@@ -71,6 +73,9 @@ namespace FightingGame
             }
 
             state.time = EditorGUILayout.Slider(state.time, 0, 1);
+
+            state.velocity = EditorGUILayout.Vector2Field("Velocity", state.velocity);
+
             //Hitboxes
             GUILayout.BeginHorizontal();
             if(GUILayout.Button("Add Hitbox"))
@@ -95,8 +100,8 @@ namespace FightingGame
             Rect rect = EditorGUILayout.GetControlRect();
             if (state != null && state.sprite != null)
             {
-                rect.width = state.sprite.rect.width;
-                rect.height = h;
+                rect.width = state.sprite.rect.width*scale;
+                rect.height = h*scale;
             }
                 GUILayout.Space(h);
             if (state != null && state.sprite != null) {
@@ -120,6 +125,8 @@ namespace FightingGame
             Vector2 pos;
             pos.x = state.sprite.pivot.x + hb._position.x * state.sprite.pixelsPerUnit;
             pos.y = state.sprite.rect.height-state.sprite.pivot.y - hb._position.y * state.sprite.pixelsPerUnit;
+            size *= scale;
+            pos *= scale;
             CreateLineMaterial();
             lineMaterial.SetPass(0);
             GL.PushMatrix();
@@ -144,6 +151,7 @@ namespace FightingGame
         void HitboxGUI(HitBox hb)
         {
             hb._type = (HitBox.Type)EditorGUILayout.EnumPopup("Type", hb._type);
+            hb.dmg = EditorGUILayout.FloatField(hb.dmg);
             hb._position = EditorGUILayout.Vector2Field("Pos:", hb._position);
             hb._size = EditorGUILayout.Vector2Field("Size:", hb._size);
             if (GUILayout.Button("Remove"))

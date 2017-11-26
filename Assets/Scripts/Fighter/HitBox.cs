@@ -27,6 +27,8 @@ namespace FightingGame
         }
         [SerializeField]
         Color color;
+        [SerializeField]
+        public float dmg = 1.0f;
 
         public HitBox(Type type, Vector2 position, Vector2 size)
         {
@@ -41,6 +43,7 @@ namespace FightingGame
             _type = h._type;
             _size = h._size;
             _position = h._position;
+            dmg = h.dmg;
         }
 
         public HitBox(HitBox h, Transform t)
@@ -55,6 +58,7 @@ namespace FightingGame
             if (t.localScale.y < 0)
                 _position.x -= _size.x;
             _position += (Vector2)t.position;
+            dmg = h.dmg;
         }
 
         protected void SetColor()
@@ -89,6 +93,12 @@ namespace FightingGame
                 // Turn off depth writes
                 debugMat.SetInt("_ZWrite", 0);
             }
+        }
+
+        public static Material GetDebugMaterial()
+        {
+            CreateMaterial();
+            return debugMat;
         }
 
         public void Draw(Matrix4x4 p)

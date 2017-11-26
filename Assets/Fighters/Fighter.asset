@@ -17,112 +17,163 @@ MonoBehaviour:
   moves:
   - frames:
     - name: Stand1
+      frameType: 2
       hitboxes:
-      - _position: {x: 0, y: 0.04}
-        _size: {x: 40, y: 0.77}
+      - _position: {x: 0, y: 0}
+        _size: {x: 1, y: 1}
         _type: 0
         color: {r: 1, g: 0, b: 0, a: 0.5}
+        dmg: 0
       sprite: {fileID: 21300000, guid: fa9bff244b8104c41bc538aaaafc0836, type: 3}
-      time: 0.1
+      time: 0.378
+      velocity: {x: 0, y: 0}
     - name: 
-      hitboxes:
-      - _position: {x: 7.7, y: 0}
-        _size: {x: 40, y: 75.74}
-        _type: 1
-        color: {r: 1, g: 0, b: 0, a: 0.5}
-      sprite: {fileID: 21300002, guid: fa9bff244b8104c41bc538aaaafc0836, type: 3}
-      time: 0.1
-    - name: 
+      frameType: 2
       hitboxes:
       - _position: {x: 0, y: 0}
-        _size: {x: 40, y: 40}
-        _type: 1
-        color: {r: 1, g: 0, b: 0, a: 0.5}
-      sprite: {fileID: 21300004, guid: fa9bff244b8104c41bc538aaaafc0836, type: 3}
-      time: 0.1
+        _size: {x: 1, y: 1}
+        _type: 0
+        color: {r: 0, g: 0, b: 0, a: 0}
+        dmg: 0
+      sprite: {fileID: 21300000, guid: fa9bff244b8104c41bc538aaaafc0836, type: 3}
+      time: 0.709
+      velocity: {x: 0, y: 0}
     - name: 
+      frameType: 2
       hitboxes:
       - _position: {x: 0, y: 0}
-        _size: {x: 40, y: 40}
-        _type: 1
-        color: {r: 1, g: 0, b: 0, a: 0.5}
-      sprite: {fileID: 21300006, guid: fa9bff244b8104c41bc538aaaafc0836, type: 3}
-      time: 0.1
+        _size: {x: 1, y: 1}
+        _type: 0
+        color: {r: 0, g: 0, b: 0, a: 0}
+        dmg: 0
+      sprite: {fileID: 21300000, guid: fa9bff244b8104c41bc538aaaafc0836, type: 3}
+      time: 0.709
+      velocity: {x: 0, y: 0}
     - name: 
+      frameType: 2
       hitboxes:
       - _position: {x: 0, y: 0}
-        _size: {x: 40, y: 40}
-        _type: 1
-        color: {r: 1, g: 0, b: 0, a: 0.5}
-      sprite: {fileID: 21300008, guid: fa9bff244b8104c41bc538aaaafc0836, type: 3}
-      time: 0.1
+        _size: {x: 1, y: 1}
+        _type: 0
+        color: {r: 0, g: 0, b: 0, a: 0}
+        dmg: 0
+      sprite: {fileID: 21300000, guid: fa9bff244b8104c41bc538aaaafc0836, type: 3}
+      time: 0.709
+      velocity: {x: 0, y: 0}
+    - name: 
+      frameType: 2
+      hitboxes:
+      - _position: {x: 0, y: 0}
+        _size: {x: 1, y: 1}
+        _type: 0
+        color: {r: 0, g: 0, b: 0, a: 0}
+        dmg: 0
+      sprite: {fileID: 21300000, guid: fa9bff244b8104c41bc538aaaafc0836, type: 3}
+      time: 0.709
+      velocity: {x: 0, y: 0}
+    - name: 
+      frameType: 2
+      hitboxes:
+      - _position: {x: 0, y: 0}
+        _size: {x: 1, y: 1}
+        _type: 0
+        color: {r: 0, g: 0, b: 0, a: 0}
+        dmg: 0
+      sprite: {fileID: 21300000, guid: fa9bff244b8104c41bc538aaaafc0836, type: 3}
+      time: 0.709
+      velocity: {x: 0, y: 0}
     currentFrame: 0
     name: Stand
+    time_modifier: 1
   - frames: []
     currentFrame: 0
     name: Stand
+    time_modifier: 1
   - frames:
     - name: 
+      frameType: 2
       hitboxes:
       - _position: {x: 0, y: 0}
         _size: {x: 1, y: 1}
         _type: 1
         color: {r: 0, g: 0, b: 1, a: 0.5}
+        dmg: 0
       sprite: {fileID: 21300018, guid: fa9bff244b8104c41bc538aaaafc0836, type: 3}
       time: 0.5
+      velocity: {x: 0, y: 0}
     currentFrame: 0
     name: Crouch
+    time_modifier: 1
   - frames:
     - name: 
+      frameType: 2
       hitboxes:
       - _position: {x: 0, y: 0}
         _size: {x: 1, y: 1}
         _type: 1
         color: {r: 0, g: 0, b: 1, a: 0.5}
+        dmg: 0
       sprite: {fileID: 21300038, guid: fa9bff244b8104c41bc538aaaafc0836, type: 3}
       time: 0.1
+      velocity: {x: 0, y: 0}
     - name: 
+      frameType: 2
       hitboxes:
       - _position: {x: 0, y: 0}
         _size: {x: 1, y: 1}
         _type: 1
         color: {r: 0, g: 0, b: 1, a: 0.5}
+        dmg: 0
       sprite: {fileID: 21300040, guid: fa9bff244b8104c41bc538aaaafc0836, type: 3}
       time: 0.1
+      velocity: {x: 0, y: 0}
     - name: 
+      frameType: 2
       hitboxes:
       - _position: {x: 0, y: 0}
         _size: {x: 1, y: 1}
         _type: 1
         color: {r: 0, g: 0, b: 1, a: 0.5}
+        dmg: 0
       sprite: {fileID: 21300042, guid: fa9bff244b8104c41bc538aaaafc0836, type: 3}
       time: 0.1
+      velocity: {x: 0, y: 0}
     - name: 
+      frameType: 2
       hitboxes:
       - _position: {x: 0, y: 0}
         _size: {x: 1, y: 1}
         _type: 1
         color: {r: 0, g: 0, b: 1, a: 0.5}
+        dmg: 0
       sprite: {fileID: 21300044, guid: fa9bff244b8104c41bc538aaaafc0836, type: 3}
       time: 0.1
+      velocity: {x: 0, y: 0}
     - name: 
+      frameType: 2
       hitboxes:
       - _position: {x: 0, y: 0}
         _size: {x: 1, y: 1}
         _type: 1
         color: {r: 0, g: 0, b: 1, a: 0.5}
+        dmg: 0
       sprite: {fileID: 21300046, guid: fa9bff244b8104c41bc538aaaafc0836, type: 3}
       time: 0.1
+      velocity: {x: 0, y: 0}
     - name: 
+      frameType: 2
       hitboxes:
       - _position: {x: 0, y: 0}
         _size: {x: 1, y: 1}
         _type: 1
         color: {r: 0, g: 0, b: 1, a: 0.5}
+        dmg: 0
       sprite: {fileID: 21300048, guid: fa9bff244b8104c41bc538aaaafc0836, type: 3}
       time: 0.1
+      velocity: {x: 0, y: 0}
     currentFrame: 0
     name: Walk
+    time_modifier: 1
   speed: 5
   currentState: 0
   drawHitbox: 1
@@ -130,6 +181,8 @@ MonoBehaviour:
   Stand: 0
   Crouch: 2
   Walk: 3
+  Hit: 0
+  Block: 0
   running: 0
   velocity: {x: 0, y: 0, z: 0}
   jumpStrength: 10

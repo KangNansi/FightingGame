@@ -20,6 +20,8 @@ namespace FightingGame
         public int Stand = 0;
         public int Crouch = 0;
         public int Walk = 0;
+        public int Hit = 0;
+        public int Block = 0;
 
         public bool running = false;
 
@@ -31,6 +33,16 @@ namespace FightingGame
         {
             if (currentState == Stand || currentState == Walk) return true;
             return false;
+        }
+
+        public string[] GetMoveList()
+        {
+            List<string> r = new List<string>();
+            for (int i = 0; i < moves.Count; i++)
+            {
+                r.Add(moves[i].name);
+            }
+            return r.ToArray();
         }
 
         public void SetMove(int newMove)

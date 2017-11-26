@@ -13,10 +13,13 @@ namespace FightingGame
         public string name = "Unnamed";
 
         private float time = 0;
+
+        public float time_modifier = 1.0f;
         
         public bool Compute(float delta)
         {
-            time += delta;
+            time += delta*time_modifier;
+            while (time < 0) time += GetTotalTime();
             float p = 0;
             for(int i = 0; i < frames.Count; i++)
             {
@@ -39,6 +42,16 @@ namespace FightingGame
         public FighterState GetFrame()
         {
             return frames[currentFrame];
+        }
+
+        public FighterState.Type GetFrameType()
+        {
+            return frames[currentFrame].frameType;
+        }
+
+        public Vector2 GetVelocity()
+        {
+            return GetFrame().velocity;
         }
 
         float GetTotalTime()

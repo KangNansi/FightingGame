@@ -8,11 +8,11 @@ namespace FightingGame
 {
     public class MoveSetEditor : EditorWindow {
         public Rect windowRect = new Rect(100, 100, 20, 20);
-        Fighter _fighter;
+        FighterObject _fighter;
         int selectedNode = 0;
         int selectedMove = 0;
 
-        public static void Init(Fighter fighter)
+        public static void Init(FighterObject fighter)
         {
             MoveSetEditor window = (MoveSetEditor)EditorWindow.GetWindow(typeof(MoveSetEditor));
             window.Show();
@@ -22,6 +22,7 @@ namespace FightingGame
         private void OnGUI()
         {
             MoveSet set = _fighter.moveSet;
+            EditorGUILayout.LabelField("Moves");
             EditorGUILayout.BeginHorizontal();
             if(GUILayout.Button("Add Set"))
             {
@@ -34,6 +35,7 @@ namespace FightingGame
             }
             selectedMove = EditorGUILayout.Popup(selectedMove, _fighter.GetMoveList());
             EditorGUILayout.EndHorizontal();
+            EditorGUILayout.LabelField("MoveSets");
             EditorGUILayout.BeginHorizontal();
             if (GUILayout.Button("Remove"))
             {
@@ -42,7 +44,8 @@ namespace FightingGame
             }
             selectedNode = EditorGUILayout.Popup(selectedNode, NodeToString());
             EditorGUILayout.EndHorizontal();
-            if(selectedNode>=0 && selectedNode < set.nodes.Count)
+            EditorGUILayout.LabelField("Set");
+            if (selectedNode>=0 && selectedNode < set.nodes.Count)
             {
                 DrawNode(set.nodes[selectedNode]);
             }

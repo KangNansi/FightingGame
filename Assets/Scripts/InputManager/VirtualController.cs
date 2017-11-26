@@ -6,19 +6,19 @@ public class VirtualController {
 
     public enum Keys
     {
-        LP,
-        MP,
-        HP,
-        LK,
-        MK,
+        P,
+        FP,
+        BP,
+        UP,
+        DP,
         HK
     }
 
-    KeyCode LP;
-    KeyCode MP;
-    KeyCode HP;
-    KeyCode LK;
-    KeyCode MK;
+    KeyCode P;
+    KeyCode FP;
+    KeyCode BP;
+    KeyCode UP;
+    KeyCode DP;
     KeyCode HK;
     string hor;
     string ver;
@@ -27,51 +27,51 @@ public class VirtualController {
     {
         if(joystick == 1)
         {
-            LP = KeyCode.L;// KeyCode.Joystick1Button2;
-            MP = KeyCode.Joystick1Button3;
-            HP = KeyCode.Joystick1Button4;
-            LK = KeyCode.Joystick1Button0;
-            MK = KeyCode.Joystick1Button1;
+            P = KeyCode.Joystick1Button2;
+            FP = KeyCode.Joystick1Button3;
+            BP = KeyCode.Joystick1Button4;
+            UP = KeyCode.Joystick1Button0;
+            DP = KeyCode.Joystick1Button1;
             HK = KeyCode.Joystick1Button5;
             hor = "Horizontal1";
             ver = "Vertical1";
         }
         else
         {
-            LP = KeyCode.Joystick2Button2;
-            MP = KeyCode.Joystick2Button3;
-            HP = KeyCode.Joystick2Button4;
-            LK = KeyCode.Joystick2Button0;
-            MK = KeyCode.Joystick2Button1;
+            P = KeyCode.Joystick2Button2;
+            FP = KeyCode.Joystick2Button3;
+            BP = KeyCode.Joystick2Button4;
+            UP = KeyCode.Joystick2Button0;
+            DP = KeyCode.Joystick2Button1;
             HK = KeyCode.Joystick2Button5;
             hor = "Horizontal2";
             ver = "Vertical2";
         }
     }
 
-    public bool GetLPDown()
+    public bool GetPDown()
     {
-        return Input.GetKeyDown(LP);
+        return Input.GetKeyDown(P);
     }
 
-    public bool GetMPDown()
+    public bool GetFPDown()
     {
-        return Input.GetKeyDown(MP);
+        return Input.GetKeyDown(FP);
     }
 
-    public bool GetHPDown()
+    public bool GetBPDown()
     {
-        return Input.GetKeyDown(HP);
+        return Input.GetKeyDown(BP);
     }
 
-    public bool GetLKDown()
+    public bool GetUPDown()
     {
-        return Input.GetKeyDown(LK);
+        return Input.GetKeyDown(UP);
     }
 
-    public bool GetMKDown()
+    public bool GetDPDown()
     {
-        return Input.GetKeyDown(MK);
+        return Input.GetKeyDown(DP);
     }
 
     public bool GetHKDown()
@@ -83,11 +83,11 @@ public class VirtualController {
     {
         switch (k)
         {
-            case Keys.LP: return GetLPDown();
-            case Keys.MP: return GetMPDown();
-            case Keys.HP: return GetHPDown();
-            case Keys.LK: return GetLKDown();
-            case Keys.MK: return GetMKDown();
+            case Keys.P: return (GetPDown()&&GetHorizontal() > -0.3f && GetHorizontal() < 0.3f && GetVertical() < 0.3f && GetVertical() > -0.3f);
+            case Keys.FP: return (GetPDown() && GetHorizontal() > 0.3f);
+            case Keys.BP: return (GetPDown() && GetHorizontal() < -0.3f);
+            case Keys.UP: return (GetPDown() && GetVertical() < -0.3f);
+            case Keys.DP: return (GetPDown() && GetVertical() > 0.3f);
             case Keys.HK: return GetHKDown();
         }
         return false;
