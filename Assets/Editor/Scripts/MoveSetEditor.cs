@@ -62,11 +62,16 @@ namespace FightingGame
             {
                 n.actions.Add(new Action());
             }
-            foreach(Action a in n.actions)
+            for(int i = 0; i < n.actions.Count; i++)
             {
                 EditorGUILayout.BeginHorizontal();
-                a.input = (VirtualController.Keys)EditorGUILayout.EnumPopup(a.input);
-                a.state = EditorGUILayout.Popup(a.state, _fighter.GetMoveList());
+                n.actions[i].input = (VirtualController.Keys)EditorGUILayout.EnumPopup(n.actions[i].input);
+                n.actions[i].state = EditorGUILayout.Popup(n.actions[i].state, _fighter.GetMoveList());
+                if (GUILayout.Button("Remove"))
+                {
+                    n.actions.RemoveAt(i);
+                    i--;
+                }
                 EditorGUILayout.EndHorizontal();
             }
         }

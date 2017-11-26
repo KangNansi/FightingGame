@@ -63,7 +63,10 @@ namespace FightingGame
             //Movement
             if ((fighter.currentState == fighter.Stand || fighter.currentState == fighter.Walk) && fighter.Grounded)
             {
-                fighter.velocity += h * fighter.speed * Vector3.right;
+                float modif = 1.0f;
+                if ((h < 0.0f && sens.x > 0.0f) || (h > 0.0f && sens.x < 0.0f))
+                    modif = 0.7f;
+                fighter.velocity += h * fighter.speed * modif * Vector3.right;
                 if (fighter.currentState != fighter.Walk && h != 0)
                     fighter.SetMove(fighter.Walk);
                 if (fighter.currentState == fighter.Walk && h == 0)
@@ -75,6 +78,7 @@ namespace FightingGame
                 if (opponent.transform.position.x < transform.position.x) sens = new Vector3(-1, 1, 1);
                 else sens = new Vector3(1, 1, 1);
                 transform.localScale = sens;
+                controller.sens = sens.x;
             }
             //Attack
             int curState = fighter.currentState;
@@ -139,7 +143,7 @@ namespace FightingGame
 
         void Hit(int dmg, HitBox hitting, FighterController opponent)
         {
-            if((controller.GetHorizontal() < -0.3f && sens.x < -0.1f) || (controller.GetHorizontal() > 0.3f && sens.x > 0.1f))
+            if((controller.GetHorizontal() < -0.3f && sens.x > 0.1f) || (controller.GetHorizontal() > 0.3f && sens.x < -0.1f))
             {
                 fighter.SetMove(fighter.Block);
             }
@@ -172,7 +176,7 @@ namespace FightingGame
         IEnumerator freezeTime(float duration, float value)
         {
             yield return new WaitForSeconds(duration);
-            FightManager.timeModifier = value;
+            FightManager.timeModifier = FightManager.defaultTimeModifier;
         }
 
         IEnumerator launchParticle(GameObject p)

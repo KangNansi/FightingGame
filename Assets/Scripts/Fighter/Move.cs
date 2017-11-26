@@ -12,6 +12,8 @@ namespace FightingGame
         public int currentFrame = 0;
         public string name = "Unnamed";
 
+        public Vector2 velocity = new Vector2();
+
         private float time = 0;
 
         public float time_modifier = 1.0f;
@@ -51,7 +53,7 @@ namespace FightingGame
 
         public Vector2 GetVelocity()
         {
-            return GetFrame().velocity;
+            return velocity+GetFrame().velocity;
         }
 
         float GetTotalTime()

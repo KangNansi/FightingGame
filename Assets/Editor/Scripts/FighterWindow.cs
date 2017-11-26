@@ -118,6 +118,7 @@ namespace FightingGame
             GUILayout.EndHorizontal();
             if (selectedMove >= 0)
             {
+                fighter.moves[selectedMove].velocity = EditorGUILayout.Vector2Field("Move Velocity", fighter.moves[selectedMove].velocity);
                 //Draw Preview
                 FighterStateEditor.DrawState(fighter.moves[selectedMove].GetFrame((Time.time* fighter.moves[selectedMove].time_modifier)), fighter.moves[selectedMove].GetMaxHeight());
                 fighter.moves[selectedMove].time_modifier = EditorGUILayout.Slider(fighter.moves[selectedMove].time_modifier, 0.0f, 5.0f);

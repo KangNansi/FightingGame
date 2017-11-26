@@ -10,6 +10,7 @@ namespace FightingGame
         public FighterController player2;
         public static float groundHeight = 0;
         public static float gravity = 1;
+        public static float defaultTimeModifier = 1.0f;
         public static float timeModifier = 1.0f;
 
 

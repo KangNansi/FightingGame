@@ -25,6 +25,8 @@ public class VirtualController {
     string hor;
     string ver;
 
+    public float sens = 1f;
+
     public VirtualController(int joystick)
     {
         if(joystick == 1)
@@ -85,9 +87,9 @@ public class VirtualController {
     {
         switch (k)
         {
-            case Keys.P: return (GetPDown()&&GetHorizontal() > -0.3f && GetHorizontal() < 0.3f && GetVertical() < 0.3f && GetVertical() > -0.3f);
-            case Keys.FP: return (GetPDown() && GetHorizontal() > 0.3f);
-            case Keys.BP: return (GetPDown() && GetHorizontal() < -0.3f);
+            case Keys.P: return (GetPDown()&&GetHorizontalS() > -0.3f && GetHorizontalS() < 0.3f && GetVertical() < 0.3f && GetVertical() > -0.3f);
+            case Keys.FP: return (GetPDown() && GetHorizontalS() > 0.3f);
+            case Keys.BP: return (GetPDown() && GetHorizontalS() < -0.3f);
             case Keys.UP: return (GetPDown() && GetVertical() < -0.3f);
             case Keys.DP: return (GetPDown() && GetVertical() > 0.3f);
             case Keys.HK: return GetHKDown();
@@ -100,6 +102,11 @@ public class VirtualController {
     public float GetHorizontal()
     {
         return Input.GetAxisRaw(hor);
+    }
+
+    public float GetHorizontalS()
+    {
+        return Input.GetAxisRaw(hor) * sens;
     }
 
     public float GetVertical()
