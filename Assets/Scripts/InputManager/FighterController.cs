@@ -13,6 +13,9 @@ namespace FightingGame
         public FighterController opponent;
         public float life = 100;
         public float combo_strength = 0.0f;
+
+        public float parryTimer = 0.0f;
+
         public Vector2 sens = new Vector2();
 
         public GameObject hit;
@@ -24,6 +27,8 @@ namespace FightingGame
         public GameObject guardBreak;
 
         Vector3 addedVelocity = new Vector3(0, 0, 0);
+        bool blocking = false;
+        bool blocked = false;
 
         void Start () {
             fighter = Instantiate(fighter);
@@ -34,10 +39,19 @@ namespace FightingGame
         // Update is called once per frame
         void Update () {
             if (!fighter.running) return;
+            ///Block
+            if (controller.GetBlockDown())
+                blocking = true;
+            else if (controller.GetBlockUp())
+                blocking = false;
+            if (!blocking)
+                blocked = false;
+                
             float h = controller.GetHorizontal();
             float v = -controller.GetVertical();
             float deltaT = Time.deltaTime*FightManager.timeModifier;
             float dT = deltaT;
+            parryTimer += deltaT;
             if(fighter.currentState == fighter.Walk && h<0.0f)
             {
                 dT *= -1;
@@ -104,6 +118,12 @@ namespace FightingGame
                 }
             }
 
+            //Parry
+            if (controller.GetBlockDown())
+            {
+                parryTimer = 0.0f;
+            }
+
             //Confirm
             if(curState == fighter.Taunt && opponent.combo_strength>0)
             {
@@ -141,6 +161,10 @@ namespace FightingGame
                 }
 
             }
+            if (aattack.Count > 0 && a.controller.GetKeyDown(VirtualController.Keys.Block))
+            {
+                b.Block();
+            }
 
             foreach (HitBox h in battack)
             {
@@ -155,15 +179,35 @@ namespace FightingGame
                 }
 
             }
+
+            if (battack.Count > 0 && b.controller.GetKeyDown(VirtualController.Keys.Block))
+            {
+                a.Block();
+            }
+        }
+
+        void Block()
+        {
+            if (parryTimer > 0.05f)
+            {
+                fighter.SetMove(fighter.Block);
+            }
         }
 
         void Hit(int dmg, HitBox hitting, FighterController opponent)
         {
-            if((controller.GetHorizontal() < -0.3f && sens.x > 0.1f) || (controller.GetHorizontal() > 0.3f && sens.x < -0.1f))
+            if (controller.GetKeyDown(VirtualController.Keys.Block))//(controller.GetHorizontal() < -0.3f && sens.x > 0.1f) || (controller.GetHorizontal() > 0.3f && sens.x < -0.1f))
             {
-                fighter.SetMove(fighter.Block);
+                if(parryTimer < 0.05f) //Perfect Parry
+                {
+                     
+                }
+                else if(!blocked)
+                {
+                    particleLaunch(hitBlock, (Vector3)(transform.position + Vector3.up*2f+new Vector3(sens.x,0,0)));
+                }
                 StartCoroutine(blockPush());
-                particleLaunch(hitBlock, (Vector3)(transform.position + Vector3.up*2f+new Vector3(sens.x,0,0)));
+                blocked = true;
             }
             else
             {
