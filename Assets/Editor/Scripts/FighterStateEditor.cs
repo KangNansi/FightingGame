@@ -107,7 +107,7 @@ namespace FightingGame
                 rect.width = state.sprite.rect.width*scale;
                 rect.height = h*scale;
             }
-                GUILayout.Space(h);
+                GUILayout.Space(h*scale);
             if (state != null && state.sprite != null) {
                 GUI.DrawTextureWithTexCoords(rect, state.sprite.texture, GetSpriteRect(state.sprite));
             }
