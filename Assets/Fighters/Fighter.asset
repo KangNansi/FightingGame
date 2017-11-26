@@ -84,10 +84,12 @@ MonoBehaviour:
       velocity: {x: 0, y: 0}
     currentFrame: 0
     name: Stand
+    velocity: {x: 0, y: 0}
     time_modifier: 1
   - frames: []
     currentFrame: 0
     name: Stand
+    velocity: {x: 0, y: 0}
     time_modifier: 1
   - frames:
     - name: 
@@ -103,6 +105,7 @@ MonoBehaviour:
       velocity: {x: 0, y: 0}
     currentFrame: 0
     name: Crouch
+    velocity: {x: 0, y: 0}
     time_modifier: 1
   - frames:
     - name: 
@@ -173,6 +176,7 @@ MonoBehaviour:
       velocity: {x: 0, y: 0}
     currentFrame: 0
     name: Walk
+    velocity: {x: 0, y: 0}
     time_modifier: 1
   speed: 5
   currentState: 0
@@ -183,6 +187,7 @@ MonoBehaviour:
   Walk: 3
   Hit: 0
   Block: 0
+  Taunt: 0
   running: 0
   velocity: {x: 0, y: 0, z: 0}
   jumpStrength: 10

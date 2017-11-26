@@ -29,6 +29,8 @@ namespace FightingGame
         Color color;
         [SerializeField]
         public float dmg = 1.0f;
+        public float stun = 1.0f;
+        public float guardDmg = 1.0f;
 
         public HitBox(Type type, Vector2 position, Vector2 size)
         {

@@ -26,12 +26,12 @@ MonoBehaviour:
         state: 7
       - input: 4
         state: 8
-      - input: 5
-        state: 6
       - input: 6
         state: 11
       - input: 7
         state: 6
+      - input: 8
+        state: 2
     - moveId: 3
       actions:
       - input: 3
@@ -1499,6 +1499,7 @@ MonoBehaviour:
   Walk: 1
   Hit: 4
   Block: 5
+  Taunt: 6
   running: 0
   velocity: {x: 0, y: 0, z: 0}
   jumpStrength: 0

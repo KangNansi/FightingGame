@@ -427,6 +427,7 @@
     <Compile Include="Assets\Scripts\Fighter\Move.cs" />
     <Compile Include="Assets\Scripts\Fighter\MoveSet.cs" />
     <Compile Include="Assets\Scripts\FightManager.cs" />
+    <Compile Include="Assets\Scripts\ForDebug.cs" />
     <Compile Include="Assets\Scripts\InputManager\FighterController.cs" />
     <Compile Include="Assets\Scripts\InputManager\VirtualController.cs" />
     <Compile Include="Assets\SpriteShaders\DemoScene\Scripts\ShaderFloatAnimator.cs" />
