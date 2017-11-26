@@ -217,6 +217,8 @@ namespace FightingGame
                 FightManager.timeModifier = 0.0f;
                 StartCoroutine(freezeTime(0.1f, t));
                 combo_strength += hitting.dmg;
+                fighter.guard += hitting.guardDmg;
+                fighter.stun += hitting.stun;
             }
             Debug.Log("Hit!");
         }

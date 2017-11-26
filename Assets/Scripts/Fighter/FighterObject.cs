@@ -30,6 +30,11 @@ namespace FightingGame
         public float jumpStrength = 30;
         public bool jumped = false;
 
+        public float guardMax = 100f;
+        public float stunMax = 100f;
+        public float guard = 0.0f;
+        public float stun = 0.0f;
+
         public bool Standing()
         {
             if (currentState == Stand || currentState == Walk) return true;

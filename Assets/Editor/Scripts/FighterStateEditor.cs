@@ -161,7 +161,11 @@ namespace FightingGame
             }
             GUILayout.EndHorizontal();
             hb._type = (HitBox.Type)EditorGUILayout.EnumPopup("Type", hb._type);
-            hb.dmg = EditorGUILayout.FloatField(hb.dmg);
+            GUILayout.BeginHorizontal();
+            hb.dmg = EditorGUILayout.FloatField("Damage:", hb.dmg);
+            hb.stun = EditorGUILayout.FloatField("Stun:", hb.stun);
+            hb.guardDmg = EditorGUILayout.FloatField("GuardDmg:", hb.guardDmg);
+            GUILayout.EndHorizontal();
             hb._position = EditorGUILayout.Vector2Field("Pos:", hb._position);
             hb._size = EditorGUILayout.Vector2Field("Size:", hb._size);
             if (GUILayout.Button("Remove"))
