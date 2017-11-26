@@ -118,6 +118,8 @@ MonoBehaviour:
   controllerNumber: 1
   opponent: {fileID: 1979740369297006}
   life: 100
+  sens: {x: 0, y: 0}
+  hit: {fileID: 1842889166708966, guid: 2197fde14182de8489aae2167100c358, type: 2}
 --- !u!114 &114484975224229398
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -134,6 +136,8 @@ MonoBehaviour:
   controllerNumber: 2
   opponent: {fileID: 1600659802681082}
   life: 100
+  sens: {x: 0, y: 0}
+  hit: {fileID: 1842889166708966, guid: 2197fde14182de8489aae2167100c358, type: 2}
 --- !u!114 &114625867236568980
 MonoBehaviour:
   m_ObjectHideFlags: 1

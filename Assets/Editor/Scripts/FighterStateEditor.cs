@@ -8,6 +8,7 @@ namespace FightingGame
     public class FighterStateEditor {
         FighterState state;
         static float scale = 0.3f;
+        static HitBox copyPaste = null;
 
         static Material lineMaterial;
         static void CreateLineMaterial()
@@ -82,7 +83,10 @@ namespace FightingGame
             {
                 state.hitboxes.Add(new HitBox(HitBox.Type.Attack, new Vector2(0,0), new Vector2(1,1)));
             }
-            
+            if(GUILayout.Button("Paste Hitbox") && copyPaste != null)
+            {
+                state.hitboxes.Add(new HitBox(copyPaste));
+            }
             GUILayout.EndHorizontal();
             if (state.hitboxes.Count > 0)
             {
@@ -150,6 +154,12 @@ namespace FightingGame
 
         void HitboxGUI(HitBox hb)
         {
+            GUILayout.BeginHorizontal();
+            if (GUILayout.Button("Copy"))
+            {
+                copyPaste = hb;
+            }
+            GUILayout.EndHorizontal();
             hb._type = (HitBox.Type)EditorGUILayout.EnumPopup("Type", hb._type);
             hb.dmg = EditorGUILayout.FloatField(hb.dmg);
             hb._position = EditorGUILayout.Vector2Field("Pos:", hb._position);

@@ -11,12 +11,14 @@ public class VirtualController {
         BP,
         UP,
         DP,
-        HK
+        HK,
+        Dash,
+        Taunt
     }
 
     KeyCode P;
-    KeyCode FP;
-    KeyCode BP;
+    KeyCode Taunt;
+    KeyCode Dash;
     KeyCode UP;
     KeyCode DP;
     KeyCode HK;
@@ -28,9 +30,9 @@ public class VirtualController {
         if(joystick == 1)
         {
             P = KeyCode.Joystick1Button2;
-            FP = KeyCode.Joystick1Button3;
-            BP = KeyCode.Joystick1Button4;
-            UP = KeyCode.Joystick1Button0;
+            Taunt = KeyCode.Joystick1Button3;
+            //BP = KeyCode.Joystick1Button4;
+            Dash = KeyCode.Joystick1Button0;
             DP = KeyCode.Joystick1Button1;
             HK = KeyCode.Joystick1Button5;
             hor = "Horizontal1";
@@ -39,9 +41,9 @@ public class VirtualController {
         else
         {
             P = KeyCode.Joystick2Button2;
-            FP = KeyCode.Joystick2Button3;
-            BP = KeyCode.Joystick2Button4;
-            UP = KeyCode.Joystick2Button0;
+            Taunt = KeyCode.Joystick2Button3;
+            //BP = KeyCode.Joystick2Button4;
+            Dash = KeyCode.Joystick2Button0;
             DP = KeyCode.Joystick2Button1;
             HK = KeyCode.Joystick2Button5;
             hor = "Horizontal2";
@@ -54,7 +56,7 @@ public class VirtualController {
         return Input.GetKeyDown(P);
     }
 
-    public bool GetFPDown()
+    /*public bool GetFPDown()
     {
         return Input.GetKeyDown(FP);
     }
@@ -62,7 +64,7 @@ public class VirtualController {
     public bool GetBPDown()
     {
         return Input.GetKeyDown(BP);
-    }
+    }*/
 
     public bool GetUPDown()
     {
@@ -89,6 +91,8 @@ public class VirtualController {
             case Keys.UP: return (GetPDown() && GetVertical() < -0.3f);
             case Keys.DP: return (GetPDown() && GetVertical() > 0.3f);
             case Keys.HK: return GetHKDown();
+            case Keys.Dash: return Input.GetKeyDown(Dash);
+            case Keys.Taunt: return Input.GetKeyDown(Taunt);
         }
         return false;
     }

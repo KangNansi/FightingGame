@@ -108,8 +108,10 @@ namespace FightingGame
             debugMat.SetPass(0);
             GL.MultMatrix(p);
             GL.Begin(GL.QUADS);
-
-            GL.Color(color);
+            if (_type == Type.Attack)
+                GL.Color(new Color(1,0,0,0.4f));
+            else
+                GL.Color(new Color(0, 0, 1, 0.4f));
             GL.Vertex(_position);
             GL.Vertex3(_position.x + _size.x, _position.y, 0);
             GL.Vertex3(_position.x + _size.x, _position.y + _size.y, 0);

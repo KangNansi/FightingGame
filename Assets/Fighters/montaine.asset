@@ -215,7 +215,7 @@ MonoBehaviour:
         _size: {x: 1, y: 1}
         _type: 0
         color: {r: 1, g: 0, b: 0, a: 0.5}
-        dmg: 0
+        dmg: 5
       sprite: {fileID: 21300036, guid: 59fb37fc39a7cf94cb7d564533cbb230, type: 3}
       time: 0.16
       velocity: {x: 0, y: 0}
