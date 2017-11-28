@@ -75,9 +75,16 @@ namespace FightingGame
 
             windowPos = GUILayout.BeginScrollView(windowPos);
 
+            GUILayout.BeginHorizontal();
             fighter.jumpStrength = EditorGUILayout.FloatField("Jump Strength", fighter.jumpStrength);
             fighter.speed = EditorGUILayout.FloatField("Speed", fighter.speed);
             fighter.fallTime = EditorGUILayout.FloatField("Fall Time", fighter.fallTime);
+            GUILayout.EndHorizontal();
+            GUILayout.BeginHorizontal();
+            fighter.lifeMax = EditorGUILayout.FloatField("Life", fighter.lifeMax);
+            fighter.guardMax = EditorGUILayout.FloatField("Guard", fighter.guardMax);
+            fighter.stunMax = EditorGUILayout.FloatField("Stun", fighter.stunMax);
+            GUILayout.EndHorizontal();
 
             //Fighter Properties
             GUILayout.BeginHorizontal();

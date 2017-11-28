@@ -1971,8 +1971,7 @@ MonoBehaviour:
   velocity: {x: 0, y: 0, z: 0}
   jumpStrength: 0
   jumped: 0
+  lifeMax: 100
   guardMax: 100
   stunMax: 100
-  guard: 0
-  stun: 0
   fallTime: 2

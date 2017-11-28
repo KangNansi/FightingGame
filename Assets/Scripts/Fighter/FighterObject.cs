@@ -32,14 +32,36 @@ namespace FightingGame
         public float jumpStrength = 30;
         public bool jumped = false;
 
+        public float lifeMax = 100f;
         public float guardMax = 100f;
         public float stunMax = 100f;
-        public float guard = 0.0f;
-        public float stun = 0.0f;
+        float life = 0.0f;
+        float guard = 0.0f;
+        float stun = 0.0f;
+        float combo = 0.0f;
+        public float Life
+        {
+            get
+            {
+                return life;
+            }
+        }
+        public float Combo
+        {
+            get
+            {
+                return combo;
+            }
+        }
 
         public float fallTime = 1.0f;
         bool bFallen = false;
         float fallTimer = 0.0f;
+
+        public void Init()
+        {
+            life = lifeMax;
+        }
 
         public bool Standing()
         {
@@ -84,6 +106,25 @@ namespace FightingGame
         public Move GetMove()
         {
             return moves[currentState];
+        }
+
+        public void Damage(HitBox hb)
+        {
+            combo += hb.dmg;
+            combo = Mathf.Min(combo, life);
+            guard += hb.guardDmg;
+            stun += hb.stun;
+            SetMove(Hit);
+        }
+
+        public void ConfirmHit()
+        {
+            life -= combo;
+            combo = 0;
+            if (life > 0)
+                FallDown();
+            else
+                Die();
         }
 
         public void FallDown()

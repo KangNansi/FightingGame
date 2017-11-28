@@ -19,13 +19,18 @@ namespace FightingGame
         //public int controllerNumber = 1;
         public VirtualController controller;
         public FighterController opponent;
-        public float life = 100;
-        float combo_strength = 0.0f;
         public float ComboStrength
         {
             get
             {
-                return combo_strength;
+                return (fighter.Combo/(float)fighter.lifeMax);
+            }
+        }
+        public float Life
+        {
+            get
+            {
+                return (fighter.Life/(float)fighter.lifeMax);
             }
         }
 
@@ -49,15 +54,15 @@ namespace FightingGame
 
         public void Reset()
         {
-            life = 100f;
-            combo_strength = 0.0f;
             fighter = Instantiate(fighterObject);
             fighter.running = true;
+            fighter.Init();
         }
 
         void Start () {
             fighter = Instantiate(fighterObject);
             fighter.running = true;
+            fighter.Init();
             controller = Instantiate(controller);
         }
 
@@ -151,12 +156,12 @@ namespace FightingGame
             }
 
             //Confirm
-            if(curState == fighter.Taunt && opponent.combo_strength>0)
+            if(curState == fighter.Taunt && opponent.ComboStrength > 0)
             {
                 HitBox hb = fighter.GetAttackHitbox();
                 if (hb != null)
                 {
-                    if (opponent.combo_strength < 30)
+                    if (opponent.ComboStrength < 0.3)
                     {
                         particleLaunch(confirmSuccess, transform.position+new Vector3((hb._position.x + hb._size.x / 2f)*sens.x, (hb._position.y + hb._size.y / 2f), 0));
                     }
@@ -258,15 +263,11 @@ namespace FightingGame
             }
             else
             {
-                fighter.SetMove(fighter.Hit);
                 particleLaunch(hit, (Vector3)(hitting._position + hitting._size/2f));
                 float t = FightManager.timeModifier;
                 FightManager.timeModifier = 0.0f;
                 StartCoroutine(freezeTime(0.1f, t));
-                combo_strength += hitting.dmg;
-                combo_strength = Mathf.Min(combo_strength, life);
-                fighter.guard += hitting.guardDmg;
-                fighter.stun += hitting.stun;
+                fighter.Damage(hitting);
                 StartCoroutine(blockPush());
             }
             Debug.Log("Hit!");
@@ -274,13 +275,7 @@ namespace FightingGame
 
         public void Confirm()
         {
-            life -= combo_strength;
-            combo_strength = 0;
-            if (life > 0)
-                fighter.FallDown();
-            else
-                fighter.Die();
-            
+            fighter.ConfirmHit();
         }
 
         public void OnRenderObject()

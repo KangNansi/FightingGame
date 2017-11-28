@@ -25,7 +25,7 @@ namespace FightingGame
 	    // Update is called once per frame
 	    void Update () {
             FighterController.Hit(player1, player2);
-            if (!bReset && (player1.life <= 0 || player2.life <= 0))
+            if (!bReset && (player1.Life <= 0 || player2.Life <= 0))
             {
                 Debug.Log("Match End");
                 bReset = true;
@@ -44,8 +44,8 @@ namespace FightingGame
         void ResetMatch()
         {
             Debug.Log("Match Reload");
-            bool bPlayer1Fall = (player1.life <= 0);
-            bool bPlayer2Fall = (player2.life <= 0);
+            bool bPlayer1Fall = (player1.Life <= 0);
+            bool bPlayer2Fall = (player2.Life <= 0);
             player1.Reset();
             player2.Reset();
             if (bPlayer1Fall)
@@ -62,8 +62,8 @@ namespace FightingGame
 
         public void OnRenderObject()
         {
-            float l1 = Mathf.Max(player1.life, 0.0f);
-            float l2 = Mathf.Max(player2.life, 0.0f);
+            float l1 = Mathf.Max(player1.Life, 0.0f);
+            float l2 = Mathf.Max(player2.Life, 0.0f);
             float c1 = player1.ComboStrength;
             float c2 = player2.ComboStrength;
 
@@ -83,14 +83,14 @@ namespace FightingGame
             GL.Color(Color.green);
             GL.Vertex(Vector3.zero);
             GL.Vertex3(0, 20, 0);
-            GL.Vertex3(l1, 20, 0);
-            GL.Vertex3(l1, 0, 0);
+            GL.Vertex3(l1*100, 20, 0);
+            GL.Vertex3(l1*100, 0, 0);
 
             GL.Color(Color.blue);
-            GL.Vertex3(l1 - c1, 0, 0);
-            GL.Vertex3(l1 - c1, 20, 0);
-            GL.Vertex3(l1, 20, 0);
-            GL.Vertex3(l1, 0, 0);
+            GL.Vertex3((l1 - c1)*100, 0, 0);
+            GL.Vertex3((l1 - c1)*100, 20, 0);
+            GL.Vertex3(l1*100, 20, 0);
+            GL.Vertex3(l1*100, 0, 0);
 
 
             GL.End();
@@ -111,14 +111,14 @@ namespace FightingGame
             GL.Color(Color.green);
             GL.Vertex(Vector3.zero);
             GL.Vertex3(0, 20, 0);
-            GL.Vertex3(l2, 20, 0);
-            GL.Vertex3(l2, 0, 0);
+            GL.Vertex3(l2*100, 20, 0);
+            GL.Vertex3(l2*100, 0, 0);
 
             GL.Color(Color.blue);
-            GL.Vertex3(l2 - c2, 0, 0);
-            GL.Vertex3(l2 - c2, 20, 0);
-            GL.Vertex3(l2, 20, 0);
-            GL.Vertex3(l2, 0, 0);
+            GL.Vertex3((l2 - c2)*100, 0, 0);
+            GL.Vertex3((l2 - c2)*100, 20, 0);
+            GL.Vertex3(l2*100, 20, 0);
+            GL.Vertex3(l2*100, 0, 0);
 
             GL.End();
             GL.PopMatrix();
@@ -126,7 +126,7 @@ namespace FightingGame
 
         private void OnDrawGizmos()
         {
-            OnRenderObject();
+            //OnRenderObject();
         }
 
     }
