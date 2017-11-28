@@ -29,7 +29,18 @@ public class VirtualController {
 
     public VirtualController(int joystick)
     {
-        if(joystick == 1)
+        if(joystick == 0)
+        {
+            P = KeyCode.K;
+            Taunt = KeyCode.O;
+            //BP = KeyCode.Joystick1Button4;
+            Dash = KeyCode.L;
+            DP = KeyCode.M;
+            HK = KeyCode.P;
+            hor = "Horizontal1";
+            ver = "Vertical1";
+        }
+        else if(joystick == 1)
         {
             P = KeyCode.Joystick1Button2;
             Taunt = KeyCode.Joystick1Button3;
