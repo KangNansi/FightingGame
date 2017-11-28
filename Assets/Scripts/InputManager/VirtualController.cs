@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class VirtualController {
+public class VirtualController : ScriptableObject {
 
     public enum Keys
     {
@@ -17,15 +17,15 @@ public class VirtualController {
         Teabag
     }
 
-    KeyCode P;
-    KeyCode Taunt;
-    KeyCode Dash;
-    KeyCode Block;
-    KeyCode DP;
-    KeyCode Teabag;
-    string hor;
-    string ver;
-    string dpadhor;
+    public KeyCode P;
+    public KeyCode Taunt;
+    public KeyCode Dash;
+    public KeyCode Block;
+    public KeyCode DP;
+    public KeyCode Teabag;
+    public string hor;
+    public string ver;
+    public string dpadhor;
 
     public float sens = 1f;
 

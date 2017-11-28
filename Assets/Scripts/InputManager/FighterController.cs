@@ -8,8 +8,8 @@ namespace FightingGame
     public class FighterController : MonoBehaviour {
         public FighterObject fighter;
         public bool drawHitbox = true;
-        public int controllerNumber = 1;
-        VirtualController controller = VirtualController.GetController(1);
+        //public int controllerNumber = 1;
+        public VirtualController controller;
         public FighterController opponent;
         public float life = 100;
         public float combo_strength = 0.0f;
@@ -33,7 +33,7 @@ namespace FightingGame
         void Start () {
             fighter = Instantiate(fighter);
             fighter.running = true;
-            controller = VirtualController.GetController(controllerNumber);
+            controller = Instantiate(controller);
         }
 
         // Update is called once per frame

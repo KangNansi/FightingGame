@@ -115,7 +115,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fighter: {fileID: 11400000, guid: 2b86dec85b2690a4a84a926c9873dda4, type: 2}
   drawHitbox: 0
-  controllerNumber: 1
+  controller: {fileID: 11400000, guid: 9db9d13976c94f74fb43aa29de060af0, type: 2}
   opponent: {fileID: 114484975224229398}
   life: 100
   combo_strength: 0
@@ -144,7 +144,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fighter: {fileID: 11400000, guid: 2b86dec85b2690a4a84a926c9873dda4, type: 2}
   drawHitbox: 0
-  controllerNumber: 2
+  controller: {fileID: 11400000, guid: 8f8197671f7957a4b8301a59ef3db1f9, type: 2}
   opponent: {fileID: 114018580943779924}
   life: 100
   combo_strength: 0

@@ -90,11 +90,15 @@ MonoBehaviour:
         _type: 1
         color: {r: 1, g: 0, b: 0, a: 0.5}
         dmg: 0
+        stun: 0
+        guardDmg: 0
       - _position: {x: -1.36, y: -0.21}
         _size: {x: 2.34, y: 1.34}
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 0
+        stun: 0
+        guardDmg: 0
       sprite: {fileID: 21300000, guid: 59fb37fc39a7cf94cb7d564533cbb230, type: 3}
       time: 0.08
       velocity: {x: 0, y: 0}
@@ -106,11 +110,15 @@ MonoBehaviour:
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 0
+        stun: 0
+        guardDmg: 0
       - _position: {x: -1.36, y: -0.21}
         _size: {x: 2.38, y: 1.49}
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 0
+        stun: 0
+        guardDmg: 0
       sprite: {fileID: 21300002, guid: 59fb37fc39a7cf94cb7d564533cbb230, type: 3}
       time: 0.08
       velocity: {x: 0, y: 0}
@@ -122,11 +130,15 @@ MonoBehaviour:
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 0
+        stun: 0
+        guardDmg: 0
       - _position: {x: -1.36, y: -0.21}
         _size: {x: 2.34, y: 1.34}
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 0
+        stun: 0
+        guardDmg: 0
       sprite: {fileID: 21300004, guid: 59fb37fc39a7cf94cb7d564533cbb230, type: 3}
       time: 0.08
       velocity: {x: 0, y: 0}
@@ -138,11 +150,15 @@ MonoBehaviour:
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 0
+        stun: 0
+        guardDmg: 0
       - _position: {x: -1.36, y: -0.21}
         _size: {x: 2.34, y: 1.34}
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 0
+        stun: 0
+        guardDmg: 0
       sprite: {fileID: 21300006, guid: 59fb37fc39a7cf94cb7d564533cbb230, type: 3}
       time: 0.08
       velocity: {x: 0, y: 0}
@@ -154,11 +170,15 @@ MonoBehaviour:
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 0
+        stun: 0
+        guardDmg: 0
       - _position: {x: -1.36, y: -0.21}
         _size: {x: 2.44, y: 1.34}
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 0
+        stun: 0
+        guardDmg: 0
       sprite: {fileID: 21300008, guid: 59fb37fc39a7cf94cb7d564533cbb230, type: 3}
       time: 0.08
       velocity: {x: 0, y: 0}
@@ -170,11 +190,15 @@ MonoBehaviour:
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 0
+        stun: 0
+        guardDmg: 0
       - _position: {x: -1.36, y: -0.21}
         _size: {x: 2.51, y: 1.34}
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 0
+        stun: 0
+        guardDmg: 0
       sprite: {fileID: 21300010, guid: 59fb37fc39a7cf94cb7d564533cbb230, type: 3}
       time: 0.08
       velocity: {x: 0, y: 0}
@@ -186,11 +210,15 @@ MonoBehaviour:
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 0
+        stun: 0
+        guardDmg: 0
       - _position: {x: -1.36, y: -0.21}
         _size: {x: 2.54, y: 1.34}
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 0
+        stun: 0
+        guardDmg: 0
       sprite: {fileID: 21300012, guid: 59fb37fc39a7cf94cb7d564533cbb230, type: 3}
       time: 0.08
       velocity: {x: 0, y: 0}
@@ -202,11 +230,15 @@ MonoBehaviour:
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 0
+        stun: 0
+        guardDmg: 0
       - _position: {x: -1.36, y: -0.21}
         _size: {x: 2.47, y: 1.34}
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 0
+        stun: 0
+        guardDmg: 0
       sprite: {fileID: 21300014, guid: 59fb37fc39a7cf94cb7d564533cbb230, type: 3}
       time: 0.08
       velocity: {x: 0, y: 0}
@@ -223,11 +255,15 @@ MonoBehaviour:
         _type: 1
         color: {r: 1, g: 0, b: 0, a: 0.5}
         dmg: 1
+        stun: 0
+        guardDmg: 0
       - _position: {x: -0.45, y: 2.13}
         _size: {x: 1.57, y: 1.44}
         _type: 1
         color: {r: 1, g: 0, b: 0, a: 0.5}
         dmg: 1
+        stun: 0
+        guardDmg: 0
       sprite: {fileID: 21300016, guid: 59fb37fc39a7cf94cb7d564533cbb230, type: 3}
       time: 0.08
       velocity: {x: 0, y: 0}
@@ -239,11 +275,15 @@ MonoBehaviour:
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
+        stun: 0
+        guardDmg: 0
       - _position: {x: -0.45, y: 2.13}
         _size: {x: 1.57, y: 1.44}
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
+        stun: 0
+        guardDmg: 0
       sprite: {fileID: 21300018, guid: 59fb37fc39a7cf94cb7d564533cbb230, type: 3}
       time: 0.08
       velocity: {x: 0, y: 0}
@@ -255,11 +295,15 @@ MonoBehaviour:
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
+        stun: 0
+        guardDmg: 0
       - _position: {x: -0.45, y: 2.4}
         _size: {x: 1.57, y: 1.44}
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
+        stun: 0
+        guardDmg: 0
       sprite: {fileID: 21300020, guid: 59fb37fc39a7cf94cb7d564533cbb230, type: 3}
       time: 0.08
       velocity: {x: 0, y: 0}
@@ -271,11 +315,15 @@ MonoBehaviour:
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
+        stun: 0
+        guardDmg: 0
       - _position: {x: -0.45, y: 2.55}
         _size: {x: 1.57, y: 1.44}
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
+        stun: 0
+        guardDmg: 0
       sprite: {fileID: 21300022, guid: 59fb37fc39a7cf94cb7d564533cbb230, type: 3}
       time: 0.08
       velocity: {x: 0, y: 0}
@@ -287,11 +335,15 @@ MonoBehaviour:
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
+        stun: 0
+        guardDmg: 0
       - _position: {x: -0.45, y: 2.64}
         _size: {x: 1.57, y: 1.44}
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
+        stun: 0
+        guardDmg: 0
       sprite: {fileID: 21300024, guid: 59fb37fc39a7cf94cb7d564533cbb230, type: 3}
       time: 0.08
       velocity: {x: 0, y: 0}
@@ -303,11 +355,15 @@ MonoBehaviour:
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
+        stun: 0
+        guardDmg: 0
       - _position: {x: -0.45, y: 2.65}
         _size: {x: 1.57, y: 1.44}
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
+        stun: 0
+        guardDmg: 0
       sprite: {fileID: 21300026, guid: 59fb37fc39a7cf94cb7d564533cbb230, type: 3}
       time: 0.08
       velocity: {x: 0, y: 0}
@@ -319,11 +375,15 @@ MonoBehaviour:
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
+        stun: 0
+        guardDmg: 0
       - _position: {x: -0.45, y: 2.64}
         _size: {x: 1.57, y: 1.44}
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
+        stun: 0
+        guardDmg: 0
       sprite: {fileID: 21300028, guid: 59fb37fc39a7cf94cb7d564533cbb230, type: 3}
       time: 0.08
       velocity: {x: 0, y: 0}
@@ -340,11 +400,15 @@ MonoBehaviour:
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
+        stun: 0
+        guardDmg: 0
       - _position: {x: -0.02, y: 2.11}
         _size: {x: 1.48, y: 1.43}
         _type: 1
         color: {r: 1, g: 0, b: 0, a: 0.5}
         dmg: 1
+        stun: 0
+        guardDmg: 0
       sprite: {fileID: 21300028, guid: ba00f26b33f16c746bf077a2d2ceaec6, type: 3}
       time: 0.04
       velocity: {x: 0, y: 0}
@@ -356,11 +420,15 @@ MonoBehaviour:
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
+        stun: 0
+        guardDmg: 0
       - _position: {x: -0.02, y: 1.7}
         _size: {x: 1.48, y: 1.43}
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
+        stun: 0
+        guardDmg: 0
       sprite: {fileID: 21300030, guid: ba00f26b33f16c746bf077a2d2ceaec6, type: 3}
       time: 0.02
       velocity: {x: 0, y: 0}
@@ -372,11 +440,15 @@ MonoBehaviour:
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
+        stun: 0
+        guardDmg: 0
       - _position: {x: -0.02, y: 1.55}
         _size: {x: 1.48, y: 1.43}
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
+        stun: 0
+        guardDmg: 0
       sprite: {fileID: 21300032, guid: ba00f26b33f16c746bf077a2d2ceaec6, type: 3}
       time: 0.1
       velocity: {x: 0, y: 0}
@@ -388,11 +460,15 @@ MonoBehaviour:
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
+        stun: 0
+        guardDmg: 0
       - _position: {x: -0.02, y: 1.73}
         _size: {x: 1.48, y: 1.43}
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
+        stun: 0
+        guardDmg: 0
       sprite: {fileID: 21300030, guid: ba00f26b33f16c746bf077a2d2ceaec6, type: 3}
       time: 0.04
       velocity: {x: 0, y: 0}
@@ -404,11 +480,15 @@ MonoBehaviour:
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
+        stun: 0
+        guardDmg: 0
       - _position: {x: -0.02, y: 2.11}
         _size: {x: 1.48, y: 1.43}
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
+        stun: 0
+        guardDmg: 0
       sprite: {fileID: 21300028, guid: ba00f26b33f16c746bf077a2d2ceaec6, type: 3}
       time: 0.02
       velocity: {x: 0, y: 0}
@@ -425,16 +505,22 @@ MonoBehaviour:
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
+        stun: 0
+        guardDmg: 0
       - _position: {x: 0.02, y: 1.43}
         _size: {x: 1.52, y: 1.16}
         _type: 1
         color: {r: 1, g: 0, b: 0, a: 0.5}
         dmg: 1
+        stun: 0
+        guardDmg: 0
       - _position: {x: 0.58, y: 2.13}
         _size: {x: 1.54, y: 1.57}
         _type: 1
         color: {r: 1, g: 0, b: 0, a: 0.5}
         dmg: 1
+        stun: 0
+        guardDmg: 0
       sprite: {fileID: 21300034, guid: 59fb37fc39a7cf94cb7d564533cbb230, type: 3}
       time: 0.04
       velocity: {x: 0, y: 0}
@@ -446,21 +532,29 @@ MonoBehaviour:
         _type: 0
         color: {r: 1, g: 0, b: 0, a: 0.5}
         dmg: 5
+        stun: 0
+        guardDmg: 0
       - _position: {x: -1.15, y: 0}
         _size: {x: 2.31, y: 1.95}
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
+        stun: 0
+        guardDmg: 0
       - _position: {x: 0.02, y: 1.43}
         _size: {x: 1.33, y: 1.16}
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
+        stun: 0
+        guardDmg: 0
       - _position: {x: 0.58, y: 2.13}
         _size: {x: 1.31, y: 1.57}
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
+        stun: 0
+        guardDmg: 0
       sprite: {fileID: 21300036, guid: 59fb37fc39a7cf94cb7d564533cbb230, type: 3}
       time: 0.16
       velocity: {x: 0, y: 0}
@@ -472,16 +566,22 @@ MonoBehaviour:
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
+        stun: 0
+        guardDmg: 0
       - _position: {x: -0.3, y: 1.43}
         _size: {x: 1.33, y: 1.16}
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
+        stun: 0
+        guardDmg: 0
       - _position: {x: 0.07, y: 2.13}
         _size: {x: 1.4, y: 1.57}
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
+        stun: 0
+        guardDmg: 0
       sprite: {fileID: 21300038, guid: 59fb37fc39a7cf94cb7d564533cbb230, type: 3}
       time: 0.04
       velocity: {x: 0, y: 0}
@@ -516,6 +616,8 @@ MonoBehaviour:
         _type: 1
         color: {r: 1, g: 0, b: 0, a: 0.5}
         dmg: 1
+        stun: 0
+        guardDmg: 0
       sprite: {fileID: 21300020, guid: ba00f26b33f16c746bf077a2d2ceaec6, type: 3}
       time: 0.04
       velocity: {x: 0, y: 0}
@@ -527,6 +629,8 @@ MonoBehaviour:
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
+        stun: 0
+        guardDmg: 0
       sprite: {fileID: 21300022, guid: ba00f26b33f16c746bf077a2d2ceaec6, type: 3}
       time: 0.04
       velocity: {x: 0, y: 0}
@@ -538,6 +642,8 @@ MonoBehaviour:
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
+        stun: 0
+        guardDmg: 0
       sprite: {fileID: 21300024, guid: ba00f26b33f16c746bf077a2d2ceaec6, type: 3}
       time: 0.08
       velocity: {x: 0, y: 0}
@@ -571,6 +677,8 @@ MonoBehaviour:
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
+        stun: 0
+        guardDmg: 0
       sprite: {fileID: 21300000, guid: a7ba209f71c09594bbc07f6b0e73244e, type: 3}
       time: 0.04
       velocity: {x: 0, y: 0}
@@ -582,6 +690,8 @@ MonoBehaviour:
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
+        stun: 0
+        guardDmg: 0
       sprite: {fileID: 21300002, guid: a7ba209f71c09594bbc07f6b0e73244e, type: 3}
       time: 0.04
       velocity: {x: -15, y: 0}
@@ -593,6 +703,8 @@ MonoBehaviour:
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
+        stun: 0
+        guardDmg: 0
       sprite: {fileID: 21300004, guid: a7ba209f71c09594bbc07f6b0e73244e, type: 3}
       time: 0.08
       velocity: {x: -10, y: 0}
@@ -604,6 +716,8 @@ MonoBehaviour:
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
+        stun: 0
+        guardDmg: 0
       sprite: {fileID: 21300006, guid: a7ba209f71c09594bbc07f6b0e73244e, type: 3}
       time: 0.08
       velocity: {x: -5, y: 0}
@@ -615,6 +729,8 @@ MonoBehaviour:
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
+        stun: 0
+        guardDmg: 0
       sprite: {fileID: 21300008, guid: a7ba209f71c09594bbc07f6b0e73244e, type: 3}
       time: 0.08
       velocity: {x: 0, y: 0}
@@ -626,6 +742,8 @@ MonoBehaviour:
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
+        stun: 0
+        guardDmg: 0
       sprite: {fileID: 21300010, guid: a7ba209f71c09594bbc07f6b0e73244e, type: 3}
       time: 0.08
       velocity: {x: 0, y: 0}
@@ -637,6 +755,8 @@ MonoBehaviour:
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
+        stun: 0
+        guardDmg: 0
       sprite: {fileID: 21300012, guid: a7ba209f71c09594bbc07f6b0e73244e, type: 3}
       time: 0.5
       velocity: {x: 0, y: 0}
@@ -648,6 +768,8 @@ MonoBehaviour:
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
+        stun: 0
+        guardDmg: 0
       sprite: {fileID: 21300014, guid: a7ba209f71c09594bbc07f6b0e73244e, type: 3}
       time: 0.08
       velocity: {x: 0, y: 0}
@@ -659,6 +781,8 @@ MonoBehaviour:
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
+        stun: 0
+        guardDmg: 0
       sprite: {fileID: 21300016, guid: a7ba209f71c09594bbc07f6b0e73244e, type: 3}
       time: 0.06
       velocity: {x: 0, y: 0}
@@ -670,6 +794,8 @@ MonoBehaviour:
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
+        stun: 0
+        guardDmg: 0
       sprite: {fileID: 21300018, guid: a7ba209f71c09594bbc07f6b0e73244e, type: 3}
       time: 0.04
       velocity: {x: 0, y: 0}
@@ -681,6 +807,8 @@ MonoBehaviour:
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
+        stun: 0
+        guardDmg: 0
       sprite: {fileID: 21300020, guid: a7ba209f71c09594bbc07f6b0e73244e, type: 3}
       time: 0.12
       velocity: {x: 0, y: 0}
@@ -692,6 +820,8 @@ MonoBehaviour:
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
+        stun: 0
+        guardDmg: 0
       sprite: {fileID: 21300022, guid: a7ba209f71c09594bbc07f6b0e73244e, type: 3}
       time: 0.08
       velocity: {x: 0, y: 0}
@@ -703,6 +833,8 @@ MonoBehaviour:
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
+        stun: 0
+        guardDmg: 0
       sprite: {fileID: 21300024, guid: a7ba209f71c09594bbc07f6b0e73244e, type: 3}
       time: 0.04
       velocity: {x: -15, y: 0}
@@ -714,6 +846,8 @@ MonoBehaviour:
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
+        stun: 0
+        guardDmg: 0
       sprite: {fileID: 21300026, guid: a7ba209f71c09594bbc07f6b0e73244e, type: 3}
       time: 0.04
       velocity: {x: -15, y: 0}
@@ -725,6 +859,8 @@ MonoBehaviour:
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
+        stun: 0
+        guardDmg: 0
       sprite: {fileID: 21300028, guid: a7ba209f71c09594bbc07f6b0e73244e, type: 3}
       time: 0.08
       velocity: {x: -5, y: 0}
@@ -741,6 +877,8 @@ MonoBehaviour:
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
+        stun: 0
+        guardDmg: 0
       sprite: {fileID: 21300000, guid: f2746e7a8badbef4fb6b5a5648ed1817, type: 3}
       time: 0.04
       velocity: {x: 0, y: 0}
@@ -752,21 +890,29 @@ MonoBehaviour:
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
+        stun: 0
+        guardDmg: 0
       - _position: {x: 0.75, y: 4.11}
         _size: {x: 1.29, y: 1.33}
         _type: 0
         color: {r: 1, g: 0, b: 0, a: 0.5}
         dmg: 1
+        stun: 0
+        guardDmg: 0
       - _position: {x: 0.64, y: 3.34}
         _size: {x: 1.2, y: 0.78}
         _type: 0
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
+        stun: 0
+        guardDmg: 0
       - _position: {x: 0.48, y: 1.94}
         _size: {x: 0.84, y: 1.51}
         _type: 0
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
+        stun: 0
+        guardDmg: 0
       sprite: {fileID: 21300002, guid: f2746e7a8badbef4fb6b5a5648ed1817, type: 3}
       time: 0.04
       velocity: {x: 4, y: 0}
@@ -778,21 +924,29 @@ MonoBehaviour:
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
+        stun: 0
+        guardDmg: 0
       - _position: {x: 0.9, y: 4.01}
         _size: {x: 1.07, y: 1.31}
         _type: 0
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
+        stun: 0
+        guardDmg: 0
       - _position: {x: 0.71, y: 3.46}
         _size: {x: 0.87, y: 0.54}
         _type: 0
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
+        stun: 0
+        guardDmg: 0
       - _position: {x: 0.4, y: 2.1}
         _size: {x: 0.87, y: 1.51}
         _type: 0
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
+        stun: 0
+        guardDmg: 0
       sprite: {fileID: 21300004, guid: f2746e7a8badbef4fb6b5a5648ed1817, type: 3}
       time: 0.12
       velocity: {x: 3, y: 0}
@@ -804,16 +958,22 @@ MonoBehaviour:
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
+        stun: 0
+        guardDmg: 0
       - _position: {x: 0.69, y: 3.1}
         _size: {x: 1.2, y: 1.56}
         _type: 0
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
+        stun: 0
+        guardDmg: 0
       - _position: {x: 0.55, y: 2.04}
         _size: {x: 0.81, y: 1.09}
         _type: 0
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
+        stun: 0
+        guardDmg: 0
       sprite: {fileID: 21300006, guid: f2746e7a8badbef4fb6b5a5648ed1817, type: 3}
       time: 0.08
       velocity: {x: 0, y: 0}
@@ -825,6 +985,8 @@ MonoBehaviour:
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
+        stun: 0
+        guardDmg: 0
       sprite: {fileID: 21300008, guid: f2746e7a8badbef4fb6b5a5648ed1817, type: 3}
       time: 0.08
       velocity: {x: 2, y: 0}
@@ -836,6 +998,8 @@ MonoBehaviour:
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
+        stun: 0
+        guardDmg: 0
       sprite: {fileID: 21300010, guid: f2746e7a8badbef4fb6b5a5648ed1817, type: 3}
       time: 0.04
       velocity: {x: 2, y: 0}
@@ -847,11 +1011,15 @@ MonoBehaviour:
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
+        stun: 0
+        guardDmg: 0
       - _position: {x: 0.33, y: -0.07}
         _size: {x: 1.52, y: 0.85}
         _type: 0
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
+        stun: 0
+        guardDmg: 0
       sprite: {fileID: 21300012, guid: f2746e7a8badbef4fb6b5a5648ed1817, type: 3}
       time: 0.04
       velocity: {x: 1, y: 0}
@@ -863,6 +1031,8 @@ MonoBehaviour:
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
+        stun: 0
+        guardDmg: 0
       sprite: {fileID: 21300014, guid: f2746e7a8badbef4fb6b5a5648ed1817, type: 3}
       time: 0.12
       velocity: {x: 0, y: 0}
@@ -885,11 +1055,15 @@ MonoBehaviour:
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
+        stun: 0
+        guardDmg: 0
       - _position: {x: -0.8, y: 0.99}
         _size: {x: 1.71, y: 1.48}
         _type: 1
         color: {r: 1, g: 0, b: 0, a: 0.5}
         dmg: 1
+        stun: 0
+        guardDmg: 0
       sprite: {fileID: 21300020, guid: f2746e7a8badbef4fb6b5a5648ed1817, type: 3}
       time: 0.08
       velocity: {x: 0, y: 0}
@@ -901,11 +1075,15 @@ MonoBehaviour:
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
+        stun: 0
+        guardDmg: 0
       - _position: {x: -1.19, y: 0.07}
         _size: {x: 1.71, y: 1.48}
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
+        stun: 0
+        guardDmg: 0
       sprite: {fileID: 21300022, guid: f2746e7a8badbef4fb6b5a5648ed1817, type: 3}
       time: 0.08
       velocity: {x: 5, y: 0}
@@ -917,16 +1095,22 @@ MonoBehaviour:
         _type: 0
         color: {r: 1, g: 0, b: 0, a: 0.5}
         dmg: 1
+        stun: 0
+        guardDmg: 0
       - _position: {x: -1.98, y: 1.35}
         _size: {x: 1.6, y: 1.53}
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
+        stun: 0
+        guardDmg: 0
       - _position: {x: -1.19, y: 0.07}
         _size: {x: 2.19, y: 1.73}
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
+        stun: 0
+        guardDmg: 0
       sprite: {fileID: 21300024, guid: f2746e7a8badbef4fb6b5a5648ed1817, type: 3}
       time: 0.08
       velocity: {x: 10, y: 0}
@@ -938,16 +1122,22 @@ MonoBehaviour:
         _type: 0
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
+        stun: 0
+        guardDmg: 0
       - _position: {x: -1.98, y: 1.35}
         _size: {x: 1.64, y: 1.53}
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
+        stun: 0
+        guardDmg: 0
       - _position: {x: -1.19, y: 0.07}
         _size: {x: 2.09, y: 1.64}
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
+        stun: 0
+        guardDmg: 0
       sprite: {fileID: 21300024, guid: f2746e7a8badbef4fb6b5a5648ed1817, type: 3}
       time: 0.08
       velocity: {x: 0, y: 0}
@@ -959,11 +1149,15 @@ MonoBehaviour:
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
+        stun: 0
+        guardDmg: 0
       - _position: {x: -1.66, y: -0.06}
         _size: {x: 2.73, y: 1.39}
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
+        stun: 0
+        guardDmg: 0
       sprite: {fileID: 21300028, guid: f2746e7a8badbef4fb6b5a5648ed1817, type: 3}
       time: 0.08
       velocity: {x: 0, y: 0}
@@ -975,11 +1169,15 @@ MonoBehaviour:
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
+        stun: 0
+        guardDmg: 0
       - _position: {x: -1.29, y: 0.07}
         _size: {x: 1.71, y: 2.06}
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
+        stun: 0
+        guardDmg: 0
       sprite: {fileID: 21300030, guid: f2746e7a8badbef4fb6b5a5648ed1817, type: 3}
       time: 0.08
       velocity: {x: -10, y: 0}
@@ -991,11 +1189,15 @@ MonoBehaviour:
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
+        stun: 0
+        guardDmg: 0
       - _position: {x: -0.72, y: -0.03}
         _size: {x: 1.91, y: 2.36}
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
+        stun: 0
+        guardDmg: 0
       sprite: {fileID: 21300032, guid: f2746e7a8badbef4fb6b5a5648ed1817, type: 3}
       time: 0.08
       velocity: {x: -5, y: 0}
@@ -1012,6 +1214,8 @@ MonoBehaviour:
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
+        stun: 0
+        guardDmg: 0
       sprite: {fileID: 21300000, guid: fe19d07866fcd5b47a80cd5d5c835373, type: 3}
       time: 0.08
       velocity: {x: 0, y: 0}
@@ -1023,6 +1227,8 @@ MonoBehaviour:
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
+        stun: 0
+        guardDmg: 0
       sprite: {fileID: 21300002, guid: fe19d07866fcd5b47a80cd5d5c835373, type: 3}
       time: 0.04
       velocity: {x: 0, y: 0}
@@ -1034,11 +1240,15 @@ MonoBehaviour:
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
+        stun: 0
+        guardDmg: 0
       - _position: {x: -0.56, y: 1.68}
         _size: {x: 1.77, y: 1.91}
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
+        stun: 0
+        guardDmg: 0
       sprite: {fileID: 21300004, guid: fe19d07866fcd5b47a80cd5d5c835373, type: 3}
       time: 0.08
       velocity: {x: 0, y: 0}
@@ -1050,6 +1260,8 @@ MonoBehaviour:
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
+        stun: 0
+        guardDmg: 0
       sprite: {fileID: 21300006, guid: fe19d07866fcd5b47a80cd5d5c835373, type: 3}
       time: 0.04
       velocity: {x: 0, y: 0}
@@ -1061,6 +1273,8 @@ MonoBehaviour:
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
+        stun: 0
+        guardDmg: 0
       sprite: {fileID: 21300008, guid: fe19d07866fcd5b47a80cd5d5c835373, type: 3}
       time: 0.08
       velocity: {x: 0, y: 0}
@@ -1072,6 +1286,8 @@ MonoBehaviour:
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
+        stun: 0
+        guardDmg: 0
       sprite: {fileID: 21300010, guid: fe19d07866fcd5b47a80cd5d5c835373, type: 3}
       time: 0.04
       velocity: {x: 0, y: 0}
@@ -1083,11 +1299,15 @@ MonoBehaviour:
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
+        stun: 0
+        guardDmg: 0
       - _position: {x: -0.18, y: 0.47}
         _size: {x: 1.65, y: 2.63}
         _type: 0
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
+        stun: 0
+        guardDmg: 0
       sprite: {fileID: 21300012, guid: fe19d07866fcd5b47a80cd5d5c835373, type: 3}
       time: 0.04
       velocity: {x: 0, y: 0}
@@ -1099,16 +1319,22 @@ MonoBehaviour:
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
+        stun: 0
+        guardDmg: 0
       - _position: {x: -0.34, y: 1.14}
         _size: {x: 1.45, y: 2.22}
         _type: 0
         color: {r: 1, g: 0, b: 0, a: 0.5}
         dmg: 1
+        stun: 0
+        guardDmg: 0
       - _position: {x: 0.86, y: 2.14}
         _size: {x: 1.47, y: 1.41}
         _type: 0
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
+        stun: 0
+        guardDmg: 0
       sprite: {fileID: 21300014, guid: fe19d07866fcd5b47a80cd5d5c835373, type: 3}
       time: 0.04
       velocity: {x: 0, y: 0}
@@ -1120,16 +1346,22 @@ MonoBehaviour:
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
+        stun: 0
+        guardDmg: 0
       - _position: {x: 1.02, y: 2.19}
         _size: {x: 1.33, y: 1.32}
         _type: 0
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
+        stun: 0
+        guardDmg: 0
       - _position: {x: 0.01, y: 1.32}
         _size: {x: 1.2, y: 1.95}
         _type: 0
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
+        stun: 0
+        guardDmg: 0
       sprite: {fileID: 21300016, guid: fe19d07866fcd5b47a80cd5d5c835373, type: 3}
       time: 0.04
       velocity: {x: 0, y: 0}
@@ -1141,6 +1373,8 @@ MonoBehaviour:
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
+        stun: 0
+        guardDmg: 0
       sprite: {fileID: 21300018, guid: fe19d07866fcd5b47a80cd5d5c835373, type: 3}
       time: 0.08
       velocity: {x: 0, y: 0}
@@ -1152,6 +1386,8 @@ MonoBehaviour:
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
+        stun: 0
+        guardDmg: 0
       sprite: {fileID: 21300020, guid: fe19d07866fcd5b47a80cd5d5c835373, type: 3}
       time: 0.08
       velocity: {x: 0, y: 0}
@@ -1163,6 +1399,8 @@ MonoBehaviour:
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
+        stun: 0
+        guardDmg: 0
       sprite: {fileID: 21300022, guid: fe19d07866fcd5b47a80cd5d5c835373, type: 3}
       time: 0.08
       velocity: {x: 0, y: 0}
@@ -1174,6 +1412,8 @@ MonoBehaviour:
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
+        stun: 0
+        guardDmg: 0
       sprite: {fileID: 21300024, guid: fe19d07866fcd5b47a80cd5d5c835373, type: 3}
       time: 0.08
       velocity: {x: 0, y: 0}
@@ -1190,11 +1430,15 @@ MonoBehaviour:
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
+        stun: 0
+        guardDmg: 0
       - _position: {x: -1.29, y: -0.04}
         _size: {x: 2.08, y: 1.39}
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
+        stun: 0
+        guardDmg: 0
       sprite: {fileID: 21300000, guid: 2c1cc1f9066b72b43a85b94b142b5a86, type: 3}
       time: 0.08
       velocity: {x: 0, y: 0}
@@ -1206,11 +1450,15 @@ MonoBehaviour:
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
+        stun: 0
+        guardDmg: 0
       - _position: {x: -0.4, y: -0.08}
         _size: {x: 1.24, y: 1.71}
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
+        stun: 0
+        guardDmg: 0
       sprite: {fileID: 21300002, guid: 2c1cc1f9066b72b43a85b94b142b5a86, type: 3}
       time: 0.12
       velocity: {x: -1, y: 0}
@@ -1222,6 +1470,8 @@ MonoBehaviour:
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
+        stun: 0
+        guardDmg: 0
       sprite: {fileID: 21300004, guid: 2c1cc1f9066b72b43a85b94b142b5a86, type: 3}
       time: 0.04
       velocity: {x: 3, y: 0}
@@ -1233,11 +1483,15 @@ MonoBehaviour:
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
+        stun: 0
+        guardDmg: 0
       - _position: {x: 0.54, y: 2.04}
         _size: {x: 1.84, y: 1.31}
         _type: 0
         color: {r: 1, g: 0, b: 0, a: 0.5}
         dmg: 1
+        stun: 0
+        guardDmg: 0
       sprite: {fileID: 21300006, guid: 2c1cc1f9066b72b43a85b94b142b5a86, type: 3}
       time: 0.08
       velocity: {x: 6, y: 0}
@@ -1249,11 +1503,15 @@ MonoBehaviour:
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
+        stun: 0
+        guardDmg: 0
       - _position: {x: 0.69, y: 2.07}
         _size: {x: 2.3, y: 1.46}
         _type: 0
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
+        stun: 0
+        guardDmg: 0
       sprite: {fileID: 21300008, guid: 2c1cc1f9066b72b43a85b94b142b5a86, type: 3}
       time: 0.12
       velocity: {x: 2, y: 0}
@@ -1265,6 +1523,8 @@ MonoBehaviour:
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
+        stun: 0
+        guardDmg: 0
       sprite: {fileID: 21300010, guid: 2c1cc1f9066b72b43a85b94b142b5a86, type: 3}
       time: 0.08
       velocity: {x: 2, y: 0}
@@ -1276,6 +1536,8 @@ MonoBehaviour:
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
+        stun: 0
+        guardDmg: 0
       sprite: {fileID: 21300012, guid: 2c1cc1f9066b72b43a85b94b142b5a86, type: 3}
       time: 0.08
       velocity: {x: 2, y: 0}
@@ -1287,11 +1549,15 @@ MonoBehaviour:
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
+        stun: 0
+        guardDmg: 0
       - _position: {x: 0.67, y: 2}
         _size: {x: 2.2, y: 1.5}
         _type: 0
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
+        stun: 0
+        guardDmg: 0
       sprite: {fileID: 21300014, guid: 2c1cc1f9066b72b43a85b94b142b5a86, type: 3}
       time: 0.12
       velocity: {x: 4, y: 0}
@@ -1303,6 +1569,8 @@ MonoBehaviour:
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
+        stun: 0
+        guardDmg: 0
       sprite: {fileID: 21300016, guid: 2c1cc1f9066b72b43a85b94b142b5a86, type: 3}
       time: 0.08
       velocity: {x: 6, y: 0}
@@ -1314,6 +1582,8 @@ MonoBehaviour:
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
+        stun: 0
+        guardDmg: 0
       sprite: {fileID: 21300018, guid: 2c1cc1f9066b72b43a85b94b142b5a86, type: 3}
       time: 0.08
       velocity: {x: 4, y: 0}
@@ -1325,11 +1595,15 @@ MonoBehaviour:
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
+        stun: 0
+        guardDmg: 0
       - _position: {x: 0.67, y: 2.1}
         _size: {x: 2, y: 1.5}
         _type: 0
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
+        stun: 0
+        guardDmg: 0
       sprite: {fileID: 21300020, guid: 2c1cc1f9066b72b43a85b94b142b5a86, type: 3}
       time: 0.12
       velocity: {x: 4, y: 0}
@@ -1341,11 +1615,15 @@ MonoBehaviour:
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
+        stun: 0
+        guardDmg: 0
       - _position: {x: 0.39, y: 1.57}
         _size: {x: 1.62, y: 1.27}
         _type: 0
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
+        stun: 0
+        guardDmg: 0
       sprite: {fileID: 21300022, guid: 2c1cc1f9066b72b43a85b94b142b5a86, type: 3}
       time: 0.08
       velocity: {x: 5, y: 0}
@@ -1357,11 +1635,15 @@ MonoBehaviour:
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
+        stun: 0
+        guardDmg: 0
       - _position: {x: 0.75, y: 2.03}
         _size: {x: 1.38, y: 1.35}
         _type: 0
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
+        stun: 0
+        guardDmg: 0
       sprite: {fileID: 21300024, guid: 2c1cc1f9066b72b43a85b94b142b5a86, type: 3}
       time: 0.08
       velocity: {x: 6, y: 0}
@@ -1373,11 +1655,15 @@ MonoBehaviour:
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
+        stun: 0
+        guardDmg: 0
       - _position: {x: 0.79, y: 2.16}
         _size: {x: 1.65, y: 1.45}
         _type: 0
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
+        stun: 0
+        guardDmg: 0
       sprite: {fileID: 21300026, guid: 2c1cc1f9066b72b43a85b94b142b5a86, type: 3}
       time: 0.12
       velocity: {x: 2, y: 0}
@@ -1389,11 +1675,15 @@ MonoBehaviour:
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
+        stun: 0
+        guardDmg: 0
       - _position: {x: -1.26, y: 0}
         _size: {x: 2.71, y: 1.43}
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
+        stun: 0
+        guardDmg: 0
       sprite: {fileID: 21300028, guid: 2c1cc1f9066b72b43a85b94b142b5a86, type: 3}
       time: 0.04
       velocity: {x: 4, y: 0}
@@ -1405,11 +1695,15 @@ MonoBehaviour:
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
+        stun: 0
+        guardDmg: 0
       - _position: {x: -1.33, y: -0}
         _size: {x: 2.41, y: 1.65}
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
+        stun: 0
+        guardDmg: 0
       sprite: {fileID: 21300030, guid: 2c1cc1f9066b72b43a85b94b142b5a86, type: 3}
       time: 0.04
       velocity: {x: 4, y: 0}
@@ -1426,6 +1720,8 @@ MonoBehaviour:
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
+        stun: 0
+        guardDmg: 0
       sprite: {fileID: 21300000, guid: ba00f26b33f16c746bf077a2d2ceaec6, type: 3}
       time: 0.08
       velocity: {x: 0, y: 0}
@@ -1437,6 +1733,8 @@ MonoBehaviour:
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
+        stun: 0
+        guardDmg: 0
       sprite: {fileID: 21300002, guid: ba00f26b33f16c746bf077a2d2ceaec6, type: 3}
       time: 0.12
       velocity: {x: 0, y: 0}
@@ -1448,6 +1746,8 @@ MonoBehaviour:
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
+        stun: 0
+        guardDmg: 0
       sprite: {fileID: 21300004, guid: ba00f26b33f16c746bf077a2d2ceaec6, type: 3}
       time: 0.08
       velocity: {x: 0, y: 0}
@@ -1459,6 +1759,8 @@ MonoBehaviour:
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
+        stun: 0
+        guardDmg: 0
       sprite: {fileID: 21300006, guid: ba00f26b33f16c746bf077a2d2ceaec6, type: 3}
       time: 0.04
       velocity: {x: 0, y: 0}
@@ -1470,6 +1772,8 @@ MonoBehaviour:
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
+        stun: 0
+        guardDmg: 0
       sprite: {fileID: 21300008, guid: ba00f26b33f16c746bf077a2d2ceaec6, type: 3}
       time: 0.04
       velocity: {x: 0, y: 0}
@@ -1481,6 +1785,8 @@ MonoBehaviour:
         _type: 1
         color: {r: 0, g: 0, b: 0, a: 0}
         dmg: 1
+        stun: 0
+        guardDmg: 0
       sprite: {fileID: 21300010, guid: ba00f26b33f16c746bf077a2d2ceaec6, type: 3}
       time: 0.04
       velocity: {x: 0, y: 0}
@@ -1638,7 +1944,12 @@ MonoBehaviour:
   Walk: 1
   Hit: 4
   Block: 5
+  Taunt: 6
   running: 0
   velocity: {x: 0, y: 0, z: 0}
   jumpStrength: 0
   jumped: 0
+  guardMax: 100
+  stunMax: 100
+  guard: 0
+  stun: 0

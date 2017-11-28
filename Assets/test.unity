@@ -147,16 +147,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 114018580943779924, guid: 1f4ca3a4429de2e409e3eb6e7cf1461e,
-        type: 2}
-      propertyPath: drawHitbox
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114018580943779924, guid: 1f4ca3a4429de2e409e3eb6e7cf1461e,
-        type: 2}
-      propertyPath: controllerNumber
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1f4ca3a4429de2e409e3eb6e7cf1461e, type: 2}
   m_IsPrefabParent: 0
