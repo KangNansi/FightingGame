@@ -3,6 +3,7 @@
 	Properties
 	{
 		_MainTex("Texture", 2D) = "white" {}
+		_Alpha("Alpha Cutoff", Range(0.0,1.0)) = 0.03
 		_Color1("Color1", Color) = (1.00,0.00,0.00,1.0)
 		_Color2("Color2", Color) = (1.00,1.00,0.00,1.0)
 		_Color3("Color3", Color) = (0.00,1.00,0.00,1.0)
@@ -10,13 +11,13 @@
 		_Color5("Color5", Color) = (0.00,0.00,1.00,1.0)
 		_Color6("Color6", Color) = (0.00,0.70,0.70,1.0)
 		_Color7("Color7", Color) = (0.80,0.20,0.00,1.0)
-			_Color8("Color8", Color) = (0.80,0.20,0.00,1.0)
+		_Color8("Color8", Color) = (0.80,0.20,0.00,1.0)
 	}
 		SubShader
 	{
 		Tags{ "RenderType" = "Transparent" }
 		
-		Cull Off ZWrite Off ZTest Always
+		Cull Off
 		
 		Blend SrcAlpha OneMinusSrcAlpha
 
@@ -50,6 +51,7 @@
 	}
 
 	sampler2D _MainTex;
+	float _Alpha;
 	float4 _Color1;
 	float4 _Color2;
 	float4 _Color3;
@@ -66,9 +68,9 @@
 		//float4 newCol = tex2D(_Ramp, float2(col.b, 0));
 	float4 newCol = _Color1;
 	
-	if (col.b > 0.5 / 8.0) //> 32
+	if (col.b > 1 / 8.0) //> 32
 		newCol = _Color2;
-	if (col.b > 1.5 / 8.0)//> 64
+	if (col.b > 2.0 / 8.0)//> 64
 		newCol = _Color3;
 	if (col.b > 3.0 / 8.0)//> 96
 		newCol = _Color4;
@@ -81,7 +83,8 @@
 	if (col.b > 7.0 / 8.0)//> 234
 		newCol = _Color8;
 		
-	//newCol = col.b;
+	if (col.a < _Alpha)
+		discard;
 
 		newCol.a = col.a; //L'alpha de la texture
 		newCol.rgb = newCol.rgb*col.r; //Le trait

@@ -151,12 +151,22 @@ Prefab:
         type: 2}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 2095581f08c72504dbda3ed3c0aaa365, type: 2}
+      objectReference: {fileID: 2100000, guid: 628e0bea02284554892eabe46105fb54, type: 2}
     - target: {fileID: 212018589103305810, guid: 1f4ca3a4429de2e409e3eb6e7cf1461e,
         type: 2}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 2095581f08c72504dbda3ed3c0aaa365, type: 2}
+      objectReference: {fileID: 2100000, guid: e1da0e7a4399fb84ca33328ac7b0c2a5, type: 2}
+    - target: {fileID: 114018580943779924, guid: 1f4ca3a4429de2e409e3eb6e7cf1461e,
+        type: 2}
+      propertyPath: drawHitbox
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114484975224229398, guid: 1f4ca3a4429de2e409e3eb6e7cf1461e,
+        type: 2}
+      propertyPath: drawHitbox
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1f4ca3a4429de2e409e3eb6e7cf1461e, type: 2}
   m_IsPrefabParent: 0
@@ -344,6 +354,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SlowMo: 0
+  PauseOnTaunt: 0
 --- !u!1 &1726970437
 GameObject:
   m_ObjectHideFlags: 0
