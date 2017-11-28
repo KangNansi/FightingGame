@@ -13,6 +13,9 @@ namespace FightingGame
         public static float defaultTimeModifier = 1.0f;
         public static float timeModifier = 1.0f;
 
+        bool bReset = false;
+        float resetTimer = 0.0f;
+
 
 	    // Use this for initialization
 	    void Start () {
@@ -22,14 +25,47 @@ namespace FightingGame
 	    // Update is called once per frame
 	    void Update () {
             FighterController.Hit(player1, player2);
+            if (!bReset && (player1.life <= 0 || player2.life <= 0))
+            {
+                Debug.Log("Match End");
+                bReset = true;
+                resetTimer = 0.0f;
+            }
+            else if (bReset)
+            {
+                resetTimer += Time.deltaTime;
+                if(resetTimer > 2.0f)
+                {
+                    ResetMatch();
+                }
+            }
 	    }
+
+        void ResetMatch()
+        {
+            Debug.Log("Match Reload");
+            bool bPlayer1Fall = (player1.life <= 0);
+            bool bPlayer2Fall = (player2.life <= 0);
+            player1.Reset();
+            player2.Reset();
+            if (bPlayer1Fall)
+            {
+                player1.Fighter.SetMove(player1.Fighter.GetUp);
+            }
+
+            if (bPlayer2Fall)
+            {
+                player2.Fighter.SetMove(player1.Fighter.GetUp);
+            }
+            bReset = false;
+        }
 
         public void OnRenderObject()
         {
             float l1 = Mathf.Max(player1.life, 0.0f);
             float l2 = Mathf.Max(player2.life, 0.0f);
-            float c1 = player1.combo_strength;
-            float c2 = player2.combo_strength;
+            float c1 = player1.ComboStrength;
+            float c2 = player2.ComboStrength;
 
             Matrix4x4 scale = Matrix4x4.Scale(new Vector3(0.05f, 0.05f, 0.05f));
             Material debug = HitBox.GetDebugMaterial();

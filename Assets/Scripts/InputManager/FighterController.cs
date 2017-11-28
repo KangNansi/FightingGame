@@ -6,17 +6,32 @@ namespace FightingGame
 {
     [RequireComponent(typeof(SpriteRenderer))]
     public class FighterController : MonoBehaviour {
-        public FighterObject fighter;
+        public FighterObject fighterObject;
+        FighterObject fighter;
+        public FighterObject Fighter
+        {
+            get
+            {
+                return fighter;
+            }
+        }
         public bool drawHitbox = true;
         //public int controllerNumber = 1;
         public VirtualController controller;
         public FighterController opponent;
         public float life = 100;
-        public float combo_strength = 0.0f;
+        float combo_strength = 0.0f;
+        public float ComboStrength
+        {
+            get
+            {
+                return combo_strength;
+            }
+        }
 
-        public float parryTimer = 0.0f;
+        float parryTimer = 0.0f;
 
-        public Vector2 sens = new Vector2();
+        Vector2 sens = new Vector2();
 
         public GameObject hit;
         public GameObject hitBlock;
@@ -32,10 +47,16 @@ namespace FightingGame
 
         float minDistance = 1.5f;
 
-        
+        public void Reset()
+        {
+            life = 100f;
+            combo_strength = 0.0f;
+            fighter = Instantiate(fighterObject);
+            fighter.running = true;
+        }
 
         void Start () {
-            fighter = Instantiate(fighter);
+            fighter = Instantiate(fighterObject);
             fighter.running = true;
             controller = Instantiate(controller);
         }
@@ -271,7 +292,9 @@ namespace FightingGame
 
         private void OnDrawGizmos()
         {
-            OnRenderObject();
+            GetComponent<SpriteRenderer>().sprite = fighterObject.GetFrame().sprite;
+            if (drawHitbox)
+                fighterObject.GetMove().Draw(transform.localToWorldMatrix);
         }
 
         IEnumerator blockPush()
