@@ -14,6 +14,8 @@ namespace FightingGame
 
         public Vector2 velocity = new Vector2();
 
+        public int defaultNext = 0;
+
         private float time = 0;
 
         public float time_modifier = 1.0f;

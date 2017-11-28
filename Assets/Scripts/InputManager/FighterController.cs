@@ -30,6 +30,10 @@ namespace FightingGame
         bool blocking = false;
         bool blocked = false;
 
+        float minDistance = 1.5f;
+
+        
+
         void Start () {
             fighter = Instantiate(fighter);
             fighter.running = true;
@@ -52,13 +56,14 @@ namespace FightingGame
             float deltaT = Time.deltaTime*FightManager.timeModifier;
             float dT = deltaT;
             parryTimer += deltaT;
-            if(fighter.currentState == fighter.Walk && h<0.0f)
+            fighter.UpdateObject(deltaT);
+            if (fighter.currentState == fighter.Walk && h<0.0f)
             {
                 dT *= -1;
             }
             if (fighter.GetMove().Compute(dT))
             {
-                fighter.SetMove(fighter.Stand);
+                fighter.SetMove(fighter.GetMove().defaultNext);
             }
             //clamp to 1
             if (h < -0.5) h = -1;
@@ -127,7 +132,19 @@ namespace FightingGame
             //Confirm
             if(curState == fighter.Taunt && opponent.combo_strength>0)
             {
-                opponent.Confirm();
+                HitBox hb = fighter.GetAttackHitbox();
+                if (hb != null)
+                {
+                    if (opponent.combo_strength < 30)
+                    {
+                        particleLaunch(confirmSuccess, transform.position+new Vector3((hb._position.x + hb._size.x / 2f)*sens.x, (hb._position.y + hb._size.y / 2f), 0));
+                    }
+                    else
+                    {
+                        particleLaunch(confirmBigSuccess, transform.position + new Vector3((hb._position.x + hb._size.x / 2f) * sens.x, (hb._position.y + hb._size.y / 2f), 0));
+                    }
+                    opponent.Confirm();
+                }
             }
 
             //Apply gravity
@@ -136,6 +153,15 @@ namespace FightingGame
             fighter.velocity += ((Vector3)fighter.GetMove().GetVelocity()*sens.x);
             fighter.velocity += addedVelocity;
             transform.position += fighter.velocity * deltaT;
+
+            //Players pushing each other
+            float dist = (transform.position - opponent.transform.position).magnitude;
+            if (dist<minDistance)
+            {
+                float displace = minDistance - dist;
+                opponent.transform.position += new Vector3(sens.x * displace, 0);
+            }
+
             if (transform.position.y < FightManager.groundHeight)
             {
                 transform.position = new Vector3(transform.position.x, FightManager.groundHeight, 0);
@@ -161,7 +187,7 @@ namespace FightingGame
                 }
 
             }
-            if (aattack.Count > 0 && a.controller.GetKeyDown(VirtualController.Keys.Block))
+            if (aattack.Count > 0 && b.controller.GetKeyDown(VirtualController.Keys.Block))
             {
                 b.Block();
             }
@@ -180,7 +206,7 @@ namespace FightingGame
 
             }
 
-            if (battack.Count > 0 && b.controller.GetKeyDown(VirtualController.Keys.Block))
+            if (battack.Count > 0 && a.controller.GetKeyDown(VirtualController.Keys.Block))
             {
                 a.Block();
             }
@@ -200,13 +226,13 @@ namespace FightingGame
             {
                 if(parryTimer < 0.05f) //Perfect Parry
                 {
-                     
+                    particleLaunch(parry, (Vector3)(transform.position + Vector3.up * 2f + new Vector3(sens.x, 0, 0)));
                 }
-                else if(!blocked)
+                else
                 {
                     particleLaunch(hitBlock, (Vector3)(transform.position + Vector3.up*2f+new Vector3(sens.x,0,0)));
+                    StartCoroutine(blockPush());
                 }
-                StartCoroutine(blockPush());
                 blocked = true;
             }
             else
@@ -217,8 +243,10 @@ namespace FightingGame
                 FightManager.timeModifier = 0.0f;
                 StartCoroutine(freezeTime(0.1f, t));
                 combo_strength += hitting.dmg;
+                combo_strength = Mathf.Min(combo_strength, life);
                 fighter.guard += hitting.guardDmg;
                 fighter.stun += hitting.stun;
+                StartCoroutine(blockPush());
             }
             Debug.Log("Hit!");
         }
@@ -227,7 +255,11 @@ namespace FightingGame
         {
             life -= combo_strength;
             combo_strength = 0;
-            fighter.SetMove(fighter.Hit);
+            if (life > 0)
+                fighter.FallDown();
+            else
+                fighter.Die();
+            
         }
 
         public void OnRenderObject()
@@ -244,9 +276,10 @@ namespace FightingGame
 
         IEnumerator blockPush()
         {
-            addedVelocity = new Vector3(-sens.x*5, 0, 0);
+            float s = sens.x;
+            addedVelocity += new Vector3(-s * 5, 0, 0);
             yield return new WaitForSeconds(0.3f);
-            addedVelocity = Vector3.zero;
+            addedVelocity -= new Vector3(-s * 5, 0, 0);
         }
 
         IEnumerator freezeTime(float duration, float value)

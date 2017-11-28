@@ -26,8 +26,6 @@ MonoBehaviour:
         state: 7
       - input: 4
         state: 8
-      - input: 5
-        state: 6
       - input: 6
         state: 11
       - input: 7
@@ -245,6 +243,7 @@ MonoBehaviour:
     currentFrame: 0
     name: idle
     velocity: {x: 0, y: 0}
+    defaultNext: 0
     time_modifier: 1
   - frames:
     - name: 
@@ -390,6 +389,7 @@ MonoBehaviour:
     currentFrame: 0
     name: walk
     velocity: {x: 0, y: 0}
+    defaultNext: 0
     time_modifier: 1
   - frames:
     - name: 
@@ -495,6 +495,7 @@ MonoBehaviour:
     currentFrame: 0
     name: teabag
     velocity: {x: 0, y: 0}
+    defaultNext: 0
     time_modifier: 1
   - frames:
     - name: 
@@ -588,6 +589,7 @@ MonoBehaviour:
     currentFrame: 0
     name: jab
     velocity: {x: 0, y: 0}
+    defaultNext: 0
     time_modifier: 1
   - frames:
     - name: 
@@ -650,6 +652,7 @@ MonoBehaviour:
     currentFrame: 0
     name: hit
     velocity: {x: 0, y: 0}
+    defaultNext: 0
     time_modifier: 1
   - frames:
     - name: 
@@ -667,6 +670,7 @@ MonoBehaviour:
     currentFrame: 0
     name: block
     velocity: {x: 0, y: 0}
+    defaultNext: 0
     time_modifier: 1
   - frames:
     - name: 
@@ -770,6 +774,13 @@ MonoBehaviour:
         dmg: 1
         stun: 0
         guardDmg: 0
+      - _position: {x: 0.6, y: 3.25}
+        _size: {x: 0.41, y: 0.37}
+        _type: 0
+        color: {r: 1, g: 0, b: 0, a: 0.5}
+        dmg: 1
+        stun: 1
+        guardDmg: 1
       sprite: {fileID: 21300014, guid: a7ba209f71c09594bbc07f6b0e73244e, type: 3}
       time: 0.08
       velocity: {x: 0, y: 0}
@@ -867,6 +878,7 @@ MonoBehaviour:
     currentFrame: 0
     name: taunt
     velocity: {x: 0, y: 0}
+    defaultNext: 0
     time_modifier: 1
   - frames:
     - name: 
@@ -1045,6 +1057,7 @@ MonoBehaviour:
     currentFrame: 0
     name: high kick
     velocity: {x: 0, y: 0}
+    defaultNext: 0
     time_modifier: 1
   - frames:
     - name: 
@@ -1204,6 +1217,7 @@ MonoBehaviour:
     currentFrame: 0
     name: low kick
     velocity: {x: 0, y: 0}
+    defaultNext: 0
     time_modifier: 1
   - frames:
     - name: 
@@ -1420,6 +1434,7 @@ MonoBehaviour:
     currentFrame: 0
     name: back kick
     velocity: {x: 0, y: 0}
+    defaultNext: 0
     time_modifier: 1
   - frames:
     - name: 
@@ -1710,6 +1725,7 @@ MonoBehaviour:
     currentFrame: 0
     name: forward attack
     velocity: {x: 0, y: 0}
+    defaultNext: 0
     time_modifier: 1
   - frames:
     - name: 
@@ -1793,6 +1809,7 @@ MonoBehaviour:
     currentFrame: 0
     name: dash
     velocity: {x: 15, y: 0}
+    defaultNext: 0
     time_modifier: 1
   - frames:
     - name: 
@@ -1888,6 +1905,7 @@ MonoBehaviour:
     currentFrame: 0
     name: fall
     velocity: {x: 0, y: 0}
+    defaultNext: 13
     time_modifier: 1
   - frames:
     - name: 
@@ -1899,6 +1917,7 @@ MonoBehaviour:
     currentFrame: 0
     name: onGround
     velocity: {x: 0, y: 0}
+    defaultNext: 13
     time_modifier: 1
   - frames:
     - name: 
@@ -1934,6 +1953,7 @@ MonoBehaviour:
     currentFrame: 0
     name: get up
     velocity: {x: 0, y: 0}
+    defaultNext: 0
     time_modifier: 1
   speed: 15
   currentState: 0
@@ -1945,6 +1965,8 @@ MonoBehaviour:
   Hit: 4
   Block: 5
   Taunt: 6
+  Fall: 12
+  GetUp: 14
   running: 0
   velocity: {x: 0, y: 0, z: 0}
   jumpStrength: 0
@@ -1953,3 +1975,4 @@ MonoBehaviour:
   stunMax: 100
   guard: 0
   stun: 0
+  fallTime: 2

@@ -77,6 +77,7 @@ namespace FightingGame
 
             fighter.jumpStrength = EditorGUILayout.FloatField("Jump Strength", fighter.jumpStrength);
             fighter.speed = EditorGUILayout.FloatField("Speed", fighter.speed);
+            fighter.fallTime = EditorGUILayout.FloatField("Fall Time", fighter.fallTime);
 
             //Fighter Properties
             GUILayout.BeginHorizontal();
@@ -86,6 +87,8 @@ namespace FightingGame
             fighter.Hit = EditorGUILayout.Popup("Hit", fighter.Hit, fighter.moves.ConvertAll<string>(MoveToName).ToArray());
             fighter.Block = EditorGUILayout.Popup("Block", fighter.Block, fighter.moves.ConvertAll<string>(MoveToName).ToArray());
             fighter.Taunt = EditorGUILayout.Popup("Taunt", fighter.Taunt, fighter.moves.ConvertAll<string>(MoveToName).ToArray());
+            fighter.Fall = EditorGUILayout.Popup("Fall", fighter.Fall, fighter.moves.ConvertAll<string>(MoveToName).ToArray());
+            fighter.GetUp = EditorGUILayout.Popup("Get Up", fighter.GetUp, fighter.moves.ConvertAll<string>(MoveToName).ToArray());
             GUILayout.EndHorizontal();
 
             GUILayout.BeginHorizontal();
@@ -119,7 +122,9 @@ namespace FightingGame
             GUILayout.EndHorizontal();
             if (selectedMove >= 0)
             {
+                Move selMove = fighter.moves[selectedMove];
                 fighter.moves[selectedMove].velocity = EditorGUILayout.Vector2Field("Move Velocity", fighter.moves[selectedMove].velocity);
+                selMove.defaultNext = EditorGUILayout.Popup("Default next:", selMove.defaultNext, fighter.GetMoveList());
                 //Draw Preview
                 FighterStateEditor.DrawState(fighter.moves[selectedMove].GetFrame((Time.time* fighter.moves[selectedMove].time_modifier)), fighter.moves[selectedMove].GetMaxHeight());
                 fighter.moves[selectedMove].time_modifier = EditorGUILayout.Slider(fighter.moves[selectedMove].time_modifier, 0.0f, 5.0f);

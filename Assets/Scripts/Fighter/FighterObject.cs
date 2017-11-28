@@ -23,6 +23,8 @@ namespace FightingGame
         public int Hit = 0;
         public int Block = 0;
         public int Taunt = 0;
+        public int Fall = 0;
+        public int GetUp = 0;
 
         public bool running = false;
 
@@ -34,6 +36,10 @@ namespace FightingGame
         public float stunMax = 100f;
         public float guard = 0.0f;
         public float stun = 0.0f;
+
+        public float fallTime = 1.0f;
+        bool bFallen = false;
+        float fallTimer = 0.0f;
 
         public bool Standing()
         {
@@ -62,9 +68,47 @@ namespace FightingGame
             return moves[currentState].GetFrame();
         }
 
+        public HitBox GetAttackHitbox()
+        {
+            FighterState state = GetFrame();
+            foreach(HitBox h in state.hitboxes)
+            {
+                if(h._type == HitBox.Type.Attack)
+                {
+                    return h;
+                }
+            }
+            return null;
+        } 
+
         public Move GetMove()
         {
             return moves[currentState];
+        }
+
+        public void FallDown()
+        {
+            SetMove(Fall);
+            fallTimer = 0.0f;
+            bFallen = true;
+        }
+
+        public void Die()
+        {
+            SetMove(Fall);
+        }
+
+        public void UpdateObject(float deltaTime)
+        {
+            if (bFallen)
+            {
+                fallTimer += deltaTime;
+                if (fallTimer >= fallTime)
+                {
+                    SetMove(GetUp);
+                    bFallen = false;
+                }
+            }
         }
     }
 }
