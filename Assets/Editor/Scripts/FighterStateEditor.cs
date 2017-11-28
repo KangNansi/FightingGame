@@ -115,10 +115,10 @@ namespace FightingGame
 
         static Rect GetSpriteRect(Sprite s)
         {
-            return new Rect(s.textureRect.position.x / (float)s.texture.width,
-                s.textureRect.position.y / (float)s.texture.height,
-                s.textureRect.size.x / (float)s.texture.width,
-                s.textureRect.size.y / (float)s.texture.height);
+            return new Rect(s.rect.x / (float)s.texture.width,
+                s.rect.y / (float)s.texture.height,
+                s.rect.width / (float)s.texture.width,
+                s.rect.height / (float)s.texture.height);
         }
 
         void DrawHitbox(HitBox hb, Rect position)
