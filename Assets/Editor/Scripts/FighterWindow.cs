@@ -85,6 +85,7 @@ namespace FightingGame
             fighter.Walk = EditorGUILayout.Popup("Walk", fighter.Walk, fighter.moves.ConvertAll<string>(MoveToName).ToArray());
             fighter.Hit = EditorGUILayout.Popup("Hit", fighter.Hit, fighter.moves.ConvertAll<string>(MoveToName).ToArray());
             fighter.Block = EditorGUILayout.Popup("Block", fighter.Block, fighter.moves.ConvertAll<string>(MoveToName).ToArray());
+            fighter.Taunt = EditorGUILayout.Popup("Taunt", fighter.Taunt, fighter.moves.ConvertAll<string>(MoveToName).ToArray());
             GUILayout.EndHorizontal();
 
             GUILayout.BeginHorizontal();

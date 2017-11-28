@@ -11,19 +11,21 @@ public class VirtualController {
         BP,
         UP,
         DP,
-        HK,
+        Block,
         Dash,
-        Taunt
+        Taunt,
+        Teabag
     }
 
     KeyCode P;
     KeyCode Taunt;
     KeyCode Dash;
-    KeyCode UP;
+    KeyCode Block;
     KeyCode DP;
-    KeyCode HK;
+    KeyCode Teabag;
     string hor;
     string ver;
+    string dpadhor;
 
     public float sens = 1f;
 
@@ -35,32 +37,35 @@ public class VirtualController {
             Taunt = KeyCode.O;
             //BP = KeyCode.Joystick1Button4;
             Dash = KeyCode.L;
-            DP = KeyCode.M;
-            HK = KeyCode.P;
+            Block = KeyCode.M;
+            Teabag = KeyCode.W;
             hor = "Horizontal1";
             ver = "Vertical1";
+            dpadhor = "DHorizontal1";
         }
         else if(joystick == 1)
         {
             P = KeyCode.Joystick1Button2;
             Taunt = KeyCode.Joystick1Button3;
             //BP = KeyCode.Joystick1Button4;
-            Dash = KeyCode.Joystick1Button0;
-            DP = KeyCode.Joystick1Button1;
-            HK = KeyCode.Joystick1Button5;
+            Dash = KeyCode.Joystick1Button1;
+            Block = KeyCode.Joystick1Button5;
+            Teabag = KeyCode.Joystick1Button5;
             hor = "Horizontal1";
             ver = "Vertical1";
+            dpadhor = "DHorizontal1";
         }
         else
         {
             P = KeyCode.Joystick2Button2;
             Taunt = KeyCode.Joystick2Button3;
             //BP = KeyCode.Joystick2Button4;
-            Dash = KeyCode.Joystick2Button0;
-            DP = KeyCode.Joystick2Button1;
-            HK = KeyCode.Joystick2Button5;
+            Dash = KeyCode.Joystick2Button1;
+            Block = KeyCode.Joystick2Button5;
+            Teabag = KeyCode.Joystick2Button5;
             hor = "Horizontal2";
             ver = "Vertical2";
+            dpadhor = "DHorizontal2";
         }
     }
 
@@ -81,7 +86,7 @@ public class VirtualController {
 
     public bool GetUPDown()
     {
-        return Input.GetKeyDown(UP);
+        return Input.GetKeyDown(Block);
     }
 
     public bool GetDPDown()
@@ -91,7 +96,7 @@ public class VirtualController {
 
     public bool GetHKDown()
     {
-        return Input.GetKeyDown(HK);
+        return Input.GetKeyDown(Teabag);
     }
 
     public bool GetKeyDown(Keys k)
@@ -103,11 +108,22 @@ public class VirtualController {
             case Keys.BP: return (GetPDown() && GetHorizontalS() < -0.3f);
             case Keys.UP: return (GetPDown() && GetVertical() < -0.3f);
             case Keys.DP: return (GetPDown() && GetVertical() > 0.3f);
-            case Keys.HK: return GetHKDown();
             case Keys.Dash: return Input.GetKeyDown(Dash);
             case Keys.Taunt: return Input.GetKeyDown(Taunt);
+            case Keys.Block: return Input.GetKey(Block);
+            case Keys.Teabag: return Input.GetAxisRaw(dpadhor)<-0.3f;
         }
         return false;
+    }
+
+    public bool GetBlockDown()
+    {
+        return Input.GetKeyDown(Block);
+    }
+
+    public bool GetBlockUp()
+    {
+        return Input.GetKeyUp(Block);
     }
 
     public float GetHorizontal()

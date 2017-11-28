@@ -22,12 +22,18 @@ namespace FightingGame
         public int Walk = 0;
         public int Hit = 0;
         public int Block = 0;
+        public int Taunt = 0;
 
         public bool running = false;
 
         public Vector3 velocity = new Vector3();
         public float jumpStrength = 30;
         public bool jumped = false;
+
+        public float guardMax = 100f;
+        public float stunMax = 100f;
+        public float guard = 0.0f;
+        public float stun = 0.0f;
 
         public bool Standing()
         {
