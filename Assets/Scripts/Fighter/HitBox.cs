@@ -46,6 +46,8 @@ namespace FightingGame
             _size = h._size;
             _position = h._position;
             dmg = h.dmg;
+            stun = h.stun;
+            guardDmg = h.guardDmg;
         }
 
         public HitBox(HitBox h, Transform t)
@@ -61,6 +63,8 @@ namespace FightingGame
                 _position.x -= _size.x;
             _position += (Vector2)t.position;
             dmg = h.dmg;
+            stun = h.stun;
+            guardDmg = h.guardDmg;
         }
 
         protected void SetColor()

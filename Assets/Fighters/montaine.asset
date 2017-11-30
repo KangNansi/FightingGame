@@ -533,8 +533,8 @@ MonoBehaviour:
         _type: 0
         color: {r: 1, g: 0, b: 0, a: 0.5}
         dmg: 5
-        stun: 0
-        guardDmg: 0
+        stun: 50
+        guardDmg: 50
       - _position: {x: -1.15, y: 0}
         _size: {x: 2.31, y: 1.95}
         _type: 1
@@ -1976,4 +1976,6 @@ MonoBehaviour:
   stunMax: 100
   parryTime: 0.5
   parryPerfectTime: 0.2
+  stunDecrease: 20
+  guardDecrease: 20
   fallTime: 2

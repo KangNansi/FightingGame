@@ -37,6 +37,8 @@ namespace FightingGame
         public float stunMax = 100f;
         public float parryTime = 0.5f;
         public float parryPerfectTime = 0.1f;
+        public float stunDecrease = 20;
+        public float guardDecrease = 20;
         float life = 0.0f;
         float guard = 0.0f;
         float stun = 0.0f;
@@ -121,9 +123,18 @@ namespace FightingGame
         {
             combo += hb.dmg;
             combo = Mathf.Min(combo, life);
-            guard += hb.guardDmg;
             stun += hb.stun;
-            SetMove(Hit);
+            Debug.Log("stun: " + stun);
+            if(stun < stunMax)
+            {
+                SetMove(Hit);
+            }
+            else
+            {
+                Debug.Log("fall");
+                FallDown();
+                stun = 0.0f;
+            }
         }
 
         public void ConfirmHit()
@@ -162,9 +173,25 @@ namespace FightingGame
             return (parryTimer < parryTime && !Attacking() && !parried);
         }
 
+        public bool ReceiveGuardDamage(float dmg)
+        {
+            guard += dmg;
+            return guard > guardMax;
+        }
+
+
+        public bool CanBlock()
+        {
+            return guard < guardMax && Standing();
+        }
+
         public void UpdateObject(float deltaTime)
         {
             parryTimer += deltaTime;
+            guard -= guardDecrease * deltaTime;
+            stun -= stunDecrease * deltaTime;
+            if (guard < 0) guard = 0.0f;
+            if (stun < 0) stun = 0.0f;
             if (bFallen)
             {
                 fallTimer += deltaTime;

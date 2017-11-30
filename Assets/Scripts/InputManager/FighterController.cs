@@ -269,9 +269,16 @@ namespace FightingGame
                 StartCoroutine(freezeTime(hitFreezeTime, t));
                 return;
             }
-            if (controller.GetKeyDown(VirtualController.Keys.Block) && fighter.Standing())//(controller.GetHorizontal() < -0.3f && sens.x > 0.1f) || (controller.GetHorizontal() > 0.3f && sens.x < -0.1f))
+            if (controller.GetKeyDown(VirtualController.Keys.Block) && fighter.CanBlock())//(controller.GetHorizontal() < -0.3f && sens.x > 0.1f) || (controller.GetHorizontal() > 0.3f && sens.x < -0.1f))
             {
-                particleLaunch(hitBlock, (Vector3)(transform.position + Vector3.up*2f+new Vector3(sens.x,0,0)));
+                if (fighter.ReceiveGuardDamage(hitting.guardDmg))
+                {
+                    particleLaunch(guardBreak, (Vector3)(transform.position + Vector3.up * 2f + new Vector3(sens.x, 0, 0)));
+                }
+                else
+                {
+                    particleLaunch(hitBlock, (Vector3)(transform.position + Vector3.up*2f+new Vector3(sens.x,0,0)));
+                }
                 StartCoroutine(blockPush());
                 blocked = true;
             }
