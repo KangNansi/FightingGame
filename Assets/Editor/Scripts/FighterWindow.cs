@@ -84,6 +84,8 @@ namespace FightingGame
             fighter.lifeMax = EditorGUILayout.FloatField("Life", fighter.lifeMax);
             fighter.guardMax = EditorGUILayout.FloatField("Guard", fighter.guardMax);
             fighter.stunMax = EditorGUILayout.FloatField("Stun", fighter.stunMax);
+            fighter.parryTime = EditorGUILayout.FloatField("Parry Time", fighter.parryTime);
+            fighter.parryPerfectTime = EditorGUILayout.FloatField("Perfect Parry Time", fighter.parryPerfectTime);
             GUILayout.EndHorizontal();
 
             //Fighter Properties

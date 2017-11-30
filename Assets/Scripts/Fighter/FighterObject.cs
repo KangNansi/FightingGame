@@ -35,10 +35,14 @@ namespace FightingGame
         public float lifeMax = 100f;
         public float guardMax = 100f;
         public float stunMax = 100f;
+        public float parryTime = 0.5f;
+        public float parryPerfectTime = 0.1f;
         float life = 0.0f;
         float guard = 0.0f;
         float stun = 0.0f;
         float combo = 0.0f;
+        float parryTimer = 0.0f;
+        bool parried = false;
         public float Life
         {
             get
@@ -67,6 +71,11 @@ namespace FightingGame
         {
             if (currentState == Stand || currentState == Walk) return true;
             return false;
+        }
+
+        public bool Attacking()
+        {
+            return (currentState != Stand && currentState != Walk && currentState != Hit);
         }
 
         public string[] GetMoveList()
@@ -139,8 +148,23 @@ namespace FightingGame
             SetMove(Fall);
         }
 
+        public void Parry()
+        {
+            if(parryTimer>4*parryTime || parried)
+            {
+                parryTimer = 0.0f;
+                parried = false;
+            }
+        }
+
+        public bool Parrying()
+        {
+            return (parryTimer < parryTime && !Attacking() && !parried);
+        }
+
         public void UpdateObject(float deltaTime)
         {
+            parryTimer += deltaTime;
             if (bFallen)
             {
                 fallTimer += deltaTime;

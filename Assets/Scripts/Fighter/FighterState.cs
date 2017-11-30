@@ -19,10 +19,28 @@ namespace FightingGame
         public Sprite sprite;
         public float time = 0.08f;
         public Vector2 velocity = new Vector2();
+        bool computed = false;
+        public bool Computed
+        {
+            get
+            {
+                return computed;
+            }
+        }
 
         public FighterState()
         {
             //hitboxes.Add(new HitBox(HitBox.Type.Body, Vector2.zero, Vector2.one));
+        }
+
+        public void Reset()
+        {
+            computed = false;
+        }
+
+        public void Consume()
+        {
+            computed = true;
         }
 
         public void Hit()

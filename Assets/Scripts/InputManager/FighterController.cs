@@ -34,7 +34,9 @@ namespace FightingGame
             }
         }
 
-        float parryTimer = 0.0f;
+        public float hitFreezeTime = 0.1f;
+
+
 
         Vector2 sens = new Vector2();
 
@@ -81,7 +83,6 @@ namespace FightingGame
             float v = -controller.GetVertical();
             float deltaT = Time.deltaTime*FightManager.timeModifier;
             float dT = deltaT;
-            parryTimer += deltaT;
             fighter.UpdateObject(deltaT);
             if (fighter.currentState == fighter.Walk && h<0.0f)
             {
@@ -152,7 +153,7 @@ namespace FightingGame
             //Parry
             if (controller.GetBlockDown())
             {
-                parryTimer = 0.0f;
+                fighter.Parry();
             }
 
             //Confirm
@@ -200,65 +201,78 @@ namespace FightingGame
             FighterState aframe = a.fighter.GetFrame(), bframe = b.fighter.GetFrame();
             List<HitBox> aattack = aframe.GetHitbox(HitBox.Type.Attack), battack = bframe.GetHitbox(HitBox.Type.Attack);
             List<HitBox> adef = aframe.GetHitbox(HitBox.Type.Body), bdef = bframe.GetHitbox(HitBox.Type.Body);
-            foreach (HitBox h in aattack)
+            if(!aframe.Computed)
             {
-                foreach (HitBox d in bdef)
+                foreach (HitBox h in aattack)
                 {
-                    HitBox attack = new HitBox(h, a.transform);
-                    HitBox def = new HitBox(d, b.transform);
-                    if (attack.Hit(def))
+                    foreach (HitBox d in bdef)
                     {
-                        b.Hit(0, attack, a);
+                        HitBox attack = new HitBox(h, a.transform);
+                        HitBox def = new HitBox(d, b.transform);
+                        if (attack.Hit(def))
+                        {
+                            b.Hit(0, attack, a);
+                        }
                     }
+
                 }
-
-            }
-            if (aattack.Count > 0 && b.controller.GetKeyDown(VirtualController.Keys.Block))
-            {
-                b.Block();
-            }
-
-            foreach (HitBox h in battack)
-            {
-                foreach (HitBox d in adef)
+                if (aattack.Count > 0)
                 {
-                    HitBox attack = new HitBox(h, b.transform);
-                    HitBox def = new HitBox(d, a.transform);
-                    if (attack.Hit(def))
-                    {
-                        a.Hit(0, attack, b);
-                    }
+                    b.Block();
                 }
-
             }
 
-            if (battack.Count > 0 && a.controller.GetKeyDown(VirtualController.Keys.Block))
+            if(!bframe.Computed)
             {
-                a.Block();
+                foreach (HitBox h in battack)
+                {
+                    foreach (HitBox d in adef)
+                    {
+                        HitBox attack = new HitBox(h, b.transform);
+                        HitBox def = new HitBox(d, a.transform);
+                        if (attack.Hit(def))
+                        {
+                            a.Hit(0, attack, b);
+                        }
+                    }
+
+                }
+                if (battack.Count > 0)
+                {
+                    a.Block();
+                }
             }
+
+
+            aframe.Consume();
+            bframe.Consume();
         }
 
         void Block()
         {
-            if (parryTimer > 0.05f)
+            if (controller.GetKeyDown(VirtualController.Keys.Block) && fighter.Standing())
             {
-                fighter.SetMove(fighter.Block);
+                if (!fighter.Parrying())
+                {
+                    fighter.SetMove(fighter.Block);
+                }
             }
         }
 
         void Hit(int dmg, HitBox hitting, FighterController opponent)
         {
-            if (controller.GetKeyDown(VirtualController.Keys.Block))//(controller.GetHorizontal() < -0.3f && sens.x > 0.1f) || (controller.GetHorizontal() > 0.3f && sens.x < -0.1f))
+            if (fighter.Parrying()) //Perfect Parry
             {
-                if(parryTimer < 0.05f) //Perfect Parry
-                {
-                    particleLaunch(parry, (Vector3)(transform.position + Vector3.up * 2f + new Vector3(sens.x, 0, 0)));
-                }
-                else
-                {
-                    particleLaunch(hitBlock, (Vector3)(transform.position + Vector3.up*2f+new Vector3(sens.x,0,0)));
-                    StartCoroutine(blockPush());
-                }
+                particleLaunch(parry, (Vector3)(transform.position + Vector3.up * 2f + new Vector3(sens.x, 0, 0)));
+                float t = FightManager.timeModifier;
+                FightManager.timeModifier = 0.0f;
+                StartCoroutine(freezeTime(hitFreezeTime, t));
+                return;
+            }
+            if (controller.GetKeyDown(VirtualController.Keys.Block) && fighter.Standing())//(controller.GetHorizontal() < -0.3f && sens.x > 0.1f) || (controller.GetHorizontal() > 0.3f && sens.x < -0.1f))
+            {
+                particleLaunch(hitBlock, (Vector3)(transform.position + Vector3.up*2f+new Vector3(sens.x,0,0)));
+                StartCoroutine(blockPush());
                 blocked = true;
             }
             else
@@ -266,11 +280,10 @@ namespace FightingGame
                 particleLaunch(hit, (Vector3)(hitting._position + hitting._size/2f));
                 float t = FightManager.timeModifier;
                 FightManager.timeModifier = 0.0f;
-                StartCoroutine(freezeTime(0.1f, t));
+                StartCoroutine(freezeTime(hitFreezeTime, t));
                 fighter.Damage(hitting);
                 StartCoroutine(blockPush());
             }
-            Debug.Log("Hit!");
         }
 
         public void Confirm()

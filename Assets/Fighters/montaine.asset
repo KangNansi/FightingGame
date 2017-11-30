@@ -1974,4 +1974,6 @@ MonoBehaviour:
   lifeMax: 100
   guardMax: 100
   stunMax: 100
+  parryTime: 0.5
+  parryPerfectTime: 0.2
   fallTime: 2

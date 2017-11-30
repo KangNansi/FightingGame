@@ -30,6 +30,10 @@ namespace FightingGame
                 p += frames[i].time;
                 if (p > time)
                 {
+                    if(i != currentFrame)
+                    {
+                        frames[i].Reset();
+                    }
                     currentFrame = i;
                     return false;
                 }
