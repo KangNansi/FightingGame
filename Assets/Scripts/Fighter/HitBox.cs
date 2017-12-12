@@ -53,15 +53,16 @@ namespace FightingGame
         public HitBox(HitBox h, Transform t)
         {
             _type = h._type;
-            _size = h._size;
+            _size.x = h._size.x*Mathf.Abs(t.lossyScale.x);
+            _size.y = h._size.y * Mathf.Abs(t.lossyScale.y);
             _position = h._position;
-            _position.x *= t.localScale.x;
-            _position.y *= t.localScale.y;
-            if (t.localScale.x < 0)
+            _position.x *= t.lossyScale.x;
+            _position.y *= t.lossyScale.y;
+            if (t.lossyScale.x < 0)
                 _position.x -= _size.x;
-            if (t.localScale.y < 0)
+            if (t.lossyScale.y < 0)
                 _position.x -= _size.x;
-            _position += (Vector2)t.position;
+             _position += (Vector2)t.position;
             dmg = h.dmg;
             stun = h.stun;
             guardDmg = h.guardDmg;
@@ -82,6 +83,20 @@ namespace FightingGame
                 && t._position.y < _position.y + _size.y && t._position.y + t._size.y > _position.y)
                 return true;
             return false;
+        }
+
+        static HitBox Invert(HitBox hb)
+        {
+            HitBox result = new HitBox(hb);
+            result.Invert();
+            return result;
+        }
+
+        public void Invert()
+        {
+            _position.x += _size.x / 2f;
+            _position.x *= -1;
+            _position.x -= _size.x / 2f;
         }
 
         private static void CreateMaterial()

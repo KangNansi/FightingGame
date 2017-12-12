@@ -23,14 +23,28 @@ namespace FightingGame
         {
             get
             {
-                return (fighter.Combo/(float)fighter.lifeMax);
+                return (fighter.Combo/fighter.lifeMax);
             }
         }
         public float Life
         {
             get
             {
-                return (fighter.Life/(float)fighter.lifeMax);
+                return (fighter.Life/fighter.lifeMax);
+            }
+        }
+        public float Guard
+        {
+            get
+            {
+                return (fighter.guard / fighter.guardMax);
+            }
+        }
+        public float Stun
+        {
+            get
+            {
+                return (fighter.stun / fighter.stunMax);
             }
         }
 
@@ -121,7 +135,7 @@ namespace FightingGame
                 float modif = 1.0f;
                 if ((h < 0.0f && sens.x > 0.0f) || (h > 0.0f && sens.x < 0.0f))
                     modif = 0.7f;
-                fighter.velocity += h * fighter.speed * modif * Vector3.right;
+                fighter.velocity += h * fighter.speed * modif * Vector3.right * Mathf.Abs(transform.lossyScale.x);
                 if (fighter.currentState != fighter.Walk && h != 0)
                     fighter.SetMove(fighter.Walk);
                 if (fighter.currentState == fighter.Walk && h == 0)
@@ -164,11 +178,11 @@ namespace FightingGame
                 {
                     if (opponent.ComboStrength < 0.3)
                     {
-                        particleLaunch(confirmSuccess, transform.position+new Vector3((hb._position.x + hb._size.x / 2f)*sens.x, (hb._position.y + hb._size.y / 2f), 0));
+                        particleLaunch(confirmSuccess, transform.position+new Vector3((hb._position.x + hb._size.x / 2f)*sens.x*transform.lossyScale.x, (hb._position.y + hb._size.y / 2f) * transform.lossyScale.y, 0));
                     }
                     else
                     {
-                        particleLaunch(confirmBigSuccess, transform.position + new Vector3((hb._position.x + hb._size.x / 2f) * sens.x, (hb._position.y + hb._size.y / 2f), 0));
+                        particleLaunch(confirmBigSuccess, transform.position + new Vector3((hb._position.x + hb._size.x / 2f) * sens.x * transform.lossyScale.x, (hb._position.y + hb._size.y / 2f) * transform.lossyScale.y, 0));
                     }
                     opponent.Confirm();
                 }
@@ -177,21 +191,23 @@ namespace FightingGame
             //Apply gravity
             float g = FightManager.gravity;
             fighter.velocity += Vector3.down * g;
-            fighter.velocity += ((Vector3)fighter.GetMove().GetVelocity()*sens.x);
+            fighter.velocity += ((Vector3)fighter.GetMove().GetVelocity()*sens.x)*Mathf.Abs(transform.lossyScale.x);
             fighter.velocity += addedVelocity;
             transform.position += fighter.velocity * deltaT;
 
             //Players pushing each other
             float dist = (transform.position - opponent.transform.position).magnitude;
-            if (dist<minDistance)
+            float finalMinDistance = minDistance * transform.lossyScale.x;
+            if (dist< finalMinDistance)
             {
-                float displace = minDistance - dist;
+                float displace = finalMinDistance - dist;
                 opponent.transform.position += new Vector3(sens.x * displace, 0);
             }
 
+            //Floor
             if (transform.position.y < FightManager.groundHeight)
             {
-                transform.position = new Vector3(transform.position.x, FightManager.groundHeight, 0);
+                transform.position = new Vector3(transform.position.x, FightManager.groundHeight, transform.position.z);
                 fighter.Grounded = true;
             }
         }
@@ -211,7 +227,7 @@ namespace FightingGame
                         HitBox def = new HitBox(d, b.transform);
                         if (attack.Hit(def))
                         {
-                            b.Hit(0, attack, a);
+                            b.Hit(0, new HitBox(h), a);
                         }
                     }
 
@@ -232,7 +248,7 @@ namespace FightingGame
                         HitBox def = new HitBox(d, a.transform);
                         if (attack.Hit(def))
                         {
-                            a.Hit(0, attack, b);
+                            a.Hit(0, new HitBox(h), b);
                         }
                     }
 
@@ -263,7 +279,7 @@ namespace FightingGame
         {
             if (fighter.Parrying()) //Perfect Parry
             {
-                particleLaunch(parry, (Vector3)(transform.position + Vector3.up * 2f + new Vector3(sens.x, 0, 0)));
+                particleLaunch(parry, Vector3.up * 2f + new Vector3(sens.x, 0, 0));
                 float t = FightManager.timeModifier;
                 FightManager.timeModifier = 0.0f;
                 StartCoroutine(freezeTime(hitFreezeTime, t));
@@ -273,18 +289,18 @@ namespace FightingGame
             {
                 if (fighter.ReceiveGuardDamage(hitting.guardDmg))
                 {
-                    particleLaunch(guardBreak, (Vector3)(transform.position + Vector3.up * 2f + new Vector3(sens.x, 0, 0)));
+                    particleLaunch(guardBreak, Vector3.up * 2f + new Vector3(sens.x, 0, 0));
                 }
                 else
                 {
-                    particleLaunch(hitBlock, (Vector3)(transform.position + Vector3.up*2f+new Vector3(sens.x,0,0)));
+                    particleLaunch(hitBlock, Vector3.up*2f+new Vector3(sens.x,0,0));
                 }
                 StartCoroutine(blockPush());
                 blocked = true;
             }
             else
             {
-                particleLaunch(hit, (Vector3)(hitting._position + hitting._size/2f));
+                opponent.particleLaunch(hit, (Vector3)(hitting._position + hitting._size/2f));
                 float t = FightManager.timeModifier;
                 FightManager.timeModifier = 0.0f;
                 StartCoroutine(freezeTime(hitFreezeTime, t));
@@ -315,9 +331,9 @@ namespace FightingGame
         IEnumerator blockPush()
         {
             float s = sens.x;
-            addedVelocity += new Vector3(-s * 5, 0, 0);
+            addedVelocity += new Vector3(-s * 5 * transform.lossyScale.x, 0, 0);
             yield return new WaitForSeconds(0.3f);
-            addedVelocity -= new Vector3(-s * 5, 0, 0);
+            addedVelocity -= new Vector3(-s * 5 * transform.lossyScale.x, 0, 0);
         }
 
         IEnumerator freezeTime(float duration, float value)
@@ -329,12 +345,8 @@ namespace FightingGame
         void particleLaunch(GameObject p, Vector3 pos)
         {
             GameObject s = Instantiate(p);
-            s.transform.position = pos;
-            s.transform.localScale = new Vector3(s.transform.localScale.x*sens.x, s.transform.localScale.y, s.transform.localScale.z);
-            foreach(Transform g in s.transform)
-            {
-                g.localScale = new Vector3(g.localScale.x * sens.x, g.localScale.y, g.localScale.z);
-            }
+            s.transform.SetParent(transform);
+            s.transform.localPosition = pos;
             StartCoroutine(launchParticle(s));
         }
 

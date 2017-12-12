@@ -11,10 +11,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53436d6c16a228843b224fe8fc38d515, type: 3}
   m_Name: KeyboardDebug
   m_EditorClassIdentifier: 
-  P: 257
+  P: 99
   Taunt: 260
   Dash: 258
-  Block: 261
+  Block: 118
   DP: 0
   Teabag: 259
   hor: HorizontalKDebug

@@ -19,8 +19,10 @@ namespace FightingGame
 
 	    // Use this for initialization
 	    void Start () {
-		
-	    }
+            player1.Reset();
+            player2.Reset();
+            groundHeight = player1.transform.position.y;
+        }
 	
 	    // Update is called once per frame
 	    void Update () {
@@ -58,75 +60,6 @@ namespace FightingGame
                 player2.Fighter.SetMove(player1.Fighter.GetUp);
             }
             bReset = false;
-        }
-
-        public void OnRenderObject()
-        {
-            float l1 = Mathf.Max(player1.Life, 0.0f);
-            float l2 = Mathf.Max(player2.Life, 0.0f);
-            float c1 = player1.ComboStrength;
-            float c2 = player2.ComboStrength;
-
-            Matrix4x4 scale = Matrix4x4.Scale(new Vector3(0.05f, 0.05f, 0.05f));
-            Material debug = HitBox.GetDebugMaterial();
-            GL.PushMatrix();
-            debug.SetPass(0);
-            GL.MultMatrix(player1.transform.localToWorldMatrix*scale * Matrix4x4.Translate(new Vector3(-50, -35, -10)));
-            GL.Begin(GL.QUADS);
-
-            GL.Color(Color.red);
-            GL.Vertex(Vector3.zero);
-            GL.Vertex3(0, 20, 0);
-            GL.Vertex3(100, 20, 0);
-            GL.Vertex3(100, 0, 0);
-
-            GL.Color(Color.green);
-            GL.Vertex(Vector3.zero);
-            GL.Vertex3(0, 20, 0);
-            GL.Vertex3(l1*100, 20, 0);
-            GL.Vertex3(l1*100, 0, 0);
-
-            GL.Color(Color.blue);
-            GL.Vertex3((l1 - c1)*100, 0, 0);
-            GL.Vertex3((l1 - c1)*100, 20, 0);
-            GL.Vertex3(l1*100, 20, 0);
-            GL.Vertex3(l1*100, 0, 0);
-
-
-            GL.End();
-            GL.PopMatrix();
-
-
-            GL.PushMatrix();
-            debug.SetPass(0);
-            GL.MultMatrix(player2.transform.localToWorldMatrix * scale * Matrix4x4.Translate(new Vector3(-50, -35, -10)));
-            GL.Begin(GL.QUADS);
-
-            GL.Color(Color.red);
-            GL.Vertex(Vector3.zero);
-            GL.Vertex3(0, 20, 0);
-            GL.Vertex3(100, 20, 0);
-            GL.Vertex3(100, 0, 0);
-
-            GL.Color(Color.green);
-            GL.Vertex(Vector3.zero);
-            GL.Vertex3(0, 20, 0);
-            GL.Vertex3(l2*100, 20, 0);
-            GL.Vertex3(l2*100, 0, 0);
-
-            GL.Color(Color.blue);
-            GL.Vertex3((l2 - c2)*100, 0, 0);
-            GL.Vertex3((l2 - c2)*100, 20, 0);
-            GL.Vertex3(l2*100, 20, 0);
-            GL.Vertex3(l2*100, 0, 0);
-
-            GL.End();
-            GL.PopMatrix();
-        }
-
-        private void OnDrawGizmos()
-        {
-            //OnRenderObject();
         }
 
     }

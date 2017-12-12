@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEditor;
 
 namespace FightingGame
 {
@@ -40,9 +39,9 @@ namespace FightingGame
         public float stunDecrease = 20;
         public float guardDecrease = 20;
         float life = 0.0f;
-        float guard = 0.0f;
-        float stun = 0.0f;
-        float combo = 0.0f;
+        public float guard = 0.0f;
+        public float stun = 0.0f;
+        public float combo = 0.0f;
         float parryTimer = 0.0f;
         bool parried = false;
         public float Life
