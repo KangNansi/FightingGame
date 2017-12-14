@@ -12,10 +12,19 @@ namespace FightingGame
         public static float gravity = 1;
         public static float defaultTimeModifier = 1.0f;
         public static float timeModifier = 1.0f;
+        public static int matchNumber = 2;
+
+        int p1victory = 0;
+        int p2victory = 0;
+        
 
         bool bReset = false;
         float resetTimer = 0.0f;
 
+        public delegate void SetupVictory(int n);
+        public static event SetupVictory setupVictory;
+        public delegate void AddVictory(FighterController player);
+        public static event AddVictory addVictory;
 
 	    // Use this for initialization
 	    void Start () {
@@ -29,9 +38,20 @@ namespace FightingGame
             FighterController.Hit(player1, player2);
             if (!bReset && (player1.Life <= 0 || player2.Life <= 0))
             {
+                if(player1.Life <= 0)
+                {
+                    p2victory++;
+                    addVictory(player2);
+                }
+                if(player2.Life <= 0)
+                {
+                    p1victory++;
+                    addVictory(player1);
+                }
                 Debug.Log("Match End");
                 bReset = true;
                 resetTimer = 0.0f;
+                OnMatchEnd();
             }
             else if (bReset)
             {
@@ -42,6 +62,18 @@ namespace FightingGame
                 }
             }
 	    }
+
+        void OnMatchEnd()
+        {
+            if (p1victory >= matchNumber)
+            {
+                Debug.Log("Player 1 wins");
+            }
+            else if(p2victory >= matchNumber)
+            {
+                Debug.Log("Player 2 wins");
+            }
+        }
 
         void ResetMatch()
         {
@@ -60,6 +92,13 @@ namespace FightingGame
                 player2.Fighter.SetMove(player1.Fighter.GetUp);
             }
             bReset = false;
+        }
+
+        void ResetFight()
+        {
+            p1victory = 0;
+            p2victory = 0;
+            ResetMatch();
         }
 
     }

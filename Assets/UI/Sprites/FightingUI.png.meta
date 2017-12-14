@@ -1,12 +1,14 @@
 fileFormatVersion: 2
 guid: 1e1856a5007a315489546799a612b83a
-timeCreated: 1513039669
+timeCreated: 1513211730
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
     21300000: FightingUI_1
     21300002: FightingUI_2
     21300004: FightingUI_0
+    21300006: FightingUI_3
+    21300008: FightingUI_4
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -85,8 +87,8 @@ TextureImporter:
         y: 320
         width: 370
         height: 20
-      alignment: 1
-      pivot: {x: 0, y: 1}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -100,7 +102,7 @@ TextureImporter:
         width: 400
         height: 40
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -113,6 +115,34 @@ TextureImporter:
         y: 260
         width: 140
         height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FightingUI_3
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 164
+        width: 66
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: FightingUI_4
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 95
+        width: 63
+        height: 65
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

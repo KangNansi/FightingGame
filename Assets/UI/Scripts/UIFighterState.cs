@@ -12,11 +12,12 @@ namespace FightingGame
         public Image ComboBar;
         public Image GuardBar;
         public Image StunBar;
+        public UIVictoryManager victoryBoxes;
 
         // Use this for initialization
         void Start()
         {
-
+            victoryBoxes.SetFighter(fighter);
         }
 
         // Update is called once per frame

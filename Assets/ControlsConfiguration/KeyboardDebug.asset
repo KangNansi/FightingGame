@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: KeyboardDebug
   m_EditorClassIdentifier: 
   P: 99
-  Taunt: 260
+  Taunt: 98
   Dash: 258
   Block: 118
   DP: 0
@@ -20,4 +20,4 @@ MonoBehaviour:
   hor: HorizontalKDebug
   ver: VerticalKDebug
   dpadhor: DHorizontalKDebug
-  sens: 0
+  sens: 1

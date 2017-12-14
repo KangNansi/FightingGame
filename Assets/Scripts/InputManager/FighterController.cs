@@ -2,12 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 namespace FightingGame
 {
+    [RequireComponent(typeof(Rigidbody2D))]
+    [RequireComponent(typeof(BoxCollider2D))]
     [RequireComponent(typeof(SpriteRenderer))]
     public class FighterController : MonoBehaviour {
         public FighterObject fighterObject;
         FighterObject fighter;
+
+        public Vector2 maxPosition;
+
         public FighterObject Fighter
         {
             get
@@ -178,11 +184,11 @@ namespace FightingGame
                 {
                     if (opponent.ComboStrength < 0.3)
                     {
-                        particleLaunch(confirmSuccess, transform.position+new Vector3((hb._position.x + hb._size.x / 2f)*sens.x*transform.lossyScale.x, (hb._position.y + hb._size.y / 2f) * transform.lossyScale.y, 0));
+                        particleLaunch(confirmSuccess, new Vector3((hb._position.x + hb._size.x / 2f), (hb._position.y + hb._size.y / 2f), 0));
                     }
                     else
                     {
-                        particleLaunch(confirmBigSuccess, transform.position + new Vector3((hb._position.x + hb._size.x / 2f) * sens.x * transform.lossyScale.x, (hb._position.y + hb._size.y / 2f) * transform.lossyScale.y, 0));
+                        particleLaunch(confirmBigSuccess, new Vector3((hb._position.x + hb._size.x / 2f), (hb._position.y + hb._size.y / 2f), 0));
                     }
                     opponent.Confirm();
                 }
@@ -196,12 +202,13 @@ namespace FightingGame
             transform.position += fighter.velocity * deltaT;
 
             //Players pushing each other
-            float dist = (transform.position - opponent.transform.position).magnitude;
-            float finalMinDistance = minDistance * transform.lossyScale.x;
-            if (dist< finalMinDistance)
+            if(transform.position.x < maxPosition.x)
             {
-                float displace = finalMinDistance - dist;
-                opponent.transform.position += new Vector3(sens.x * displace, 0);
+                transform.position = new Vector3(maxPosition.x, transform.position.y, transform.position.z);
+            }
+            if(transform.position.x > maxPosition.y)
+            {
+                transform.position = new Vector3(maxPosition.y, transform.position.y, transform.position.z);
             }
 
             //Floor
@@ -289,11 +296,11 @@ namespace FightingGame
             {
                 if (fighter.ReceiveGuardDamage(hitting.guardDmg))
                 {
-                    particleLaunch(guardBreak, Vector3.up * 2f + new Vector3(sens.x, 0, 0));
+                    particleLaunch(guardBreak, Vector3.up * 2f + Vector3.right);
                 }
                 else
                 {
-                    particleLaunch(hitBlock, Vector3.up*2f+new Vector3(sens.x,0,0));
+                    particleLaunch(hitBlock, Vector3.up*2f+Vector3.right);
                 }
                 StartCoroutine(blockPush());
                 blocked = true;
@@ -331,9 +338,9 @@ namespace FightingGame
         IEnumerator blockPush()
         {
             float s = sens.x;
-            addedVelocity += new Vector3(-s * 5 * transform.lossyScale.x, 0, 0);
+            addedVelocity += new Vector3( -5 * transform.lossyScale.x, 0, 0);
             yield return new WaitForSeconds(0.3f);
-            addedVelocity -= new Vector3(-s * 5 * transform.lossyScale.x, 0, 0);
+            addedVelocity -= new Vector3( -5 * transform.lossyScale.x, 0, 0);
         }
 
         IEnumerator freezeTime(float duration, float value)
@@ -347,6 +354,10 @@ namespace FightingGame
             GameObject s = Instantiate(p);
             s.transform.SetParent(transform);
             s.transform.localPosition = pos;
+            foreach(Transform t in s.transform)
+            {
+                t.localScale = sens;
+            }
             StartCoroutine(launchParticle(s));
         }
 

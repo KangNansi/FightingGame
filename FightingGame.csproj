@@ -280,6 +280,7 @@
     <Compile Include="Assets\PostProcessing\Runtime\Utils\MaterialFactory.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Utils\RenderTextureFactory.cs" />
     <Compile Include="Assets\PostProcessing\Utilities\CustomMotionTexture\ExampleWheelController.cs" />
+    <Compile Include="Assets\Scripts\FightCamera.cs" />
     <Compile Include="Assets\Scripts\Fighter.cs" />
     <Compile Include="Assets\Scripts\Fighter\FighterObject.cs" />
     <Compile Include="Assets\Scripts\Fighter\FighterState.cs" />
@@ -292,6 +293,8 @@
     <Compile Include="Assets\Scripts\InputManager\VirtualController.cs" />
     <Compile Include="Assets\SpriteShaders\DemoScene\Scripts\ShaderFloatAnimator.cs" />
     <Compile Include="Assets\UI\Scripts\UIFighterState.cs" />
+    <Compile Include="Assets\UI\Scripts\UIVictoryBox.cs" />
+    <Compile Include="Assets\UI\Scripts\UIVictoryManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\2DxFX\Resources\2dxfx_AL\_2dxFX_AL_4Gradients.shader" />
