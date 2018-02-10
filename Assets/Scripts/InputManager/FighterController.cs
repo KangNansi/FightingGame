@@ -313,6 +313,10 @@ namespace FightingGame
                 StartCoroutine(freezeTime(hitFreezeTime, t));
                 fighter.Damage(hitting);
                 StartCoroutine(blockPush());
+                if (CameraController.controller != null)
+                {
+                    CameraController.controller.Shake(0.25f);
+                }
             }
         }
 

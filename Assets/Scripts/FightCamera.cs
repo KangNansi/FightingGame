@@ -13,11 +13,10 @@ namespace FightingGame
         public FighterController p1;
         public FighterController p2;
 
-        new Camera camera;
+        public new Camera camera;
 
 	    // Use this for initialization
 	    void Start () {
-            camera = GetComponent<Camera>();
             basePosition = transform.position;
             Ray rayLeft = camera.ScreenPointToRay(new Vector3(0, 0, 0));
             Ray rayRight = camera.ScreenPointToRay(new Vector3(camera.pixelWidth, 0, 0));

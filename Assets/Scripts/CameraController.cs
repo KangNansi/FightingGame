@@ -6,6 +6,8 @@ public class CameraController : MonoBehaviour {
 
 	public Camera camera;
 
+    public static CameraController controller = null;
+
     float ShakeTimer = 100f;
 	public float shakeFrequency = 100f;
 	float shakeStrength = 1f;
@@ -16,7 +18,7 @@ public class CameraController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
+        controller = this;
 	}
 	
 	// Update is called once per frame
