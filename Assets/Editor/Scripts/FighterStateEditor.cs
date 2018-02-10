@@ -50,6 +50,10 @@ namespace FightingGame
             
 
             state.sprite = (Sprite)EditorGUILayout.ObjectField(state.sprite, typeof(Sprite), false);
+            if (state.wwiseEvent = EditorGUILayout.Toggle(state.wwiseEvent))
+            {
+                state.wwiseEventName = EditorGUILayout.TextField(state.wwiseEventName);
+            }
             if (state.sprite)
             {
                 Rect rect = EditorGUILayout.GetControlRect();

@@ -28,6 +28,9 @@ namespace FightingGame
             }
         }
 
+        public bool wwiseEvent = false;
+        public string wwiseEventName = "";
+
         public FighterState()
         {
             //hitboxes.Add(new HitBox(HitBox.Type.Body, Vector2.zero, Vector2.one));

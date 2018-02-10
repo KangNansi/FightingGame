@@ -58,7 +58,7 @@ namespace FightingGame
 
 
 
-        Vector2 sens = new Vector2();
+        Vector3 sens = new Vector3();
 
         public GameObject hit;
         public GameObject hitBlock;
@@ -77,12 +77,14 @@ namespace FightingGame
         public void Reset()
         {
             fighter = Instantiate(fighterObject);
+            fighter.controller = this.gameObject;
             fighter.running = true;
             fighter.Init();
         }
 
         void Start () {
             fighter = Instantiate(fighterObject);
+            fighter.controller = this.gameObject;
             fighter.running = true;
             fighter.Init();
             controller = Instantiate(controller);

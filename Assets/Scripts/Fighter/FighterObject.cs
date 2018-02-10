@@ -6,6 +6,8 @@ namespace FightingGame
 {
     public class FighterObject : ScriptableObject {
 
+        public GameObject controller;
+
         [SerializeField]
         public MoveSet moveSet = new MoveSet();
         [SerializeField]
@@ -62,6 +64,8 @@ namespace FightingGame
         public float fallTime = 1.0f;
         bool bFallen = false;
         float fallTimer = 0.0f;
+
+        FighterState lastState = null;
 
         public void Init()
         {
@@ -123,14 +127,12 @@ namespace FightingGame
             combo += hb.dmg;
             combo = Mathf.Min(combo, life);
             stun += hb.stun;
-            Debug.Log("stun: " + stun);
             if(stun < stunMax)
             {
                 SetMove(Hit);
             }
             else
             {
-                Debug.Log("fall");
                 FallDown();
                 stun = 0.0f;
             }
@@ -186,6 +188,15 @@ namespace FightingGame
 
         public void UpdateObject(float deltaTime)
         {
+            FighterState state = GetFrame();
+            if (state != lastState)
+            {
+                if (state.wwiseEvent && controller != null)
+                {
+                    AkSoundEngine.PostEvent(state.wwiseEventName, controller);
+                }
+            }
+            lastState = state;
             parryTimer += deltaTime;
             guard -= guardDecrease * deltaTime;
             stun -= stunDecrease * deltaTime;
