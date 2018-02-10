@@ -73,7 +73,9 @@ namespace FightingGame
                 return;
             }
 
-            windowPos = GUILayout.BeginScrollView(windowPos);
+            windowPos = EditorGUILayout.BeginScrollView(windowPos);
+            GUILayout.BeginVertical();
+            GUILayout.BeginVertical("Box");
 
             GUILayout.BeginHorizontal();
             fighter.jumpStrength = EditorGUILayout.FloatField("Jump Strength", fighter.jumpStrength);
@@ -99,6 +101,8 @@ namespace FightingGame
             fighter.Fall = EditorGUILayout.Popup("Fall", fighter.Fall, fighter.moves.ConvertAll<string>(MoveToName).ToArray());
             fighter.GetUp = EditorGUILayout.Popup("Get Up", fighter.GetUp, fighter.moves.ConvertAll<string>(MoveToName).ToArray());
             GUILayout.EndHorizontal();
+
+            GUILayout.EndVertical();
 
             GUILayout.BeginHorizontal();
             int newMove = EditorGUILayout.Popup(selectedMove, fighter.moves.ConvertAll<string>(MoveToName).ToArray());
@@ -148,12 +152,13 @@ namespace FightingGame
                     fighter.moves[selectedMove].frames.Add(s);
                     states.Add(new FighterStateEditor(s));
                 }
-                //statesScroll = GUILayout.BeginScrollView(statesScroll);
+                
+                statesScroll = EditorGUILayout.BeginScrollView(statesScroll);
 
                 GUILayout.BeginHorizontal();
                 for(int i = 0; i < states.Count; i++)
                 {
-                    GUILayout.BeginVertical();
+                    GUILayout.BeginVertical("Box");
                     GUILayout.BeginHorizontal();
                     if (i > 0 && GUILayout.Button("<"))
                     {
@@ -178,10 +183,10 @@ namespace FightingGame
                 }
                 GUILayout.EndHorizontal();
 
-               // GUILayout.EndScrollView();
+                EditorGUILayout.EndScrollView();
             }
-
-            GUILayout.EndScrollView();
+            GUILayout.EndVertical();
+            EditorGUILayout.EndScrollView();
             EditorUtility.SetDirty(fighter);
         }
 
