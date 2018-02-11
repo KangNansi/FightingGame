@@ -31,7 +31,7 @@ namespace FightingGame
 
             GuardBar.fillAmount = fighter.Guard;
             StunBar.fillAmount = fighter.Stun;
-            ChargeBar.fillAmount = fighter.TeabagCharge;
+            //ChargeBar.fillAmount = fighter.TeabagCharge;
         }
     }
 }
