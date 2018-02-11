@@ -103,6 +103,7 @@ MonoBehaviour:
       velocity: {x: 0, y: 0}
       wwiseEvent: 0
       wwiseEventName: 
+      events: 
     - name: 
       frameType: 2
       hitboxes:
@@ -125,6 +126,7 @@ MonoBehaviour:
       velocity: {x: 0, y: 0}
       wwiseEvent: 0
       wwiseEventName: 
+      events: 
     - name: 
       frameType: 2
       hitboxes:
@@ -147,6 +149,7 @@ MonoBehaviour:
       velocity: {x: 0, y: 0}
       wwiseEvent: 0
       wwiseEventName: 
+      events: 
     - name: 
       frameType: 2
       hitboxes:
@@ -169,6 +172,7 @@ MonoBehaviour:
       velocity: {x: 0, y: 0}
       wwiseEvent: 0
       wwiseEventName: 
+      events: 
     - name: 
       frameType: 2
       hitboxes:
@@ -191,6 +195,7 @@ MonoBehaviour:
       velocity: {x: 0, y: 0}
       wwiseEvent: 0
       wwiseEventName: 
+      events: 
     - name: 
       frameType: 2
       hitboxes:
@@ -213,6 +218,7 @@ MonoBehaviour:
       velocity: {x: 0, y: 0}
       wwiseEvent: 0
       wwiseEventName: 
+      events: 
     - name: 
       frameType: 2
       hitboxes:
@@ -235,6 +241,7 @@ MonoBehaviour:
       velocity: {x: 0, y: 0}
       wwiseEvent: 0
       wwiseEventName: 
+      events: 
     - name: 
       frameType: 2
       hitboxes:
@@ -257,8 +264,10 @@ MonoBehaviour:
       velocity: {x: 0, y: 0}
       wwiseEvent: 0
       wwiseEventName: 
+      events: 
     currentFrame: 0
     name: idle
+    attack: 0
     velocity: {x: 0, y: 0}
     defaultNext: 0
     time_modifier: 1
@@ -285,6 +294,7 @@ MonoBehaviour:
       velocity: {x: 0, y: 0}
       wwiseEvent: 0
       wwiseEventName: 
+      events: 
     - name: 
       frameType: 2
       hitboxes:
@@ -307,6 +317,7 @@ MonoBehaviour:
       velocity: {x: 0, y: 0}
       wwiseEvent: 0
       wwiseEventName: 
+      events: 
     - name: 
       frameType: 2
       hitboxes:
@@ -329,6 +340,7 @@ MonoBehaviour:
       velocity: {x: 0, y: 0}
       wwiseEvent: 0
       wwiseEventName: 
+      events: 
     - name: 
       frameType: 2
       hitboxes:
@@ -351,6 +363,7 @@ MonoBehaviour:
       velocity: {x: 0, y: 0}
       wwiseEvent: 0
       wwiseEventName: 
+      events: 
     - name: 
       frameType: 2
       hitboxes:
@@ -373,6 +386,7 @@ MonoBehaviour:
       velocity: {x: 0, y: 0}
       wwiseEvent: 0
       wwiseEventName: 
+      events: 
     - name: 
       frameType: 2
       hitboxes:
@@ -395,6 +409,7 @@ MonoBehaviour:
       velocity: {x: 0, y: 0}
       wwiseEvent: 0
       wwiseEventName: 
+      events: 
     - name: 
       frameType: 2
       hitboxes:
@@ -417,8 +432,10 @@ MonoBehaviour:
       velocity: {x: 0, y: 0}
       wwiseEvent: 0
       wwiseEventName: 
+      events: 
     currentFrame: 0
     name: walk
+    attack: 0
     velocity: {x: 0, y: 0}
     defaultNext: 0
     time_modifier: 1
@@ -445,6 +462,7 @@ MonoBehaviour:
       velocity: {x: 0, y: 0}
       wwiseEvent: 0
       wwiseEventName: 
+      events: 
     - name: 
       frameType: 2
       hitboxes:
@@ -467,6 +485,7 @@ MonoBehaviour:
       velocity: {x: 0, y: 0}
       wwiseEvent: 0
       wwiseEventName: 
+      events: 
     - name: 
       frameType: 2
       hitboxes:
@@ -489,6 +508,7 @@ MonoBehaviour:
       velocity: {x: 0, y: 0}
       wwiseEvent: 0
       wwiseEventName: 
+      events: 
     - name: 
       frameType: 2
       hitboxes:
@@ -511,6 +531,7 @@ MonoBehaviour:
       velocity: {x: 0, y: 0}
       wwiseEvent: 0
       wwiseEventName: 
+      events: 
     - name: 
       frameType: 2
       hitboxes:
@@ -533,8 +554,10 @@ MonoBehaviour:
       velocity: {x: 0, y: 0}
       wwiseEvent: 0
       wwiseEventName: 
+      events: 
     currentFrame: 0
     name: teabag
+    attack: 0
     velocity: {x: 0, y: 0}
     defaultNext: 0
     time_modifier: 1
@@ -566,8 +589,9 @@ MonoBehaviour:
       sprite: {fileID: 21300034, guid: 59fb37fc39a7cf94cb7d564533cbb230, type: 3}
       time: 0.04
       velocity: {x: 0, y: 0}
-      wwiseEvent: 0
-      wwiseEventName: 
+      wwiseEvent: 1
+      wwiseEventName: Jab
+      events: 
     - name: 
       frameType: 1
       hitboxes:
@@ -604,6 +628,7 @@ MonoBehaviour:
       velocity: {x: 0, y: 0}
       wwiseEvent: 0
       wwiseEventName: 
+      events: 
     - name: 
       frameType: 2
       hitboxes:
@@ -633,8 +658,10 @@ MonoBehaviour:
       velocity: {x: 0, y: 0}
       wwiseEvent: 0
       wwiseEventName: 
+      events: 
     currentFrame: 0
     name: jab
+    attack: 0
     velocity: {x: 0, y: 0}
     defaultNext: 0
     time_modifier: 1
@@ -647,6 +674,7 @@ MonoBehaviour:
       velocity: {x: 0, y: 0}
       wwiseEvent: 0
       wwiseEventName: 
+      events: 
     - name: 
       frameType: 2
       hitboxes: []
@@ -655,6 +683,7 @@ MonoBehaviour:
       velocity: {x: 0, y: 0}
       wwiseEvent: 0
       wwiseEventName: 
+      events: 
     - name: 
       frameType: 2
       hitboxes: []
@@ -663,6 +692,7 @@ MonoBehaviour:
       velocity: {x: 0, y: 0}
       wwiseEvent: 0
       wwiseEventName: 
+      events: 
     - name: 
       frameType: 2
       hitboxes:
@@ -678,6 +708,7 @@ MonoBehaviour:
       velocity: {x: 0, y: 0}
       wwiseEvent: 0
       wwiseEventName: 
+      events: 
     - name: 
       frameType: 2
       hitboxes:
@@ -693,6 +724,7 @@ MonoBehaviour:
       velocity: {x: 0, y: 0}
       wwiseEvent: 0
       wwiseEventName: 
+      events: 
     - name: 
       frameType: 2
       hitboxes:
@@ -708,8 +740,10 @@ MonoBehaviour:
       velocity: {x: 0, y: 0}
       wwiseEvent: 0
       wwiseEventName: 
+      events: 
     currentFrame: 0
     name: hit
+    attack: 0
     velocity: {x: 0, y: 0}
     defaultNext: 0
     time_modifier: 1
@@ -722,6 +756,7 @@ MonoBehaviour:
       velocity: {x: 0, y: 0}
       wwiseEvent: 0
       wwiseEventName: 
+      events: 
     - name: 
       frameType: 2
       hitboxes: []
@@ -730,8 +765,10 @@ MonoBehaviour:
       velocity: {x: 0, y: 0}
       wwiseEvent: 0
       wwiseEventName: 
+      events: 
     currentFrame: 0
     name: block
+    attack: 0
     velocity: {x: 0, y: 0}
     defaultNext: 0
     time_modifier: 1
@@ -765,6 +802,7 @@ MonoBehaviour:
       velocity: {x: 0, y: 0}
       wwiseEvent: 0
       wwiseEventName: 
+      events: 
     - name: 
       frameType: 2
       hitboxes:
@@ -787,6 +825,7 @@ MonoBehaviour:
       velocity: {x: -15, y: 0}
       wwiseEvent: 0
       wwiseEventName: 
+      events: 
     - name: 
       frameType: 2
       hitboxes:
@@ -802,6 +841,7 @@ MonoBehaviour:
       velocity: {x: -10, y: 0}
       wwiseEvent: 0
       wwiseEventName: 
+      events: 
     - name: 
       frameType: 2
       hitboxes:
@@ -824,6 +864,7 @@ MonoBehaviour:
       velocity: {x: -5, y: 0}
       wwiseEvent: 0
       wwiseEventName: 
+      events: 
     - name: 
       frameType: 2
       hitboxes:
@@ -846,6 +887,7 @@ MonoBehaviour:
       velocity: {x: 0, y: 0}
       wwiseEvent: 0
       wwiseEventName: 
+      events: 
     - name: 
       frameType: 2
       hitboxes:
@@ -868,6 +910,7 @@ MonoBehaviour:
       velocity: {x: 0, y: 0}
       wwiseEvent: 0
       wwiseEventName: 
+      events: 
     - name: 
       frameType: 2
       hitboxes:
@@ -890,6 +933,7 @@ MonoBehaviour:
       velocity: {x: 0, y: 0}
       wwiseEvent: 0
       wwiseEventName: 
+      events: 
     - name: 
       frameType: 2
       hitboxes:
@@ -919,6 +963,7 @@ MonoBehaviour:
       velocity: {x: 0, y: 0}
       wwiseEvent: 0
       wwiseEventName: 
+      events: 
     - name: 
       frameType: 2
       hitboxes:
@@ -941,6 +986,7 @@ MonoBehaviour:
       velocity: {x: 0, y: 0}
       wwiseEvent: 0
       wwiseEventName: 
+      events: 
     - name: 
       frameType: 2
       hitboxes:
@@ -963,6 +1009,7 @@ MonoBehaviour:
       velocity: {x: 0, y: 0}
       wwiseEvent: 0
       wwiseEventName: 
+      events: 
     - name: 
       frameType: 2
       hitboxes:
@@ -985,6 +1032,7 @@ MonoBehaviour:
       velocity: {x: 0, y: 0}
       wwiseEvent: 0
       wwiseEventName: 
+      events: 
     - name: 
       frameType: 2
       hitboxes:
@@ -1007,6 +1055,7 @@ MonoBehaviour:
       velocity: {x: 0, y: 0}
       wwiseEvent: 0
       wwiseEventName: 
+      events: 
     - name: 
       frameType: 2
       hitboxes:
@@ -1022,6 +1071,7 @@ MonoBehaviour:
       velocity: {x: -15, y: 0}
       wwiseEvent: 0
       wwiseEventName: 
+      events: 
     - name: 
       frameType: 2
       hitboxes:
@@ -1051,6 +1101,7 @@ MonoBehaviour:
       velocity: {x: -15, y: 0}
       wwiseEvent: 0
       wwiseEventName: 
+      events: 
     - name: 
       frameType: 2
       hitboxes:
@@ -1080,8 +1131,10 @@ MonoBehaviour:
       velocity: {x: -5, y: 0}
       wwiseEvent: 0
       wwiseEventName: 
+      events: 
     currentFrame: 0
     name: taunt
+    attack: 0
     velocity: {x: 0, y: 0}
     defaultNext: 0
     time_modifier: 1
@@ -1099,8 +1152,9 @@ MonoBehaviour:
       sprite: {fileID: 21300000, guid: f2746e7a8badbef4fb6b5a5648ed1817, type: 3}
       time: 0.04
       velocity: {x: 0, y: 0}
-      wwiseEvent: 0
-      wwiseEventName: 
+      wwiseEvent: 1
+      wwiseEventName: Upper_kick_handpat
+      events: 
     - name: 
       frameType: 1
       hitboxes:
@@ -1142,8 +1196,9 @@ MonoBehaviour:
       sprite: {fileID: 21300002, guid: f2746e7a8badbef4fb6b5a5648ed1817, type: 3}
       time: 0.04
       velocity: {x: 4, y: 0}
-      wwiseEvent: 0
-      wwiseEventName: 
+      wwiseEvent: 1
+      wwiseEventName: Upper_kick
+      events: 
     - name: 
       frameType: 1
       hitboxes:
@@ -1187,6 +1242,7 @@ MonoBehaviour:
       velocity: {x: 3, y: 0}
       wwiseEvent: 0
       wwiseEventName: 
+      events: 
     - name: Should it really be an attack frame ?
       frameType: 1
       hitboxes:
@@ -1222,7 +1278,8 @@ MonoBehaviour:
       time: 0.08
       velocity: {x: 0, y: 0}
       wwiseEvent: 0
-      wwiseEventName: 
+      wwiseEventName: Upper_kick
+      events: 
     - name: 
       frameType: 2
       hitboxes:
@@ -1245,6 +1302,7 @@ MonoBehaviour:
       velocity: {x: 2, y: 0}
       wwiseEvent: 0
       wwiseEventName: 
+      events: 
     - name: 
       frameType: 2
       hitboxes:
@@ -1267,6 +1325,7 @@ MonoBehaviour:
       velocity: {x: 2, y: 0}
       wwiseEvent: 0
       wwiseEventName: 
+      events: 
     - name: 
       frameType: 2
       hitboxes:
@@ -1296,6 +1355,7 @@ MonoBehaviour:
       velocity: {x: 1, y: 0}
       wwiseEvent: 0
       wwiseEventName: 
+      events: 
     - name: 
       frameType: 2
       hitboxes:
@@ -1311,6 +1371,7 @@ MonoBehaviour:
       velocity: {x: 0, y: 0}
       wwiseEvent: 0
       wwiseEventName: 
+      events: 
     - name: 
       frameType: 2
       hitboxes:
@@ -1333,8 +1394,10 @@ MonoBehaviour:
       velocity: {x: 0, y: 0}
       wwiseEvent: 0
       wwiseEventName: 
+      events: 
     currentFrame: 0
     name: high kick
+    attack: 0
     velocity: {x: 0, y: 0}
     defaultNext: 0
     time_modifier: 1
@@ -1359,8 +1422,9 @@ MonoBehaviour:
       sprite: {fileID: 21300020, guid: f2746e7a8badbef4fb6b5a5648ed1817, type: 3}
       time: 0.08
       velocity: {x: 0, y: 0}
-      wwiseEvent: 0
-      wwiseEventName: 
+      wwiseEvent: 1
+      wwiseEventName: Low_Kick
+      events: 
     - name: 
       frameType: 0
       hitboxes:
@@ -1383,6 +1447,7 @@ MonoBehaviour:
       velocity: {x: 5, y: 0}
       wwiseEvent: 0
       wwiseEventName: 
+      events: 
     - name: 
       frameType: 1
       hitboxes:
@@ -1412,6 +1477,7 @@ MonoBehaviour:
       velocity: {x: 10, y: 0}
       wwiseEvent: 0
       wwiseEventName: 
+      events: 
     - name: 
       frameType: 1
       hitboxes:
@@ -1441,6 +1507,7 @@ MonoBehaviour:
       velocity: {x: 0, y: 0}
       wwiseEvent: 0
       wwiseEventName: 
+      events: 
     - name: 
       frameType: 2
       hitboxes:
@@ -1463,6 +1530,7 @@ MonoBehaviour:
       velocity: {x: 0, y: 0}
       wwiseEvent: 0
       wwiseEventName: 
+      events: 
     - name: 
       frameType: 2
       hitboxes:
@@ -1485,6 +1553,7 @@ MonoBehaviour:
       velocity: {x: -10, y: 0}
       wwiseEvent: 0
       wwiseEventName: 
+      events: 
     - name: 
       frameType: 2
       hitboxes:
@@ -1507,8 +1576,10 @@ MonoBehaviour:
       velocity: {x: -5, y: 0}
       wwiseEvent: 0
       wwiseEventName: 
+      events: 
     currentFrame: 0
     name: low kick
+    attack: 0
     velocity: {x: 0, y: 0}
     defaultNext: 0
     time_modifier: 1
@@ -1526,8 +1597,9 @@ MonoBehaviour:
       sprite: {fileID: 21300000, guid: fe19d07866fcd5b47a80cd5d5c835373, type: 3}
       time: 0.08
       velocity: {x: 0, y: 0}
-      wwiseEvent: 0
-      wwiseEventName: 
+      wwiseEvent: 1
+      wwiseEventName: Back_Kick_init
+      events: 
     - name: 
       frameType: 0
       hitboxes:
@@ -1543,6 +1615,7 @@ MonoBehaviour:
       velocity: {x: 0, y: 0}
       wwiseEvent: 0
       wwiseEventName: 
+      events: 
     - name: 
       frameType: 0
       hitboxes:
@@ -1565,6 +1638,7 @@ MonoBehaviour:
       velocity: {x: 0, y: 0}
       wwiseEvent: 0
       wwiseEventName: 
+      events: 
     - name: 
       frameType: 0
       hitboxes:
@@ -1580,6 +1654,7 @@ MonoBehaviour:
       velocity: {x: 0, y: 0}
       wwiseEvent: 0
       wwiseEventName: 
+      events: 
     - name: 
       frameType: 0
       hitboxes:
@@ -1595,6 +1670,7 @@ MonoBehaviour:
       velocity: {x: 0, y: 0}
       wwiseEvent: 0
       wwiseEventName: 
+      events: 
     - name: 
       frameType: 0
       hitboxes:
@@ -1610,6 +1686,7 @@ MonoBehaviour:
       velocity: {x: 0, y: 0}
       wwiseEvent: 0
       wwiseEventName: 
+      events: 
     - name: 
       frameType: 0
       hitboxes:
@@ -1630,8 +1707,9 @@ MonoBehaviour:
       sprite: {fileID: 21300012, guid: fe19d07866fcd5b47a80cd5d5c835373, type: 3}
       time: 0.04
       velocity: {x: 0, y: 0}
-      wwiseEvent: 0
-      wwiseEventName: 
+      wwiseEvent: 1
+      wwiseEventName: Back_Kick_whoosh
+      events: 
     - name: 
       frameType: 1
       hitboxes:
@@ -1661,6 +1739,7 @@ MonoBehaviour:
       velocity: {x: 0, y: 0}
       wwiseEvent: 0
       wwiseEventName: 
+      events: 
     - name: 
       frameType: 1
       hitboxes:
@@ -1690,6 +1769,7 @@ MonoBehaviour:
       velocity: {x: 0, y: 0}
       wwiseEvent: 0
       wwiseEventName: 
+      events: 
     - name: 
       frameType: 1
       hitboxes:
@@ -1705,6 +1785,7 @@ MonoBehaviour:
       velocity: {x: 0, y: 0}
       wwiseEvent: 0
       wwiseEventName: 
+      events: 
     - name: 
       frameType: 2
       hitboxes:
@@ -1720,6 +1801,7 @@ MonoBehaviour:
       velocity: {x: 0, y: 0}
       wwiseEvent: 0
       wwiseEventName: 
+      events: 
     - name: 
       frameType: 2
       hitboxes:
@@ -1735,6 +1817,7 @@ MonoBehaviour:
       velocity: {x: 0, y: 0}
       wwiseEvent: 0
       wwiseEventName: 
+      events: 
     - name: 
       frameType: 2
       hitboxes:
@@ -1750,8 +1833,10 @@ MonoBehaviour:
       velocity: {x: 0, y: 0}
       wwiseEvent: 0
       wwiseEventName: 
+      events: 
     currentFrame: 0
     name: back kick
+    attack: 0
     velocity: {x: 0, y: 0}
     defaultNext: 0
     time_modifier: 1
@@ -1776,8 +1861,9 @@ MonoBehaviour:
       sprite: {fileID: 21300000, guid: 2c1cc1f9066b72b43a85b94b142b5a86, type: 3}
       time: 0.08
       velocity: {x: 0, y: 0}
-      wwiseEvent: 0
-      wwiseEventName: 
+      wwiseEvent: 1
+      wwiseEventName: Forward_init
+      events: 
     - name: 
       frameType: 0
       hitboxes:
@@ -1800,6 +1886,7 @@ MonoBehaviour:
       velocity: {x: -1, y: 0}
       wwiseEvent: 0
       wwiseEventName: 
+      events: 
     - name: 
       frameType: 0
       hitboxes:
@@ -1815,6 +1902,7 @@ MonoBehaviour:
       velocity: {x: 3, y: 0}
       wwiseEvent: 0
       wwiseEventName: 
+      events: 
     - name: 
       frameType: 1
       hitboxes:
@@ -1835,8 +1923,9 @@ MonoBehaviour:
       sprite: {fileID: 21300006, guid: 2c1cc1f9066b72b43a85b94b142b5a86, type: 3}
       time: 0.08
       velocity: {x: 6, y: 0}
-      wwiseEvent: 0
-      wwiseEventName: 
+      wwiseEvent: 1
+      wwiseEventName: Forward_Whoosh
+      events: 
     - name: 
       frameType: 1
       hitboxes:
@@ -1859,6 +1948,7 @@ MonoBehaviour:
       velocity: {x: 2, y: 0}
       wwiseEvent: 0
       wwiseEventName: 
+      events: 
     - name: 
       frameType: 1
       hitboxes:
@@ -1874,6 +1964,7 @@ MonoBehaviour:
       velocity: {x: 2, y: 0}
       wwiseEvent: 0
       wwiseEventName: 
+      events: 
     - name: 
       frameType: 1
       hitboxes:
@@ -1889,6 +1980,7 @@ MonoBehaviour:
       velocity: {x: 2, y: 0}
       wwiseEvent: 0
       wwiseEventName: 
+      events: 
     - name: 
       frameType: 1
       hitboxes:
@@ -1916,8 +2008,9 @@ MonoBehaviour:
       sprite: {fileID: 21300014, guid: 2c1cc1f9066b72b43a85b94b142b5a86, type: 3}
       time: 0.12
       velocity: {x: 4, y: 0}
-      wwiseEvent: 0
-      wwiseEventName: 
+      wwiseEvent: 1
+      wwiseEventName: Forward_Whoosh
+      events: 
     - name: 
       frameType: 1
       hitboxes:
@@ -1933,6 +2026,7 @@ MonoBehaviour:
       velocity: {x: 6, y: 0}
       wwiseEvent: 0
       wwiseEventName: 
+      events: 
     - name: 
       frameType: 1
       hitboxes:
@@ -1948,6 +2042,7 @@ MonoBehaviour:
       velocity: {x: 4, y: 0}
       wwiseEvent: 0
       wwiseEventName: 
+      events: 
     - name: 
       frameType: 1
       hitboxes:
@@ -1975,8 +2070,9 @@ MonoBehaviour:
       sprite: {fileID: 21300020, guid: 2c1cc1f9066b72b43a85b94b142b5a86, type: 3}
       time: 0.12
       velocity: {x: 4, y: 0}
-      wwiseEvent: 0
-      wwiseEventName: 
+      wwiseEvent: 1
+      wwiseEventName: Forward_Whoosh
+      events: 
     - name: 
       frameType: 1
       hitboxes:
@@ -1992,6 +2088,7 @@ MonoBehaviour:
       velocity: {x: 5, y: 0}
       wwiseEvent: 0
       wwiseEventName: 
+      events: 
     - name: 
       frameType: 1
       hitboxes:
@@ -2007,6 +2104,7 @@ MonoBehaviour:
       velocity: {x: 6, y: 0}
       wwiseEvent: 0
       wwiseEventName: 
+      events: 
     - name: 
       frameType: 1
       hitboxes:
@@ -2029,6 +2127,7 @@ MonoBehaviour:
       velocity: {x: 2, y: 0}
       wwiseEvent: 0
       wwiseEventName: 
+      events: 
     - name: 
       frameType: 2
       hitboxes:
@@ -2051,6 +2150,7 @@ MonoBehaviour:
       velocity: {x: 4, y: 0}
       wwiseEvent: 0
       wwiseEventName: 
+      events: 
     - name: 
       frameType: 2
       hitboxes:
@@ -2073,8 +2173,10 @@ MonoBehaviour:
       velocity: {x: 4, y: 0}
       wwiseEvent: 0
       wwiseEventName: 
+      events: 
     currentFrame: 0
     name: forward attack
+    attack: 0
     velocity: {x: 0, y: 0}
     defaultNext: 0
     time_modifier: 1
@@ -2094,6 +2196,7 @@ MonoBehaviour:
       velocity: {x: 0, y: 0}
       wwiseEvent: 0
       wwiseEventName: 
+      events: 
     - name: 
       frameType: 1
       hitboxes:
@@ -2109,6 +2212,7 @@ MonoBehaviour:
       velocity: {x: 0, y: 0}
       wwiseEvent: 0
       wwiseEventName: 
+      events: 
     - name: 
       frameType: 2
       hitboxes:
@@ -2124,6 +2228,7 @@ MonoBehaviour:
       velocity: {x: 0, y: 0}
       wwiseEvent: 0
       wwiseEventName: 
+      events: 
     - name: 
       frameType: 2
       hitboxes:
@@ -2139,6 +2244,7 @@ MonoBehaviour:
       velocity: {x: 0, y: 0}
       wwiseEvent: 0
       wwiseEventName: 
+      events: 
     - name: 
       frameType: 2
       hitboxes:
@@ -2154,6 +2260,7 @@ MonoBehaviour:
       velocity: {x: 0, y: 0}
       wwiseEvent: 0
       wwiseEventName: 
+      events: 
     - name: 
       frameType: 2
       hitboxes:
@@ -2169,8 +2276,10 @@ MonoBehaviour:
       velocity: {x: 0, y: 0}
       wwiseEvent: 0
       wwiseEventName: 
+      events: 
     currentFrame: 0
     name: dash
+    attack: 0
     velocity: {x: 20, y: 0}
     defaultNext: 0
     time_modifier: 1
@@ -2183,6 +2292,7 @@ MonoBehaviour:
       velocity: {x: 0, y: 0}
       wwiseEvent: 0
       wwiseEventName: 
+      events: 
     - name: 
       frameType: 2
       hitboxes: []
@@ -2191,6 +2301,7 @@ MonoBehaviour:
       velocity: {x: 0, y: 0}
       wwiseEvent: 0
       wwiseEventName: 
+      events: 
     - name: 
       frameType: 2
       hitboxes: []
@@ -2199,6 +2310,7 @@ MonoBehaviour:
       velocity: {x: 0, y: 0}
       wwiseEvent: 0
       wwiseEventName: 
+      events: 
     - name: 
       frameType: 2
       hitboxes: []
@@ -2207,6 +2319,7 @@ MonoBehaviour:
       velocity: {x: 0, y: 0}
       wwiseEvent: 0
       wwiseEventName: 
+      events: 
     - name: 
       frameType: 2
       hitboxes: []
@@ -2215,6 +2328,7 @@ MonoBehaviour:
       velocity: {x: 0, y: 0}
       wwiseEvent: 0
       wwiseEventName: 
+      events: 
     - name: 
       frameType: 2
       hitboxes: []
@@ -2223,6 +2337,7 @@ MonoBehaviour:
       velocity: {x: 0, y: 0}
       wwiseEvent: 0
       wwiseEventName: 
+      events: 
     - name: 
       frameType: 2
       hitboxes: []
@@ -2231,6 +2346,7 @@ MonoBehaviour:
       velocity: {x: 0, y: 0}
       wwiseEvent: 0
       wwiseEventName: 
+      events: 
     - name: 
       frameType: 2
       hitboxes: []
@@ -2239,6 +2355,7 @@ MonoBehaviour:
       velocity: {x: 0, y: 0}
       wwiseEvent: 0
       wwiseEventName: 
+      events: 
     - name: 
       frameType: 2
       hitboxes: []
@@ -2247,6 +2364,7 @@ MonoBehaviour:
       velocity: {x: 0, y: 0}
       wwiseEvent: 0
       wwiseEventName: 
+      events: 
     - name: 
       frameType: 2
       hitboxes: []
@@ -2255,6 +2373,7 @@ MonoBehaviour:
       velocity: {x: 0, y: 0}
       wwiseEvent: 0
       wwiseEventName: 
+      events: 
     - name: 
       frameType: 2
       hitboxes: []
@@ -2263,6 +2382,7 @@ MonoBehaviour:
       velocity: {x: 0, y: 0}
       wwiseEvent: 0
       wwiseEventName: 
+      events: 
     - name: 
       frameType: 2
       hitboxes: []
@@ -2271,6 +2391,7 @@ MonoBehaviour:
       velocity: {x: 0, y: 0}
       wwiseEvent: 0
       wwiseEventName: 
+      events: 
     - name: 
       frameType: 2
       hitboxes: []
@@ -2279,6 +2400,7 @@ MonoBehaviour:
       velocity: {x: 0, y: 0}
       wwiseEvent: 0
       wwiseEventName: 
+      events: 
     - name: 
       frameType: 2
       hitboxes: []
@@ -2287,6 +2409,7 @@ MonoBehaviour:
       velocity: {x: 0, y: 0}
       wwiseEvent: 0
       wwiseEventName: 
+      events: 
     - name: 
       frameType: 2
       hitboxes: []
@@ -2295,8 +2418,10 @@ MonoBehaviour:
       velocity: {x: 0, y: 0}
       wwiseEvent: 0
       wwiseEventName: 
+      events: 
     currentFrame: 0
     name: fall
+    attack: 0
     velocity: {x: 0, y: 0}
     defaultNext: 13
     time_modifier: 1
@@ -2309,8 +2434,10 @@ MonoBehaviour:
       velocity: {x: 0, y: 0}
       wwiseEvent: 0
       wwiseEventName: 
+      events: 
     currentFrame: 0
     name: onGround
+    attack: 0
     velocity: {x: 0, y: 0}
     defaultNext: 13
     time_modifier: 1
@@ -2323,6 +2450,7 @@ MonoBehaviour:
       velocity: {x: 0, y: 0}
       wwiseEvent: 0
       wwiseEventName: 
+      events: 
     - name: 
       frameType: 2
       hitboxes: []
@@ -2331,6 +2459,7 @@ MonoBehaviour:
       velocity: {x: 0, y: 0}
       wwiseEvent: 0
       wwiseEventName: 
+      events: 
     - name: 
       frameType: 2
       hitboxes: []
@@ -2339,6 +2468,7 @@ MonoBehaviour:
       velocity: {x: 0, y: 0}
       wwiseEvent: 0
       wwiseEventName: 
+      events: 
     - name: 
       frameType: 2
       hitboxes: []
@@ -2347,6 +2477,7 @@ MonoBehaviour:
       velocity: {x: 0, y: 0}
       wwiseEvent: 0
       wwiseEventName: 
+      events: 
     - name: 
       frameType: 2
       hitboxes: []
@@ -2355,8 +2486,10 @@ MonoBehaviour:
       velocity: {x: 0, y: 0}
       wwiseEvent: 0
       wwiseEventName: 
+      events: 
     currentFrame: 0
     name: get up
+    attack: 0
     velocity: {x: 0, y: 0}
     defaultNext: 0
     time_modifier: 1
@@ -2369,8 +2502,10 @@ MonoBehaviour:
       velocity: {x: 0, y: 0}
       wwiseEvent: 0
       wwiseEventName: 
+      events: 
     currentFrame: 0
     name: air attack(startup)
+    attack: 0
     velocity: {x: 0, y: 0}
     defaultNext: 16
     time_modifier: 1
@@ -2383,6 +2518,7 @@ MonoBehaviour:
       velocity: {x: 0, y: 0}
       wwiseEvent: 0
       wwiseEventName: 
+      events: 
     - name: 
       frameType: 2
       hitboxes: []
@@ -2391,8 +2527,10 @@ MonoBehaviour:
       velocity: {x: 0, y: 0}
       wwiseEvent: 0
       wwiseEventName: 
+      events: 
     currentFrame: 0
     name: air attack(loop)
+    attack: 0
     velocity: {x: 0, y: 0}
     defaultNext: 16
     time_modifier: 0.849
@@ -2405,6 +2543,7 @@ MonoBehaviour:
       velocity: {x: 0, y: 0}
       wwiseEvent: 0
       wwiseEventName: 
+      events: 
     - name: 
       frameType: 2
       hitboxes: []
@@ -2413,6 +2552,7 @@ MonoBehaviour:
       velocity: {x: 0, y: 0}
       wwiseEvent: 0
       wwiseEventName: 
+      events: 
     - name: 
       frameType: 2
       hitboxes: []
@@ -2421,8 +2561,10 @@ MonoBehaviour:
       velocity: {x: 0, y: 0}
       wwiseEvent: 0
       wwiseEventName: 
+      events: 
     currentFrame: 0
     name: jump(startup)
+    attack: 0
     velocity: {x: 0, y: 0}
     defaultNext: 18
     time_modifier: 0.698
@@ -2435,8 +2577,10 @@ MonoBehaviour:
       velocity: {x: 0, y: 0}
       wwiseEvent: 0
       wwiseEventName: 
+      events: 
     currentFrame: 0
     name: jump(loop)
+    attack: 0
     velocity: {x: 0, y: 0}
     defaultNext: 18
     time_modifier: 0.344
@@ -2449,6 +2593,7 @@ MonoBehaviour:
       velocity: {x: 0, y: 0}
       wwiseEvent: 0
       wwiseEventName: 
+      events: 
     - name: 
       frameType: 2
       hitboxes: []
@@ -2457,8 +2602,10 @@ MonoBehaviour:
       velocity: {x: 0, y: 0}
       wwiseEvent: 0
       wwiseEventName: 
+      events: 
     currentFrame: 0
     name: jump(end)
+    attack: 0
     velocity: {x: 0, y: 0}
     defaultNext: 21
     time_modifier: 1
@@ -2471,6 +2618,7 @@ MonoBehaviour:
       velocity: {x: 0, y: 0}
       wwiseEvent: 0
       wwiseEventName: 
+      events: 
     - name: 
       frameType: 2
       hitboxes: []
@@ -2479,6 +2627,7 @@ MonoBehaviour:
       velocity: {x: 0, y: 0}
       wwiseEvent: 0
       wwiseEventName: 
+      events: 
     - name: 
       frameType: 2
       hitboxes: []
@@ -2487,8 +2636,10 @@ MonoBehaviour:
       velocity: {x: 0, y: 0}
       wwiseEvent: 0
       wwiseEventName: 
+      events: 
     currentFrame: 0
     name: jump(recovery)
+    attack: 0
     velocity: {x: 0, y: 0}
     defaultNext: 0
     time_modifier: 0.707
@@ -2501,11 +2652,14 @@ MonoBehaviour:
       velocity: {x: 0, y: 0}
       wwiseEvent: 0
       wwiseEventName: 
+      events: 
     currentFrame: 0
     name: jumpend(loop)
+    attack: 0
     velocity: {x: 0, y: 0}
     defaultNext: 21
     time_modifier: 1
+  fireBall: {fileID: 0}
   speed: 15
   currentState: 0
   drawHitbox: 1
@@ -2518,6 +2672,9 @@ MonoBehaviour:
   Taunt: 6
   Fall: 12
   GetUp: 14
+  JumpStart: 0
+  JumpFall: 0
+  JumpRecovery: 0
   running: 0
   velocity: {x: 0, y: 0, z: 0}
   jumpStrength: 0

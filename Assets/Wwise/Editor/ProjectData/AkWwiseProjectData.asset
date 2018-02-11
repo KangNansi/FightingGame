@@ -16,9 +16,29 @@ MonoBehaviour:
   - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{033D3F2C-F663-480F-BBC8-F1266E58C3D0}'
-    m_lastTimePsrt1: -103541702
-    m_lastTimePart2: -1999277907
+    m_lastTimePsrt1: -375965129
+    m_lastTimePart2: -1999277718
     List:
+    - Name: Back_Kick_init
+      Path: Default Work Unit\Back_Kick_init
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Back_Kick_init
+        ObjectType: 3
+      ID: -99413994
+      Guid: c085b8a71626ae4897f6a0f008718622
+      maxAttenuation: 0
+    - Name: Back_Kick_whoosh
+      Path: Default Work Unit\Back_Kick_whoosh
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Back_Kick_whoosh
+        ObjectType: 3
+      ID: -302922982
+      Guid: 2c7ed70345d29e4088d5533714181ee5
+      maxAttenuation: 0
     - Name: Block
       Path: Default Work Unit\Block
       PathAndIcons:
@@ -28,6 +48,56 @@ MonoBehaviour:
         ObjectType: 3
       ID: -293386320
       Guid: 7d2f6bdfd1ccae47bc47cf10c3c935df
+      maxAttenuation: 0
+    - Name: Forward_init
+      Path: Default Work Unit\Forward_init
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Forward_init
+        ObjectType: 3
+      ID: 1593604493
+      Guid: 8cbfa983f36bbc4391c1a7bf1d21bb0b
+      maxAttenuation: 0
+    - Name: Forward_Whoosh
+      Path: Default Work Unit\Forward_Whoosh
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Forward_Whoosh
+        ObjectType: 3
+      ID: 17683061
+      Guid: 2fe7f130d8a97d429c81dfa162ba4a90
+      maxAttenuation: 0
+    - Name: Jab
+      Path: Default Work Unit\Jab
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Jab
+        ObjectType: 3
+      ID: 780552104
+      Guid: 8e60bd43f21f6346b6291a527812ad38
+      maxAttenuation: 0
+    - Name: Kill
+      Path: Default Work Unit\Kill
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Kill
+        ObjectType: 3
+      ID: 2030840469
+      Guid: 307b70df62d1eb4abfe5f09ccd1bd7f5
+      maxAttenuation: 0
+    - Name: Low_Kick
+      Path: Default Work Unit\Low_Kick
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Low_Kick
+        ObjectType: 3
+      ID: 622371194
+      Guid: 6170dd793f17044484460b3e27383b0a
       maxAttenuation: 0
     - Name: Mid_Hit
       Path: Default Work Unit\Mid_Hit
@@ -59,13 +129,54 @@ MonoBehaviour:
       ID: -926387491
       Guid: a86bf385f9692f4f9395177aed8a423f
       maxAttenuation: 0
+    - Name: Round_Start
+      Path: Default Work Unit\Round_Start
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Round_Start
+        ObjectType: 3
+      ID: 280570306
+      Guid: 7f246576e6408e4ca91f428fffb4b89d
+      maxAttenuation: 0
+    - Name: Upper_kick
+      Path: Default Work Unit\Upper_kick
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Upper_kick
+        ObjectType: 3
+      ID: 321053796
+      Guid: 444a0e7737406948a718cabfb7b3a785
+      maxAttenuation: 0
+    - Name: Upper_kick_handpat
+      Path: Default Work Unit\Upper_kick_handpat
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Upper_kick_handpat
+        ObjectType: 3
+      ID: 587916051
+      Guid: eeb7f27ca6cc274c93adfa215a0964b9
+      maxAttenuation: 0
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{E2F1505B-76D8-459F-8EAB-723AC840F2BB}'
-    m_lastTimePsrt1: 1420687731
-    m_lastTimePart2: -1999277907
-    List: []
+    m_lastTimePsrt1: -245550330
+    m_lastTimePart2: -1999277733
+    List:
+    - Name: Delay
+      Path: Default Work Unit\Master Audio Bus\Delay
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+      - ElementName: Delay
+        ObjectType: 1
+      ID: 357718954
+      Guid: 47f9159d6348684ea14e3d67e3a153a3
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
     ParentPhysicalPath: 
@@ -84,8 +195,8 @@ MonoBehaviour:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{64E31A7D-62C1-402F-8295-C2D1C2BEAEC9}'
-    m_lastTimePsrt1: 183427601
-    m_lastTimePart2: -1999277903
+    m_lastTimePsrt1: 919035008
+    m_lastTimePart2: -1999277717
     List:
     - Name: Main
       Path: Default Work Unit\Main
@@ -100,8 +211,8 @@ MonoBehaviour:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{8ADDECDE-0CF7-4344-A430-758978B1C68D}'
-    m_lastTimePsrt1: -1533756451
-    m_lastTimePart2: -1999277907
+    m_lastTimePsrt1: -376973555
+    m_lastTimePart2: -1999277718
     List:
     - Name: GuardBreak
       Path: Default Work Unit\GuardBreak
@@ -112,6 +223,15 @@ MonoBehaviour:
         ObjectType: 13
       ID: -1227785847
       Guid: 25bcc590d644944587dfde3e46061616
+    - Name: Kill
+      Path: Default Work Unit\Kill
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Kill
+        ObjectType: 13
+      ID: 2030840469
+      Guid: 70e426f46d2ac847bc1871e6cce67315
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
     ParentPhysicalPath: 
@@ -123,8 +243,6 @@ MonoBehaviour:
   - /Montaine The Game
   - /Montaine The Game/Events
   - /Montaine The Game/Events/Default Work Unit
-  - /Montaine The Game/SoundBanks
-  - /Montaine The Game/SoundBanks/Default Work Unit
   m_lastPopulateTimePsrt1: 0
   m_lastPopulateTimePart2: 0
   autoPopulateEnabled: 1
