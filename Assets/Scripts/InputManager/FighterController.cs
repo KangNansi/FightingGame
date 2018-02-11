@@ -156,7 +156,7 @@ namespace FightingGame
             {
                 //SetMove(Stand);
             }
-            if(!fighter.Grounded && jumpTimer > 1 && lastJumpState && !fighter.GetMove().attack)
+            if(!fighter.Grounded && jumpTimer > 1.25f && lastJumpState && !fighter.GetMove().attack)
             {
                 fighter.SetMove(fighter.JumpFall);
                 lastJumpState = false;
