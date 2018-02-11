@@ -2672,12 +2672,13 @@ MonoBehaviour:
   Taunt: 6
   Fall: 12
   GetUp: 14
-  JumpStart: 0
-  JumpFall: 0
-  JumpRecovery: 0
+  JumpStart: 17
+  JumpFall: 19
+  JumpRecovery: 20
   running: 0
   velocity: {x: 0, y: 0, z: 0}
-  jumpStrength: 0
+  jumpStrength: 1
+  jumpSpeed: 2
   jumped: 0
   lifeMax: 100
   guardMax: 100
