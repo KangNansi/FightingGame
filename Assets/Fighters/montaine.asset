@@ -11,6 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e57d16a7c677934ca4c5dff8b14258f, type: 3}
   m_Name: montaine
   m_EditorClassIdentifier: 
+  controller: {fileID: 0}
   moveSet:
     actions: []
     nodes:
@@ -100,6 +101,8 @@ MonoBehaviour:
       sprite: {fileID: 21300000, guid: 59fb37fc39a7cf94cb7d564533cbb230, type: 3}
       time: 0.08
       velocity: {x: 0, y: 0}
+      wwiseEvent: 0
+      wwiseEventName: 
     - name: 
       frameType: 2
       hitboxes:
@@ -120,6 +123,8 @@ MonoBehaviour:
       sprite: {fileID: 21300002, guid: 59fb37fc39a7cf94cb7d564533cbb230, type: 3}
       time: 0.08
       velocity: {x: 0, y: 0}
+      wwiseEvent: 0
+      wwiseEventName: 
     - name: 
       frameType: 2
       hitboxes:
@@ -140,6 +145,8 @@ MonoBehaviour:
       sprite: {fileID: 21300004, guid: 59fb37fc39a7cf94cb7d564533cbb230, type: 3}
       time: 0.08
       velocity: {x: 0, y: 0}
+      wwiseEvent: 0
+      wwiseEventName: 
     - name: 
       frameType: 2
       hitboxes:
@@ -160,6 +167,8 @@ MonoBehaviour:
       sprite: {fileID: 21300006, guid: 59fb37fc39a7cf94cb7d564533cbb230, type: 3}
       time: 0.08
       velocity: {x: 0, y: 0}
+      wwiseEvent: 0
+      wwiseEventName: 
     - name: 
       frameType: 2
       hitboxes:
@@ -180,6 +189,8 @@ MonoBehaviour:
       sprite: {fileID: 21300008, guid: 59fb37fc39a7cf94cb7d564533cbb230, type: 3}
       time: 0.08
       velocity: {x: 0, y: 0}
+      wwiseEvent: 0
+      wwiseEventName: 
     - name: 
       frameType: 2
       hitboxes:
@@ -200,6 +211,8 @@ MonoBehaviour:
       sprite: {fileID: 21300010, guid: 59fb37fc39a7cf94cb7d564533cbb230, type: 3}
       time: 0.08
       velocity: {x: 0, y: 0}
+      wwiseEvent: 0
+      wwiseEventName: 
     - name: 
       frameType: 2
       hitboxes:
@@ -220,6 +233,8 @@ MonoBehaviour:
       sprite: {fileID: 21300012, guid: 59fb37fc39a7cf94cb7d564533cbb230, type: 3}
       time: 0.08
       velocity: {x: 0, y: 0}
+      wwiseEvent: 0
+      wwiseEventName: 
     - name: 
       frameType: 2
       hitboxes:
@@ -240,6 +255,8 @@ MonoBehaviour:
       sprite: {fileID: 21300014, guid: 59fb37fc39a7cf94cb7d564533cbb230, type: 3}
       time: 0.08
       velocity: {x: 0, y: 0}
+      wwiseEvent: 0
+      wwiseEventName: 
     currentFrame: 0
     name: idle
     velocity: {x: 0, y: 0}
@@ -266,6 +283,8 @@ MonoBehaviour:
       sprite: {fileID: 21300016, guid: 59fb37fc39a7cf94cb7d564533cbb230, type: 3}
       time: 0.08
       velocity: {x: 0, y: 0}
+      wwiseEvent: 0
+      wwiseEventName: 
     - name: 
       frameType: 2
       hitboxes:
@@ -286,6 +305,8 @@ MonoBehaviour:
       sprite: {fileID: 21300018, guid: 59fb37fc39a7cf94cb7d564533cbb230, type: 3}
       time: 0.08
       velocity: {x: 0, y: 0}
+      wwiseEvent: 0
+      wwiseEventName: 
     - name: 
       frameType: 2
       hitboxes:
@@ -306,6 +327,8 @@ MonoBehaviour:
       sprite: {fileID: 21300020, guid: 59fb37fc39a7cf94cb7d564533cbb230, type: 3}
       time: 0.08
       velocity: {x: 0, y: 0}
+      wwiseEvent: 0
+      wwiseEventName: 
     - name: 
       frameType: 2
       hitboxes:
@@ -326,6 +349,8 @@ MonoBehaviour:
       sprite: {fileID: 21300022, guid: 59fb37fc39a7cf94cb7d564533cbb230, type: 3}
       time: 0.08
       velocity: {x: 0, y: 0}
+      wwiseEvent: 0
+      wwiseEventName: 
     - name: 
       frameType: 2
       hitboxes:
@@ -346,6 +371,8 @@ MonoBehaviour:
       sprite: {fileID: 21300024, guid: 59fb37fc39a7cf94cb7d564533cbb230, type: 3}
       time: 0.08
       velocity: {x: 0, y: 0}
+      wwiseEvent: 0
+      wwiseEventName: 
     - name: 
       frameType: 2
       hitboxes:
@@ -366,6 +393,8 @@ MonoBehaviour:
       sprite: {fileID: 21300026, guid: 59fb37fc39a7cf94cb7d564533cbb230, type: 3}
       time: 0.08
       velocity: {x: 0, y: 0}
+      wwiseEvent: 0
+      wwiseEventName: 
     - name: 
       frameType: 2
       hitboxes:
@@ -386,6 +415,8 @@ MonoBehaviour:
       sprite: {fileID: 21300028, guid: 59fb37fc39a7cf94cb7d564533cbb230, type: 3}
       time: 0.08
       velocity: {x: 0, y: 0}
+      wwiseEvent: 0
+      wwiseEventName: 
     currentFrame: 0
     name: walk
     velocity: {x: 0, y: 0}
@@ -412,6 +443,8 @@ MonoBehaviour:
       sprite: {fileID: 21300028, guid: ba00f26b33f16c746bf077a2d2ceaec6, type: 3}
       time: 0.04
       velocity: {x: 0, y: 0}
+      wwiseEvent: 0
+      wwiseEventName: 
     - name: 
       frameType: 2
       hitboxes:
@@ -432,6 +465,8 @@ MonoBehaviour:
       sprite: {fileID: 21300030, guid: ba00f26b33f16c746bf077a2d2ceaec6, type: 3}
       time: 0.02
       velocity: {x: 0, y: 0}
+      wwiseEvent: 0
+      wwiseEventName: 
     - name: 
       frameType: 2
       hitboxes:
@@ -452,6 +487,8 @@ MonoBehaviour:
       sprite: {fileID: 21300032, guid: ba00f26b33f16c746bf077a2d2ceaec6, type: 3}
       time: 0.1
       velocity: {x: 0, y: 0}
+      wwiseEvent: 0
+      wwiseEventName: 
     - name: 
       frameType: 2
       hitboxes:
@@ -472,6 +509,8 @@ MonoBehaviour:
       sprite: {fileID: 21300030, guid: ba00f26b33f16c746bf077a2d2ceaec6, type: 3}
       time: 0.04
       velocity: {x: 0, y: 0}
+      wwiseEvent: 0
+      wwiseEventName: 
     - name: 
       frameType: 2
       hitboxes:
@@ -492,6 +531,8 @@ MonoBehaviour:
       sprite: {fileID: 21300028, guid: ba00f26b33f16c746bf077a2d2ceaec6, type: 3}
       time: 0.02
       velocity: {x: 0, y: 0}
+      wwiseEvent: 0
+      wwiseEventName: 
     currentFrame: 0
     name: teabag
     velocity: {x: 0, y: 0}
@@ -525,6 +566,8 @@ MonoBehaviour:
       sprite: {fileID: 21300034, guid: 59fb37fc39a7cf94cb7d564533cbb230, type: 3}
       time: 0.04
       velocity: {x: 0, y: 0}
+      wwiseEvent: 0
+      wwiseEventName: 
     - name: 
       frameType: 1
       hitboxes:
@@ -559,6 +602,8 @@ MonoBehaviour:
       sprite: {fileID: 21300036, guid: 59fb37fc39a7cf94cb7d564533cbb230, type: 3}
       time: 0.16
       velocity: {x: 0, y: 0}
+      wwiseEvent: 0
+      wwiseEventName: 
     - name: 
       frameType: 2
       hitboxes:
@@ -586,6 +631,8 @@ MonoBehaviour:
       sprite: {fileID: 21300038, guid: 59fb37fc39a7cf94cb7d564533cbb230, type: 3}
       time: 0.04
       velocity: {x: 0, y: 0}
+      wwiseEvent: 0
+      wwiseEventName: 
     currentFrame: 0
     name: jab
     velocity: {x: 0, y: 0}
@@ -598,18 +645,24 @@ MonoBehaviour:
       sprite: {fileID: 21300014, guid: ba00f26b33f16c746bf077a2d2ceaec6, type: 3}
       time: 0.04
       velocity: {x: 0, y: 0}
+      wwiseEvent: 0
+      wwiseEventName: 
     - name: 
       frameType: 2
       hitboxes: []
       sprite: {fileID: 21300016, guid: ba00f26b33f16c746bf077a2d2ceaec6, type: 3}
       time: 0.08
       velocity: {x: 0, y: 0}
+      wwiseEvent: 0
+      wwiseEventName: 
     - name: 
       frameType: 2
       hitboxes: []
       sprite: {fileID: 21300018, guid: ba00f26b33f16c746bf077a2d2ceaec6, type: 3}
       time: 0.12
       velocity: {x: 0, y: 0}
+      wwiseEvent: 0
+      wwiseEventName: 
     - name: 
       frameType: 2
       hitboxes:
@@ -623,6 +676,8 @@ MonoBehaviour:
       sprite: {fileID: 21300020, guid: ba00f26b33f16c746bf077a2d2ceaec6, type: 3}
       time: 0.04
       velocity: {x: 0, y: 0}
+      wwiseEvent: 0
+      wwiseEventName: 
     - name: 
       frameType: 2
       hitboxes:
@@ -636,6 +691,8 @@ MonoBehaviour:
       sprite: {fileID: 21300022, guid: ba00f26b33f16c746bf077a2d2ceaec6, type: 3}
       time: 0.04
       velocity: {x: 0, y: 0}
+      wwiseEvent: 0
+      wwiseEventName: 
     - name: 
       frameType: 2
       hitboxes:
@@ -649,6 +706,8 @@ MonoBehaviour:
       sprite: {fileID: 21300024, guid: ba00f26b33f16c746bf077a2d2ceaec6, type: 3}
       time: 0.08
       velocity: {x: 0, y: 0}
+      wwiseEvent: 0
+      wwiseEventName: 
     currentFrame: 0
     name: hit
     velocity: {x: 0, y: 0}
@@ -661,12 +720,16 @@ MonoBehaviour:
       sprite: {fileID: 21300028, guid: fe19d07866fcd5b47a80cd5d5c835373, type: 3}
       time: 0.04
       velocity: {x: 0, y: 0}
+      wwiseEvent: 0
+      wwiseEventName: 
     - name: 
       frameType: 2
       hitboxes: []
       sprite: {fileID: 21300030, guid: fe19d07866fcd5b47a80cd5d5c835373, type: 3}
       time: 0.12
       velocity: {x: 0, y: 0}
+      wwiseEvent: 0
+      wwiseEventName: 
     currentFrame: 0
     name: block
     velocity: {x: 0, y: 0}
@@ -700,6 +763,8 @@ MonoBehaviour:
       sprite: {fileID: 21300000, guid: a7ba209f71c09594bbc07f6b0e73244e, type: 3}
       time: 0.04
       velocity: {x: 0, y: 0}
+      wwiseEvent: 0
+      wwiseEventName: 
     - name: 
       frameType: 2
       hitboxes:
@@ -720,6 +785,8 @@ MonoBehaviour:
       sprite: {fileID: 21300002, guid: a7ba209f71c09594bbc07f6b0e73244e, type: 3}
       time: 0.04
       velocity: {x: -15, y: 0}
+      wwiseEvent: 0
+      wwiseEventName: 
     - name: 
       frameType: 2
       hitboxes:
@@ -733,6 +800,8 @@ MonoBehaviour:
       sprite: {fileID: 21300004, guid: a7ba209f71c09594bbc07f6b0e73244e, type: 3}
       time: 0.08
       velocity: {x: -10, y: 0}
+      wwiseEvent: 0
+      wwiseEventName: 
     - name: 
       frameType: 2
       hitboxes:
@@ -753,6 +822,8 @@ MonoBehaviour:
       sprite: {fileID: 21300006, guid: a7ba209f71c09594bbc07f6b0e73244e, type: 3}
       time: 0.08
       velocity: {x: -5, y: 0}
+      wwiseEvent: 0
+      wwiseEventName: 
     - name: 
       frameType: 2
       hitboxes:
@@ -773,6 +844,8 @@ MonoBehaviour:
       sprite: {fileID: 21300008, guid: a7ba209f71c09594bbc07f6b0e73244e, type: 3}
       time: 0.08
       velocity: {x: 0, y: 0}
+      wwiseEvent: 0
+      wwiseEventName: 
     - name: 
       frameType: 2
       hitboxes:
@@ -793,6 +866,8 @@ MonoBehaviour:
       sprite: {fileID: 21300010, guid: a7ba209f71c09594bbc07f6b0e73244e, type: 3}
       time: 0.08
       velocity: {x: 0, y: 0}
+      wwiseEvent: 0
+      wwiseEventName: 
     - name: 
       frameType: 2
       hitboxes:
@@ -813,6 +888,8 @@ MonoBehaviour:
       sprite: {fileID: 21300012, guid: a7ba209f71c09594bbc07f6b0e73244e, type: 3}
       time: 0.5
       velocity: {x: 0, y: 0}
+      wwiseEvent: 0
+      wwiseEventName: 
     - name: 
       frameType: 2
       hitboxes:
@@ -840,6 +917,8 @@ MonoBehaviour:
       sprite: {fileID: 21300014, guid: a7ba209f71c09594bbc07f6b0e73244e, type: 3}
       time: 0.08
       velocity: {x: 0, y: 0}
+      wwiseEvent: 0
+      wwiseEventName: 
     - name: 
       frameType: 2
       hitboxes:
@@ -860,6 +939,8 @@ MonoBehaviour:
       sprite: {fileID: 21300016, guid: a7ba209f71c09594bbc07f6b0e73244e, type: 3}
       time: 0.06
       velocity: {x: 0, y: 0}
+      wwiseEvent: 0
+      wwiseEventName: 
     - name: 
       frameType: 2
       hitboxes:
@@ -880,6 +961,8 @@ MonoBehaviour:
       sprite: {fileID: 21300018, guid: a7ba209f71c09594bbc07f6b0e73244e, type: 3}
       time: 0.04
       velocity: {x: 0, y: 0}
+      wwiseEvent: 0
+      wwiseEventName: 
     - name: 
       frameType: 2
       hitboxes:
@@ -900,6 +983,8 @@ MonoBehaviour:
       sprite: {fileID: 21300020, guid: a7ba209f71c09594bbc07f6b0e73244e, type: 3}
       time: 0.12
       velocity: {x: 0, y: 0}
+      wwiseEvent: 0
+      wwiseEventName: 
     - name: 
       frameType: 2
       hitboxes:
@@ -920,6 +1005,8 @@ MonoBehaviour:
       sprite: {fileID: 21300022, guid: a7ba209f71c09594bbc07f6b0e73244e, type: 3}
       time: 0.08
       velocity: {x: 0, y: 0}
+      wwiseEvent: 0
+      wwiseEventName: 
     - name: 
       frameType: 2
       hitboxes:
@@ -933,6 +1020,8 @@ MonoBehaviour:
       sprite: {fileID: 21300024, guid: a7ba209f71c09594bbc07f6b0e73244e, type: 3}
       time: 0.04
       velocity: {x: -15, y: 0}
+      wwiseEvent: 0
+      wwiseEventName: 
     - name: 
       frameType: 2
       hitboxes:
@@ -960,6 +1049,8 @@ MonoBehaviour:
       sprite: {fileID: 21300026, guid: a7ba209f71c09594bbc07f6b0e73244e, type: 3}
       time: 0.04
       velocity: {x: -15, y: 0}
+      wwiseEvent: 0
+      wwiseEventName: 
     - name: 
       frameType: 2
       hitboxes:
@@ -987,6 +1078,8 @@ MonoBehaviour:
       sprite: {fileID: 21300028, guid: a7ba209f71c09594bbc07f6b0e73244e, type: 3}
       time: 0.08
       velocity: {x: -5, y: 0}
+      wwiseEvent: 0
+      wwiseEventName: 
     currentFrame: 0
     name: taunt
     velocity: {x: 0, y: 0}
@@ -1006,6 +1099,8 @@ MonoBehaviour:
       sprite: {fileID: 21300000, guid: f2746e7a8badbef4fb6b5a5648ed1817, type: 3}
       time: 0.04
       velocity: {x: 0, y: 0}
+      wwiseEvent: 0
+      wwiseEventName: 
     - name: 
       frameType: 1
       hitboxes:
@@ -1047,6 +1142,8 @@ MonoBehaviour:
       sprite: {fileID: 21300002, guid: f2746e7a8badbef4fb6b5a5648ed1817, type: 3}
       time: 0.04
       velocity: {x: 4, y: 0}
+      wwiseEvent: 0
+      wwiseEventName: 
     - name: 
       frameType: 1
       hitboxes:
@@ -1088,6 +1185,8 @@ MonoBehaviour:
       sprite: {fileID: 21300004, guid: f2746e7a8badbef4fb6b5a5648ed1817, type: 3}
       time: 0.12
       velocity: {x: 3, y: 0}
+      wwiseEvent: 0
+      wwiseEventName: 
     - name: Should it really be an attack frame ?
       frameType: 1
       hitboxes:
@@ -1122,6 +1221,8 @@ MonoBehaviour:
       sprite: {fileID: 21300006, guid: f2746e7a8badbef4fb6b5a5648ed1817, type: 3}
       time: 0.08
       velocity: {x: 0, y: 0}
+      wwiseEvent: 0
+      wwiseEventName: 
     - name: 
       frameType: 2
       hitboxes:
@@ -1142,6 +1243,8 @@ MonoBehaviour:
       sprite: {fileID: 21300008, guid: f2746e7a8badbef4fb6b5a5648ed1817, type: 3}
       time: 0.08
       velocity: {x: 2, y: 0}
+      wwiseEvent: 0
+      wwiseEventName: 
     - name: 
       frameType: 2
       hitboxes:
@@ -1162,6 +1265,8 @@ MonoBehaviour:
       sprite: {fileID: 21300010, guid: f2746e7a8badbef4fb6b5a5648ed1817, type: 3}
       time: 0.04
       velocity: {x: 2, y: 0}
+      wwiseEvent: 0
+      wwiseEventName: 
     - name: 
       frameType: 2
       hitboxes:
@@ -1189,6 +1294,8 @@ MonoBehaviour:
       sprite: {fileID: 21300012, guid: f2746e7a8badbef4fb6b5a5648ed1817, type: 3}
       time: 0.04
       velocity: {x: 1, y: 0}
+      wwiseEvent: 0
+      wwiseEventName: 
     - name: 
       frameType: 2
       hitboxes:
@@ -1202,6 +1309,8 @@ MonoBehaviour:
       sprite: {fileID: 21300014, guid: f2746e7a8badbef4fb6b5a5648ed1817, type: 3}
       time: 0.12
       velocity: {x: 0, y: 0}
+      wwiseEvent: 0
+      wwiseEventName: 
     - name: 
       frameType: 2
       hitboxes:
@@ -1222,6 +1331,8 @@ MonoBehaviour:
       sprite: {fileID: 21300016, guid: f2746e7a8badbef4fb6b5a5648ed1817, type: 3}
       time: 0.08
       velocity: {x: 0, y: 0}
+      wwiseEvent: 0
+      wwiseEventName: 
     currentFrame: 0
     name: high kick
     velocity: {x: 0, y: 0}
@@ -1248,6 +1359,8 @@ MonoBehaviour:
       sprite: {fileID: 21300020, guid: f2746e7a8badbef4fb6b5a5648ed1817, type: 3}
       time: 0.08
       velocity: {x: 0, y: 0}
+      wwiseEvent: 0
+      wwiseEventName: 
     - name: 
       frameType: 0
       hitboxes:
@@ -1268,6 +1381,8 @@ MonoBehaviour:
       sprite: {fileID: 21300022, guid: f2746e7a8badbef4fb6b5a5648ed1817, type: 3}
       time: 0.08
       velocity: {x: 5, y: 0}
+      wwiseEvent: 0
+      wwiseEventName: 
     - name: 
       frameType: 1
       hitboxes:
@@ -1295,6 +1410,8 @@ MonoBehaviour:
       sprite: {fileID: 21300024, guid: f2746e7a8badbef4fb6b5a5648ed1817, type: 3}
       time: 0.08
       velocity: {x: 10, y: 0}
+      wwiseEvent: 0
+      wwiseEventName: 
     - name: 
       frameType: 1
       hitboxes:
@@ -1322,6 +1439,8 @@ MonoBehaviour:
       sprite: {fileID: 21300024, guid: f2746e7a8badbef4fb6b5a5648ed1817, type: 3}
       time: 0.08
       velocity: {x: 0, y: 0}
+      wwiseEvent: 0
+      wwiseEventName: 
     - name: 
       frameType: 2
       hitboxes:
@@ -1342,6 +1461,8 @@ MonoBehaviour:
       sprite: {fileID: 21300028, guid: f2746e7a8badbef4fb6b5a5648ed1817, type: 3}
       time: 0.08
       velocity: {x: 0, y: 0}
+      wwiseEvent: 0
+      wwiseEventName: 
     - name: 
       frameType: 2
       hitboxes:
@@ -1362,6 +1483,8 @@ MonoBehaviour:
       sprite: {fileID: 21300030, guid: f2746e7a8badbef4fb6b5a5648ed1817, type: 3}
       time: 0.08
       velocity: {x: -10, y: 0}
+      wwiseEvent: 0
+      wwiseEventName: 
     - name: 
       frameType: 2
       hitboxes:
@@ -1382,6 +1505,8 @@ MonoBehaviour:
       sprite: {fileID: 21300032, guid: f2746e7a8badbef4fb6b5a5648ed1817, type: 3}
       time: 0.08
       velocity: {x: -5, y: 0}
+      wwiseEvent: 0
+      wwiseEventName: 
     currentFrame: 0
     name: low kick
     velocity: {x: 0, y: 0}
@@ -1401,6 +1526,8 @@ MonoBehaviour:
       sprite: {fileID: 21300000, guid: fe19d07866fcd5b47a80cd5d5c835373, type: 3}
       time: 0.08
       velocity: {x: 0, y: 0}
+      wwiseEvent: 0
+      wwiseEventName: 
     - name: 
       frameType: 0
       hitboxes:
@@ -1414,6 +1541,8 @@ MonoBehaviour:
       sprite: {fileID: 21300002, guid: fe19d07866fcd5b47a80cd5d5c835373, type: 3}
       time: 0.04
       velocity: {x: 0, y: 0}
+      wwiseEvent: 0
+      wwiseEventName: 
     - name: 
       frameType: 0
       hitboxes:
@@ -1434,6 +1563,8 @@ MonoBehaviour:
       sprite: {fileID: 21300004, guid: fe19d07866fcd5b47a80cd5d5c835373, type: 3}
       time: 0.08
       velocity: {x: 0, y: 0}
+      wwiseEvent: 0
+      wwiseEventName: 
     - name: 
       frameType: 0
       hitboxes:
@@ -1447,6 +1578,8 @@ MonoBehaviour:
       sprite: {fileID: 21300006, guid: fe19d07866fcd5b47a80cd5d5c835373, type: 3}
       time: 0.04
       velocity: {x: 0, y: 0}
+      wwiseEvent: 0
+      wwiseEventName: 
     - name: 
       frameType: 0
       hitboxes:
@@ -1460,6 +1593,8 @@ MonoBehaviour:
       sprite: {fileID: 21300008, guid: fe19d07866fcd5b47a80cd5d5c835373, type: 3}
       time: 0.08
       velocity: {x: 0, y: 0}
+      wwiseEvent: 0
+      wwiseEventName: 
     - name: 
       frameType: 0
       hitboxes:
@@ -1473,6 +1608,8 @@ MonoBehaviour:
       sprite: {fileID: 21300010, guid: fe19d07866fcd5b47a80cd5d5c835373, type: 3}
       time: 0.04
       velocity: {x: 0, y: 0}
+      wwiseEvent: 0
+      wwiseEventName: 
     - name: 
       frameType: 0
       hitboxes:
@@ -1493,6 +1630,8 @@ MonoBehaviour:
       sprite: {fileID: 21300012, guid: fe19d07866fcd5b47a80cd5d5c835373, type: 3}
       time: 0.04
       velocity: {x: 0, y: 0}
+      wwiseEvent: 0
+      wwiseEventName: 
     - name: 
       frameType: 1
       hitboxes:
@@ -1520,6 +1659,8 @@ MonoBehaviour:
       sprite: {fileID: 21300014, guid: fe19d07866fcd5b47a80cd5d5c835373, type: 3}
       time: 0.04
       velocity: {x: 0, y: 0}
+      wwiseEvent: 0
+      wwiseEventName: 
     - name: 
       frameType: 1
       hitboxes:
@@ -1547,6 +1688,8 @@ MonoBehaviour:
       sprite: {fileID: 21300016, guid: fe19d07866fcd5b47a80cd5d5c835373, type: 3}
       time: 0.04
       velocity: {x: 0, y: 0}
+      wwiseEvent: 0
+      wwiseEventName: 
     - name: 
       frameType: 1
       hitboxes:
@@ -1560,6 +1703,8 @@ MonoBehaviour:
       sprite: {fileID: 21300018, guid: fe19d07866fcd5b47a80cd5d5c835373, type: 3}
       time: 0.08
       velocity: {x: 0, y: 0}
+      wwiseEvent: 0
+      wwiseEventName: 
     - name: 
       frameType: 2
       hitboxes:
@@ -1573,6 +1718,8 @@ MonoBehaviour:
       sprite: {fileID: 21300020, guid: fe19d07866fcd5b47a80cd5d5c835373, type: 3}
       time: 0.08
       velocity: {x: 0, y: 0}
+      wwiseEvent: 0
+      wwiseEventName: 
     - name: 
       frameType: 2
       hitboxes:
@@ -1586,6 +1733,8 @@ MonoBehaviour:
       sprite: {fileID: 21300022, guid: fe19d07866fcd5b47a80cd5d5c835373, type: 3}
       time: 0.08
       velocity: {x: 0, y: 0}
+      wwiseEvent: 0
+      wwiseEventName: 
     - name: 
       frameType: 2
       hitboxes:
@@ -1599,6 +1748,8 @@ MonoBehaviour:
       sprite: {fileID: 21300024, guid: fe19d07866fcd5b47a80cd5d5c835373, type: 3}
       time: 0.08
       velocity: {x: 0, y: 0}
+      wwiseEvent: 0
+      wwiseEventName: 
     currentFrame: 0
     name: back kick
     velocity: {x: 0, y: 0}
@@ -1625,6 +1776,8 @@ MonoBehaviour:
       sprite: {fileID: 21300000, guid: 2c1cc1f9066b72b43a85b94b142b5a86, type: 3}
       time: 0.08
       velocity: {x: 0, y: 0}
+      wwiseEvent: 0
+      wwiseEventName: 
     - name: 
       frameType: 0
       hitboxes:
@@ -1645,6 +1798,8 @@ MonoBehaviour:
       sprite: {fileID: 21300002, guid: 2c1cc1f9066b72b43a85b94b142b5a86, type: 3}
       time: 0.12
       velocity: {x: -1, y: 0}
+      wwiseEvent: 0
+      wwiseEventName: 
     - name: 
       frameType: 0
       hitboxes:
@@ -1658,6 +1813,8 @@ MonoBehaviour:
       sprite: {fileID: 21300004, guid: 2c1cc1f9066b72b43a85b94b142b5a86, type: 3}
       time: 0.04
       velocity: {x: 3, y: 0}
+      wwiseEvent: 0
+      wwiseEventName: 
     - name: 
       frameType: 1
       hitboxes:
@@ -1678,6 +1835,8 @@ MonoBehaviour:
       sprite: {fileID: 21300006, guid: 2c1cc1f9066b72b43a85b94b142b5a86, type: 3}
       time: 0.08
       velocity: {x: 6, y: 0}
+      wwiseEvent: 0
+      wwiseEventName: 
     - name: 
       frameType: 1
       hitboxes:
@@ -1698,6 +1857,8 @@ MonoBehaviour:
       sprite: {fileID: 21300008, guid: 2c1cc1f9066b72b43a85b94b142b5a86, type: 3}
       time: 0.12
       velocity: {x: 2, y: 0}
+      wwiseEvent: 0
+      wwiseEventName: 
     - name: 
       frameType: 1
       hitboxes:
@@ -1711,6 +1872,8 @@ MonoBehaviour:
       sprite: {fileID: 21300010, guid: 2c1cc1f9066b72b43a85b94b142b5a86, type: 3}
       time: 0.08
       velocity: {x: 2, y: 0}
+      wwiseEvent: 0
+      wwiseEventName: 
     - name: 
       frameType: 1
       hitboxes:
@@ -1724,6 +1887,8 @@ MonoBehaviour:
       sprite: {fileID: 21300012, guid: 2c1cc1f9066b72b43a85b94b142b5a86, type: 3}
       time: 0.08
       velocity: {x: 2, y: 0}
+      wwiseEvent: 0
+      wwiseEventName: 
     - name: 
       frameType: 1
       hitboxes:
@@ -1751,6 +1916,8 @@ MonoBehaviour:
       sprite: {fileID: 21300014, guid: 2c1cc1f9066b72b43a85b94b142b5a86, type: 3}
       time: 0.12
       velocity: {x: 4, y: 0}
+      wwiseEvent: 0
+      wwiseEventName: 
     - name: 
       frameType: 1
       hitboxes:
@@ -1764,6 +1931,8 @@ MonoBehaviour:
       sprite: {fileID: 21300016, guid: 2c1cc1f9066b72b43a85b94b142b5a86, type: 3}
       time: 0.08
       velocity: {x: 6, y: 0}
+      wwiseEvent: 0
+      wwiseEventName: 
     - name: 
       frameType: 1
       hitboxes:
@@ -1777,6 +1946,8 @@ MonoBehaviour:
       sprite: {fileID: 21300018, guid: 2c1cc1f9066b72b43a85b94b142b5a86, type: 3}
       time: 0.08
       velocity: {x: 4, y: 0}
+      wwiseEvent: 0
+      wwiseEventName: 
     - name: 
       frameType: 1
       hitboxes:
@@ -1804,6 +1975,8 @@ MonoBehaviour:
       sprite: {fileID: 21300020, guid: 2c1cc1f9066b72b43a85b94b142b5a86, type: 3}
       time: 0.12
       velocity: {x: 4, y: 0}
+      wwiseEvent: 0
+      wwiseEventName: 
     - name: 
       frameType: 1
       hitboxes:
@@ -1817,6 +1990,8 @@ MonoBehaviour:
       sprite: {fileID: 21300022, guid: 2c1cc1f9066b72b43a85b94b142b5a86, type: 3}
       time: 0.08
       velocity: {x: 5, y: 0}
+      wwiseEvent: 0
+      wwiseEventName: 
     - name: 
       frameType: 1
       hitboxes:
@@ -1830,6 +2005,8 @@ MonoBehaviour:
       sprite: {fileID: 21300024, guid: 2c1cc1f9066b72b43a85b94b142b5a86, type: 3}
       time: 0.08
       velocity: {x: 6, y: 0}
+      wwiseEvent: 0
+      wwiseEventName: 
     - name: 
       frameType: 1
       hitboxes:
@@ -1850,6 +2027,8 @@ MonoBehaviour:
       sprite: {fileID: 21300026, guid: 2c1cc1f9066b72b43a85b94b142b5a86, type: 3}
       time: 0.12
       velocity: {x: 2, y: 0}
+      wwiseEvent: 0
+      wwiseEventName: 
     - name: 
       frameType: 2
       hitboxes:
@@ -1870,6 +2049,8 @@ MonoBehaviour:
       sprite: {fileID: 21300028, guid: 2c1cc1f9066b72b43a85b94b142b5a86, type: 3}
       time: 0.04
       velocity: {x: 4, y: 0}
+      wwiseEvent: 0
+      wwiseEventName: 
     - name: 
       frameType: 2
       hitboxes:
@@ -1890,6 +2071,8 @@ MonoBehaviour:
       sprite: {fileID: 21300030, guid: 2c1cc1f9066b72b43a85b94b142b5a86, type: 3}
       time: 0.04
       velocity: {x: 4, y: 0}
+      wwiseEvent: 0
+      wwiseEventName: 
     currentFrame: 0
     name: forward attack
     velocity: {x: 0, y: 0}
@@ -1909,6 +2092,8 @@ MonoBehaviour:
       sprite: {fileID: 21300000, guid: ba00f26b33f16c746bf077a2d2ceaec6, type: 3}
       time: 0.08
       velocity: {x: 0, y: 0}
+      wwiseEvent: 0
+      wwiseEventName: 
     - name: 
       frameType: 1
       hitboxes:
@@ -1922,6 +2107,8 @@ MonoBehaviour:
       sprite: {fileID: 21300002, guid: ba00f26b33f16c746bf077a2d2ceaec6, type: 3}
       time: 0.12
       velocity: {x: 0, y: 0}
+      wwiseEvent: 0
+      wwiseEventName: 
     - name: 
       frameType: 2
       hitboxes:
@@ -1935,6 +2122,8 @@ MonoBehaviour:
       sprite: {fileID: 21300004, guid: ba00f26b33f16c746bf077a2d2ceaec6, type: 3}
       time: 0.08
       velocity: {x: 0, y: 0}
+      wwiseEvent: 0
+      wwiseEventName: 
     - name: 
       frameType: 2
       hitboxes:
@@ -1948,6 +2137,8 @@ MonoBehaviour:
       sprite: {fileID: 21300006, guid: ba00f26b33f16c746bf077a2d2ceaec6, type: 3}
       time: 0.04
       velocity: {x: 0, y: 0}
+      wwiseEvent: 0
+      wwiseEventName: 
     - name: 
       frameType: 2
       hitboxes:
@@ -1961,6 +2152,8 @@ MonoBehaviour:
       sprite: {fileID: 21300008, guid: ba00f26b33f16c746bf077a2d2ceaec6, type: 3}
       time: 0.04
       velocity: {x: 0, y: 0}
+      wwiseEvent: 0
+      wwiseEventName: 
     - name: 
       frameType: 2
       hitboxes:
@@ -1974,6 +2167,8 @@ MonoBehaviour:
       sprite: {fileID: 21300010, guid: ba00f26b33f16c746bf077a2d2ceaec6, type: 3}
       time: 0.04
       velocity: {x: 0, y: 0}
+      wwiseEvent: 0
+      wwiseEventName: 
     currentFrame: 0
     name: dash
     velocity: {x: 20, y: 0}
@@ -1986,90 +2181,120 @@ MonoBehaviour:
       sprite: {fileID: 21300000, guid: 1db9929fb04bcba4a91e432e1ba59e61, type: 3}
       time: 0.04
       velocity: {x: 0, y: 0}
+      wwiseEvent: 0
+      wwiseEventName: 
     - name: 
       frameType: 2
       hitboxes: []
       sprite: {fileID: 21300002, guid: 1db9929fb04bcba4a91e432e1ba59e61, type: 3}
       time: 0.08
       velocity: {x: 0, y: 0}
+      wwiseEvent: 0
+      wwiseEventName: 
     - name: 
       frameType: 2
       hitboxes: []
       sprite: {fileID: 21300004, guid: 1db9929fb04bcba4a91e432e1ba59e61, type: 3}
       time: 0.12
       velocity: {x: 0, y: 0}
+      wwiseEvent: 0
+      wwiseEventName: 
     - name: 
       frameType: 2
       hitboxes: []
       sprite: {fileID: 21300006, guid: 1db9929fb04bcba4a91e432e1ba59e61, type: 3}
       time: 0.08
       velocity: {x: 0, y: 0}
+      wwiseEvent: 0
+      wwiseEventName: 
     - name: 
       frameType: 2
       hitboxes: []
       sprite: {fileID: 21300010, guid: 1db9929fb04bcba4a91e432e1ba59e61, type: 3}
       time: 0.04
       velocity: {x: 0, y: 0}
+      wwiseEvent: 0
+      wwiseEventName: 
     - name: 
       frameType: 2
       hitboxes: []
       sprite: {fileID: 21300012, guid: 1db9929fb04bcba4a91e432e1ba59e61, type: 3}
       time: 0.08
       velocity: {x: 0, y: 0}
+      wwiseEvent: 0
+      wwiseEventName: 
     - name: 
       frameType: 2
       hitboxes: []
       sprite: {fileID: 21300014, guid: 1db9929fb04bcba4a91e432e1ba59e61, type: 3}
       time: 0.12
       velocity: {x: 0, y: 0}
+      wwiseEvent: 0
+      wwiseEventName: 
     - name: 
       frameType: 2
       hitboxes: []
       sprite: {fileID: 21300016, guid: 1db9929fb04bcba4a91e432e1ba59e61, type: 3}
       time: 0.08
       velocity: {x: 0, y: 0}
+      wwiseEvent: 0
+      wwiseEventName: 
     - name: 
       frameType: 2
       hitboxes: []
       sprite: {fileID: 21300018, guid: 1db9929fb04bcba4a91e432e1ba59e61, type: 3}
       time: 0.04
       velocity: {x: 0, y: 0}
+      wwiseEvent: 0
+      wwiseEventName: 
     - name: 
       frameType: 2
       hitboxes: []
       sprite: {fileID: 21300020, guid: 1db9929fb04bcba4a91e432e1ba59e61, type: 3}
       time: 0.04
       velocity: {x: 0, y: 0}
+      wwiseEvent: 0
+      wwiseEventName: 
     - name: 
       frameType: 2
       hitboxes: []
       sprite: {fileID: 21300022, guid: 1db9929fb04bcba4a91e432e1ba59e61, type: 3}
       time: 0.08
       velocity: {x: 0, y: 0}
+      wwiseEvent: 0
+      wwiseEventName: 
     - name: 
       frameType: 2
       hitboxes: []
       sprite: {fileID: 21300024, guid: 1db9929fb04bcba4a91e432e1ba59e61, type: 3}
       time: 0.08
       velocity: {x: 0, y: 0}
+      wwiseEvent: 0
+      wwiseEventName: 
     - name: 
       frameType: 2
       hitboxes: []
       sprite: {fileID: 21300028, guid: 1db9929fb04bcba4a91e432e1ba59e61, type: 3}
       time: 0.04
       velocity: {x: 0, y: 0}
+      wwiseEvent: 0
+      wwiseEventName: 
     - name: 
       frameType: 2
       hitboxes: []
       sprite: {fileID: 21300026, guid: 1db9929fb04bcba4a91e432e1ba59e61, type: 3}
       time: 0.08
       velocity: {x: 0, y: 0}
+      wwiseEvent: 0
+      wwiseEventName: 
     - name: 
       frameType: 2
       hitboxes: []
       sprite: {fileID: 21300008, guid: 1db9929fb04bcba4a91e432e1ba59e61, type: 3}
       time: 0.04
       velocity: {x: 0, y: 0}
+      wwiseEvent: 0
+      wwiseEventName: 
     currentFrame: 0
     name: fall
     velocity: {x: 0, y: 0}
@@ -2082,6 +2307,8 @@ MonoBehaviour:
       sprite: {fileID: 21300030, guid: 1db9929fb04bcba4a91e432e1ba59e61, type: 3}
       time: 0.08
       velocity: {x: 0, y: 0}
+      wwiseEvent: 0
+      wwiseEventName: 
     currentFrame: 0
     name: onGround
     velocity: {x: 0, y: 0}
@@ -2094,34 +2321,190 @@ MonoBehaviour:
       sprite: {fileID: 21300032, guid: 1db9929fb04bcba4a91e432e1ba59e61, type: 3}
       time: 0.04
       velocity: {x: 0, y: 0}
+      wwiseEvent: 0
+      wwiseEventName: 
     - name: 
       frameType: 2
       hitboxes: []
       sprite: {fileID: 21300034, guid: 1db9929fb04bcba4a91e432e1ba59e61, type: 3}
       time: 0.04
       velocity: {x: 0, y: 0}
+      wwiseEvent: 0
+      wwiseEventName: 
     - name: 
       frameType: 2
       hitboxes: []
       sprite: {fileID: 21300036, guid: 1db9929fb04bcba4a91e432e1ba59e61, type: 3}
       time: 0.08
       velocity: {x: 0, y: 0}
+      wwiseEvent: 0
+      wwiseEventName: 
     - name: 
       frameType: 2
       hitboxes: []
       sprite: {fileID: 21300038, guid: 1db9929fb04bcba4a91e432e1ba59e61, type: 3}
       time: 0.04
       velocity: {x: 0, y: 0}
+      wwiseEvent: 0
+      wwiseEventName: 
     - name: 
       frameType: 2
       hitboxes: []
       sprite: {fileID: 21300000, guid: 59fb37fc39a7cf94cb7d564533cbb230, type: 3}
       time: 0.08
       velocity: {x: 0, y: 0}
+      wwiseEvent: 0
+      wwiseEventName: 
     currentFrame: 0
     name: get up
     velocity: {x: 0, y: 0}
     defaultNext: 0
+    time_modifier: 1
+  - frames:
+    - name: 
+      frameType: 2
+      hitboxes: []
+      sprite: {fileID: 21300018, guid: 65c88cf54ad02cc4ba1b9ce4dc787203, type: 3}
+      time: 0.12
+      velocity: {x: 0, y: 0}
+      wwiseEvent: 0
+      wwiseEventName: 
+    currentFrame: 0
+    name: air attack(startup)
+    velocity: {x: 0, y: 0}
+    defaultNext: 16
+    time_modifier: 1
+  - frames:
+    - name: 
+      frameType: 2
+      hitboxes: []
+      sprite: {fileID: 21300020, guid: 65c88cf54ad02cc4ba1b9ce4dc787203, type: 3}
+      time: 0.08
+      velocity: {x: 0, y: 0}
+      wwiseEvent: 0
+      wwiseEventName: 
+    - name: 
+      frameType: 2
+      hitboxes: []
+      sprite: {fileID: 21300022, guid: 65c88cf54ad02cc4ba1b9ce4dc787203, type: 3}
+      time: 0.08
+      velocity: {x: 0, y: 0}
+      wwiseEvent: 0
+      wwiseEventName: 
+    currentFrame: 0
+    name: air attack(loop)
+    velocity: {x: 0, y: 0}
+    defaultNext: 16
+    time_modifier: 0.849
+  - frames:
+    - name: 
+      frameType: 2
+      hitboxes: []
+      sprite: {fileID: 21300002, guid: 65c88cf54ad02cc4ba1b9ce4dc787203, type: 3}
+      time: 0.08
+      velocity: {x: 0, y: 0}
+      wwiseEvent: 0
+      wwiseEventName: 
+    - name: 
+      frameType: 2
+      hitboxes: []
+      sprite: {fileID: 21300004, guid: 65c88cf54ad02cc4ba1b9ce4dc787203, type: 3}
+      time: 0.08
+      velocity: {x: 0, y: 0}
+      wwiseEvent: 0
+      wwiseEventName: 
+    - name: 
+      frameType: 2
+      hitboxes: []
+      sprite: {fileID: 21300000, guid: 65c88cf54ad02cc4ba1b9ce4dc787203, type: 3}
+      time: 0.18
+      velocity: {x: 0, y: 0}
+      wwiseEvent: 0
+      wwiseEventName: 
+    currentFrame: 0
+    name: jump(startup)
+    velocity: {x: 0, y: 0}
+    defaultNext: 18
+    time_modifier: 0.698
+  - frames:
+    - name: 
+      frameType: 2
+      hitboxes: []
+      sprite: {fileID: 21300006, guid: 65c88cf54ad02cc4ba1b9ce4dc787203, type: 3}
+      time: 0.08
+      velocity: {x: 0, y: 0}
+      wwiseEvent: 0
+      wwiseEventName: 
+    currentFrame: 0
+    name: jump(loop)
+    velocity: {x: 0, y: 0}
+    defaultNext: 18
+    time_modifier: 0.344
+  - frames:
+    - name: 
+      frameType: 2
+      hitboxes: []
+      sprite: {fileID: 21300008, guid: 65c88cf54ad02cc4ba1b9ce4dc787203, type: 3}
+      time: 0.04
+      velocity: {x: 0, y: 0}
+      wwiseEvent: 0
+      wwiseEventName: 
+    - name: 
+      frameType: 2
+      hitboxes: []
+      sprite: {fileID: 21300010, guid: 65c88cf54ad02cc4ba1b9ce4dc787203, type: 3}
+      time: 0.1
+      velocity: {x: 0, y: 0}
+      wwiseEvent: 0
+      wwiseEventName: 
+    currentFrame: 0
+    name: jump(end)
+    velocity: {x: 0, y: 0}
+    defaultNext: 21
+    time_modifier: 1
+  - frames:
+    - name: 
+      frameType: 2
+      hitboxes: []
+      sprite: {fileID: 21300014, guid: 65c88cf54ad02cc4ba1b9ce4dc787203, type: 3}
+      time: 0.006
+      velocity: {x: 0, y: 0}
+      wwiseEvent: 0
+      wwiseEventName: 
+    - name: 
+      frameType: 2
+      hitboxes: []
+      sprite: {fileID: 21300016, guid: 65c88cf54ad02cc4ba1b9ce4dc787203, type: 3}
+      time: 0.04
+      velocity: {x: 0, y: 0}
+      wwiseEvent: 0
+      wwiseEventName: 
+    - name: 
+      frameType: 2
+      hitboxes: []
+      sprite: {fileID: 21300000, guid: 59fb37fc39a7cf94cb7d564533cbb230, type: 3}
+      time: 0.08
+      velocity: {x: 0, y: 0}
+      wwiseEvent: 0
+      wwiseEventName: 
+    currentFrame: 0
+    name: jump(recovery)
+    velocity: {x: 0, y: 0}
+    defaultNext: 0
+    time_modifier: 0.707
+  - frames:
+    - name: 
+      frameType: 2
+      hitboxes: []
+      sprite: {fileID: 21300012, guid: 65c88cf54ad02cc4ba1b9ce4dc787203, type: 3}
+      time: 0.08
+      velocity: {x: 0, y: 0}
+      wwiseEvent: 0
+      wwiseEventName: 
+    currentFrame: 0
+    name: jumpend(loop)
+    velocity: {x: 0, y: 0}
+    defaultNext: 21
     time_modifier: 1
   speed: 15
   currentState: 0
