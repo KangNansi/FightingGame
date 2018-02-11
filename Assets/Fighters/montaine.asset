@@ -1323,8 +1323,8 @@ MonoBehaviour:
       sprite: {fileID: 21300010, guid: f2746e7a8badbef4fb6b5a5648ed1817, type: 3}
       time: 0.04
       velocity: {x: 2, y: 0}
-      wwiseEvent: 0
-      wwiseEventName: 
+      wwiseEvent: 1
+      wwiseEventName: Upper_kick_land
       events: 
     - name: 
       frameType: 2
@@ -2194,8 +2194,8 @@ MonoBehaviour:
       sprite: {fileID: 21300000, guid: ba00f26b33f16c746bf077a2d2ceaec6, type: 3}
       time: 0.08
       velocity: {x: 0, y: 0}
-      wwiseEvent: 0
-      wwiseEventName: 
+      wwiseEvent: 1
+      wwiseEventName: Dash
       events: 
     - name: 
       frameType: 1
@@ -2541,8 +2541,8 @@ MonoBehaviour:
       sprite: {fileID: 21300002, guid: 65c88cf54ad02cc4ba1b9ce4dc787203, type: 3}
       time: 0.08
       velocity: {x: 0, y: 0}
-      wwiseEvent: 0
-      wwiseEventName: 
+      wwiseEvent: 1
+      wwiseEventName: Jump_init
       events: 
     - name: 
       frameType: 2
@@ -2616,8 +2616,8 @@ MonoBehaviour:
       sprite: {fileID: 21300014, guid: 65c88cf54ad02cc4ba1b9ce4dc787203, type: 3}
       time: 0.006
       velocity: {x: 0, y: 0}
-      wwiseEvent: 0
-      wwiseEventName: 
+      wwiseEvent: 1
+      wwiseEventName: Jump_Land
       events: 
     - name: 
       frameType: 2
