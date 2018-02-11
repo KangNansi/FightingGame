@@ -31,6 +31,9 @@ namespace FightingGame
         public bool wwiseEvent = false;
         public string wwiseEventName = "";
 
+        [SerializeField]
+        public List<FighterObject.Event> events = new List<FighterObject.Event>();
+
         public FighterState()
         {
             //hitboxes.Add(new HitBox(HitBox.Type.Body, Vector2.zero, Vector2.one));
@@ -54,6 +57,18 @@ namespace FightingGame
         public List<HitBox> GetHitbox(HitBox.Type type)
         {
             return hitboxes.FindAll((HitBox h) => h._type == type);
+        }
+
+        public Vector2 GetMiddleOf(HitBox.Type type)
+        {
+            List<HitBox> l = GetHitbox(type);
+            Vector2 pos = new Vector2();
+            foreach(HitBox h in l)
+            {
+                pos += h._position + h._size / 2f;
+            }
+            pos /= (float)l.Count;
+            return pos;
         }
 
         public void Draw(Matrix4x4 position)

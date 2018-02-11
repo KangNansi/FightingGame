@@ -13,6 +13,16 @@ namespace FightingGame
         [SerializeField]
         public List<Move> moves = new List<Move>();
 
+        public enum Event
+        {
+            Teabag, FireBall
+        };
+
+        public GameObject fireBall = null;
+
+        public delegate void EventDelegate(Event eventType);
+        public event EventDelegate FightEvent;
+
         public float speed;
         public int currentState = 0;
         public bool drawHitbox = true;
@@ -26,6 +36,9 @@ namespace FightingGame
         public int Taunt = 0;
         public int Fall = 0;
         public int GetUp = 0;
+        public int JumpStart = 0;
+        public int JumpFall = 0;
+        public int JumpRecovery = 0;
 
         public bool running = false;
 
@@ -65,11 +78,14 @@ namespace FightingGame
         bool bFallen = false;
         float fallTimer = 0.0f;
 
+        public Jauge teabagCharge = new Jauge(0, 100);
+
         FighterState lastState = null;
 
         public void Init()
         {
             life = lifeMax;
+            FightEvent += EventHandler;
         }
 
         public bool Standing()
@@ -169,6 +185,11 @@ namespace FightingGame
             }
         }
 
+        public bool PerfectParrying()
+        {
+            return (parryTimer < parryPerfectTime && !Attacking() && !parried);
+        }
+
         public bool Parrying()
         {
             return (parryTimer < parryTime && !Attacking() && !parried);
@@ -195,7 +216,17 @@ namespace FightingGame
                 {
                     AkSoundEngine.PostEvent(state.wwiseEventName, controller);
                 }
+                //Launch Events
+                foreach(Event e in state.events)
+                {
+                    if (FightEvent != null)
+                    {
+                        Debug.Log("Invoking");
+                        FightEvent.Invoke(e);
+                    }
+                }
             }
+
             lastState = state;
             parryTimer += deltaTime;
             guard -= guardDecrease * deltaTime;
@@ -210,6 +241,25 @@ namespace FightingGame
                     SetMove(GetUp);
                     bFallen = false;
                 }
+            }
+        }
+
+        void EventHandler(Event e)
+        {
+            switch (e)
+            {
+                case Event.Teabag:
+                    teabagCharge += 20;
+                    break;
+
+                case Event.FireBall:
+                    Vector3 pos = GetFrame().GetMiddleOf(HitBox.Type.Attack);
+                    pos.x *= controller.transform.lossyScale.x;
+                    pos.y *= controller.transform.lossyScale.y;
+                    GameObject g = Instantiate<GameObject>(fireBall, controller.transform.position+pos, Quaternion.identity);
+                    g.GetComponent<FireBall>().opponent = controller.GetComponent<FighterController>().opponent;
+                    g.GetComponent<FireBall>().velocity *= controller.transform.localScale.x;
+                    break;
             }
         }
     }

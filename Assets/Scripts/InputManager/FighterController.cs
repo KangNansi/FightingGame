@@ -53,6 +53,13 @@ namespace FightingGame
                 return (fighter.stun / fighter.stunMax);
             }
         }
+        public float TeabagCharge
+        {
+            get
+            {
+                return fighter.teabagCharge.NormalizedValue;
+            }
+        }
 
         public float hitFreezeTime = 0.1f;
 
@@ -73,6 +80,12 @@ namespace FightingGame
         bool blocked = false;
 
         float minDistance = 1.5f;
+        bool lastJumpState = false;
+
+        public event System.Action blockEvent;
+        public event System.Action parryEvent;
+        public event System.Action perfectParryEvent;
+        public event System.Action stunEvent;
 
         public void Reset()
         {
@@ -88,6 +101,9 @@ namespace FightingGame
             fighter.running = true;
             fighter.Init();
             controller = Instantiate(controller);
+            blockEvent += () => AkSoundEngine.PostEvent("Block", gameObject);
+            parryEvent += () => AkSoundEngine.PostEvent("Parry_11", gameObject);
+            perfectParryEvent += () => AkSoundEngine.PostEvent("Perfect_Parry_10", gameObject);
         }
 
         // Update is called once per frame
@@ -126,15 +142,22 @@ namespace FightingGame
             {
                 //fighter.SetMove(fighter.Crouch);
             }
-            else if (v > 0 && fighter.Grounded && !fighter.jumped)
+            else if (v > 0 && fighter.Grounded && !fighter.jumped) //Jump
             {
                 fighter.Grounded = false;
                 fighter.velocity.y = fighter.jumpStrength;
                 fighter.jumped = true;
+                fighter.SetMove(fighter.JumpStart);
+                lastJumpState = true;
             }
             else
             {
                 //SetMove(Stand);
+            }
+            if(!fighter.Grounded && fighter.velocity.y < 0 && lastJumpState && !fighter.GetMove().attack)
+            {
+                fighter.SetMove(fighter.JumpFall);
+                lastJumpState = false;
             }
             if (fighter.Grounded) fighter.velocity = Vector3.zero;
             //Movement
@@ -217,8 +240,28 @@ namespace FightingGame
             if (transform.position.y < FightManager.groundHeight)
             {
                 transform.position = new Vector3(transform.position.x, FightManager.groundHeight, transform.position.z);
+                if (!fighter.Grounded)
+                {
+                    fighter.SetMove(fighter.JumpRecovery);
+                }
                 fighter.Grounded = true;
             }
+        }
+
+        public bool Hit(HitBox h, Transform t)
+        {
+            HitBox hit = new HitBox(h, t);
+            List<HitBox> def = fighter.GetFrame().GetHitbox(HitBox.Type.Body);
+            foreach(HitBox d in def)
+            {
+                HitBox defbox = new HitBox(d, transform);
+                if (hit.Hit(defbox))
+                {
+                    Hit(0, hit, opponent);
+                    return true;
+                }
+            }
+            return false;
         }
 
         public static void Hit(FighterController a, FighterController b)
@@ -288,6 +331,22 @@ namespace FightingGame
         {
             if (fighter.Parrying()) //Perfect Parry
             {
+                if (perfectParryEvent != null)
+                {
+                    perfectParryEvent.Invoke();
+                }
+                particleLaunch(parryPerfect, Vector3.up * 2f + new Vector3(sens.x, 0, 0));
+                float t = FightManager.timeModifier;
+                FightManager.timeModifier = 0.0f;
+                StartCoroutine(freezeTime(hitFreezeTime, t));
+                return;
+            }
+            if (fighter.Parrying()) //Parry
+            {
+                if(parryEvent != null)
+                {
+                    parryEvent.Invoke();
+                }
                 particleLaunch(parry, Vector3.up * 2f + new Vector3(sens.x, 0, 0));
                 float t = FightManager.timeModifier;
                 FightManager.timeModifier = 0.0f;
@@ -296,6 +355,10 @@ namespace FightingGame
             }
             if (controller.GetKeyDown(VirtualController.Keys.Block) && fighter.CanBlock())//(controller.GetHorizontal() < -0.3f && sens.x > 0.1f) || (controller.GetHorizontal() > 0.3f && sens.x < -0.1f))
             {
+                if (blockEvent != null)
+                {
+                    blockEvent.Invoke();
+                }
                 if (fighter.ReceiveGuardDamage(hitting.guardDmg))
                 {
                     particleLaunch(guardBreak, Vector3.up * 2f + Vector3.right);
@@ -372,5 +435,7 @@ namespace FightingGame
             yield return new WaitForSeconds(1f);
             Destroy(p);
         }
+
+
     }
 }

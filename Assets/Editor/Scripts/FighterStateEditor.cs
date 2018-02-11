@@ -50,9 +50,28 @@ namespace FightingGame
             
 
             state.sprite = (Sprite)EditorGUILayout.ObjectField(state.sprite, typeof(Sprite), false);
-            if (state.wwiseEvent = EditorGUILayout.Toggle(state.wwiseEvent))
+            if (state.wwiseEvent = EditorGUILayout.Toggle("Wwise event?", state.wwiseEvent))
             {
-                state.wwiseEventName = EditorGUILayout.TextField(state.wwiseEventName);
+                state.wwiseEventName = EditorGUILayout.TextField("Event Name:", state.wwiseEventName);
+            }
+            if(GUILayout.Button("Add Event"))
+            {
+                state.events.Add(FighterObject.Event.Teabag);
+            }
+            Texture2D t = EditorGUIUtility.FindTexture("d_winbtn_mac_close_h");
+            for (int i=state.events.Count-1; i>=0; i--)
+            {
+                EditorGUILayout.BeginHorizontal();
+                state.events[i] = (FighterObject.Event)EditorGUILayout.EnumPopup(state.events[i]);
+                GUILayout.BeginVertical(GUILayout.Width(t.width));
+                GUILayout.FlexibleSpace();
+                if (GUILayout.Button(t, GUIStyle.none, GUILayout.Width(t.width), GUILayout.Height(t.height)))
+                {
+                    state.events.RemoveAt(i);
+                }
+                GUILayout.FlexibleSpace();
+                GUILayout.EndVertical();
+                EditorGUILayout.EndHorizontal();
             }
             if (state.sprite)
             {

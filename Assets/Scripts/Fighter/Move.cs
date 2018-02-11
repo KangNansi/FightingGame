@@ -12,6 +12,8 @@ namespace FightingGame
         public int currentFrame = 0;
         public string name = "Unnamed";
 
+        public bool attack = false;
+
         public Vector2 velocity = new Vector2();
 
         public int defaultNext = 0;

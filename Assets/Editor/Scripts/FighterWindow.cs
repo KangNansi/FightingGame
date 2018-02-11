@@ -74,7 +74,7 @@ namespace FightingGame
             }
 
             windowPos = EditorGUILayout.BeginScrollView(windowPos);
-            GUILayout.BeginVertical();
+            GUILayout.BeginVertical(GUILayout.MaxWidth(800));
             GUILayout.BeginVertical("Box");
 
             GUILayout.BeginHorizontal();
@@ -100,6 +100,12 @@ namespace FightingGame
             fighter.Taunt = EditorGUILayout.Popup("Taunt", fighter.Taunt, fighter.moves.ConvertAll<string>(MoveToName).ToArray());
             fighter.Fall = EditorGUILayout.Popup("Fall", fighter.Fall, fighter.moves.ConvertAll<string>(MoveToName).ToArray());
             fighter.GetUp = EditorGUILayout.Popup("Get Up", fighter.GetUp, fighter.moves.ConvertAll<string>(MoveToName).ToArray());
+            GUILayout.EndHorizontal();
+
+            GUILayout.BeginHorizontal();
+            fighter.JumpStart = EditorGUILayout.Popup("Jump Start", fighter.JumpStart, fighter.moves.ConvertAll<string>(MoveToName).ToArray());
+            fighter.JumpFall = EditorGUILayout.Popup("Jump Fall", fighter.JumpFall, fighter.moves.ConvertAll<string>(MoveToName).ToArray());
+            fighter.JumpRecovery = EditorGUILayout.Popup("Jump Recovery", fighter.JumpRecovery, fighter.moves.ConvertAll<string>(MoveToName).ToArray());
             GUILayout.EndHorizontal();
 
             GUILayout.EndVertical();
@@ -136,6 +142,7 @@ namespace FightingGame
             if (selectedMove >= 0)
             {
                 Move selMove = fighter.moves[selectedMove];
+                selMove.attack = EditorGUILayout.Toggle("Is Attack?", selMove.attack);
                 fighter.moves[selectedMove].velocity = EditorGUILayout.Vector2Field("Move Velocity", fighter.moves[selectedMove].velocity);
                 selMove.defaultNext = EditorGUILayout.Popup("Default next:", selMove.defaultNext, fighter.GetMoveList());
                 //Draw Preview
@@ -158,7 +165,7 @@ namespace FightingGame
                 GUILayout.BeginHorizontal();
                 for(int i = 0; i < states.Count; i++)
                 {
-                    GUILayout.BeginVertical("Box");
+                    GUILayout.BeginVertical("Box", GUILayout.MaxWidth(250));
                     GUILayout.BeginHorizontal();
                     if (i > 0 && GUILayout.Button("<"))
                     {

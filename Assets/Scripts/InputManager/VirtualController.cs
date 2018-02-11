@@ -111,7 +111,7 @@ public class VirtualController : ScriptableObject {
             case Keys.Dash: return Input.GetKeyDown(Dash);
             case Keys.Taunt: return Input.GetKeyDown(Taunt);
             case Keys.Block: return Input.GetKey(Block);
-            case Keys.Teabag: return Input.GetAxisRaw(dpadhor)<-0.3f;
+            case Keys.Teabag: return Input.GetKeyDown(Teabag);
         }
         return false;
     }

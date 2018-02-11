@@ -12,6 +12,7 @@ namespace FightingGame
         public Image ComboBar;
         public Image GuardBar;
         public Image StunBar;
+        public Image ChargeBar;
         public UIVictoryManager victoryBoxes;
 
         // Use this for initialization
@@ -30,6 +31,7 @@ namespace FightingGame
 
             GuardBar.fillAmount = fighter.Guard;
             StunBar.fillAmount = fighter.Stun;
+            ChargeBar.fillAmount = fighter.TeabagCharge;
         }
     }
 }
