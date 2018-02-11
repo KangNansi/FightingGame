@@ -76,6 +76,7 @@ namespace FightingGame
         public GameObject guardBreak;
 
         Vector3 addedVelocity = new Vector3(0, 0, 0);
+        float jumpTimer = 0;
         bool blocking = false;
         bool blocked = false;
 
@@ -145,16 +146,17 @@ namespace FightingGame
             else if (v > 0 && fighter.Grounded && !fighter.jumped) //Jump
             {
                 fighter.Grounded = false;
-                fighter.velocity.y = fighter.jumpStrength;
+                //fighter.velocity.y = fighter.jumpStrength;
                 fighter.jumped = true;
                 fighter.SetMove(fighter.JumpStart);
                 lastJumpState = true;
+                jumpTimer = 0;
             }
             else
             {
                 //SetMove(Stand);
             }
-            if(!fighter.Grounded && fighter.velocity.y < 0 && lastJumpState && !fighter.GetMove().attack)
+            if(!fighter.Grounded && jumpTimer > 1 && lastJumpState && !fighter.GetMove().attack)
             {
                 fighter.SetMove(fighter.JumpFall);
                 lastJumpState = false;
@@ -221,10 +223,23 @@ namespace FightingGame
 
             //Apply gravity
             float g = FightManager.gravity;
-            fighter.velocity += Vector3.down * g;
+            //fighter.velocity += (fighter.velocity.y*fighter.velocity.y+1)/(fighter.jumpStrength*fighter.jumpStrength) * Vector3.down * g;
             fighter.velocity += ((Vector3)fighter.GetMove().GetVelocity()*sens.x)*Mathf.Abs(transform.lossyScale.x);
             fighter.velocity += addedVelocity;
             transform.position += fighter.velocity * deltaT;
+            if (jumpTimer < 2f)
+            {
+                float curvePosition = jumpTimer - 1f;
+                Debug.Log(jumpTimer);
+                float added = fighter.jumpStrength * (-(curvePosition * curvePosition) + 1);
+                Debug.Log("added:" + added);
+                transform.position = new Vector3(transform.position.x, FightManager.groundHeight + added, transform.position.z);
+                jumpTimer += (Time.deltaTime * 2) / fighter.jumpSpeed;
+            }
+            else
+            {
+                transform.position += Vector3.down * FightManager.gravity;
+            }
 
             //Players pushing each other
             if(transform.position.x < maxPosition.x)

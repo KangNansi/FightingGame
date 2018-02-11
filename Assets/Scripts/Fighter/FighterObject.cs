@@ -44,6 +44,7 @@ namespace FightingGame
 
         public Vector3 velocity = new Vector3();
         public float jumpStrength = 30;
+        public float jumpSpeed = 2f;
         public bool jumped = false;
 
         public float lifeMax = 100f;
