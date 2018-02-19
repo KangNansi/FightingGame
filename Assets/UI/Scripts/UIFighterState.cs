@@ -8,6 +8,7 @@ namespace FightingGame
     public class UIFighterState : MonoBehaviour
     {
         public FighterController fighter;
+        public Image UnderBar;
         public Image LifeBar;
         public Vector3 lifeStartPosition;
         public RectTransform lifeMask;
@@ -27,6 +28,7 @@ namespace FightingGame
             lifeMaskStart = lifeMask.transform.position;
             lifeStartPosition = LifeBar.transform.position;
             comboStartPosition = ComboBar.transform.position;
+            //UnderBar.material = fighter.GetComponent<SpriteRenderer>().material;
 
             victoryBoxes.SetFighter(fighter);
         }
