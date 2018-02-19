@@ -78,8 +78,8 @@ namespace FightingGame
             RectTransform newBoxTransform = newBox.GetComponent<RectTransform>();
             if (newBoxTransform != null)
             {
-                newBoxTransform.transform.SetParent(transform, false);
-                newBoxTransform.anchoredPosition = new Vector2(-(newBoxTransform.rect.width + 4) * (boxlist.Count), 0);
+                newBoxTransform.SetParent(GetComponent<RectTransform>());
+                newBoxTransform.anchoredPosition = new Vector2(-(newBoxTransform.rect.width * Mathf.Abs(newBoxTransform.localScale.x) + 4) * (boxlist.Count), 0);
             }
         }
     }
