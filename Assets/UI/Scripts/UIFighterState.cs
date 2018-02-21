@@ -22,6 +22,8 @@ namespace FightingGame
         public Image ChargeBar;
         public UIVictoryManager victoryBoxes;
 
+
+
         // Use this for initialization
         void Start()
         {
@@ -49,5 +51,7 @@ namespace FightingGame
             StunBar.fillAmount = fighter.Stun;
             //ChargeBar.fillAmount = fighter.TeabagCharge;
         }
+
+
     }
 }

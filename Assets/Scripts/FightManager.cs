@@ -45,6 +45,9 @@ namespace FightingGame
         public delegate void AddVictory(FighterController player);
         public static event AddVictory addVictory;
 
+		public delegate void RoundEnd(int player);
+		public static event RoundEnd roundEnd;
+
 	    // Use this for initialization
 	    void Start () {
 			instance = this;
@@ -64,11 +67,17 @@ namespace FightingGame
                 {
                     p2victory++;
                     addVictory(player2);
+					if (roundEnd != null) {
+						roundEnd.Invoke (1);
+					}
                 }
                 if(player2.Life <= 0)
                 {
                     p1victory++;
                     addVictory(player1);
+					if (roundEnd != null) {
+						roundEnd.Invoke (0);
+					}
                 }
                 Debug.Log("Match End");
                 bReset = true;
@@ -90,11 +99,11 @@ namespace FightingGame
         {
             if (p1victory >= matchNumber)
             {
-                Debug.Log("Player 1 wins");
+				
             }
             else if(p2victory >= matchNumber)
             {
-                Debug.Log("Player 2 wins");
+				
             }
         }
 
@@ -117,6 +126,7 @@ namespace FightingGame
                 player2.Fighter.SetMove(player1.Fighter.GetUp);
             }
             bReset = false;
+			time = 0;
         }
 
         void ResetFight()
