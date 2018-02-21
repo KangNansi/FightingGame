@@ -85,18 +85,26 @@ MonoBehaviour:
       actions:
       - input: 11
         state: 15
+      - input: 1
+        state: 23
     - moveId: 18
       actions:
       - input: 11
         state: 15
+      - input: 1
+        state: 23
     - moveId: 19
       actions:
       - input: 11
         state: 15
+      - input: 1
+        state: 23
     - moveId: 21
       actions:
       - input: 11
         state: 15
+      - input: 1
+        state: 23
   moves:
   - frames:
     - name: 
@@ -2885,6 +2893,68 @@ MonoBehaviour:
     velocity: {x: -20, y: 0}
     defaultNext: 0
     time_modifier: 0.995
+  - frames:
+    - name: 
+      frameType: 2
+      hitboxes:
+      - _position: {x: -1.57, y: 0.8}
+        _size: {x: 2, y: 2}
+        _type: 1
+        color: {r: 1, g: 0, b: 0, a: 0.5}
+        dmg: 1
+        stun: 1
+        guardDmg: 1
+      sprite: {fileID: 21300000, guid: 13fed334ce22a6f4ea739d4568674ecf, type: 3}
+      time: 0.08
+      velocity: {x: 0, y: 0}
+      wwiseEvent: 0
+      wwiseEventName: 
+      events: 
+    - name: 
+      frameType: 2
+      hitboxes:
+      - _position: {x: -1.14, y: 0.8}
+        _size: {x: 2, y: 2}
+        _type: 1
+        color: {r: 0, g: 0, b: 0, a: 0}
+        dmg: 1
+        stun: 1
+        guardDmg: 1
+      - _position: {x: 0.86, y: 0.5}
+        _size: {x: 2, y: 2}
+        _type: 0
+        color: {r: 1, g: 0, b: 0, a: 0.5}
+        dmg: 10
+        stun: 10
+        guardDmg: 10
+      sprite: {fileID: 21300002, guid: 13fed334ce22a6f4ea739d4568674ecf, type: 3}
+      time: 0.08
+      velocity: {x: 0, y: 0}
+      wwiseEvent: 0
+      wwiseEventName: 
+      events: 
+    - name: 
+      frameType: 2
+      hitboxes:
+      - _position: {x: -0.96, y: 0.8}
+        _size: {x: 2, y: 2}
+        _type: 1
+        color: {r: 0, g: 0, b: 0, a: 0}
+        dmg: 1
+        stun: 1
+        guardDmg: 1
+      sprite: {fileID: 21300004, guid: 13fed334ce22a6f4ea739d4568674ecf, type: 3}
+      time: 0.08
+      velocity: {x: 0, y: 0}
+      wwiseEvent: 0
+      wwiseEventName: 
+      events: 
+    currentFrame: 0
+    name: air attack 2(startup)
+    attack: 1
+    velocity: {x: 0, y: 0}
+    defaultNext: 18
+    time_modifier: 1
   fireBall: {fileID: 0}
   speed: 15
   currentState: 0
