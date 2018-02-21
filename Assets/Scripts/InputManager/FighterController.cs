@@ -82,6 +82,7 @@ namespace FightingGame
 
         float minDistance = 1.5f;
         bool lastJumpState = false;
+		public bool running = true;
 
         public event System.Action blockEvent;
         public event System.Action parryEvent;
@@ -109,7 +110,14 @@ namespace FightingGame
 
         // Update is called once per frame
         void Update () {
-            if (!fighter.running) return;
+			if (!fighter.running || !running) {
+				fighter.UpdateObject(Time.deltaTime);
+				if (fighter.GetMove().Compute(Time.deltaTime))
+				{
+					fighter.SetMove(fighter.GetMove().defaultNext);
+				}
+				return;
+			}
             ///Block
             if (controller.GetBlockDown())
                 blocking = true;

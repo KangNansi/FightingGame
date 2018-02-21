@@ -28,7 +28,7 @@ namespace FightingGame
 		float time = 0.0f;
 		public float MatchTime {
 			get {
-				return time;
+				return (int)(Mathf.Clamp(matchTime-time, 0, 99));
 			}
 		}
 		public float matchTime = 99;
@@ -48,6 +48,8 @@ namespace FightingGame
 		public delegate void RoundEnd(int player);
 		public static event RoundEnd roundEnd;
 
+		public static event System.Action FightBegin;
+
 	    // Use this for initialization
 	    void Start () {
 			instance = this;
@@ -56,14 +58,17 @@ namespace FightingGame
             player1.Reset();
             player2.Reset();
             groundHeight = player1.transform.position.y;
+			if (FightBegin != null) {
+				FightBegin.Invoke();
+			}
         }
 	
 	    // Update is called once per frame
 	    void Update () {
             FighterController.Hit(player1, player2);
-            if (!bReset && (player1.Life <= 0 || player2.Life <= 0))
+			if (!bReset && (player1.Life <= 0 || player2.Life <= 0 || time > matchTime))
             {
-                if(player1.Life <= 0)
+				if(player1.Life < player2.Life)
                 {
                     p2victory++;
                     addVictory(player2);
@@ -71,7 +76,7 @@ namespace FightingGame
 						roundEnd.Invoke (1);
 					}
                 }
-                if(player2.Life <= 0)
+                if(player2.Life < player1.Life)
                 {
                     p1victory++;
                     addVictory(player1);
@@ -82,14 +87,17 @@ namespace FightingGame
                 Debug.Log("Match End");
                 bReset = true;
                 resetTimer = 0.0f;
-                OnMatchEnd();
             }
             else if (bReset)
             {
                 resetTimer += Time.deltaTime;
                 if(resetTimer > 2.0f)
                 {
+					OnMatchEnd();
                     ResetMatch();
+					if (FightBegin != null) {
+						FightBegin.Invoke();
+					}
                 }
             }
 			time += Time.deltaTime;

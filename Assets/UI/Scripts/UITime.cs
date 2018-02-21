@@ -14,7 +14,7 @@ public class UITime : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (timerText != null && FightingGame.FightManager.Instance != null) {
-			timerText.text = (99-((int)FightingGame.FightManager.Instance.MatchTime)).ToString();
+			timerText.text = FightingGame.FightManager.Instance.MatchTime.ToString();
 		}
 	}
 }
