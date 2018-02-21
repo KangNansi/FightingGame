@@ -433,6 +433,77 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c17c873d3de3d147900bbada4f1cb61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buttons:
+  - {fileID: 1588553703}
+  - {fileID: 1590775844}
+--- !u!1 &951788139
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 951788141}
+  - component: {fileID: 951788140}
+  m_Layer: 0
+  m_Name: GameConfiguration
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &951788140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 951788139}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98d19af0819048a45a8cee4343ad70bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  config:
+    p1controls:
+      P: 0
+      Taunt: 0
+      Dash: 0
+      Block: 0
+      DP: 0
+      Teabag: 0
+      Jump: 0
+      hor: 
+      ver: 
+      dpadhor: 
+    p2controls:
+      P: 0
+      Taunt: 0
+      Dash: 0
+      Block: 0
+      DP: 0
+      Teabag: 0
+      Jump: 0
+      hor: 
+      ver: 
+      dpadhor: 
+    matchTime: 99
+  p1controller: {fileID: 11400000, guid: 9db9d13976c94f74fb43aa29de060af0, type: 2}
+  p2controller: {fileID: 11400000, guid: 8f8197671f7957a4b8301a59ef3db1f9, type: 2}
+  p1material: {fileID: 0}
+  p2material: {fileID: 0}
+--- !u!4 &951788141
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 951788139}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 271.45435, y: 527.5175, z: -0.9375}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1110380375
 GameObject:
   m_ObjectHideFlags: 0
@@ -480,7 +551,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_FirstSelected: {fileID: 1588553701}
-  m_sendNavigationEvents: 1
+  m_sendNavigationEvents: 0
   m_DragThreshold: 5
 --- !u!4 &1110380378
 Transform:

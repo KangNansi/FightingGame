@@ -14,9 +14,10 @@ MonoBehaviour:
   P: 372
   Taunt: 373
   Dash: 371
-  Block: 32
+  Block: 375
   DP: 0
-  Teabag: 375
+  Teabag: 374
+  Jump: 370
   hor: Horizontal2
   ver: Vertical2
   dpadhor: DHorizontal2

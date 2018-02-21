@@ -76,7 +76,7 @@ namespace FightingGame
         public GameObject guardBreak;
 
         Vector3 addedVelocity = new Vector3(0, 0, 0);
-        float jumpTimer = 0;
+        float jumpTimer = 500;
         bool blocking = false;
         bool blocked = false;
 
@@ -151,7 +151,7 @@ namespace FightingGame
             {
                 //fighter.SetMove(fighter.Crouch);
             }
-            else if (v > 0 && fighter.Grounded && !fighter.jumped) //Jump
+            else if (controller.GetJumpDown() && fighter.Grounded && (fighter.currentState == fighter.Stand || fighter.currentState == fighter.Walk) && !fighter.jumped) //Jump
             {
                 fighter.Grounded = false;
                 //fighter.velocity.y = fighter.jumpStrength;

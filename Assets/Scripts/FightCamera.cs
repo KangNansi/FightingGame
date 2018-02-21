@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 namespace FightingGame
 {
-    [RequireComponent(typeof(Camera))]
     public class FightCamera : MonoBehaviour {
         Vector3 basePosition;
 

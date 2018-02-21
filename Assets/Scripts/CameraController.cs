@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour {
 
-	public Camera camera;
+	new public Camera camera;
 
     public static CameraController controller = null;
 

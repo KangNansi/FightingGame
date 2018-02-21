@@ -6,7 +6,14 @@ public class UIMaterialSelector : MonoBehaviour {
 	public List<Material> materials = new List<Material>();
 	// Use this for initialization
 	int current = 0;
-	public VirtualController controller;
+	VirtualController controller;
+    public VirtualController Controller
+    {
+        set
+        {
+            controller = value;
+        }
+    }
 	public FightingGame.FighterController fighter;
 	SpriteRenderer renderer;
 	bool stop = false;
@@ -44,4 +51,9 @@ public class UIMaterialSelector : MonoBehaviour {
 			ready = true;
 		}
 	}
+
+    public Material GetCurrentMaterial()
+    {
+        return materials[current];
+    }
 }

@@ -11,9 +11,9 @@ namespace FightingGame{
 		public UIImageFade Fight;
 
 		// Use this for initialization
-		void Start () {
+		void Awake () {
 			FightManager.roundEnd += Victory;
-			FightManager.FightBegin += () => Fight.Launch();
+			FightManager.fightBegin += (c) => Fight.Launch(c);
 		}
 		
 		// Update is called once per frame
@@ -23,9 +23,9 @@ namespace FightingGame{
 		
 		void Victory(int player){
 			if (player == 0) {
-				VictoryP1.Launch ();
+				VictoryP1.Launch (null);
 			} else if (player == 1) {
-				VictoryP2.Launch ();
+				VictoryP2.Launch (null);
 			}
 		}
 	}

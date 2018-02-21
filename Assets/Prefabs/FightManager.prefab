@@ -295,7 +295,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4895862656504984}
-  - component: {fileID: 20430315434667764}
   - component: {fileID: 114824671382545290}
   - component: {fileID: 114028719885814176}
   m_Layer: 0
@@ -690,7 +689,7 @@ Transform:
   m_GameObject: {fileID: 1795815633629498}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4, y: 4, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4715574800738264}
   m_Father: {fileID: 4895862656504984}
@@ -807,41 +806,6 @@ Camera:
     serializedVersion: 2
     m_Bits: 4294967272
   m_RenderingPath: 3
-  m_TargetTexture: {fileID: 0}
-  m_TargetDisplay: 0
-  m_TargetEye: 3
-  m_HDR: 1
-  m_AllowMSAA: 1
-  m_ForceIntoRT: 0
-  m_OcclusionCulling: 1
-  m_StereoConvergence: 10
-  m_StereoSeparation: 0.022
---- !u!20 &20430315434667764
-Camera:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1446229400891470}
-  m_Enabled: 1
-  serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
-  m_NormalizedViewPortRect:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
-  near clip plane: 0.3
-  far clip plane: 1000
-  field of view: 60
-  orthographic: 0
-  orthographic size: 5
-  m_Depth: 0
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
   m_TargetEye: 3
@@ -1017,7 +981,7 @@ MonoBehaviour:
   fighterObject: {fileID: 11400000, guid: 2b86dec85b2690a4a84a926c9873dda4, type: 2}
   maxPosition: {x: 0, y: 0}
   drawHitbox: 0
-  controller: {fileID: 11400000, guid: 504dc8ae806d5f34297cfa6f316aa48b, type: 2}
+  controller: {fileID: 11400000, guid: 9db9d13976c94f74fb43aa29de060af0, type: 2}
   opponent: {fileID: 114484975224229398}
   hitFreezeTime: 0.1
   hit: {fileID: 1842889166708966, guid: 2197fde14182de8489aae2167100c358, type: 2}
@@ -1030,6 +994,7 @@ MonoBehaviour:
   parryPerfect: {fileID: 1666438446970906, guid: 4f5ee5485e2a13c4a942bd38fd643bd3,
     type: 2}
   guardBreak: {fileID: 1398323086944634, guid: 37591f896faa94541a70010089aa1fa4, type: 2}
+  running: 1
 --- !u!114 &114028719885814176
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1096,7 +1061,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 8d841996be6a4d245959cf9842805cfe, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 0
   m_FillAmount: 1
@@ -1665,6 +1630,7 @@ MonoBehaviour:
   parryPerfect: {fileID: 1666438446970906, guid: 4f5ee5485e2a13c4a942bd38fd643bd3,
     type: 2}
   guardBreak: {fileID: 1398323086944634, guid: 37591f896faa94541a70010089aa1fa4, type: 2}
+  running: 1
 --- !u!114 &114530340741680834
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1803,7 +1769,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 2192c010527db4342b67463624b6870c, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -1849,7 +1815,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player1: {fileID: 114018580943779924}
   player2: {fileID: 114484975224229398}
-  matchTime: 5
+  matchTime: 99
 --- !u!114 &114651182633605402
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1898,7 +1864,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 2192c010527db4342b67463624b6870c, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -2048,7 +2014,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 8d841996be6a4d245959cf9842805cfe, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 0
   m_FillAmount: 1
@@ -2705,9 +2671,9 @@ RectTransform:
   m_Father: {fileID: 224741390726314806}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -759, y: 428}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 201, y: -112}
   m_SizeDelta: {x: 408, y: 224}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224564376863924006
@@ -2765,9 +2731,9 @@ RectTransform:
   m_Father: {fileID: 224741390726314806}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 753, y: 428}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -207, y: -112}
   m_SizeDelta: {x: 408, y: 224}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224733816170615154
@@ -2784,9 +2750,9 @@ RectTransform:
   m_Father: {fileID: 224741390726314806}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 397}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 0, y: -143}
   m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224735774106526450

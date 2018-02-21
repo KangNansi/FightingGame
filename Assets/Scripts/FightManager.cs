@@ -40,6 +40,8 @@ namespace FightingGame
         bool bReset = false;
         float resetTimer = 0.0f;
 
+        bool running = true;
+
         public delegate void SetupVictory(int n);
         public static event SetupVictory setupVictory;
         public delegate void AddVictory(FighterController player);
@@ -48,18 +50,33 @@ namespace FightingGame
 		public delegate void RoundEnd(int player);
 		public static event RoundEnd roundEnd;
 
-		public static event System.Action FightBegin;
+        public delegate void FightBegin(System.Action onEnd);
+		public static event FightBegin fightBegin;
 
-	    // Use this for initialization
-	    void Start () {
+        private void Awake()
+        {
+            GameConfiguration config = GameConfiguration.instance;
+            if(config != null)
+            {
+                player1.controller = config.p1controller;
+                player2.controller = config.p2controller;
+                player1.GetComponent<SpriteRenderer>().material = config.p1material;
+                player2.GetComponent<SpriteRenderer>().material = config.p2material;
+                matchTime = config.config.matchTime;
+            }
+        }
+
+        // Use this for initialization
+        void Start () {
 			instance = this;
 			player1basePosition = player1.transform.position;
 			player2basePosition = player2.transform.position;
             player1.Reset();
             player2.Reset();
             groundHeight = player1.transform.position.y;
-			if (FightBegin != null) {
-				FightBegin.Invoke();
+			if (fightBegin != null) {
+                Block();
+				fightBegin.Invoke(UnBlock);
 			}
         }
 	
@@ -95,13 +112,31 @@ namespace FightingGame
                 {
 					OnMatchEnd();
                     ResetMatch();
-					if (FightBegin != null) {
-						FightBegin.Invoke();
+					if (fightBegin != null) {
+                        Block();
+						fightBegin.Invoke(UnBlock);
 					}
                 }
             }
-			time += Time.deltaTime;
+            if (running)
+            {
+			    time += Time.deltaTime;
+            }
 	    }
+
+        void Block()
+        {
+            running = false;
+            player1.running = false;
+            player2.running = false;
+        }
+
+        void UnBlock()
+        {
+            running = true;
+            player1.running = true;
+            player2.running = true;
+        }
 
         void OnMatchEnd()
         {

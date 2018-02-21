@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[System.Serializable]
 public class VirtualController : ScriptableObject {
 
+    [System.Serializable]
     public enum Keys
     {
         P,
@@ -13,8 +15,11 @@ public class VirtualController : ScriptableObject {
         DP,
         Block,
         Dash,
+        BackDash,
         Taunt,
-        Teabag
+        Teabag,
+        Jump,
+        Attack
     }
 
     public KeyCode P;
@@ -23,6 +28,7 @@ public class VirtualController : ScriptableObject {
     public KeyCode Block;
     public KeyCode DP;
     public KeyCode Teabag;
+    public KeyCode Jump;
     public string hor;
     public string ver;
     public string dpadhor;
@@ -69,6 +75,20 @@ public class VirtualController : ScriptableObject {
         }
     }
 
+    public void Setup(VController c)
+    {
+        P = c.P;
+        Taunt = c.Taunt;
+        Dash = c.Dash;
+        Block = c.Block;
+        DP = c.DP;
+        Teabag = c.Teabag;
+        hor = c.hor;
+        ver = c.ver;
+        dpadhor = c.dpadhor;
+        Jump = c.Jump;
+    }
+
     public bool GetPDown()
     {
         return Input.GetKeyDown(P);
@@ -99,19 +119,52 @@ public class VirtualController : ScriptableObject {
         return Input.GetKeyDown(Teabag);
     }
 
+    public bool GetJumpDown()
+    {
+        return Input.GetKeyDown(Jump);
+    }
+
     public bool GetKeyDown(Keys k)
     {
         switch (k)
         {
-            case Keys.P: return (GetPDown()&&GetHorizontalS() > -0.3f && GetHorizontalS() < 0.3f && GetVertical() < 0.3f && GetVertical() > -0.3f);
+            case Keys.P: return (GetPDown() && GetHorizontalS() > -0.3f && GetHorizontalS() < 0.3f && GetVertical() < 0.3f && GetVertical() > -0.3f);
             case Keys.FP: return (GetPDown() && GetHorizontalS() > 0.3f);
             case Keys.BP: return (GetPDown() && GetHorizontalS() < -0.3f);
             case Keys.UP: return (GetPDown() && GetVertical() < -0.3f);
             case Keys.DP: return (GetPDown() && GetVertical() > 0.3f);
-            case Keys.Dash: return Input.GetKeyDown(Dash);
+            case Keys.Dash: return GetDashDown();
+            case Keys.BackDash: return GetBackDashDown();
             case Keys.Taunt: return Input.GetKeyDown(Taunt);
             case Keys.Block: return Input.GetKey(Block);
             case Keys.Teabag: return Input.GetKeyDown(Teabag);
+            case Keys.Attack: return GetPDown();
+        }
+        return false;
+    }
+
+    bool SameSens(float a, float b)
+    {
+        if((a<0 && b<0) || (a>0 && b > 0)){
+            return true;
+        }
+        return false;
+    }
+
+    public bool GetDashDown()
+    {
+        if(SameSens(GetHorizontal(), sens) && Input.GetKeyDown(Dash))
+        {
+            return true;
+        }
+        return false;
+    }
+
+    public bool GetBackDashDown()
+    {
+        if(!SameSens(GetHorizontal(), sens) && Input.GetKeyDown(Dash))
+        {
+            return true;
         }
         return false;
     }
