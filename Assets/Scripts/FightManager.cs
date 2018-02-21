@@ -6,13 +6,32 @@ using UnityEngine.UI;
 namespace FightingGame
 {
     public class FightManager : MonoBehaviour {
+
+		static FightManager instance = null;
+		public static FightManager Instance {
+			get{
+				return instance;
+			}
+		}
+			
+
         public FighterController player1;
+		Vector3 player1basePosition;
         public FighterController player2;
+		Vector3 player2basePosition;
         public static float groundHeight = 0;
         public static float gravity = 1f;
         public static float defaultTimeModifier = 1.0f;
         public static float timeModifier = 1.0f;
         public static int matchNumber = 2;
+
+		float time = 0.0f;
+		public float MatchTime {
+			get {
+				return time;
+			}
+		}
+		public float matchTime = 99;
 
         int p1victory = 0;
         int p2victory = 0;
@@ -28,6 +47,9 @@ namespace FightingGame
 
 	    // Use this for initialization
 	    void Start () {
+			instance = this;
+			player1basePosition = player1.transform.position;
+			player2basePosition = player2.transform.position;
             player1.Reset();
             player2.Reset();
             groundHeight = player1.transform.position.y;
@@ -61,6 +83,7 @@ namespace FightingGame
                     ResetMatch();
                 }
             }
+			time += Time.deltaTime;
 	    }
 
         void OnMatchEnd()
@@ -82,6 +105,8 @@ namespace FightingGame
             bool bPlayer2Fall = (player2.Life <= 0);
             player1.Reset();
             player2.Reset();
+			player1.transform.position = player1basePosition;
+			player2.transform.position = player2basePosition;
             if (bPlayer1Fall)
             {
                 player1.Fighter.SetMove(player1.Fighter.GetUp);

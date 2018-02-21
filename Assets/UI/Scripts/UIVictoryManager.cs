@@ -79,7 +79,8 @@ namespace FightingGame
             if (newBoxTransform != null)
             {
                 newBoxTransform.SetParent(GetComponent<RectTransform>());
-                newBoxTransform.localPosition = new Vector2((newBoxTransform.rect.width * Mathf.Abs(newBoxTransform.localScale.x) + 4) * (boxlist.Count), 0);
+				newBoxTransform.localScale = Vector3.one;
+                newBoxTransform.localPosition = new Vector2(-(newBoxTransform.rect.width + 4) * (boxlist.Count), 0);
             }
         }
     }

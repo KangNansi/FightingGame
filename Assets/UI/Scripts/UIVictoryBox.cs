@@ -10,7 +10,7 @@ public class UIVictoryBox : MonoBehaviour {
         RectTransform rectT = victoryImage.GetComponent<RectTransform>();
         if(rectT != null)
         {
-            rectT.localScale = new Vector3(rectT.lossyScale.x, 1, 1);
+            //rectT.localScale = new Vector3(rectT.lossyScale.x, 1, 1);
         }
 	}
 	
