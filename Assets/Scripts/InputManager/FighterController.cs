@@ -95,6 +95,7 @@ namespace FightingGame
             fighter.controller = this.gameObject;
             fighter.running = true;
             fighter.Init();
+            SetSens();
         }
 
         void Start () {
@@ -268,6 +269,17 @@ namespace FightingGame
                     fighter.SetMove(fighter.JumpRecovery);
                 }
                 fighter.Grounded = true;
+            }
+        }
+
+        void SetSens()
+        {
+            if (opponent)
+            {
+                if (opponent.transform.position.x < transform.position.x) sens = new Vector3(-1, 1, 1);
+                else sens = new Vector3(1, 1, 1);
+                transform.localScale = sens;
+                controller.sens = sens.x;
             }
         }
 

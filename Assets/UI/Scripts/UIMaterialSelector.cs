@@ -19,6 +19,10 @@ public class UIMaterialSelector : MonoBehaviour {
 	bool stop = false;
 	bool ready = false;
 	public bool Ready {
+        set
+        {
+            ready = value;
+        }
 		get {
 			return ready;
 		}
@@ -30,7 +34,7 @@ public class UIMaterialSelector : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (!stop){
+		if (!stop && !ready){
 			if (controller.GetHorizontal () < -0.1) {
 				current = (current - 1) % materials.Count;
 			}

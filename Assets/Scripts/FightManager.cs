@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 namespace FightingGame
 {
@@ -110,12 +111,14 @@ namespace FightingGame
                 resetTimer += Time.deltaTime;
                 if(resetTimer > 2.0f)
                 {
-					OnMatchEnd();
-                    ResetMatch();
-					if (fightBegin != null) {
-                        Block();
-						fightBegin.Invoke(UnBlock);
-					}
+                    if (!OnMatchEnd())
+                    {
+                        ResetMatch();
+					    if (fightBegin != null) {
+                            Block();
+						    fightBegin.Invoke(UnBlock);
+					    }
+                    }
                 }
             }
             if (running)
@@ -138,16 +141,19 @@ namespace FightingGame
             player2.running = true;
         }
 
-        void OnMatchEnd()
+        bool OnMatchEnd()
         {
             if (p1victory >= matchNumber)
             {
-				
+                SceneManager.LoadScene("CharacterChoice");
+                return true;
             }
             else if(p2victory >= matchNumber)
             {
-				
+                SceneManager.LoadScene("CharacterChoice");
+                return true;
             }
+            return false;
         }
 
         void ResetMatch()
