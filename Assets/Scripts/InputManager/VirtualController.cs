@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
-public class VirtualController : ScriptableObject {
+public class VirtualController : ScriptableObject, IController {
 
     [System.Serializable]
     public enum Keys
@@ -34,6 +34,11 @@ public class VirtualController : ScriptableObject {
     public string dpadhor;
 
     public float sens = 1f;
+
+    public void SetSens(float s)
+    {
+        sens = s;
+    }
 
     public VirtualController(int joystick)
     {

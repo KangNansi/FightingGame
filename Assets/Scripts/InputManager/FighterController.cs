@@ -23,13 +23,20 @@ namespace FightingGame
         }
         public bool drawHitbox = true;
         //public int controllerNumber = 1;
-        public VirtualController controller;
+        public IController controller;
         public FighterController opponent;
         public float ComboStrength
         {
             get
             {
                 return (fighter.Combo/fighter.lifeMax);
+            }
+        }
+        public float ComboOverLife
+        {
+            get
+            {
+                return (fighter.Combo / fighter.Life);
             }
         }
         public float Life
@@ -103,7 +110,6 @@ namespace FightingGame
             fighter.controller = this.gameObject;
             fighter.running = true;
             fighter.Init();
-            controller = Instantiate(controller);
             blockEvent += () => AkSoundEngine.PostEvent("Block", gameObject);
             parryEvent += () => AkSoundEngine.PostEvent("Parry_11", gameObject);
             perfectParryEvent += () => AkSoundEngine.PostEvent("Perfect_Parry_10", gameObject);
@@ -189,7 +195,7 @@ namespace FightingGame
                 if (opponent.transform.position.x < transform.position.x) sens = new Vector3(-1, 1, 1);
                 else sens = new Vector3(1, 1, 1);
                 transform.localScale = sens;
-                controller.sens = sens.x;
+                controller.SetSens(sens.x);
             }
             //Attack
             int curState = fighter.currentState;
@@ -279,7 +285,7 @@ namespace FightingGame
                 if (opponent.transform.position.x < transform.position.x) sens = new Vector3(-1, 1, 1);
                 else sens = new Vector3(1, 1, 1);
                 transform.localScale = sens;
-                controller.sens = sens.x;
+                controller.SetSens(sens.x);
             }
         }
 

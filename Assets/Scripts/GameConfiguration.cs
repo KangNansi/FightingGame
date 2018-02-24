@@ -14,6 +14,8 @@ public class GameConfiguration : MonoBehaviour {
     public VirtualController p2controller;
     public Material p1material;
     public Material p2material;
+    public bool p2isAI = true;
+    public float AIReflex = 0.1f;
 
 	// Use this for initialization
 	void Awake () {
