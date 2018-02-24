@@ -64,6 +64,11 @@ namespace FightingGame
                 player1.GetComponent<SpriteRenderer>().material = config.p1material;
                 player2.GetComponent<SpriteRenderer>().material = config.p2material;
                 matchTime = config.config.matchTime;
+                if (config.p1isAI)
+                {
+                    AIController ai = player1.gameObject.AddComponent<AIController>();
+                    ai.AIReflex = config.AIReflex;
+                }
                 if (config.p2isAI)
                 {
                     AIController ai = player2.gameObject.AddComponent<AIController>();

@@ -15,6 +15,7 @@ public class GameConfiguration : MonoBehaviour {
     public Material p1material;
     public Material p2material;
     public bool p2isAI = true;
+    public bool p1isAI = false;
     public float AIReflex = 0.1f;
 
 	// Use this for initialization

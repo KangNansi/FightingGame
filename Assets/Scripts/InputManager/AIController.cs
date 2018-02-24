@@ -129,7 +129,7 @@ namespace FightingGame
                 case VirtualController.Keys.Dash:
                     return GetRandom()*(1-opponent.ComboOverLife) > 5f && distanceToOpponent() > 3;
                 case VirtualController.Keys.BackDash:
-                    return GetRandom() * opponent.ComboOverLife > 5f && distanceToOpponent() < 2;
+                    return GetRandom() * opponent.ComboOverLife > 15f && distanceToOpponent() < 2;
             }
             return false;
         }
