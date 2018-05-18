@@ -13,13 +13,11 @@
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>Unity Full v3.5</TargetFrameworkProfile>
-    <CompilerResponseFile>
-    </CompilerResponseFile>
+    <CompilerResponseFile></CompilerResponseFile>
     <UnityProjectType>Editor:5</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows64:19</UnityBuildTarget>
     <UnityVersion>2017.2.1f1</UnityVersion>
-    <RootNamespace>
-    </RootNamespace>
+    <RootNamespace></RootNamespace>
     <LangVersion Condition=" '$(VisualStudioVersion)' != '10.0' ">4</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -344,8 +342,8 @@
     <Compile Include="Assets\Scripts\Fighter\Editor\LZFighterFrameEditor.cs" />
     <Compile Include="Assets\Scripts\Fighter\Editor\LZFighterStateEditor.cs" />
     <Compile Include="Assets\Scripts\Fighter\Editor\LZFighterStateEditorExtension.cs" />
-    <Compile Include="Assets\Scripts\Fighter\Editor\MonoBehaviour\LZFighterDebuggerEditor.cs" />
     <Compile Include="Assets\Scripts\Fighter\Editor\MonoBehaviour\LZFighterAnimatorEditor.cs" />
+    <Compile Include="Assets\Scripts\Fighter\Editor\MonoBehaviour\LZFighterDebuggerEditor.cs" />
     <Compile Include="Assets\Scripts\Fighter\Editor\StateMachineEditor.cs" />
     <Compile Include="Assets\SpriteShaders\Editor\SpriteShaderGUI.cs" />
     <Compile Include="Assets\Wwise\Editor\WwiseComponents\AkAmbientInspector.cs" />
@@ -598,6 +596,9 @@
     <None Include="Assets\SpriteShaders\SpritesUnlit.shader" />
     <None Include="Assets\SpriteShaders\SpritesVertexLit.shader" />
     <None Include="Assets\StreamingAssets\desc.txt" />
+    <None Include="Assets\Wwise\Deployment\Plugins\Mac\Debug\AkSoundEngine.bundle\Contents\Resources\readme.txt" />
+    <None Include="Assets\Wwise\Deployment\Plugins\Mac\Profile\AkSoundEngine.bundle\Contents\Resources\readme.txt" />
+    <None Include="Assets\Wwise\Deployment\Plugins\Mac\Release\AkSoundEngine.bundle\Contents\Resources\readme.txt" />
     <None Include="Assets\Wwise\Version.txt" />
     <None Include="Assets\WwiseSettings.xml" />
   </ItemGroup>

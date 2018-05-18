@@ -28,9 +28,9 @@ namespace FightingGame
         public LZUIFighterState p1State;
         public LZUIFighterState p2State;
 
-        public UIImageFade fight;
-        public UIImageFade p1win;
-        public UIImageFade p2win;
+        public RectTransform fight;
+        public RectTransform p1win;
+        public RectTransform p2win;
 
         private Vector3 p1position;
         private Vector3 p2position;
@@ -71,10 +71,14 @@ namespace FightingGame
             camFollow = Camera.main.FollowMultiple(player1.transform, player2.transform);
             player1.transform.ClampToCamera(Camera.main, camFollowThreshold);
             player2.transform.ClampToCamera(Camera.main, camFollowThreshold);
+
+            fight.gameObject.SetActive(false);
+            p1win.gameObject.SetActive(false);
+            p2win.gameObject.SetActive(false);
         }
 
         private void Update() {
-            camFollow.offset = camOffset;
+            //camFollow.offset = camOffset;
             if (!p1R || !p2R || !start) {
                 return;
             }
@@ -108,18 +112,29 @@ namespace FightingGame
 
             bool waitImage = false;
             if(player == 1) {
-                p1win.Launch(() => waitImage = true);
+                yield return Victory(p1win);
             }
             else {
-                p2win.Launch(() => waitImage = true);
+                yield return Victory(p2win);
             }
-            yield return new WaitUntil(() => waitImage);
+
             yield return new WaitForSeconds(1f);
             // Round End Coroutine
             Debug.Log("Round End");
             StartCoroutine(StartMatch());
             //p1State.Setup(2);
             //p2State.Setup(2);
+        }
+
+        private IEnumerator Victory(RectTransform player)
+        {
+            player.gameObject.SetActive(true);
+            player.MoveTo(Vector3.left * 5000);
+            yield return new WaitForSeconds(0.2f);
+            player.MoveTo(Vector3.zero, 0.3f);
+            yield return new WaitForSeconds(2f);
+            player.MoveTo(Vector3.right * 5000, 0.3f);
+            yield return new WaitForSeconds(1f);
         }
 
         private void BlockPlayers() {
@@ -147,7 +162,14 @@ namespace FightingGame
         private IEnumerator StartMatch() {
             ResetMatch();
             BlockPlayers();
+
             yield return new WaitForSeconds(0.5f);
+            fight.gameObject.SetActive(true);
+            fight.MoveTo(Vector3.up * 5000);
+            fight.MoveTo(Vector3.zero, 0.3f);
+            yield return new WaitForSeconds(1f);
+            fight.MoveTo(Vector3.down * 5000, 0.3f);
+
             yield return new WaitForSeconds(1.5f);
             UnblockPlayers();
 
