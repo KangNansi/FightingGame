@@ -1,0 +1,1179 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c89c09565eaaa24d8b5ed3904c1edf6, type: 3}
+  m_Name: Montaine
+  m_EditorClassIdentifier: 
+  fighterName: Montaine
+  initScripts:
+  - {fileID: 11400000, guid: 0df8b9a6767789a46b5099e297782914, type: 2}
+  - {fileID: 11400000, guid: 65917c94167a72d4d813e26be3f841ac, type: 2}
+  - {fileID: 11400000, guid: cf961854e12c58748b50867153fb2eb9, type: 2}
+  - {fileID: 11400000, guid: 4696380eb41375a46a573867cb2df471, type: 2}
+  - {fileID: 11400000, guid: 19b175636f1c535459f4d23cdcde8389, type: 2}
+  - {fileID: 11400000, guid: 3daf791fa9f831742995d85aebe70769, type: 2}
+  - {fileID: 11400000, guid: 0a3bc2b725992b74e9b56ce11ca91aea, type: 2}
+  stateMachine:
+    states:
+      items:
+      - nodeRect:
+          serializedVersion: 2
+          x: 230
+          y: 253
+          width: 150
+          height: 40
+        isDragged: 0
+        name: Ground
+        data: {fileID: 0}
+        parent: -1
+        containedNodes: 01000000050000000e0000000f00000018000000190000001a0000001c000000
+        startState: 1
+        loop: 0
+        velocity: {x: 0, y: 0}
+        invert: 0
+        isShortcut: 0
+        targetState: 0
+      - nodeRect:
+          serializedVersion: 2
+          x: -10
+          y: 277
+          width: 150
+          height: 40
+        isDragged: 0
+        name: Normal
+        data: {fileID: 0}
+        parent: 0
+        containedNodes: 0200000003000000040000000c000000
+        startState: 2
+        loop: 0
+        velocity: {x: 0, y: 0}
+        invert: 0
+        isShortcut: 0
+        targetState: 0
+      - nodeRect:
+          serializedVersion: 2
+          x: 163
+          y: 144
+          width: 150
+          height: 40
+        isDragged: 0
+        name: Idle
+        data: {fileID: 11400000, guid: b50afc04683efa24095419e5dd663e95, type: 2}
+        parent: 1
+        containedNodes: 
+        startState: 0
+        loop: 1
+        velocity: {x: 0, y: 0}
+        invert: 0
+        isShortcut: 0
+        targetState: 0
+      - nodeRect:
+          serializedVersion: 2
+          x: 7
+          y: 274
+          width: 167
+          height: 40
+        isDragged: 0
+        name: Walk Backward
+        data: {fileID: 11400000, guid: 3cab4ce19da8f084dbe4d794fc9a4ad7, type: 2}
+        parent: 1
+        containedNodes: 
+        startState: 0
+        loop: 1
+        velocity: {x: -18, y: 0}
+        invert: 1
+        isShortcut: 0
+        targetState: 0
+      - nodeRect:
+          serializedVersion: 2
+          x: 315
+          y: 269
+          width: 154
+          height: 40
+        isDragged: 0
+        name: Walk Forward
+        data: {fileID: 11400000, guid: 3cab4ce19da8f084dbe4d794fc9a4ad7, type: 2}
+        parent: 1
+        containedNodes: 
+        startState: 0
+        loop: 1
+        velocity: {x: 20, y: 0}
+        invert: 0
+        isShortcut: 0
+        targetState: 0
+      - nodeRect:
+          serializedVersion: 2
+          x: -3
+          y: 474
+          width: 150
+          height: 40
+        isDragged: 0
+        name: Attack
+        data: {fileID: 0}
+        parent: 0
+        containedNodes: 110000001200000013000000140000001500000016000000170000001b000000
+        startState: 17
+        loop: 0
+        velocity: {x: 0, y: 0}
+        invert: 0
+        isShortcut: 0
+        targetState: 0
+      - nodeRect:
+          serializedVersion: 2
+          x: 500
+          y: 248
+          width: 150
+          height: 40
+        isDragged: 0
+        name: Air
+        data: {fileID: 0}
+        parent: -1
+        containedNodes: 070000001d0000001e0000001f000000
+        startState: 7
+        loop: 0
+        velocity: {x: 0, y: 0}
+        invert: 0
+        isShortcut: 0
+        targetState: 0
+      - nodeRect:
+          serializedVersion: 2
+          x: 219
+          y: 127
+          width: 150
+          height: 40
+        isDragged: 0
+        name: Jump
+        data: {fileID: 0}
+        parent: 6
+        containedNodes: 08000000090000000a0000000b000000
+        startState: 8
+        loop: 0
+        velocity: {x: 0, y: 0}
+        invert: 0
+        isShortcut: 0
+        targetState: 0
+      - nodeRect:
+          serializedVersion: 2
+          x: 155
+          y: 215
+          width: 150
+          height: 40
+        isDragged: 0
+        name: Startup
+        data: {fileID: 11400000, guid: ed7f80ec689471441a5a6aca0613bf13, type: 2}
+        parent: 7
+        containedNodes: 
+        startState: 0
+        loop: 0
+        velocity: {x: 0, y: 0}
+        invert: 0
+        isShortcut: 0
+        targetState: 0
+      - nodeRect:
+          serializedVersion: 2
+          x: 157
+          y: 297
+          width: 150
+          height: 40
+        isDragged: 0
+        name: UpLoop
+        data: {fileID: 11400000, guid: 9da8a2adceb7d01438ffbcca4619b018, type: 2}
+        parent: 7
+        containedNodes: 
+        startState: 0
+        loop: 1
+        velocity: {x: 0, y: 0}
+        invert: 0
+        isShortcut: 0
+        targetState: 0
+      - nodeRect:
+          serializedVersion: 2
+          x: 154
+          y: 370
+          width: 150
+          height: 40
+        isDragged: 0
+        name: UpEnd
+        data: {fileID: 11400000, guid: 30d2c6df55c7f734185560898f25fb64, type: 2}
+        parent: 7
+        containedNodes: 
+        startState: 0
+        loop: 0
+        velocity: {x: 0, y: 0}
+        invert: 0
+        isShortcut: 0
+        targetState: 0
+      - nodeRect:
+          serializedVersion: 2
+          x: 152
+          y: 439
+          width: 150
+          height: 40
+        isDragged: 0
+        name: DownLoop
+        data: {fileID: 11400000, guid: 46d16db98018c264f87397d306e7a4aa, type: 2}
+        parent: 7
+        containedNodes: 
+        startState: 0
+        loop: 1
+        velocity: {x: 0, y: 0}
+        invert: 0
+        isShortcut: 0
+        targetState: 0
+      - nodeRect:
+          serializedVersion: 2
+          x: 159
+          y: 502
+          width: 150
+          height: 40
+        isDragged: 0
+        name: Jump
+        data: {fileID: 0}
+        parent: 1
+        containedNodes: 
+        startState: 0
+        loop: 0
+        velocity: {x: 0, y: 0}
+        invert: 0
+        isShortcut: 1
+        targetState: 7
+      - nodeRect:
+          serializedVersion: 2
+          x: 176
+          y: 414
+          width: 150
+          height: 40
+        isDragged: 0
+        name: Fall
+        data: {fileID: 11400000, guid: 825a9bf8f05a0bf4bbce139cd281ea38, type: 2}
+        parent: -1
+        containedNodes: 
+        startState: 0
+        loop: 0
+        velocity: {x: 0, y: 0}
+        invert: 0
+        isShortcut: 0
+        targetState: 0
+      - nodeRect:
+          serializedVersion: 2
+          x: -214
+          y: 209
+          width: 150
+          height: 40
+        isDragged: 0
+        name: Hit
+        data: {fileID: 11400000, guid: 2c32abd3e319bf0419f289582ccc43a2, type: 2}
+        parent: 0
+        containedNodes: 
+        startState: 0
+        loop: 0
+        velocity: {x: 0, y: 0}
+        invert: 0
+        isShortcut: 0
+        targetState: 0
+      - nodeRect:
+          serializedVersion: 2
+          x: -133
+          y: 147
+          width: 150
+          height: 40
+        isDragged: 0
+        name: Block
+        data: {fileID: 11400000, guid: efc167e9be6188142823d9f21a6f79a5, type: 2}
+        parent: 0
+        containedNodes: 
+        startState: 0
+        loop: 0
+        velocity: {x: 0, y: 0}
+        invert: 0
+        isShortcut: 0
+        targetState: 0
+      - nodeRect:
+          serializedVersion: 2
+          x: 349
+          y: 470
+          width: 150
+          height: 40
+        isDragged: 0
+        name: Get up
+        data: {fileID: 11400000, guid: e1539adf02350c04c92c38d0b771e213, type: 2}
+        parent: -1
+        containedNodes: 
+        startState: 0
+        loop: 0
+        velocity: {x: 0, y: 0}
+        invert: 0
+        isShortcut: 0
+        targetState: 0
+      - nodeRect:
+          serializedVersion: 2
+          x: -40
+          y: 283
+          width: 150
+          height: 40
+        isDragged: 0
+        name: Jab
+        data: {fileID: 11400000, guid: 08efc7894d27e6046873b10fd17e9947, type: 2}
+        parent: 5
+        containedNodes: 
+        startState: 0
+        loop: 0
+        velocity: {x: 0, y: 0}
+        invert: 0
+        isShortcut: 0
+        targetState: 0
+      - nodeRect:
+          serializedVersion: 2
+          x: 221
+          y: 286
+          width: 166
+          height: 40
+        isDragged: 0
+        name: Forward attack
+        data: {fileID: 11400000, guid: 8db1d53776f98b948ac8515d1624fdcd, type: 2}
+        parent: 5
+        containedNodes: 
+        startState: 0
+        loop: 0
+        velocity: {x: 0, y: 0}
+        invert: 0
+        isShortcut: 0
+        targetState: 0
+      - nodeRect:
+          serializedVersion: 2
+          x: -329
+          y: 103
+          width: 150
+          height: 40
+        isDragged: 0
+        name: Normal
+        data: {fileID: 0}
+        parent: 5
+        containedNodes: 
+        startState: 0
+        loop: 0
+        velocity: {x: 0, y: 0}
+        invert: 0
+        isShortcut: 1
+        targetState: 1
+      - nodeRect:
+          serializedVersion: 2
+          x: -210
+          y: 290
+          width: 150
+          height: 40
+        isDragged: 0
+        name: Back Kick
+        data: {fileID: 11400000, guid: 920fca02d2d449f45af777402c626fc5, type: 2}
+        parent: 5
+        containedNodes: 
+        startState: 0
+        loop: 0
+        velocity: {x: 0, y: 0}
+        invert: 0
+        isShortcut: 0
+        targetState: 0
+      - nodeRect:
+          serializedVersion: 2
+          x: -4
+          y: 171
+          width: 150
+          height: 40
+        isDragged: 0
+        name: High Kick
+        data: {fileID: 11400000, guid: ee94de3d488820543997c2f68d738d5b, type: 2}
+        parent: 5
+        containedNodes: 
+        startState: 0
+        loop: 0
+        velocity: {x: 0, y: 0}
+        invert: 0
+        isShortcut: 0
+        targetState: 0
+      - nodeRect:
+          serializedVersion: 2
+          x: 61
+          y: 370
+          width: 150
+          height: 40
+        isDragged: 0
+        name: Low Kick
+        data: {fileID: 11400000, guid: b62c7d0d3547b384cac6e213506e6cf3, type: 2}
+        parent: 5
+        containedNodes: 
+        startState: 0
+        loop: 0
+        velocity: {x: 0, y: 0}
+        invert: 0
+        isShortcut: 0
+        targetState: 0
+      - nodeRect:
+          serializedVersion: 2
+          x: 366
+          y: 537
+          width: 150
+          height: 40
+        isDragged: 0
+        name: Normal
+        data: {fileID: 0}
+        parent: 5
+        containedNodes: 
+        startState: 0
+        loop: 0
+        velocity: {x: 0, y: 0}
+        invert: 0
+        isShortcut: 1
+        targetState: 1
+      - nodeRect:
+          serializedVersion: 2
+          x: 263
+          y: 214
+          width: 150
+          height: 40
+        isDragged: 0
+        name: Taunt
+        data: {fileID: 11400000, guid: 5652801cea235ca469c20dd22cbf57b4, type: 2}
+        parent: 0
+        containedNodes: 
+        startState: 0
+        loop: 0
+        velocity: {x: 0, y: 0}
+        invert: 0
+        isShortcut: 0
+        targetState: 0
+      - nodeRect:
+          serializedVersion: 2
+          x: 255
+          y: 383
+          width: 150
+          height: 40
+        isDragged: 0
+        name: Dash
+        data: {fileID: 11400000, guid: b682e5fd4b9f8d942ba083997bd4ad8f, type: 2}
+        parent: 0
+        containedNodes: 
+        startState: 0
+        loop: 0
+        velocity: {x: 0, y: 0}
+        invert: 0
+        isShortcut: 0
+        targetState: 0
+      - nodeRect:
+          serializedVersion: 2
+          x: 253
+          y: 479
+          width: 150
+          height: 40
+        isDragged: 0
+        name: BackDash
+        data: {fileID: 11400000, guid: 781e3001f7d43b6468ee8493294166a3, type: 2}
+        parent: 0
+        containedNodes: 
+        startState: 0
+        loop: 0
+        velocity: {x: 0, y: 0}
+        invert: 0
+        isShortcut: 0
+        targetState: 0
+      - nodeRect:
+          serializedVersion: 2
+          x: 277
+          y: 81
+          width: 150
+          height: 40
+        isDragged: 0
+        name: Dash
+        data: {fileID: 0}
+        parent: 5
+        containedNodes: 
+        startState: 0
+        loop: 0
+        velocity: {x: 0, y: 0}
+        invert: 0
+        isShortcut: 1
+        targetState: 25
+      - nodeRect:
+          serializedVersion: 2
+          x: 169
+          y: 130
+          width: 150
+          height: 40
+        isDragged: 0
+        name: Teabag
+        data: {fileID: 11400000, guid: d2169bbc1a8cd93409a2b56dcc177c16, type: 2}
+        parent: 0
+        containedNodes: 
+        startState: 0
+        loop: 0
+        velocity: {x: 0, y: 0}
+        invert: 0
+        isShortcut: 0
+        targetState: 0
+      - nodeRect:
+          serializedVersion: 2
+          x: 297
+          y: 280
+          width: 150
+          height: 40
+        isDragged: 0
+        name: Air Attack
+        data: {fileID: 11400000, guid: 84be1c6bd7210fd47bd1c5e7ac2d422d, type: 2}
+        parent: 6
+        containedNodes: 
+        startState: 0
+        loop: 0
+        velocity: {x: 0, y: 0}
+        invert: 0
+        isShortcut: 0
+        targetState: 0
+      - nodeRect:
+          serializedVersion: 2
+          x: 436
+          y: 155
+          width: 150
+          height: 40
+        isDragged: 0
+        name: DownLoop
+        data: {fileID: 0}
+        parent: 6
+        containedNodes: 
+        startState: 0
+        loop: 0
+        velocity: {x: 0, y: 0}
+        invert: 0
+        isShortcut: 1
+        targetState: 11
+      - nodeRect:
+          serializedVersion: 2
+          x: 277
+          y: 28
+          width: 150
+          height: 40
+        isDragged: 0
+        name: Air Attack 2
+        data: {fileID: 0}
+        parent: 6
+        containedNodes: 2000000021000000
+        startState: 32
+        loop: 0
+        velocity: {x: 0, y: 0}
+        invert: 0
+        isShortcut: 0
+        targetState: 0
+      - nodeRect:
+          serializedVersion: 2
+          x: 152
+          y: 221
+          width: 150
+          height: 40
+        isDragged: 0
+        name: Startup
+        data: {fileID: 11400000, guid: e268e0bfa6f0306478982a594f606e15, type: 2}
+        parent: 31
+        containedNodes: 
+        startState: 0
+        loop: 0
+        velocity: {x: 0, y: 0}
+        invert: 0
+        isShortcut: 0
+        targetState: 0
+      - nodeRect:
+          serializedVersion: 2
+          x: 160
+          y: 318
+          width: 150
+          height: 40
+        isDragged: 0
+        name: Loop
+        data: {fileID: 11400000, guid: 1db20d31f44d4e349a3b7e1b8e0e050e, type: 2}
+        parent: 31
+        containedNodes: 
+        startState: 0
+        loop: 1
+        velocity: {x: 0, y: 0}
+        invert: 0
+        isShortcut: 0
+        targetState: 0
+      - nodeRect:
+          serializedVersion: 2
+          x: 45
+          y: 138
+          width: 150
+          height: 40
+        isDragged: 0
+        name: Dead
+        data: {fileID: 11400000, guid: 825a9bf8f05a0bf4bbce139cd281ea38, type: 2}
+        parent: -1
+        containedNodes: 
+        startState: 0
+        loop: 0
+        velocity: {x: 0, y: 0}
+        invert: 0
+        isShortcut: 0
+        targetState: 0
+      - nodeRect:
+          serializedVersion: 2
+          x: -62
+          y: 232
+          width: 150
+          height: 40
+        isDragged: 0
+        name: On Ground
+        data: {fileID: 11400000, guid: c7a3ac03c5eac1547ac8305344f00b99, type: 2}
+        parent: -1
+        containedNodes: 
+        startState: 0
+        loop: 1
+        velocity: {x: 0, y: 0}
+        invert: 0
+        isShortcut: 0
+        targetState: 0
+      ids: 
+    transitions:
+    - source: 2
+      target: 3
+      events: 
+      inputs:
+      - type: 0
+        ev: 0
+        no: 0
+      scriptedConditions: []
+      scripts: []
+    - source: 3
+      target: 2
+      events: 
+      inputs:
+      - type: 2
+        ev: 0
+        no: 0
+      scriptedConditions: []
+      scripts: []
+    - source: 2
+      target: 4
+      events: 
+      inputs:
+      - type: 0
+        ev: 1
+        no: 0
+      scriptedConditions: []
+      scripts: []
+    - source: 4
+      target: 2
+      events: 
+      inputs:
+      - type: 2
+        ev: 1
+        no: 0
+      scriptedConditions: []
+      scripts: []
+    - source: 3
+      target: 4
+      events: 
+      inputs:
+      - type: 1
+        ev: 1
+        no: 0
+      scriptedConditions: []
+      scripts: []
+    - source: 4
+      target: 3
+      events: 
+      inputs:
+      - type: 1
+        ev: 0
+        no: 0
+      scriptedConditions: []
+      scripts: []
+    - source: 5
+      target: 1
+      events: 
+      inputs: []
+      scriptedConditions: []
+      scripts: []
+    - source: 8
+      target: 9
+      events: 
+      inputs: []
+      scriptedConditions: []
+      scripts: []
+    - source: 9
+      target: 10
+      events: 
+      inputs: []
+      scriptedConditions:
+      - {fileID: 11400000, guid: a464bb007e665964a8c639ec503a1028, type: 2}
+      scripts: []
+    - source: 10
+      target: 11
+      events: 
+      inputs: []
+      scriptedConditions: []
+      scripts: []
+    - source: 6
+      target: 0
+      events: 02000000
+      inputs: []
+      scriptedConditions: []
+      scripts: []
+    - source: 3
+      target: 12
+      events: 
+      inputs:
+      - type: 1
+        ev: 6
+        no: 0
+      scriptedConditions: []
+      scripts:
+      - {fileID: 11400000, guid: 7571faf8a96e1454880aa2e139cc21a4, type: 2}
+      - {fileID: 11400000, guid: b42692c56ec02b644a49860cf879894a, type: 2}
+    - source: 2
+      target: 12
+      events: 
+      inputs:
+      - type: 1
+        ev: 6
+        no: 0
+      scriptedConditions: []
+      scripts:
+      - {fileID: 11400000, guid: 7571faf8a96e1454880aa2e139cc21a4, type: 2}
+    - source: 4
+      target: 12
+      events: 
+      inputs:
+      - type: 1
+        ev: 6
+        no: 0
+      scriptedConditions: []
+      scripts:
+      - {fileID: 11400000, guid: 7571faf8a96e1454880aa2e139cc21a4, type: 2}
+      - {fileID: 11400000, guid: 4e134b8768e53e94b99569f93e8a872b, type: 2}
+    - source: 1
+      target: 14
+      events: 04000000
+      inputs: []
+      scriptedConditions: []
+      scripts: []
+    - source: 14
+      target: 1
+      events: 
+      inputs: []
+      scriptedConditions: []
+      scripts: []
+    - source: 1
+      target: 15
+      events: 03000000
+      inputs: []
+      scriptedConditions: []
+      scripts: []
+    - source: 15
+      target: 1
+      events: 
+      inputs: []
+      scriptedConditions: []
+      scripts: []
+    - source: 19
+      target: 17
+      events: 
+      inputs:
+      - type: 1
+        ev: 4
+        no: 0
+      scriptedConditions: []
+      scripts: []
+    - source: 23
+      target: 18
+      events: 
+      inputs:
+      - type: 0
+        ev: 1
+        no: 0
+      - type: 1
+        ev: 4
+        no: 0
+      scriptedConditions: []
+      scripts: []
+    - source: 23
+      target: 22
+      events: 
+      inputs:
+      - type: 0
+        ev: 3
+        no: 0
+      - type: 1
+        ev: 4
+        no: 0
+      scriptedConditions: []
+      scripts: []
+    - source: 19
+      target: 20
+      events: 
+      inputs:
+      - type: 0
+        ev: 0
+        no: 0
+      - type: 1
+        ev: 4
+        no: 0
+      scriptedConditions: []
+      scripts: []
+    - source: 19
+      target: 21
+      events: 
+      inputs:
+      - type: 0
+        ev: 2
+        no: 0
+      - type: 1
+        ev: 4
+        no: 0
+      scriptedConditions: []
+      scripts: []
+    - source: 1
+      target: 24
+      events: 
+      inputs:
+      - type: 1
+        ev: 5
+        no: 0
+      scriptedConditions: []
+      scripts: []
+    - source: 24
+      target: 1
+      events: 
+      inputs: []
+      scriptedConditions: []
+      scripts: []
+    - source: 1
+      target: 25
+      events: 
+      inputs:
+      - type: 0
+        ev: 1
+        no: 0
+      - type: 1
+        ev: 7
+        no: 0
+      scriptedConditions: []
+      scripts: []
+    - source: 25
+      target: 1
+      events: 
+      inputs: []
+      scriptedConditions: []
+      scripts: []
+    - source: 1
+      target: 26
+      events: 
+      inputs:
+      - type: 0
+        ev: 0
+        no: 0
+      - type: 1
+        ev: 7
+        no: 0
+      scriptedConditions: []
+      scripts: []
+    - source: 26
+      target: 1
+      events: 
+      inputs: []
+      scriptedConditions: []
+      scripts: []
+    - source: 17
+      target: 21
+      events: 
+      inputs:
+      - type: 0
+        ev: 2
+        no: 0
+      - type: 1
+        ev: 4
+        no: 0
+      scriptedConditions: []
+      scripts: []
+    - source: 17
+      target: 20
+      events: 
+      inputs:
+      - type: 0
+        ev: 0
+        no: 0
+      - type: 1
+        ev: 4
+        no: 0
+      scriptedConditions: []
+      scripts: []
+    - source: 17
+      target: 18
+      events: 
+      inputs:
+      - type: 0
+        ev: 1
+        no: 0
+      - type: 1
+        ev: 4
+        no: 0
+      scriptedConditions: []
+      scripts: []
+    - source: 17
+      target: 22
+      events: 
+      inputs:
+      - type: 0
+        ev: 3
+        no: 0
+      - type: 1
+        ev: 4
+        no: 0
+      scriptedConditions: []
+      scripts: []
+    - source: 21
+      target: 18
+      events: 
+      inputs:
+      - type: 0
+        ev: 1
+        no: 0
+      - type: 1
+        ev: 4
+        no: 0
+      scriptedConditions: []
+      scripts: []
+    - source: 21
+      target: 20
+      events: 
+      inputs:
+      - type: 0
+        ev: 0
+        no: 0
+      - type: 1
+        ev: 4
+        no: 0
+      scriptedConditions: []
+      scripts: []
+    - source: 21
+      target: 17
+      events: 
+      inputs:
+      - type: 1
+        ev: 4
+        no: 0
+      scriptedConditions: []
+      scripts: []
+    - source: 18
+      target: 17
+      events: 
+      inputs:
+      - type: 1
+        ev: 4
+        no: 0
+      scriptedConditions: []
+      scripts: []
+    - source: 18
+      target: 22
+      events: 
+      inputs:
+      - type: 0
+        ev: 3
+        no: 0
+      - type: 1
+        ev: 4
+        no: 0
+      scriptedConditions: []
+      scripts: []
+    - source: 22
+      target: 20
+      events: 
+      inputs:
+      - type: 0
+        ev: 0
+        no: 0
+      - type: 1
+        ev: 4
+        no: 0
+      scriptedConditions: []
+      scripts: []
+    - source: 22
+      target: 21
+      events: 
+      inputs:
+      - type: 0
+        ev: 2
+        no: 0
+      - type: 1
+        ev: 4
+        no: 0
+      scriptedConditions: []
+      scripts: []
+    - source: 20
+      target: 21
+      events: 
+      inputs:
+      - type: 0
+        ev: 2
+        no: 0
+      - type: 1
+        ev: 4
+        no: 0
+      scriptedConditions: []
+      scripts: []
+    - source: 20
+      target: 17
+      events: 
+      inputs:
+      - type: 1
+        ev: 4
+        no: 0
+      scriptedConditions: []
+      scripts: []
+    - source: 27
+      target: 17
+      events: 
+      inputs:
+      - type: 1
+        ev: 4
+        no: 0
+      scriptedConditions: []
+      scripts: []
+    - source: 27
+      target: 18
+      events: 
+      inputs:
+      - type: 0
+        ev: 1
+        no: 0
+      - type: 1
+        ev: 4
+        no: 0
+      scriptedConditions: []
+      scripts: []
+    - source: 27
+      target: 21
+      events: 
+      inputs:
+      - type: 0
+        ev: 2
+        no: 0
+      - type: 1
+        ev: 4
+        no: 0
+      scriptedConditions: []
+      scripts: []
+    - source: 25
+      target: 24
+      events: 
+      inputs:
+      - type: 1
+        ev: 5
+        no: 0
+      scriptedConditions: []
+      scripts: []
+    - source: 1
+      target: 28
+      events: 00000000
+      inputs: []
+      scriptedConditions: []
+      scripts: []
+    - source: 28
+      target: 1
+      events: 
+      inputs: []
+      scriptedConditions: []
+      scripts: []
+    - source: 25
+      target: 28
+      events: 
+      inputs:
+      - type: 1
+        ev: 3
+        no: 0
+      scriptedConditions: []
+      scripts: []
+    - source: 29
+      target: 30
+      events: 
+      inputs: []
+      scriptedConditions: []
+      scripts: []
+    - source: 7
+      target: 29
+      events: 
+      inputs:
+      - type: 1
+        ev: 4
+        no: 0
+      scriptedConditions: []
+      scripts: []
+    - source: 32
+      target: 33
+      events: 
+      inputs: []
+      scriptedConditions: []
+      scripts: []
+    - source: 31
+      target: 30
+      events: 
+      inputs: []
+      scriptedConditions: []
+      scripts: []
+    - source: 0
+      target: 13
+      events: 05000000
+      inputs: []
+      scriptedConditions: []
+      scripts: []
+    - source: 13
+      target: 16
+      events: 
+      inputs: []
+      scriptedConditions: []
+      scripts: []
+    - source: 16
+      target: 0
+      events: 
+      inputs: []
+      scriptedConditions: []
+      scripts: []
+    - source: 0
+      target: 34
+      events: 06000000
+      inputs: []
+      scriptedConditions: []
+      scripts: []
+    - source: 6
+      target: 34
+      events: 06000000
+      inputs: []
+      scriptedConditions: []
+      scripts: []
+    - source: 13
+      target: 34
+      events: 06000000
+      inputs: []
+      scriptedConditions: []
+      scripts: []
+    - source: 16
+      target: 34
+      events: 06000000
+      inputs: []
+      scriptedConditions: []
+      scripts: []
+    - source: 34
+      target: 35
+      events: 
+      inputs: []
+      scriptedConditions: []
+      scripts: []
+    allowInput: 1
+    startState: 0
+  time: 0
+  invertHorizontal: 0
+  internalVelocityStrength: 1
+  blockInput: 0

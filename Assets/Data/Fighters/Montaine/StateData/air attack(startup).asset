@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 622c2851e25c65447a29f523a66b3e42, type: 3}
+  m_Name: air attack(startup)
+  m_EditorClassIdentifier: 
+  frames:
+  - frameType: 2
+    hitboxes:
+    - _position: {x: -1.19, y: 1.17}
+      _size: {x: 2.2, y: 3}
+      _type: 1
+      color: {r: 0, g: 0, b: 0, a: 0}
+      dmg: 0
+      stun: 0
+      guardDmg: 0
+    sprite: {fileID: 21300018, guid: 65c88cf54ad02cc4ba1b9ce4dc787203, type: 3}
+    time: 0.12
+    velocity: {x: 0, y: 0}
+  velocity: {x: 0, y: 0}
+  time: 0

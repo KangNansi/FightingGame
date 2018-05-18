@@ -1,0 +1,430 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c89c09565eaaa24d8b5ed3904c1edf6, type: 3}
+  m_Name: New LZ Fighter
+  m_EditorClassIdentifier: 
+  fighterName: Montaine
+  initScripts:
+  - {fileID: 11400000, guid: 0df8b9a6767789a46b5099e297782914, type: 2}
+  - {fileID: 11400000, guid: 4696380eb41375a46a573867cb2df471, type: 2}
+  - {fileID: 11400000, guid: 65917c94167a72d4d813e26be3f841ac, type: 2}
+  - {fileID: 11400000, guid: cf961854e12c58748b50867153fb2eb9, type: 2}
+  stateMachine:
+    states:
+      items:
+      - nodeRect:
+          serializedVersion: 2
+          x: 340
+          y: 191
+          width: 150
+          height: 40
+        isDragged: 0
+        name: Ground
+        data: {fileID: 0}
+        parent: -1
+        containedNodes: 0100000005000000060000000700000008000000090000000a0000000b0000000c000000
+        startState: 1
+        loop: 0
+        velocity: {x: 5, y: 0}
+        invert: 1
+        isShortcut: 0
+        targetState: 0
+      - nodeRect:
+          serializedVersion: 2
+          x: 327
+          y: 175
+          width: 150
+          height: 40
+        isDragged: 0
+        name: Idle
+        data: {fileID: 0}
+        parent: 0
+        containedNodes: 020000000300000004000000
+        startState: 2
+        loop: 0
+        velocity: {x: 0, y: 0}
+        invert: 0
+        isShortcut: 0
+        targetState: 0
+      - nodeRect:
+          serializedVersion: 2
+          x: 340
+          y: 193
+          width: 150
+          height: 40
+        isDragged: 0
+        name: Idle
+        data: {fileID: 11400000, guid: b50afc04683efa24095419e5dd663e95, type: 2}
+        parent: 1
+        containedNodes: 
+        startState: 0
+        loop: 1
+        velocity: {x: 0, y: 0}
+        invert: 0
+        isShortcut: 0
+        targetState: 0
+      - nodeRect:
+          serializedVersion: 2
+          x: 168
+          y: 355
+          width: 150
+          height: 40
+        isDragged: 0
+        name: back
+        data: {fileID: 11400000, guid: 3cab4ce19da8f084dbe4d794fc9a4ad7, type: 2}
+        parent: 1
+        containedNodes: 
+        startState: 0
+        loop: 1
+        velocity: {x: -7, y: 0}
+        invert: 1
+        isShortcut: 0
+        targetState: 0
+      - nodeRect:
+          serializedVersion: 2
+          x: 506
+          y: 346
+          width: 150
+          height: 40
+        isDragged: 0
+        name: forward
+        data: {fileID: 11400000, guid: 3cab4ce19da8f084dbe4d794fc9a4ad7, type: 2}
+        parent: 1
+        containedNodes: 
+        startState: 0
+        loop: 1
+        velocity: {x: 10, y: 0}
+        invert: 0
+        isShortcut: 0
+        targetState: 0
+      - nodeRect:
+          serializedVersion: 2
+          x: 302
+          y: 542
+          width: 150
+          height: 40
+        isDragged: 0
+        name: Jab
+        data: {fileID: 11400000, guid: 08efc7894d27e6046873b10fd17e9947, type: 2}
+        parent: 0
+        containedNodes: 
+        startState: 0
+        loop: 0
+        velocity: {x: 0, y: 0}
+        invert: 0
+        isShortcut: 0
+        targetState: 0
+      - nodeRect:
+          serializedVersion: 2
+          x: 27
+          y: 202
+          width: 150
+          height: 40
+        isDragged: 0
+        name: Block
+        data: {fileID: 11400000, guid: efc167e9be6188142823d9f21a6f79a5, type: 2}
+        parent: 0
+        containedNodes: 
+        startState: 0
+        loop: 0
+        velocity: {x: 0, y: 0}
+        invert: 0
+        isShortcut: 0
+        targetState: 0
+      - nodeRect:
+          serializedVersion: 2
+          x: 20
+          y: 155
+          width: 150
+          height: 40
+        isDragged: 0
+        name: Hit
+        data: {fileID: 11400000, guid: 2c32abd3e319bf0419f289582ccc43a2, type: 2}
+        parent: 0
+        containedNodes: 
+        startState: 0
+        loop: 0
+        velocity: {x: 0, y: 0}
+        invert: 0
+        isShortcut: 0
+        targetState: 0
+      - nodeRect:
+          serializedVersion: 2
+          x: 83
+          y: 462
+          width: 150
+          height: 40
+        isDragged: 0
+        name: Low Kick
+        data: {fileID: 11400000, guid: b62c7d0d3547b384cac6e213506e6cf3, type: 2}
+        parent: 0
+        containedNodes: 
+        startState: 0
+        loop: 0
+        velocity: {x: 0, y: 0}
+        invert: 0
+        isShortcut: 0
+        targetState: 0
+      - nodeRect:
+          serializedVersion: 2
+          x: 51
+          y: 321
+          width: 150
+          height: 40
+        isDragged: 0
+        name: Back Kick
+        data: {fileID: 11400000, guid: 920fca02d2d449f45af777402c626fc5, type: 2}
+        parent: 0
+        containedNodes: 
+        startState: 0
+        loop: 0
+        velocity: {x: 0, y: 0}
+        invert: 0
+        isShortcut: 0
+        targetState: 0
+      - nodeRect:
+          serializedVersion: 2
+          x: 550
+          y: 476
+          width: 163
+          height: 40
+        isDragged: 0
+        name: forward attack
+        data: {fileID: 11400000, guid: 8db1d53776f98b948ac8515d1624fdcd, type: 2}
+        parent: 0
+        containedNodes: 
+        startState: 0
+        loop: 0
+        velocity: {x: 0, y: 0}
+        invert: 0
+        isShortcut: 0
+        targetState: 0
+      - nodeRect:
+          serializedVersion: 2
+          x: 574
+          y: 296
+          width: 150
+          height: 40
+        isDragged: 0
+        name: high kick
+        data: {fileID: 11400000, guid: ee94de3d488820543997c2f68d738d5b, type: 2}
+        parent: 0
+        containedNodes: 
+        startState: 0
+        loop: 0
+        velocity: {x: 0, y: 0}
+        invert: 0
+        isShortcut: 0
+        targetState: 0
+      - nodeRect:
+          serializedVersion: 2
+          x: 325
+          y: 59
+          width: 150
+          height: 41
+        isDragged: 0
+        name: 
+        data: {fileID: 11400000, guid: 5652801cea235ca469c20dd22cbf57b4, type: 2}
+        parent: 0
+        containedNodes: 
+        startState: 0
+        loop: 0
+        velocity: {x: 0, y: 0}
+        invert: 0
+        isShortcut: 0
+        targetState: 0
+      ids: 
+    transitions:
+    - source: 2
+      target: 4
+      events: 
+      inputs:
+      - type: 0
+        ev: 1
+        no: 0
+      scriptedConditions: []
+      scripts: []
+    - source: 2
+      target: 3
+      events: 
+      inputs:
+      - type: 0
+        ev: 0
+        no: 0
+      scriptedConditions: []
+      scripts: []
+    - source: 3
+      target: 4
+      events: 
+      inputs:
+      - type: 1
+        ev: 1
+        no: 0
+      scriptedConditions: []
+      scripts: []
+    - source: 4
+      target: 3
+      events: 
+      inputs:
+      - type: 1
+        ev: 0
+        no: 0
+      scriptedConditions: []
+      scripts: []
+    - source: 3
+      target: 2
+      events: 
+      inputs:
+      - type: 2
+        ev: 0
+        no: 0
+      scriptedConditions: []
+      scripts: []
+    - source: 4
+      target: 2
+      events: 
+      inputs:
+      - type: 2
+        ev: 1
+        no: 0
+      scriptedConditions: []
+      scripts: []
+    - source: 1
+      target: 5
+      events: 
+      inputs:
+      - type: 1
+        ev: 4
+        no: 0
+      scriptedConditions: []
+      scripts: []
+    - source: 5
+      target: 1
+      events: 
+      inputs: []
+      scriptedConditions: []
+      scripts: []
+    - source: 1
+      target: 6
+      events: 03000000
+      inputs: []
+      scriptedConditions: []
+      scripts: []
+    - source: 6
+      target: 1
+      events: 
+      inputs: []
+      scriptedConditions: []
+      scripts: []
+    - source: 1
+      target: 7
+      events: 04000000
+      inputs: []
+      scriptedConditions: []
+      scripts: []
+    - source: 7
+      target: 1
+      events: 
+      inputs: []
+      scriptedConditions: []
+      scripts: []
+    - source: 1
+      target: 8
+      events: 
+      inputs:
+      - type: 0
+        ev: 3
+        no: 0
+      - type: 1
+        ev: 4
+        no: 0
+      scriptedConditions: []
+      scripts: []
+    - source: 8
+      target: 1
+      events: 
+      inputs: []
+      scriptedConditions: []
+      scripts: []
+    - source: 1
+      target: 9
+      events: 
+      inputs:
+      - type: 0
+        ev: 0
+        no: 0
+      - type: 1
+        ev: 4
+        no: 0
+      scriptedConditions: []
+      scripts: []
+    - source: 9
+      target: 1
+      events: 
+      inputs: []
+      scriptedConditions: []
+      scripts: []
+    - source: 1
+      target: 10
+      events: 
+      inputs:
+      - type: 0
+        ev: 1
+        no: 0
+      - type: 1
+        ev: 4
+        no: 0
+      scriptedConditions: []
+      scripts: []
+    - source: 10
+      target: 1
+      events: 
+      inputs: []
+      scriptedConditions: []
+      scripts: []
+    - source: 1
+      target: 11
+      events: 
+      inputs:
+      - type: 0
+        ev: 2
+        no: 0
+      - type: 1
+        ev: 4
+        no: 0
+      scriptedConditions: []
+      scripts: []
+    - source: 11
+      target: 1
+      events: 
+      inputs: []
+      scriptedConditions: []
+      scripts: []
+    - source: 1
+      target: 12
+      events: 
+      inputs:
+      - type: 1
+        ev: 5
+        no: 0
+      scriptedConditions: []
+      scripts: []
+    - source: 12
+      target: 1
+      events: 
+      inputs: []
+      scriptedConditions: []
+      scripts: []
+    allowInput: 1
+    startState: 0
+  time: 0
+  invertHorizontal: 0
+  internalVelocityStrength: 3.5

@@ -25,6 +25,7 @@ public class UIImageFade : MonoBehaviour {
             if(EndAction != null)
             {
                 EndAction.Invoke();
+                EndAction = null;
             }
         }
 	}

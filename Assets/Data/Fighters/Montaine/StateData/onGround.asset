@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 622c2851e25c65447a29f523a66b3e42, type: 3}
+  m_Name: onGround
+  m_EditorClassIdentifier: 
+  frames:
+  - frameType: 2
+    hitboxes: []
+    sprite: {fileID: 21300030, guid: 1db9929fb04bcba4a91e432e1ba59e61, type: 3}
+    time: 0.08
+    velocity: {x: 0, y: 0}
+  velocity: {x: 0, y: 0}
+  time: 0

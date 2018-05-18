@@ -20,9 +20,20 @@ public class UICharacterSelector : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (p1.Ready && p2.Ready) {
+        GameConfiguration gconf = GameConfiguration.instance;
+		if (p1.Ready && (p2.Ready || gconf.p2isAI)) {
+            if (gconf.p2isAI)
+            {
+                gconf.p2material = p2.materials[Random.Range(0, p2.materials.Count)];
+            }
 			SceneManager.LoadScene("level1");
+            return;
 		}
+        p2.active = !gconf.p2isAI;
+        if (Input.GetKeyDown(c2.P))
+        {
+            gconf.p2isAI = false;
+        }
         if (Input.GetKeyDown(c1.Dash))
         {
             if (p1.Ready)
@@ -36,7 +47,11 @@ public class UICharacterSelector : MonoBehaviour {
         }
         if (Input.GetKeyDown(c2.Dash))
         {
-            if (p2.Ready)
+            if (!gconf.p2isAI)
+            {
+                gconf.p2isAI = true;
+            }
+            else if (p2.Ready)
             {
                 p2.Ready = false;
             }
@@ -45,7 +60,6 @@ public class UICharacterSelector : MonoBehaviour {
                 SceneManager.LoadScene("Title");
             }
         }
-        GameConfiguration gconf = GameConfiguration.instance;
         gconf.p1material = p1.GetCurrentMaterial();
         gconf.p2material = p2.GetCurrentMaterial();
 	}

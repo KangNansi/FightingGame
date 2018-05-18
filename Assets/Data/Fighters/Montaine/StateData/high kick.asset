@@ -1,0 +1,236 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 622c2851e25c65447a29f523a66b3e42, type: 3}
+  m_Name: high kick
+  m_EditorClassIdentifier: 
+  frames:
+  - frameType: 0
+    hitboxes:
+    - _position: {x: -1.62, y: 0}
+      _size: {x: 1.77, y: 3.46}
+      _type: 1
+      color: {r: 0, g: 0, b: 0, a: 0}
+      dmg: 1
+      stun: 0
+      guardDmg: 0
+    sprite: {fileID: 21300000, guid: f2746e7a8badbef4fb6b5a5648ed1817, type: 3}
+    time: 0.04
+    velocity: {x: 0, y: 0}
+  - frameType: 1
+    hitboxes:
+    - _position: {x: -1.33, y: 0}
+      _size: {x: 2.2, y: 2.56}
+      _type: 1
+      color: {r: 0, g: 0, b: 0, a: 0}
+      dmg: 4
+      stun: 0
+      guardDmg: 0
+    - _position: {x: 0.75, y: 4.11}
+      _size: {x: 1.29, y: 1.33}
+      _type: 0
+      color: {r: 0, g: 0, b: 0, a: 0}
+      dmg: 5
+      stun: 18
+      guardDmg: 5
+    - _position: {x: 0.64, y: 3.34}
+      _size: {x: 1.2, y: 0.78}
+      _type: 0
+      color: {r: 0, g: 0, b: 0, a: 0}
+      dmg: 5
+      stun: 18
+      guardDmg: 5
+    - _position: {x: 0.48, y: 1.94}
+      _size: {x: 0.84, y: 1.51}
+      _type: 0
+      color: {r: 0, g: 0, b: 0, a: 0}
+      dmg: 3
+      stun: 10
+      guardDmg: 5
+    - _position: {x: 0.28, y: 1.62}
+      _size: {x: 0.72, y: 2.2}
+      _type: 1
+      color: {r: 0, g: 0, b: 0, a: 0}
+      dmg: 1
+      stun: 1
+      guardDmg: 1
+    sprite: {fileID: 21300002, guid: f2746e7a8badbef4fb6b5a5648ed1817, type: 3}
+    time: 0.04
+    velocity: {x: 4, y: 0}
+  - frameType: 1
+    hitboxes:
+    - _position: {x: -1.18, y: 0}
+      _size: {x: 1.65, y: 3.46}
+      _type: 1
+      color: {r: 0, g: 0, b: 0, a: 0}
+      dmg: 3
+      stun: 0
+      guardDmg: 0
+    - _position: {x: 0.9, y: 4.01}
+      _size: {x: 1.07, y: 1.31}
+      _type: 0
+      color: {r: 0, g: 0, b: 0, a: 0}
+      dmg: 4
+      stun: 16
+      guardDmg: 5
+    - _position: {x: 0.71, y: 3.46}
+      _size: {x: 0.87, y: 0.54}
+      _type: 0
+      color: {r: 0, g: 0, b: 0, a: 0}
+      dmg: 3
+      stun: 16
+      guardDmg: 5
+    - _position: {x: 0.4, y: 2.1}
+      _size: {x: 0.87, y: 1.51}
+      _type: 0
+      color: {r: 0, g: 0, b: 0, a: 0}
+      dmg: 2
+      stun: 8
+      guardDmg: 5
+    - _position: {x: 0.28, y: 1.62}
+      _size: {x: 0.72, y: 2.2}
+      _type: 1
+      color: {r: 0, g: 0, b: 0, a: 0}
+      dmg: 1
+      stun: 1
+      guardDmg: 1
+    sprite: {fileID: 21300004, guid: f2746e7a8badbef4fb6b5a5648ed1817, type: 3}
+    time: 0.12
+    velocity: {x: 3, y: 0}
+  - frameType: 1
+    hitboxes:
+    - _position: {x: -1.12, y: 0}
+      _size: {x: 1.77, y: 3.46}
+      _type: 1
+      color: {r: 0, g: 0, b: 0, a: 0}
+      dmg: 1
+      stun: 0
+      guardDmg: 0
+    - _position: {x: 0.69, y: 3.1}
+      _size: {x: 1.2, y: 1.56}
+      _type: 0
+      color: {r: 0, g: 0, b: 0, a: 0}
+      dmg: 3
+      stun: 14
+      guardDmg: 5
+    - _position: {x: 0.55, y: 2.04}
+      _size: {x: 0.81, y: 1.09}
+      _type: 0
+      color: {r: 0, g: 0, b: 0, a: 0}
+      dmg: 2
+      stun: 14
+      guardDmg: 5
+    - _position: {x: 0.46, y: 1.62}
+      _size: {x: 0.72, y: 1.76}
+      _type: 1
+      color: {r: 0, g: 0, b: 0, a: 0}
+      dmg: 1
+      stun: 1
+      guardDmg: 1
+    sprite: {fileID: 21300006, guid: f2746e7a8badbef4fb6b5a5648ed1817, type: 3}
+    time: 0.08
+    velocity: {x: 0, y: 0}
+  - frameType: 2
+    hitboxes:
+    - _position: {x: -1.18, y: 0}
+      _size: {x: 1.77, y: 3.46}
+      _type: 1
+      color: {r: 0, g: 0, b: 0, a: 0}
+      dmg: 1
+      stun: 0
+      guardDmg: 0
+    - _position: {x: 0, y: 2.29}
+      _size: {x: 1.66, y: 1}
+      _type: 1
+      color: {r: 0, g: 0, b: 0, a: 0}
+      dmg: 1
+      stun: 1
+      guardDmg: 1
+    sprite: {fileID: 21300008, guid: f2746e7a8badbef4fb6b5a5648ed1817, type: 3}
+    time: 0.08
+    velocity: {x: 2, y: 0}
+  - frameType: 2
+    hitboxes:
+    - _position: {x: -1.26, y: 0}
+      _size: {x: 1.77, y: 3.46}
+      _type: 1
+      color: {r: 0, g: 0, b: 0, a: 0}
+      dmg: 1
+      stun: 0
+      guardDmg: 0
+    - _position: {x: 0, y: 1.67}
+      _size: {x: 1.66, y: 1}
+      _type: 1
+      color: {r: 0, g: 0, b: 0, a: 0}
+      dmg: 1
+      stun: 1
+      guardDmg: 1
+    sprite: {fileID: 21300010, guid: f2746e7a8badbef4fb6b5a5648ed1817, type: 3}
+    time: 0.04
+    velocity: {x: 2, y: 0}
+  - frameType: 2
+    hitboxes:
+    - _position: {x: -0.67, y: 0.8}
+      _size: {x: 1.8, y: 2.66}
+      _type: 1
+      color: {r: 0, g: 0, b: 0, a: 0}
+      dmg: 1
+      stun: 0
+      guardDmg: 0
+    - _position: {x: 0.33, y: -0.07}
+      _size: {x: 1.52, y: 0.92}
+      _type: 0
+      color: {r: 0, g: 0, b: 0, a: 0}
+      dmg: 1
+      stun: 25
+      guardDmg: 25
+    - _position: {x: 0.42, y: 0}
+      _size: {x: 1, y: 1.63}
+      _type: 1
+      color: {r: 0, g: 0, b: 0, a: 0}
+      dmg: 1
+      stun: 1
+      guardDmg: 1
+    sprite: {fileID: 21300012, guid: f2746e7a8badbef4fb6b5a5648ed1817, type: 3}
+    time: 0.04
+    velocity: {x: 1, y: 0}
+  - frameType: 2
+    hitboxes:
+    - _position: {x: -1.34, y: 0}
+      _size: {x: 2.68, y: 2.55}
+      _type: 1
+      color: {r: 0, g: 0, b: 0, a: 0}
+      dmg: 1
+      stun: 0
+      guardDmg: 0
+    sprite: {fileID: 21300014, guid: f2746e7a8badbef4fb6b5a5648ed1817, type: 3}
+    time: 0.12
+    velocity: {x: 0, y: 0}
+  - frameType: 2
+    hitboxes:
+    - _position: {x: -1.34, y: 0}
+      _size: {x: 2.68, y: 2.55}
+      _type: 1
+      color: {r: 0, g: 0, b: 0, a: 0}
+      dmg: 1
+      stun: 0
+      guardDmg: 0
+    - _position: {x: -0.34, y: 2.39}
+      _size: {x: 1.73, y: 1}
+      _type: 1
+      color: {r: 0, g: 0, b: 0, a: 0}
+      dmg: 1
+      stun: 1
+      guardDmg: 1
+    sprite: {fileID: 21300016, guid: f2746e7a8badbef4fb6b5a5648ed1817, type: 3}
+    time: 0.08
+    velocity: {x: 0, y: 0}
+  velocity: {x: 0, y: 0}
+  time: 0

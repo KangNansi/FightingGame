@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 622c2851e25c65447a29f523a66b3e42, type: 3}
+  m_Name: BackDash
+  m_EditorClassIdentifier: 
+  frames:
+  - frameType: 0
+    hitboxes:
+    - _position: {x: -0.45, y: 0.35}
+      _size: {x: 1.5, y: 3}
+      _type: 1
+      color: {r: 0, g: 0, b: 0, a: 0}
+      dmg: 1
+      stun: 1
+      guardDmg: 1
+    sprite: {fileID: 21300006, guid: 13fed334ce22a6f4ea739d4568674ecf, type: 3}
+    time: 0.08
+    velocity: {x: 0, y: 0}
+  - frameType: 0
+    hitboxes:
+    - _position: {x: -0.45, y: 0.35}
+      _size: {x: 1.5, y: 3}
+      _type: 1
+      color: {r: 0, g: 0, b: 0, a: 0}
+      dmg: 1
+      stun: 1
+      guardDmg: 1
+    sprite: {fileID: 21300008, guid: 13fed334ce22a6f4ea739d4568674ecf, type: 3}
+    time: 0.08
+    velocity: {x: 0, y: 0}
+  - frameType: 0
+    hitboxes:
+    - _position: {x: -0.45, y: 0.35}
+      _size: {x: 1.5, y: 3}
+      _type: 1
+      color: {r: 0, g: 0, b: 0, a: 0}
+      dmg: 1
+      stun: 1
+      guardDmg: 1
+    sprite: {fileID: 21300010, guid: 13fed334ce22a6f4ea739d4568674ecf, type: 3}
+    time: 0.08
+    velocity: {x: 0, y: 0}
+  - frameType: 0
+    hitboxes:
+    - _position: {x: -0.45, y: 0.35}
+      _size: {x: 1.5, y: 3}
+      _type: 1
+      color: {r: 0, g: 0, b: 0, a: 0}
+      dmg: 1
+      stun: 1
+      guardDmg: 1
+    sprite: {fileID: 21300012, guid: 13fed334ce22a6f4ea739d4568674ecf, type: 3}
+    time: 0.08
+    velocity: {x: 0, y: 0}
+  - frameType: 2
+    hitboxes:
+    - _position: {x: -0.45, y: 0.35}
+      _size: {x: 1.5, y: 3}
+      _type: 1
+      color: {r: 0, g: 0, b: 0, a: 0}
+      dmg: 1
+      stun: 1
+      guardDmg: 1
+    sprite: {fileID: 21300014, guid: 13fed334ce22a6f4ea739d4568674ecf, type: 3}
+    time: 0.08
+    velocity: {x: 0, y: 0}
+  - frameType: 2
+    hitboxes:
+    - _position: {x: -0.45, y: 0.35}
+      _size: {x: 1.5, y: 3}
+      _type: 1
+      color: {r: 0, g: 0, b: 0, a: 0}
+      dmg: 1
+      stun: 1
+      guardDmg: 1
+    sprite: {fileID: 21300016, guid: 13fed334ce22a6f4ea739d4568674ecf, type: 3}
+    time: 0.08
+    velocity: {x: 0, y: 0}
+  velocity: {x: -20, y: 0}
+  time: 0

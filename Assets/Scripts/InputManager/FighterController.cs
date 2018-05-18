@@ -238,6 +238,7 @@ namespace FightingGame
 
             //Apply gravity
             float g = FightManager.gravity;
+            addedVelocity -= addedVelocity * (Time.deltaTime/0.1f);
             //fighter.velocity += (fighter.velocity.y*fighter.velocity.y+1)/(fighter.jumpStrength*fighter.jumpStrength) * Vector3.down * g;
             fighter.velocity += ((Vector3)fighter.GetMove().GetVelocity()*sens.x)*Mathf.Abs(transform.lossyScale.x);
             fighter.velocity += addedVelocity;
@@ -450,7 +451,6 @@ namespace FightingGame
             float s = sens.x;
             addedVelocity += new Vector3( -5 * transform.lossyScale.x, 0, 0);
             yield return new WaitForSeconds(0.3f);
-            addedVelocity -= new Vector3( -5 * transform.lossyScale.x, 0, 0);
         }
 
         IEnumerator freezeTime(float duration, float value)

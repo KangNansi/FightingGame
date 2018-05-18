@@ -142,5 +142,12 @@ namespace FightingGame
             GL.PopMatrix();
         }
 
+        public bool IsPointIn(Vector2 position) {
+            return _position.x < position.x && _position.y < position.y && _position.x + _size.x > position.x && _position.y + _size.y > position.y;
+        }
+
+        public Vector3 GetCenter() {
+            return _position + _size / 2f;
+        }
     }
 }

@@ -20,8 +20,8 @@ public class GameConfiguration : MonoBehaviour {
 
 	// Use this for initialization
 	void Awake () {
-        p1controller = Instantiate<VirtualController>(p1controller);
-        p2controller = Instantiate<VirtualController>(p2controller);
+        p1controller = Instantiate(p1controller);
+        p2controller = Instantiate(p2controller);
         DontDestroyOnLoad(this);
         if(instance == null)
         {
@@ -32,7 +32,7 @@ public class GameConfiguration : MonoBehaviour {
             Destroy(this.gameObject);
         }
         Debug.Log("Config file in " + Application.persistentDataPath + "/config.dat");
-        Load();
+        //Load();
         Save();
 	}
 	

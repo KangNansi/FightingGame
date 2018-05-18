@@ -60,6 +60,11 @@ namespace FightingGame
         void OnGUI()
         {
             GUILayout.BeginHorizontal();
+
+            if (GUILayout.Button("Convert")) {
+                FighterConverter.Convert(fighter);
+            }
+
             GUILayout.Label("Fighter Editor", EditorStyles.boldLabel);
 
             fighter = (FighterObject)EditorGUILayout.ObjectField(fighter, typeof(FighterObject), true);

@@ -1,0 +1,67 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 622c2851e25c65447a29f523a66b3e42, type: 3}
+  m_Name: hit
+  m_EditorClassIdentifier: 
+  frames:
+  - frameType: 2
+    hitboxes: []
+    sprite: {fileID: 21300014, guid: ba00f26b33f16c746bf077a2d2ceaec6, type: 3}
+    time: 0.04
+    velocity: {x: 0, y: 0}
+  - frameType: 2
+    hitboxes: []
+    sprite: {fileID: 21300016, guid: ba00f26b33f16c746bf077a2d2ceaec6, type: 3}
+    time: 0.08
+    velocity: {x: 0, y: 0}
+  - frameType: 2
+    hitboxes: []
+    sprite: {fileID: 21300018, guid: ba00f26b33f16c746bf077a2d2ceaec6, type: 3}
+    time: 0.12
+    velocity: {x: 0, y: 0}
+  - frameType: 2
+    hitboxes:
+    - _position: {x: -1.47, y: 1.66}
+      _size: {x: 1.51, y: 1.45}
+      _type: 1
+      color: {r: 0, g: 0, b: 0, a: 0}
+      dmg: 1
+      stun: 0
+      guardDmg: 0
+    sprite: {fileID: 21300020, guid: ba00f26b33f16c746bf077a2d2ceaec6, type: 3}
+    time: 0.04
+    velocity: {x: 0, y: 0}
+  - frameType: 2
+    hitboxes:
+    - _position: {x: -1, y: 1.53}
+      _size: {x: 1.51, y: 1.45}
+      _type: 1
+      color: {r: 0, g: 0, b: 0, a: 0}
+      dmg: 1
+      stun: 0
+      guardDmg: 0
+    sprite: {fileID: 21300022, guid: ba00f26b33f16c746bf077a2d2ceaec6, type: 3}
+    time: 0.04
+    velocity: {x: 0, y: 0}
+  - frameType: 2
+    hitboxes:
+    - _position: {x: -0.29, y: 1.36}
+      _size: {x: 1.51, y: 1.45}
+      _type: 1
+      color: {r: 0, g: 0, b: 0, a: 0}
+      dmg: 1
+      stun: 0
+      guardDmg: 0
+    sprite: {fileID: 21300024, guid: ba00f26b33f16c746bf077a2d2ceaec6, type: 3}
+    time: 0.08
+    velocity: {x: 0, y: 0}
+  velocity: {x: 0, y: 0}
+  time: 0

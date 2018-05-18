@@ -195,7 +195,6 @@ MonoBehaviour:
   fighterObject: {fileID: 11400000, guid: 2b86dec85b2690a4a84a926c9873dda4, type: 2}
   maxPosition: {x: 0, y: 0}
   drawHitbox: 0
-  controller: {fileID: 11400000, guid: 9db9d13976c94f74fb43aa29de060af0, type: 2}
   opponent: {fileID: 0}
   hitFreezeTime: 0.1
   hit: {fileID: 1842889166708966, guid: 2197fde14182de8489aae2167100c358, type: 2}
@@ -671,8 +670,8 @@ MonoBehaviour:
   - {fileID: 2100000, guid: 63ed1b8c05b035644a112d464fb62925, type: 2}
   - {fileID: 2100000, guid: 6916fac9015bfa54cbc46c97d781e9a6, type: 2}
   - {fileID: 2100000, guid: c8882890cf5eab94ca9bbba52bb8001e, type: 2}
-  controller: {fileID: 11400000, guid: 504dc8ae806d5f34297cfa6f316aa48b, type: 2}
   fighter: {fileID: 1892120967}
+  active: 0
 --- !u!1 &1765340741
 GameObject:
   m_ObjectHideFlags: 0
@@ -820,7 +819,6 @@ MonoBehaviour:
   fighterObject: {fileID: 11400000, guid: 2b86dec85b2690a4a84a926c9873dda4, type: 2}
   maxPosition: {x: 0, y: 0}
   drawHitbox: 0
-  controller: {fileID: 11400000, guid: 9db9d13976c94f74fb43aa29de060af0, type: 2}
   opponent: {fileID: 0}
   hitFreezeTime: 0.1
   hit: {fileID: 1842889166708966, guid: 2197fde14182de8489aae2167100c358, type: 2}
@@ -948,8 +946,8 @@ MonoBehaviour:
   - {fileID: 2100000, guid: 63ed1b8c05b035644a112d464fb62925, type: 2}
   - {fileID: 2100000, guid: 6916fac9015bfa54cbc46c97d781e9a6, type: 2}
   - {fileID: 2100000, guid: c8882890cf5eab94ca9bbba52bb8001e, type: 2}
-  controller: {fileID: 11400000, guid: 9db9d13976c94f74fb43aa29de060af0, type: 2}
   fighter: {fileID: 153147377}
+  active: 1
 --- !u!1 &2104892664
 GameObject:
   m_ObjectHideFlags: 0

@@ -18,6 +18,7 @@ public class UIMaterialSelector : MonoBehaviour {
 	SpriteRenderer renderer;
 	bool stop = false;
 	bool ready = false;
+    public bool active = false;
 	public bool Ready {
         set
         {
@@ -34,6 +35,7 @@ public class UIMaterialSelector : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        if (!active) return;
 		if (!stop && !ready){
 			if (controller.GetHorizontal () < -0.1) {
 				current = (current - 1) % materials.Count;
