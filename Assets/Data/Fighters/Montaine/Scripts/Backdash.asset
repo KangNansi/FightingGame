@@ -11,7 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebbacb512f51d094e89aa5c00bb79817, type: 3}
   m_Name: Backdash
   m_EditorClassIdentifier: 
-  lifeTime: 0.4
+  lifeTime: 0.49
   curve:
     serializedVersion: 2
     m_Curve:
@@ -22,10 +22,10 @@ MonoBehaviour:
       outSlope: 0
       tangentMode: 0
     - serializedVersion: 2
-      time: 0.99890137
-      value: 0
-      inSlope: -3.3029406
-      outSlope: -3.3029406
+      time: 0.9978261
+      value: 0.5035744
+      inSlope: -0.9256009
+      outSlope: -0.9256009
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2

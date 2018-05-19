@@ -8,7 +8,7 @@ public static class GameObjectExtension
         go.AddComponent<AutoDestroy>().time = duration;
     }
 
-    public static void InstantiateAndDestroy(GameObject go, Vector3 position, float duration)
+    public static void InstantiateAndDestroy(this GameObject go, Vector3 position, float duration)
     {
         UnityEngine.Object.Instantiate(go, position, Quaternion.identity).AutoDestroy(duration);
     }

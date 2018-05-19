@@ -10,6 +10,8 @@ namespace LZFight.Scripting {
         Stun stun;
         GuardBreak guardBreak;
 
+        public GameObject particle;
+
         public override void OnStart() {
             base.OnStart();
             life = fighter.GetComponent<Life>();
@@ -32,6 +34,11 @@ namespace LZFight.Scripting {
             bool applied = false;
             if (combo != null) {
                 applied = combo.ReceiveDamage(hitbox.dmg, hitbox.GetCenter());
+            }
+
+            if (applied)
+            {
+                particle.InstantiateAndDestroy(hitbox.GetCenter(), 2f);
             }
 
             if (stun != null && applied) {

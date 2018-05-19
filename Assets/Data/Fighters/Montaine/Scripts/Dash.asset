@@ -22,14 +22,14 @@ MonoBehaviour:
       outSlope: 0
       tangentMode: 0
     - serializedVersion: 2
-      time: 0.99786377
-      value: 0
-      inSlope: -3.2772152
-      outSlope: -3.2772152
+      time: 0.99676514
+      value: 0.49969482
+      inSlope: -1.1582087
+      outSlope: -1.1582087
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
   direction: {x: 1, y: 0}
-  strength: 20
+  strength: 18.5
   cancelOnHitGround: 0

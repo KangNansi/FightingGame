@@ -514,6 +514,7 @@
     <Compile Include="Assets\Scripts\Tools\NoiseBox.cs" />
     <Compile Include="Assets\Scripts\Tools\SpriteExtension.cs" />
     <Compile Include="Assets\Scripts\Tools\TweenManager.cs" />
+    <Compile Include="Assets\Scripts\Tools\UI\RollOverColor.cs" />
     <Compile Include="Assets\SpriteShaders\DemoScene\Scripts\ShaderFloatAnimator.cs" />
     <Compile Include="Assets\UI\Scripts\UICharacterSelector.cs" />
     <Compile Include="Assets\UI\Scripts\UIFighterState.cs" />

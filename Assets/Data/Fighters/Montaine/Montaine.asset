@@ -33,7 +33,7 @@ MonoBehaviour:
         name: Ground
         data: {fileID: 0}
         parent: -1
-        containedNodes: 01000000050000000e0000000f00000018000000190000001a0000001c00000025000000
+        containedNodes: 01000000050000000e0000000f00000018000000190000001a0000001c00000024000000
         startState: 1
         loop: 0
         velocity: {x: 0, y: 0}
@@ -43,8 +43,8 @@ MonoBehaviour:
         targetState: 0
       - nodeRect:
           serializedVersion: 2
-          x: 323
-          y: 184
+          x: 185
+          y: 221
           width: 150
           height: 40
         isDragged: 0
@@ -115,8 +115,8 @@ MonoBehaviour:
         targetState: 0
       - nodeRect:
           serializedVersion: 2
-          x: 330
-          y: 381
+          x: 192
+          y: 418
           width: 150
           height: 40
         isDragged: 0
@@ -278,8 +278,8 @@ MonoBehaviour:
         targetState: 0
       - nodeRect:
           serializedVersion: 2
-          x: 119
-          y: 116
+          x: -19
+          y: 153
           width: 150
           height: 40
         isDragged: 0
@@ -296,8 +296,8 @@ MonoBehaviour:
         targetState: 0
       - nodeRect:
           serializedVersion: 2
-          x: 232
-          y: 65
+          x: 94
+          y: 102
           width: 150
           height: 40
         isDragged: 0
@@ -459,11 +459,11 @@ MonoBehaviour:
         targetState: 1
       - nodeRect:
           serializedVersion: 2
-          x: 596
-          y: 121
+          x: 458
+          y: 158
           width: 150
           height: 40
-        isDragged: 0
+        isDragged: 1
         name: Taunt
         data: {fileID: 11400000, guid: 5652801cea235ca469c20dd22cbf57b4, type: 2}
         parent: 0
@@ -472,13 +472,14 @@ MonoBehaviour:
         loop: 0
         velocity: {x: 0, y: 0}
         invert: 0
-        scripts: []
+        scripts:
+        - {fileID: 11400000, guid: 2608487ae8ededd478d0c4bc93d20236, type: 2}
         isShortcut: 0
         targetState: 0
       - nodeRect:
           serializedVersion: 2
-          x: 588
-          y: 290
+          x: 450
+          y: 327
           width: 150
           height: 40
         isDragged: 0
@@ -497,8 +498,8 @@ MonoBehaviour:
         targetState: 0
       - nodeRect:
           serializedVersion: 2
-          x: 586
-          y: 386
+          x: 448
+          y: 423
           width: 150
           height: 40
         isDragged: 0
@@ -535,8 +536,8 @@ MonoBehaviour:
         targetState: 25
       - nodeRect:
           serializedVersion: 2
-          x: 502
-          y: 37
+          x: 364
+          y: 74
           width: 150
           height: 40
         isDragged: 0
@@ -680,8 +681,8 @@ MonoBehaviour:
         targetState: 0
       - nodeRect:
           serializedVersion: 2
-          x: 124
-          y: 201
+          x: -14
+          y: 238
           width: 150
           height: 40
         isDragged: 0

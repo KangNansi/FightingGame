@@ -121,6 +121,11 @@ namespace FightingGame
             }
 
             yield return new WaitForSeconds(1f);
+
+            if(p1.victoryCount >= 2 || p2.victoryCount >= 2)
+            {
+                SceneManager.LoadScene("CharacterChoice");
+            }
             // Round End Coroutine
             Debug.Log("Round End");
             StartCoroutine(StartMatch());
