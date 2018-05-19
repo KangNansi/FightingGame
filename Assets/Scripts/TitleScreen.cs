@@ -1,11 +1,12 @@
-﻿using System.Collections;
+﻿using InputManager;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class TitleScreen : MonoBehaviour {
-    VirtualController controller;
+    LZFightPlayer controller;
     public List<Button> buttons;
     int current = 0;
     bool stop = false;
@@ -20,15 +21,8 @@ public class TitleScreen : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        buttons[current].Select();
-        float v = controller.GetVertical();
-        if (Mathf.Abs(v) < 0.1f)
-        {
-            stop = false;
-        }
-        else if(!stop)
-        {
-            if(v < 0.1f)
+
+            if(controller.GetInput(LZFight.LZFIGHTERINPUTEVENT.UP).GetDown())
             {
                 current--;
                 if (current < 0)
@@ -36,7 +30,7 @@ public class TitleScreen : MonoBehaviour {
                     current = buttons.Count - 1;
                 }
             }
-            else
+            else if (controller.GetInput(LZFight.LZFIGHTERINPUTEVENT.DOWN).GetDown())
             {
                 current++;
                 if (current >= buttons.Count)
@@ -44,9 +38,8 @@ public class TitleScreen : MonoBehaviour {
                     current = 0;
                 }
             }
-            stop = true;
-        }
-        if (controller.GetJumpDown())
+
+        if (controller.GetInput(LZFight.LZFIGHTERINPUTEVENT.ATTACK).Get())
         {
             buttons[current].OnSubmit(null);
         }

@@ -454,32 +454,172 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   config:
     p1controls:
-      P: 0
-      Taunt: 0
-      Dash: 0
-      Block: 0
-      DP: 0
-      Teabag: 0
-      Jump: 0
-      hor: 
-      ver: 
-      dpadhor: 
+    - ev: 0
+      input:
+        type: 1
+        axisThreshold: 0.3
+        axisName: 
+        invert: 0
+        keyType: 0
+        code: 0
+    - ev: 0
+      input:
+        type: 1
+        axisThreshold: 0.3
+        axisName: 
+        invert: 0
+        keyType: 0
+        code: 0
+    - ev: 0
+      input:
+        type: 1
+        axisThreshold: 0.3
+        axisName: 
+        invert: 0
+        keyType: 0
+        code: 0
+    - ev: 0
+      input:
+        type: 1
+        axisThreshold: 0.3
+        axisName: 
+        invert: 0
+        keyType: 0
+        code: 0
+    - ev: 0
+      input:
+        type: 1
+        axisThreshold: 0.3
+        axisName: 
+        invert: 0
+        keyType: 0
+        code: 0
+    - ev: 0
+      input:
+        type: 1
+        axisThreshold: 0.3
+        axisName: 
+        invert: 0
+        keyType: 0
+        code: 0
+    - ev: 0
+      input:
+        type: 1
+        axisThreshold: 0.3
+        axisName: 
+        invert: 0
+        keyType: 0
+        code: 0
+    - ev: 0
+      input:
+        type: 1
+        axisThreshold: 0.3
+        axisName: 
+        invert: 0
+        keyType: 0
+        code: 0
+    - ev: 0
+      input:
+        type: 1
+        axisThreshold: 0.3
+        axisName: 
+        invert: 0
+        keyType: 0
+        code: 0
+    - ev: 0
+      input:
+        type: 1
+        axisThreshold: 0.3
+        axisName: 
+        invert: 0
+        keyType: 0
+        code: 0
     p2controls:
-      P: 0
-      Taunt: 0
-      Dash: 0
-      Block: 0
-      DP: 0
-      Teabag: 0
-      Jump: 0
-      hor: 
-      ver: 
-      dpadhor: 
+    - ev: 0
+      input:
+        type: 1
+        axisThreshold: 0.3
+        axisName: 
+        invert: 0
+        keyType: 0
+        code: 0
+    - ev: 0
+      input:
+        type: 1
+        axisThreshold: 0.3
+        axisName: 
+        invert: 0
+        keyType: 0
+        code: 0
+    - ev: 0
+      input:
+        type: 1
+        axisThreshold: 0.3
+        axisName: 
+        invert: 0
+        keyType: 0
+        code: 0
+    - ev: 0
+      input:
+        type: 1
+        axisThreshold: 0.3
+        axisName: 
+        invert: 0
+        keyType: 0
+        code: 0
+    - ev: 0
+      input:
+        type: 1
+        axisThreshold: 0.3
+        axisName: 
+        invert: 0
+        keyType: 0
+        code: 0
+    - ev: 0
+      input:
+        type: 1
+        axisThreshold: 0.3
+        axisName: 
+        invert: 0
+        keyType: 0
+        code: 0
+    - ev: 0
+      input:
+        type: 1
+        axisThreshold: 0.3
+        axisName: 
+        invert: 0
+        keyType: 0
+        code: 0
+    - ev: 0
+      input:
+        type: 1
+        axisThreshold: 0.3
+        axisName: 
+        invert: 0
+        keyType: 0
+        code: 0
+    - ev: 0
+      input:
+        type: 1
+        axisThreshold: 0.3
+        axisName: 
+        invert: 0
+        keyType: 0
+        code: 0
+    - ev: 0
+      input:
+        type: 1
+        axisThreshold: 0.3
+        axisName: 
+        invert: 0
+        keyType: 0
+        code: 0
     matchTime: 99
-  p1controller: {fileID: 11400000, guid: 9db9d13976c94f74fb43aa29de060af0, type: 2}
-  p2controller: {fileID: 11400000, guid: 8f8197671f7957a4b8301a59ef3db1f9, type: 2}
-  p1material: {fileID: 0}
-  p2material: {fileID: 0}
+  p1controller: {fileID: 11400000, guid: b50150ba85da5e4489534ed0e2359d77, type: 2}
+  p2controller: {fileID: 11400000, guid: 18857d8f1f487f14da4a5245f392df0e, type: 2}
+  p1material: {fileID: 2100000, guid: 4f61689b792c17749ac0e73faafd2ef3, type: 2}
+  p2material: {fileID: 2100000, guid: e5e889f938efb0f4180fce09d6e4e8af, type: 2}
   p2isAI: 1
   p1isAI: 0
   AIReflex: 0.1
@@ -1085,8 +1225,6 @@ GameObject:
   - component: {fileID: 1796900886}
   - component: {fileID: 1796900885}
   - component: {fileID: 1796900884}
-  - component: {fileID: 1796900887}
-  - component: {fileID: 1796900883}
   - component: {fileID: 1796900889}
   - component: {fileID: 1796900888}
   m_Layer: 0
@@ -1096,17 +1234,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1796900883
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1796900882}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c22d23337441af840933a5c224326ba3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!124 &1796900884
 Behaviour:
   m_ObjectHideFlags: 0
@@ -1162,17 +1289,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1796900887
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1796900882}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9244deadebbb0524daff720d79dc1349, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1796900888
 MonoBehaviour:
   m_ObjectHideFlags: 0

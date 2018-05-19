@@ -12,9 +12,11 @@ public class InputObject {
     // Axis properties
     public float axisThreshold = 0.3f;
     public string axisName;
+    public bool invert = false;
+    private bool down = false;
 
     public enum KeyType {
-        KEY, JOYSTICK
+        KEY, JOYSTICK1, JOYSTICK2
     }
     public KeyType keyType;
     public KeyCode code;
@@ -25,7 +27,7 @@ public class InputObject {
             case TYPE.KEY:
                 return Input.GetKey(code);
             case TYPE.AXIS:
-                return Input.GetAxis(axisName) > axisThreshold;
+                return (invert?-Input.GetAxis(axisName):Input.GetAxis(axisName)) > axisThreshold;
         }
         return false;
     }

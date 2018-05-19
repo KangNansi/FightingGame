@@ -1,20 +1,21 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using InputManager;
 
 public class UIMaterialSelector : MonoBehaviour {
 	public List<Material> materials = new List<Material>();
 	// Use this for initialization
 	int current = 0;
-	VirtualController controller;
-    public VirtualController Controller
+	LZFightPlayer controller;
+    public LZFightPlayer Controller
     {
         set
         {
             controller = value;
         }
     }
-	public FightingGame.FighterController fighter;
+	public LZFighterAnimator fighter;
 	SpriteRenderer renderer;
 	bool stop = false;
 	bool ready = false;
@@ -37,10 +38,10 @@ public class UIMaterialSelector : MonoBehaviour {
 	void Update () {
         if (!active) return;
 		if (!stop && !ready){
-			if (controller.GetHorizontal () < -0.1) {
+			if (controller.GetInput(LZFight.LZFIGHTERINPUTEVENT.LEFT).GetDown()) {
 				current = (current - 1) % materials.Count;
 			}
-			if (controller.GetHorizontal () > 0.1) {
+			if (controller.GetInput(LZFight.LZFIGHTERINPUTEVENT.RIGHT).GetDown()) {
 				current = (current + 1) % materials.Count;
 			}
 			if (current < 0) {
@@ -50,10 +51,10 @@ public class UIMaterialSelector : MonoBehaviour {
 			renderer.material = materials [current];
 			stop = true;
 		}
-		if (stop && Mathf.Abs(controller.GetHorizontal()) < 0.1) {
+		if (stop && !(controller.GetInput(LZFight.LZFIGHTERINPUTEVENT.LEFT).Get() || controller.GetInput(LZFight.LZFIGHTERINPUTEVENT.RIGHT).Get())) {
 			stop = false;
 		}
-		if (controller.GetPDown ()) {
+		if (controller.GetInput(LZFight.LZFIGHTERINPUTEVENT.ATTACK).GetDown()) {
 			ready = true;
 		}
 	}

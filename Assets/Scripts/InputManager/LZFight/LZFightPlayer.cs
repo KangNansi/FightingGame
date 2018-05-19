@@ -27,5 +27,10 @@ namespace InputManager {
             return pairs.Find((p) => p.ev == ev).input;
         }
 
+        public void Setup(List<EventInputPair> pairs)
+        {
+            this.pairs = pairs;
+        }
+
     }
 }

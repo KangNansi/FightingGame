@@ -59,8 +59,7 @@ namespace FightingGame
             GameConfiguration config = GameConfiguration.instance;
             if(config != null)
             {
-                player1.controller = config.p1controller;
-                player2.controller = config.p2controller;
+
                 player1.GetComponent<SpriteRenderer>().material = config.p1material;
                 player2.GetComponent<SpriteRenderer>().material = config.p2material;
                 matchTime = config.config.matchTime;

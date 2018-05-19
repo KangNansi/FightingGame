@@ -2,13 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using InputManager;
 
 public class UICharacterSelector : MonoBehaviour {
 	public UIMaterialSelector p1;
 	public UIMaterialSelector p2;
 
-    VirtualController c1;
-    VirtualController c2;
+    LZFightPlayer c1;
+    LZFightPlayer c2;
 
 	// Use this for initialization
 	void Start () {
@@ -17,24 +18,24 @@ public class UICharacterSelector : MonoBehaviour {
         c2 = GameConfiguration.instance.p2controller;
         p2.Controller = c2;
     }
-	
-	// Update is called once per frame
-	void Update () {
+
+    // Update is called once per frame
+    void Update() {
         GameConfiguration gconf = GameConfiguration.instance;
-		if (p1.Ready && (p2.Ready || gconf.p2isAI)) {
+        if (p1.Ready && (p2.Ready || gconf.p2isAI)) {
             if (gconf.p2isAI)
             {
                 gconf.p2material = p2.materials[Random.Range(0, p2.materials.Count)];
             }
-			SceneManager.LoadScene("level1");
+            SceneManager.LoadScene("level1");
             return;
-		}
+        }
         p2.active = !gconf.p2isAI;
-        if (Input.GetKeyDown(c2.P))
+        if (c2.GetInput(LZFight.LZFIGHTERINPUTEVENT.ATTACK).GetDown())
         {
             gconf.p2isAI = false;
         }
-        if (Input.GetKeyDown(c1.Dash))
+        if (c1.GetInput(LZFight.LZFIGHTERINPUTEVENT.DASH).GetDown())
         {
             if (p1.Ready)
             {
@@ -45,7 +46,7 @@ public class UICharacterSelector : MonoBehaviour {
                 SceneManager.LoadScene("Title");
             }
         }
-        if (Input.GetKeyDown(c2.Dash))
+        if (c2.GetInput(LZFight.LZFIGHTERINPUTEVENT.DASH).GetDown())
         {
             if (!gconf.p2isAI)
             {

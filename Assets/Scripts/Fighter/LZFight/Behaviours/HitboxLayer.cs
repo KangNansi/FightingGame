@@ -22,8 +22,16 @@ public class HitboxLayer : ScriptableObject {
     }
 
     public void ApplyHitbox(HitBox hitbox) {
-        foreach(var hc in registered) {
-            hc.ReceiveHit(hitbox);
+        for(int i = 0; i < registered.Count; i++) {
+            if(registered[i] == null)
+            {
+                registered.RemoveAt(i);
+                i--;
+            }
+            else
+            {
+                registered[i].ReceiveHit(hitbox);
+            }
         }
     }
 }

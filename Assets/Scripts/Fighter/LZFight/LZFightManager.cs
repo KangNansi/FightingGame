@@ -62,6 +62,14 @@ namespace FightingGame
                 };
                 p2R = true;
             };
+
+            if(GameConfiguration.instance != null)
+            {
+                player1.GetComponent<SpriteRenderer>().sharedMaterial = GameConfiguration.instance.p1material;
+                player2.GetComponent<SpriteRenderer>().sharedMaterial = GameConfiguration.instance.p2material;
+
+            }
+
             p1position = player1.transform.position;
             p2position = player2.transform.position;
             StartCoroutine(StartMatch());

@@ -1,0 +1,71 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f144004582e06974d8f2ba1b0d845ead, type: 3}
+  m_Name: P2Keyboard
+  m_EditorClassIdentifier: 
+  defaultValue: 0
+  pairs:
+  - ev: 0
+    input:
+      type: 1
+      axisThreshold: 0.3
+      axisName: 
+      keyType: 0
+      code: 119
+  - ev: 1
+    input:
+      type: 1
+      axisThreshold: 0.3
+      axisName: 
+      keyType: 0
+      code: 99
+  - ev: 2
+    input:
+      type: 1
+      axisThreshold: 0.3
+      axisName: 
+      keyType: 0
+      code: 122
+  - ev: 3
+    input:
+      type: 1
+      axisThreshold: 0.3
+      axisName: 
+      keyType: 0
+      code: 120
+  - ev: 4
+    input:
+      type: 1
+      axisThreshold: 0.3
+      axisName: 
+      keyType: 0
+      code: 110
+  - ev: 5
+    input:
+      type: 1
+      axisThreshold: 0.3
+      axisName: 
+      keyType: 0
+      code: 105
+  - ev: 6
+    input:
+      type: 1
+      axisThreshold: 0.3
+      axisName: 
+      keyType: 0
+      code: 108
+  - ev: 7
+    input:
+      type: 1
+      axisThreshold: 0.3
+      axisName: 
+      keyType: 0
+      code: 107

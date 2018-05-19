@@ -4,14 +4,15 @@ using UnityEngine;
 using System;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.IO;
+using InputManager;
 
 public class GameConfiguration : MonoBehaviour {
     
     public static GameConfiguration instance = null;
 
     public Configuration config;
-    public VirtualController p1controller;
-    public VirtualController p2controller;
+    public LZFightPlayer p1controller;
+    public LZFightPlayer p2controller;
     public Material p1material;
     public Material p2material;
     public bool p2isAI = true;
@@ -43,8 +44,8 @@ public class GameConfiguration : MonoBehaviour {
 
     public void Save()
     {
-        config.p1controls.Setup(p1controller);
-        config.p2controls.Setup(p2controller);
+        config.p1controls = p1controller.pairs;
+        config.p2controls = p2controller.pairs;
         BinaryFormatter bf = new BinaryFormatter();
         FileStream fs = File.Open(Application.persistentDataPath + "/config.dat", FileMode.OpenOrCreate);
         bf.Serialize(fs, config);
@@ -68,7 +69,7 @@ public class GameConfiguration : MonoBehaviour {
 [Serializable]
 public class Configuration
 {
-    public VController p1controls = null;
-    public VController p2controls = null;
+    public List<LZFightPlayer.EventInputPair> p1controls = null;
+    public List<LZFightPlayer.EventInputPair> p2controls = null;
     public int matchTime = 99;
 }

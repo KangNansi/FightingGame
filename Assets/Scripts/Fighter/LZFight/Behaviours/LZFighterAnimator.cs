@@ -14,6 +14,7 @@ public class LZFighterAnimator : MonoBehaviour {
     public LZFighter fighter;
     public LZFightPlayer controller;
     public bool debug = false;
+    public bool allowInput = true;
 
     private Vector3 baseScale;
 
@@ -29,6 +30,7 @@ public class LZFighterAnimator : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
+        fighter.blockInput = !allowInput;
         fighter.debug = debug;
         if (fighter.invertHorizontal) {
             transform.localScale = new Vector3(-baseScale.x, baseScale.y, baseScale.z);

@@ -29,6 +29,7 @@ public class LZFightPlayerEditor : Editor {
             GUI.color = Color.white;
             if (pair.input.type == InputObject.TYPE.AXIS) {
                 pair.input.axisName = EditorGUILayout.TextField(pair.input.axisName);
+                pair.input.invert = EditorGUILayout.Toggle("Invert", pair.input.invert);
                 pair.input.axisThreshold = EditorGUILayout.FloatField(pair.input.axisThreshold);
             }
             else {
@@ -36,6 +37,7 @@ public class LZFightPlayerEditor : Editor {
                 KeyCode[] codes = (KeyCode[]) Enum.GetValues(typeof(KeyCode));
                 List<string> keys = new List<string>();
                 List<string> joystick1 = new List<string>();
+                List<string> joystick2 = new List<string>();
                 int selected = 0;
                 foreach(var code in codes) {
                     
@@ -47,7 +49,15 @@ public class LZFightPlayerEditor : Editor {
                     }
                     if (code.ToString().Contains("Joystick1")) {
                         joystick1.Add(code.ToString());
-                        if (pair.input.keyType == InputObject.KeyType.JOYSTICK && code == pair.input.code) {
+                        if (pair.input.keyType == InputObject.KeyType.JOYSTICK1 && code == pair.input.code) {
+                            selected = joystick1.Count - 1;
+                        }
+                    }
+                    if (code.ToString().Contains("Joystick2"))
+                    {
+                        joystick2.Add(code.ToString());
+                        if (pair.input.keyType == InputObject.KeyType.JOYSTICK2 && code == pair.input.code)
+                        {
                             selected = joystick1.Count - 1;
                         }
                     }
@@ -59,7 +69,12 @@ public class LZFightPlayerEditor : Editor {
                     int newIndex = EditorGUILayout.Popup(selected, keys.ToArray());
                     pair.input.code = (KeyCode)Enum.Parse(typeof(KeyCode), keys[newIndex]);
                 }
-                else if(pair.input.keyType == InputObject.KeyType.JOYSTICK) {
+                else if(pair.input.keyType == InputObject.KeyType.JOYSTICK1) {
+                    int newIndex = EditorGUILayout.Popup(selected, joystick1.ToArray());
+                    pair.input.code = (KeyCode)Enum.Parse(typeof(KeyCode), joystick1[newIndex]);
+                }
+                else if (pair.input.keyType == InputObject.KeyType.JOYSTICK2)
+                {
                     int newIndex = EditorGUILayout.Popup(selected, joystick1.ToArray());
                     pair.input.code = (KeyCode)Enum.Parse(typeof(KeyCode), joystick1[newIndex]);
                 }
