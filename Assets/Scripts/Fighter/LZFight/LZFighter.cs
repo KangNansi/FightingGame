@@ -84,6 +84,11 @@ namespace LZFight {
             }
         }
 
+        public void AddScript(MiniScript script)
+        {
+            machine.AddScript(script);
+        }
+
         public LZFighterFrame CurrentFrame{
             get {
                 return stateMachine.GetCurrentFrame();

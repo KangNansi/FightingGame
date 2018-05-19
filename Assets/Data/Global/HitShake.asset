@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: HitShake
   m_EditorClassIdentifier: 
   priority: 102
-  strength: 35
+  strength: 5
   strengthCurve:
     serializedVersion: 2
     m_Curve:
@@ -37,5 +37,5 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
-  frequency: 133.66
+  frequency: 30
   time: 0.3

@@ -75,6 +75,8 @@ namespace FightingGame
             fight.gameObject.SetActive(false);
             p1win.gameObject.SetActive(false);
             p2win.gameObject.SetActive(false);
+
+            AkSoundEngine.PostEvent("Play_Music", gameObject);
         }
 
         private void Update() {
@@ -167,6 +169,7 @@ namespace FightingGame
             fight.gameObject.SetActive(true);
             fight.MoveTo(Vector3.up * 5000);
             fight.MoveTo(Vector3.zero, 0.3f);
+            AkSoundEngine.PostEvent("Round_Start", gameObject);
             yield return new WaitForSeconds(1f);
             fight.MoveTo(Vector3.down * 5000, 0.3f);
 

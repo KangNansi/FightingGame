@@ -5,7 +5,7 @@ using System.Linq;
 
 public class GlobalScriptMachine : MonoBehaviour {
     private static GlobalScriptMachine instance;
-    private static GlobalScriptMachine Instance {
+    public static GlobalScriptMachine Instance {
         get {
             if(instance == null) {
                 instance = new GameObject().AddComponent<GlobalScriptMachine>();

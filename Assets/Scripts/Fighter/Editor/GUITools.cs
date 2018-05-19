@@ -173,7 +173,7 @@ public static class GUITools {
         return r;
     }
 
-    public static void ListField<T>(List<T> list, System.Action<int> onElement, System.Action<T> onAdd = null) {
+    public static void ListField<T>(List<T> list, System.Action<int> onElement = null, System.Action<T> onAdd = null) {
         EditorGUILayout.BeginVertical();
         for (int i = 0; i < list.Count; i++) {
             EditorGUILayout.BeginHorizontal(GreyBlock);

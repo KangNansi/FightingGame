@@ -31,5 +31,5 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 0
   direction: {x: 0, y: -1}
-  strength: 39
+  strength: 35
   cancelOnHitGround: 0

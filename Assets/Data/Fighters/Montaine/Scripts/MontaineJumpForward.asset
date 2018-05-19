@@ -11,7 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebbacb512f51d094e89aa5c00bb79817, type: 3}
   m_Name: MontaineJumpForward
   m_EditorClassIdentifier: 
-  lifeTime: 1
+  lifeTime: 2
   curve:
     serializedVersion: 2
     m_Curve:
@@ -31,5 +31,5 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 0
   direction: {x: 0.5, y: 0}
-  strength: 12
+  strength: 32
   cancelOnHitGround: 1

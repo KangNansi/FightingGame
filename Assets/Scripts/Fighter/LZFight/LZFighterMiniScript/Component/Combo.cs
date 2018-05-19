@@ -21,6 +21,8 @@ namespace LZFight.Scripting {
 
         public List<ScriptableScript> onHit = new List<ScriptableScript>();
 
+        public List<MiniScript> hitSound = new List<MiniScript>();
+
         public event Func<float, Vector3, bool> onReceiveDamage;
         public event System.Action onConfirm;
 
@@ -51,6 +53,19 @@ namespace LZFight.Scripting {
 
             GlobalScriptMachine.Launch(onHit);
 
+            if(dmg > 25)
+            {
+                fighter.AddScript(hitSound[0]);
+            }
+            else if(dmg > 15)
+            {
+                fighter.AddScript(hitSound[1]);
+            }
+            else
+            {
+                fighter.AddScript(hitSound[2]);
+            }
+
             fighter.ApplyEvent(LZFIGHTEREVENT.HIT);
             currentCombo += dmg;
             currentCombo = Mathf.Clamp(currentCombo, 0, life.CurrentLife);
@@ -58,10 +73,11 @@ namespace LZFight.Scripting {
             return true;
         }
 
-        public void Confirm() {
+        public float Confirm() {
             if(onConfirm != null) {
                 onConfirm.Invoke();
             }
+            return currentCombo;
         }
 
         public void Apply() {

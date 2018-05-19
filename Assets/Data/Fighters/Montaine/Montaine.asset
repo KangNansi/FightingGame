@@ -25,8 +25,8 @@ MonoBehaviour:
       items:
       - nodeRect:
           serializedVersion: 2
-          x: 230
-          y: 253
+          x: 229
+          y: 206
           width: 150
           height: 40
         isDragged: 0
@@ -38,12 +38,13 @@ MonoBehaviour:
         loop: 0
         velocity: {x: 0, y: 0}
         invert: 0
+        scripts: []
         isShortcut: 0
         targetState: 0
       - nodeRect:
           serializedVersion: 2
-          x: -10
-          y: 277
+          x: 50
+          y: 199
           width: 150
           height: 40
         isDragged: 0
@@ -55,12 +56,13 @@ MonoBehaviour:
         loop: 0
         velocity: {x: 0, y: 0}
         invert: 0
+        scripts: []
         isShortcut: 0
         targetState: 0
       - nodeRect:
           serializedVersion: 2
-          x: 163
-          y: 144
+          x: 74
+          y: -18
           width: 150
           height: 40
         isDragged: 0
@@ -72,12 +74,13 @@ MonoBehaviour:
         loop: 1
         velocity: {x: 0, y: 0}
         invert: 0
+        scripts: []
         isShortcut: 0
         targetState: 0
       - nodeRect:
           serializedVersion: 2
-          x: 7
-          y: 274
+          x: -82
+          y: 112
           width: 167
           height: 40
         isDragged: 0
@@ -87,14 +90,15 @@ MonoBehaviour:
         containedNodes: 
         startState: 0
         loop: 1
-        velocity: {x: -18, y: 0}
+        velocity: {x: -15, y: 0}
         invert: 1
+        scripts: []
         isShortcut: 0
         targetState: 0
       - nodeRect:
           serializedVersion: 2
-          x: 315
-          y: 269
+          x: 226
+          y: 107
           width: 154
           height: 40
         isDragged: 0
@@ -104,14 +108,15 @@ MonoBehaviour:
         containedNodes: 
         startState: 0
         loop: 1
-        velocity: {x: 20, y: 0}
+        velocity: {x: 15, y: 0}
         invert: 0
+        scripts: []
         isShortcut: 0
         targetState: 0
       - nodeRect:
           serializedVersion: 2
-          x: -3
-          y: 474
+          x: 57
+          y: 396
           width: 150
           height: 40
         isDragged: 0
@@ -123,12 +128,13 @@ MonoBehaviour:
         loop: 0
         velocity: {x: 0, y: 0}
         invert: 0
+        scripts: []
         isShortcut: 0
         targetState: 0
       - nodeRect:
           serializedVersion: 2
-          x: 500
-          y: 248
+          x: 477
+          y: 202
           width: 150
           height: 40
         isDragged: 0
@@ -140,12 +146,13 @@ MonoBehaviour:
         loop: 0
         velocity: {x: 0, y: 0}
         invert: 0
+        scripts: []
         isShortcut: 0
         targetState: 0
       - nodeRect:
           serializedVersion: 2
-          x: 219
-          y: 127
+          x: 113
+          y: 129
           width: 150
           height: 40
         isDragged: 0
@@ -157,6 +164,8 @@ MonoBehaviour:
         loop: 0
         velocity: {x: 0, y: 0}
         invert: 0
+        scripts:
+        - {fileID: 11400000, guid: 63fdd2d9aac2aaf48a1c9756effd9f11, type: 2}
         isShortcut: 0
         targetState: 0
       - nodeRect:
@@ -174,6 +183,7 @@ MonoBehaviour:
         loop: 0
         velocity: {x: 0, y: 0}
         invert: 0
+        scripts: []
         isShortcut: 0
         targetState: 0
       - nodeRect:
@@ -191,6 +201,7 @@ MonoBehaviour:
         loop: 1
         velocity: {x: 0, y: 0}
         invert: 0
+        scripts: []
         isShortcut: 0
         targetState: 0
       - nodeRect:
@@ -208,6 +219,7 @@ MonoBehaviour:
         loop: 0
         velocity: {x: 0, y: 0}
         invert: 0
+        scripts: []
         isShortcut: 0
         targetState: 0
       - nodeRect:
@@ -225,12 +237,13 @@ MonoBehaviour:
         loop: 1
         velocity: {x: 0, y: 0}
         invert: 0
+        scripts: []
         isShortcut: 0
         targetState: 0
       - nodeRect:
           serializedVersion: 2
-          x: 159
-          y: 502
+          x: 70
+          y: 340
           width: 150
           height: 40
         isDragged: 0
@@ -242,12 +255,13 @@ MonoBehaviour:
         loop: 0
         velocity: {x: 0, y: 0}
         invert: 0
+        scripts: []
         isShortcut: 1
         targetState: 7
       - nodeRect:
           serializedVersion: 2
-          x: 176
-          y: 414
+          x: 153
+          y: 368
           width: 150
           height: 40
         isDragged: 0
@@ -259,12 +273,13 @@ MonoBehaviour:
         loop: 0
         velocity: {x: 0, y: 0}
         invert: 0
+        scripts: []
         isShortcut: 0
         targetState: 0
       - nodeRect:
           serializedVersion: 2
-          x: -214
-          y: 209
+          x: -154
+          y: 131
           width: 150
           height: 40
         isDragged: 0
@@ -276,12 +291,13 @@ MonoBehaviour:
         loop: 0
         velocity: {x: 0, y: 0}
         invert: 0
+        scripts: []
         isShortcut: 0
         targetState: 0
       - nodeRect:
           serializedVersion: 2
-          x: -133
-          y: 147
+          x: -73
+          y: 69
           width: 150
           height: 40
         isDragged: 0
@@ -293,12 +309,13 @@ MonoBehaviour:
         loop: 0
         velocity: {x: 0, y: 0}
         invert: 0
+        scripts: []
         isShortcut: 0
         targetState: 0
       - nodeRect:
           serializedVersion: 2
-          x: 349
-          y: 470
+          x: 326
+          y: 424
           width: 150
           height: 40
         isDragged: 0
@@ -310,12 +327,13 @@ MonoBehaviour:
         loop: 0
         velocity: {x: 0, y: 0}
         invert: 0
+        scripts: []
         isShortcut: 0
         targetState: 0
       - nodeRect:
           serializedVersion: 2
-          x: -40
-          y: 283
+          x: 53
+          y: 209
           width: 150
           height: 40
         isDragged: 0
@@ -327,12 +345,13 @@ MonoBehaviour:
         loop: 0
         velocity: {x: 0, y: 0}
         invert: 0
+        scripts: []
         isShortcut: 0
         targetState: 0
       - nodeRect:
           serializedVersion: 2
-          x: 221
-          y: 286
+          x: 314
+          y: 212
           width: 166
           height: 40
         isDragged: 0
@@ -344,12 +363,13 @@ MonoBehaviour:
         loop: 0
         velocity: {x: 0, y: 0}
         invert: 0
+        scripts: []
         isShortcut: 0
         targetState: 0
       - nodeRect:
           serializedVersion: 2
-          x: -329
-          y: 103
+          x: -236
+          y: 29
           width: 150
           height: 40
         isDragged: 0
@@ -361,12 +381,13 @@ MonoBehaviour:
         loop: 0
         velocity: {x: 0, y: 0}
         invert: 0
+        scripts: []
         isShortcut: 1
         targetState: 1
       - nodeRect:
           serializedVersion: 2
-          x: -210
-          y: 290
+          x: -117
+          y: 216
           width: 150
           height: 40
         isDragged: 0
@@ -378,12 +399,13 @@ MonoBehaviour:
         loop: 0
         velocity: {x: 0, y: 0}
         invert: 0
+        scripts: []
         isShortcut: 0
         targetState: 0
       - nodeRect:
           serializedVersion: 2
-          x: -4
-          y: 171
+          x: 89
+          y: 97
           width: 150
           height: 40
         isDragged: 0
@@ -395,12 +417,13 @@ MonoBehaviour:
         loop: 0
         velocity: {x: 0, y: 0}
         invert: 0
+        scripts: []
         isShortcut: 0
         targetState: 0
       - nodeRect:
           serializedVersion: 2
-          x: 61
-          y: 370
+          x: 154
+          y: 296
           width: 150
           height: 40
         isDragged: 0
@@ -412,12 +435,13 @@ MonoBehaviour:
         loop: 0
         velocity: {x: 0, y: 0}
         invert: 0
+        scripts: []
         isShortcut: 0
         targetState: 0
       - nodeRect:
           serializedVersion: 2
-          x: 366
-          y: 537
+          x: 459
+          y: 463
           width: 150
           height: 40
         isDragged: 0
@@ -429,12 +453,13 @@ MonoBehaviour:
         loop: 0
         velocity: {x: 0, y: 0}
         invert: 0
+        scripts: []
         isShortcut: 1
         targetState: 1
       - nodeRect:
           serializedVersion: 2
-          x: 263
-          y: 214
+          x: 323
+          y: 136
           width: 150
           height: 40
         isDragged: 0
@@ -446,12 +471,13 @@ MonoBehaviour:
         loop: 0
         velocity: {x: 0, y: 0}
         invert: 0
+        scripts: []
         isShortcut: 0
         targetState: 0
       - nodeRect:
           serializedVersion: 2
-          x: 255
-          y: 383
+          x: 315
+          y: 305
           width: 150
           height: 40
         isDragged: 0
@@ -463,12 +489,13 @@ MonoBehaviour:
         loop: 0
         velocity: {x: 0, y: 0}
         invert: 0
+        scripts: []
         isShortcut: 0
         targetState: 0
       - nodeRect:
           serializedVersion: 2
-          x: 253
-          y: 479
+          x: 313
+          y: 401
           width: 150
           height: 40
         isDragged: 0
@@ -480,12 +507,13 @@ MonoBehaviour:
         loop: 0
         velocity: {x: 0, y: 0}
         invert: 0
+        scripts: []
         isShortcut: 0
         targetState: 0
       - nodeRect:
           serializedVersion: 2
-          x: 277
-          y: 81
+          x: 370
+          y: 7
           width: 150
           height: 40
         isDragged: 0
@@ -497,12 +525,13 @@ MonoBehaviour:
         loop: 0
         velocity: {x: 0, y: 0}
         invert: 0
+        scripts: []
         isShortcut: 1
         targetState: 25
       - nodeRect:
           serializedVersion: 2
-          x: 169
-          y: 130
+          x: 229
+          y: 52
           width: 150
           height: 40
         isDragged: 0
@@ -514,12 +543,13 @@ MonoBehaviour:
         loop: 0
         velocity: {x: 0, y: 0}
         invert: 0
+        scripts: []
         isShortcut: 0
         targetState: 0
       - nodeRect:
           serializedVersion: 2
-          x: 297
-          y: 280
+          x: 191
+          y: 282
           width: 150
           height: 40
         isDragged: 0
@@ -531,12 +561,13 @@ MonoBehaviour:
         loop: 0
         velocity: {x: 0, y: 0}
         invert: 0
+        scripts: []
         isShortcut: 0
         targetState: 0
       - nodeRect:
           serializedVersion: 2
-          x: 436
-          y: 155
+          x: 330
+          y: 157
           width: 150
           height: 40
         isDragged: 0
@@ -548,12 +579,13 @@ MonoBehaviour:
         loop: 0
         velocity: {x: 0, y: 0}
         invert: 0
+        scripts: []
         isShortcut: 1
         targetState: 11
       - nodeRect:
           serializedVersion: 2
-          x: 277
-          y: 28
+          x: 171
+          y: 30
           width: 150
           height: 40
         isDragged: 0
@@ -565,6 +597,7 @@ MonoBehaviour:
         loop: 0
         velocity: {x: 0, y: 0}
         invert: 0
+        scripts: []
         isShortcut: 0
         targetState: 0
       - nodeRect:
@@ -582,6 +615,7 @@ MonoBehaviour:
         loop: 0
         velocity: {x: 0, y: 0}
         invert: 0
+        scripts: []
         isShortcut: 0
         targetState: 0
       - nodeRect:
@@ -599,12 +633,13 @@ MonoBehaviour:
         loop: 1
         velocity: {x: 0, y: 0}
         invert: 0
+        scripts: []
         isShortcut: 0
         targetState: 0
       - nodeRect:
           serializedVersion: 2
-          x: 45
-          y: 138
+          x: 22
+          y: 92
           width: 150
           height: 40
         isDragged: 0
@@ -616,12 +651,13 @@ MonoBehaviour:
         loop: 0
         velocity: {x: 0, y: 0}
         invert: 0
+        scripts: []
         isShortcut: 0
         targetState: 0
       - nodeRect:
           serializedVersion: 2
-          x: -62
-          y: 232
+          x: -85
+          y: 186
           width: 150
           height: 40
         isDragged: 0
@@ -633,6 +669,7 @@ MonoBehaviour:
         loop: 1
         velocity: {x: 0, y: 0}
         invert: 0
+        scripts: []
         isShortcut: 0
         targetState: 0
       ids: 
@@ -721,7 +758,8 @@ MonoBehaviour:
       events: 02000000
       inputs: []
       scriptedConditions: []
-      scripts: []
+      scripts:
+      - {fileID: 11400000, guid: 70041195463d2b44584c4edc932a5670, type: 2}
     - source: 3
       target: 12
       events: 
@@ -1152,7 +1190,8 @@ MonoBehaviour:
       events: 06000000
       inputs: []
       scriptedConditions: []
-      scripts: []
+      scripts:
+      - {fileID: 11400000, guid: 70041195463d2b44584c4edc932a5670, type: 2}
     - source: 13
       target: 34
       events: 06000000

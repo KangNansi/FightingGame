@@ -11,24 +11,451 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b305bafa75e39f4b9db94eaefff5a9c, type: 3}
   m_Name: AkWwiseProjectData
   m_EditorClassIdentifier: 
-  AcousticTextureWwu: []
+  AcousticTextureWwu:
+  - Guid: '{7EE439C5-2512-4FB6-93F5-DBC1D9D9BFDB}'
+    m_lastTimePart2: -1999258341
+    m_lastTimePsrt1: -496090228
+    ParentPhysicalPath: 
+    PhysicalPath: Virtual Acoustics\Default Work Unit.wwu
+    List: []
   autoPopulateEnabled: 1
-  AuxBusWwu: []
-  BankWwu: []
+  AuxBusWwu:
+  - Guid: '{E2F1505B-76D8-459F-8EAB-723AC840F2BB}'
+    m_lastTimePart2: -1999258341
+    m_lastTimePsrt1: -498360230
+    ParentPhysicalPath: 
+    PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
+    List:
+    - Guid: 47f9159d6348684ea14e3d67e3a153a3
+      ID: 357718954
+      Name: Delay
+      Path: Default Work Unit\Master Audio Bus\Delay
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+      - ElementName: Delay
+        ObjectType: 1
+  BankWwu:
+  - Guid: '{64E31A7D-62C1-402F-8295-C2D1C2BEAEC9}'
+    m_lastTimePart2: -1999258341
+    m_lastTimePsrt1: -498519681
+    ParentPhysicalPath: 
+    PhysicalPath: SoundBanks\Default Work Unit.wwu
+    List:
+    - Guid: 18b830fd06950c4d8e898d8bc31ef67d
+      ID: -1133058374
+      Name: Main
+      Path: Default Work Unit\Main
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Main
+        ObjectType: 7
   basePath: Audio\GeneratedSoundBanks
   callbackManagerBufferSize: 4
   CurrentPluginConfig: 
   defaultPoolSize: 4096
-  EventWwu: []
-  ExpandedItems: []
+  EventWwu:
+  - Guid: '{033D3F2C-F663-480F-BBC8-F1266E58C3D0}'
+    m_lastTimePart2: -1999258341
+    m_lastTimePsrt1: -497720243
+    ParentPhysicalPath: 
+    PhysicalPath: Events\Default Work Unit.wwu
+    List:
+    - Guid: c085b8a71626ae4897f6a0f008718622
+      ID: -99413994
+      Name: Back_Kick_init
+      Path: Default Work Unit\Attacks\Back_Kick_init
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Attacks
+        ObjectType: 4
+      - ElementName: Back_Kick_init
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 2c7ed70345d29e4088d5533714181ee5
+      ID: -302922982
+      Name: Back_Kick_whoosh
+      Path: Default Work Unit\Attacks\Back_Kick_whoosh
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Attacks
+        ObjectType: 4
+      - ElementName: Back_Kick_whoosh
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 69f64f6f0aefd947bdb641af58011e8e
+      ID: 1795338027
+      Name: BigConfirm
+      Path: Default Work Unit\BigConfirm
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: BigConfirm
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 7d2f6bdfd1ccae47bc47cf10c3c935df
+      ID: -293386320
+      Name: Block
+      Path: Default Work Unit\Block
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Block
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 087a1f54986d0a4d92b1563a244b78b3
+      ID: 1517537939
+      Name: Confirm
+      Path: Default Work Unit\Confirm
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Confirm
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 9e7e116f6c3fcc439d97356d7eee1c6f
+      ID: 1942692385
+      Name: Dash
+      Path: Default Work Unit\Dash
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Dash
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 8cbfa983f36bbc4391c1a7bf1d21bb0b
+      ID: 1593604493
+      Name: Forward_init
+      Path: Default Work Unit\Attacks\Forward_init
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Attacks
+        ObjectType: 4
+      - ElementName: Forward_init
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 2fe7f130d8a97d429c81dfa162ba4a90
+      ID: 17683061
+      Name: Forward_Whoosh
+      Path: Default Work Unit\Attacks\Forward_Whoosh
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Attacks
+        ObjectType: 4
+      - ElementName: Forward_Whoosh
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 1d1d75a5a486714ea11895812706c6dd
+      ID: 1867622356
+      Name: GetUp
+      Path: Default Work Unit\GetUp
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: GetUp
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 53466d2214ff494a872d9761495f37f9
+      ID: -1227785847
+      Name: GuardBreak
+      Path: Default Work Unit\GuardBreak
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: GuardBreak
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 8c40e03e977aa14580f085cca0c5a13f
+      ID: 1501246120
+      Name: Heavy_Hit
+      Path: Default Work Unit\Hits\Heavy_Hit
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Hits
+        ObjectType: 4
+      - ElementName: Heavy_Hit
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 8e60bd43f21f6346b6291a527812ad38
+      ID: 780552104
+      Name: Jab
+      Path: Default Work Unit\Attacks\Jab
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Attacks
+        ObjectType: 4
+      - ElementName: Jab
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 40420216df72ad42aab4ffdcd47aa7d5
+      ID: 164547642
+      Name: Jump_init
+      Path: Default Work Unit\Jump_init
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Jump_init
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: f7e8078773c2fd468548053366532b3b
+      ID: -875280557
+      Name: Jump_Land
+      Path: Default Work Unit\Jump_Land
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Jump_Land
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 307b70df62d1eb4abfe5f09ccd1bd7f5
+      ID: 2030840469
+      Name: Kill
+      Path: Default Work Unit\Kill
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Kill
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: a19811cb6458d64da17350208a85d772
+      ID: -700884175
+      Name: Light_Hit
+      Path: Default Work Unit\Hits\Light_Hit
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Hits
+        ObjectType: 4
+      - ElementName: Light_Hit
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 6170dd793f17044484460b3e27383b0a
+      ID: 622371194
+      Name: Low_Kick
+      Path: Default Work Unit\Attacks\Low_Kick
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Attacks
+        ObjectType: 4
+      - ElementName: Low_Kick
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 0dc6912bbc40c4428938211ba227f7e8
+      ID: 1711038907
+      Name: Mid_Hit
+      Path: Default Work Unit\Hits\Mid_Hit
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Hits
+        ObjectType: 4
+      - ElementName: Mid_Hit
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 0dea622f1df1ae4bbcc0070a051914a3
+      ID: -26129802
+      Name: Parry_11
+      Path: Default Work Unit\Parry_11
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Parry_11
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: a86bf385f9692f4f9395177aed8a423f
+      ID: -926387491
+      Name: Perfect_Parry_10
+      Path: Default Work Unit\Perfect_Parry_10
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Perfect_Parry_10
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 3c25fdf94c5d934c96be7a1317ca25a4
+      ID: -1362926625
+      Name: Play_Music
+      Path: Default Work Unit\Play_Music
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_Music
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 7f246576e6408e4ca91f428fffb4b89d
+      ID: 280570306
+      Name: Round_Start
+      Path: Default Work Unit\Round_Start
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Round_Start
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 03bea91494558a4c8dbdc147ce9f382f
+      ID: -1457583239
+      Name: Stop_Music
+      Path: Default Work Unit\Stop_Music
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Stop_Music
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 444a0e7737406948a718cabfb7b3a785
+      ID: 321053796
+      Name: Upper_kick
+      Path: Default Work Unit\Attacks\Upper_kick
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Attacks
+        ObjectType: 4
+      - ElementName: Upper_kick
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: eeb7f27ca6cc274c93adfa215a0964b9
+      ID: 587916051
+      Name: Upper_kick_handpat
+      Path: Default Work Unit\Attacks\Upper_kick_handpat
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Attacks
+        ObjectType: 4
+      - ElementName: Upper_kick_handpat
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 90ca50d405bd3646a1a2dda767c2fc73
+      ID: 405316760
+      Name: Upper_kick_land
+      Path: Default Work Unit\Attacks\Upper_kick_land
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Attacks
+        ObjectType: 4
+      - ElementName: Upper_kick_land
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+  ExpandedItems:
+  - /Montaine The Game
+  - /Montaine The Game/Events
+  - /Montaine The Game/Events/Default Work Unit
+  - /Montaine The Game/Events/Default Work Unit/Attacks
+  - /Montaine The Game/Events/Default Work Unit/Hits
   language: English(US)
   lowerPoolSize: 2048
   m_lastPopulateTimePart2: 0
   m_lastPopulateTimePsrt1: 0
   memoryCutoffThreshold: 0.95
   preparePoolSize: 0
-  RtpcWwu: []
-  StateWwu: []
+  RtpcWwu:
+  - Guid: '{8ADDECDE-0CF7-4344-A430-758978B1C68D}'
+    m_lastTimePart2: -1999258341
+    m_lastTimePsrt1: -498160238
+    ParentPhysicalPath: 
+    PhysicalPath: Game Parameters\Default Work Unit.wwu
+    List:
+    - Guid: 25bcc590d644944587dfde3e46061616
+      ID: -1227785847
+      Name: GuardBreak
+      Path: Default Work Unit\GuardBreak
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: GuardBreak
+        ObjectType: 13
+    - Guid: 70e426f46d2ac847bc1871e6cce67315
+      ID: 2030840469
+      Name: Kill
+      Path: Default Work Unit\Kill
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Kill
+        ObjectType: 13
+  StateWwu:
+  - Guid: '{B9E9CB31-858E-488C-8A51-A7375E873915}'
+    m_lastTimePart2: -1999258341
+    m_lastTimePsrt1: -497640239
+    ParentPhysicalPath: 
+    PhysicalPath: States\Default Work Unit.wwu
+    List: []
   streamingPoolSize: 1024
-  SwitchWwu: []
-  TriggerWwu: []
+  SwitchWwu:
+  - Guid: '{2E596A24-C4E3-4FD0-B407-8F86FC627437}'
+    m_lastTimePart2: -1999258341
+    m_lastTimePsrt1: -498600194
+    ParentPhysicalPath: 
+    PhysicalPath: Switches\Default Work Unit.wwu
+    List: []
+  TriggerWwu:
+  - Guid: '{5307A8B0-1BCC-4856-A8E1-7650938D9979}'
+    m_lastTimePart2: -1999258341
+    m_lastTimePsrt1: -496530243
+    ParentPhysicalPath: 
+    PhysicalPath: Triggers\Default Work Unit.wwu
+    List: []

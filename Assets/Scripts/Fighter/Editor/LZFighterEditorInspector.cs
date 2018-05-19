@@ -95,6 +95,8 @@ public class LZFighterEditorInspector {
         }
         state.invert = EditorGUILayout.Toggle("Invert", state.invert);
         state.loop = EditorGUILayout.Toggle("Loop", state.loop);
+
+        GUITools.ScriptListField(state.scripts, fighter);
     }
 
     private void DrawShortcut(StateMachineNode node) {

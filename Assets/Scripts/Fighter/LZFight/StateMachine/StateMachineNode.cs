@@ -30,6 +30,8 @@ namespace LZFight {
         public Vector2 velocity;
         public bool invert = false;
 
+        public List<MiniScript> scripts = new List<MiniScript>();
+
         [SerializeField]
         bool isShortcut;
         public bool IsShortcut{
@@ -65,6 +67,7 @@ namespace LZFight {
                 fighter.stateMachine.JumpToState(targetState);
                 return;
             }
+            fighter.AddScript(scripts);
             time.Reset();
             if (containedNodes.Count <= 0) {
                 currentData = UnityEngine.Object.Instantiate(data);

@@ -261,7 +261,10 @@ public class LZFighterFrameEditor {
                 selectedHitBox.guardDmg = EditorGUILayout.FloatField("GuardDmg:", selectedHitBox.guardDmg);
                 EditorGUILayout.EndVertical();
             }
-            GUITools.ScriptListField(frame.scripts, null);
+            GUITools.ListField(frame.scripts, (i) =>
+            {
+                frame.scripts[i] = (MiniScript)EditorGUILayout.ObjectField(frame.scripts[i], typeof(MiniScript), false);
+            });
         }
         EditorGUILayout.EndVertical();
         GUILayout.EndArea();
