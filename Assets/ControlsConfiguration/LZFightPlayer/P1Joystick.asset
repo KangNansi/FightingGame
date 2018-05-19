@@ -34,7 +34,7 @@ MonoBehaviour:
       type: 0
       axisThreshold: 0.3
       axisName: Vertical1
-      invert: 0
+      invert: 1
       keyType: 0
       code: 97
   - ev: 3
@@ -42,7 +42,7 @@ MonoBehaviour:
       type: 0
       axisThreshold: 0.3
       axisName: Vertical1
-      invert: 1
+      invert: 0
       keyType: 0
       code: 97
   - ev: 4

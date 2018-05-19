@@ -1,0 +1,79 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f144004582e06974d8f2ba1b0d845ead, type: 3}
+  m_Name: P2Joystick
+  m_EditorClassIdentifier: 
+  defaultValue: 0
+  pairs:
+  - ev: 0
+    input:
+      type: 0
+      axisThreshold: 0.3
+      axisName: Horizontal2
+      invert: 1
+      keyType: 0
+      code: 97
+  - ev: 1
+    input:
+      type: 0
+      axisThreshold: 0.3
+      axisName: Horizontal2
+      invert: 0
+      keyType: 0
+      code: 97
+  - ev: 2
+    input:
+      type: 0
+      axisThreshold: 0.3
+      axisName: Vertical2
+      invert: 1
+      keyType: 0
+      code: 97
+  - ev: 3
+    input:
+      type: 0
+      axisThreshold: 0.3
+      axisName: Vertical2
+      invert: 0
+      keyType: 0
+      code: 97
+  - ev: 4
+    input:
+      type: 1
+      axisThreshold: 0.3
+      axisName: 
+      invert: 0
+      keyType: 2
+      code: 372
+  - ev: 5
+    input:
+      type: 1
+      axisThreshold: 0.3
+      axisName: 
+      invert: 0
+      keyType: 2
+      code: 373
+  - ev: 6
+    input:
+      type: 1
+      axisThreshold: 0.3
+      axisName: 
+      invert: 0
+      keyType: 2
+      code: 370
+  - ev: 7
+    input:
+      type: 1
+      axisThreshold: 0.3
+      axisName: 
+      invert: 0
+      keyType: 2
+      code: 371

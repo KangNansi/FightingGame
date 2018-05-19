@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="11" SoundbankVersion="128">
+	<RootPaths>
+		<ProjectRoot>C:\Users\UserPC\Downloads\Montaine The Game\</ProjectRoot>
+		<SourceFilesRoot>C:\Users\UserPC\Downloads\Montaine The Game\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>C:\Users\UserPC\Downloads\Montaine The Game\GeneratedSoundBanks\Windows\</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>C:\Users\UserPC\Downloads\Montaine The Game\GeneratedSoundBanks\Windows\</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<StreamedFiles/>
+	<MediaFilesNotInAnyBank/>
+	<SoundBanks>
+		<SoundBank Id="1355168291" Language="SFX">
+			<ObjectPath>Init</ObjectPath>
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="3161908922" Language="SFX">
+			<ObjectPath>\SoundBanks\Default Work Unit\Main</ObjectPath>
+			<ShortName>Main</ShortName>
+			<Path>Main.bnk</Path>
+			<IncludedEvents>
+				<Event Id="4195553302" Name="Back_Kick_init" ObjectPath="\Events\Default Work Unit\Attacks\Back_Kick_init"/>
+				<Event Id="3992044314" Name="Back_Kick_whoosh" ObjectPath="\Events\Default Work Unit\Attacks\Back_Kick_whoosh"/>
+				<Event Id="1795338027" Name="BigConfirm" ObjectPath="\Events\Default Work Unit\BigConfirm"/>
+				<Event Id="4001580976" Name="Block" ObjectPath="\Events\Default Work Unit\Block"/>
+				<Event Id="1517537939" Name="Confirm" ObjectPath="\Events\Default Work Unit\Confirm"/>
+				<Event Id="1942692385" Name="Dash" ObjectPath="\Events\Default Work Unit\Dash"/>
+				<Event Id="1593604493" Name="Forward_init" ObjectPath="\Events\Default Work Unit\Attacks\Forward_init"/>
+				<Event Id="17683061" Name="Forward_Whoosh" ObjectPath="\Events\Default Work Unit\Attacks\Forward_Whoosh"/>
+				<Event Id="1867622356" Name="GetUp" ObjectPath="\Events\Default Work Unit\GetUp"/>
+				<Event Id="3067181449" Name="GuardBreak" ObjectPath="\Events\Default Work Unit\GuardBreak"/>
+				<Event Id="1501246120" Name="Heavy_Hit" ObjectPath="\Events\Default Work Unit\Hits\Heavy_Hit"/>
+				<Event Id="780552104" Name="Jab" ObjectPath="\Events\Default Work Unit\Attacks\Jab"/>
+				<Event Id="164547642" Name="Jump_init" ObjectPath="\Events\Default Work Unit\Jump_init"/>
+				<Event Id="3419686739" Name="Jump_Land" ObjectPath="\Events\Default Work Unit\Jump_Land"/>
+				<Event Id="2030840469" Name="Kill" ObjectPath="\Events\Default Work Unit\Kill" MaxAttenuation="0.000000"/>
+				<Event Id="3594083121" Name="Light_Hit" ObjectPath="\Events\Default Work Unit\Hits\Light_Hit"/>
+				<Event Id="622371194" Name="Low_Kick" ObjectPath="\Events\Default Work Unit\Attacks\Low_Kick"/>
+				<Event Id="1711038907" Name="Mid_Hit" ObjectPath="\Events\Default Work Unit\Hits\Mid_Hit"/>
+				<Event Id="4268837494" Name="Parry_11" ObjectPath="\Events\Default Work Unit\Parry_11"/>
+				<Event Id="3368579805" Name="Perfect_Parry_10" ObjectPath="\Events\Default Work Unit\Perfect_Parry_10"/>
+				<Event Id="2932040671" Name="Play_Music" ObjectPath="\Events\Default Work Unit\Play_Music"/>
+				<Event Id="280570306" Name="Round_Start" ObjectPath="\Events\Default Work Unit\Round_Start" MaxAttenuation="0.000000"/>
+				<Event Id="2837384057" Name="Stop_Music" ObjectPath="\Events\Default Work Unit\Stop_Music"/>
+				<Event Id="321053796" Name="Upper_kick" ObjectPath="\Events\Default Work Unit\Attacks\Upper_kick"/>
+				<Event Id="587916051" Name="Upper_kick_handpat" ObjectPath="\Events\Default Work Unit\Attacks\Upper_kick_handpat"/>
+				<Event Id="405316760" Name="Upper_kick_land" ObjectPath="\Events\Default Work Unit\Attacks\Upper_kick_land"/>
+			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="2191044" Language="SFX">
+					<ShortName>Back_Kick_init_11.wav</ShortName>
+					<Path>SFX\Back_Kick_init_11_1C9C67B2.wem</Path>
+				</File>
+				<File Id="24403429" Language="SFX">
+					<ShortName>Mid_Hit_7.wav</ShortName>
+					<Path>SFX\Mid_Hit_7_1C9C67B2.wem</Path>
+				</File>
+				<File Id="33309053" Language="SFX">
+					<ShortName>Jab_5.wav</ShortName>
+					<Path>SFX\Jab_5_1C9C67B2.wem</Path>
+				</File>
+				<File Id="54385766" Language="SFX">
+					<ShortName>Light_Hit_12.wav</ShortName>
+					<Path>SFX\Light_Hit_12_1C9C67B2.wem</Path>
+				</File>
+				<File Id="64031508" Language="SFX">
+					<ShortName>Light_Hit_15.wav</ShortName>
+					<Path>SFX\Light_Hit_15_1C9C67B2.wem</Path>
+				</File>
+				<File Id="73623968" Language="SFX">
+					<ShortName>Heavy_Hit_20.wav</ShortName>
+					<Path>SFX\Heavy_Hit_20_1C9C67B2.wem</Path>
+				</File>
+				<File Id="75057509" Language="SFX">
+					<ShortName>Perfect_Parry_10.wav</ShortName>
+					<Path>SFX\Perfect_Parry_10_1C9C67B2.wem</Path>
+				</File>
+				<File Id="99714247" Language="SFX">
+					<ShortName>whoosh_8.wav</ShortName>
+					<Path>SFX\whoosh_8_1C9C67B2.wem</Path>
+				</File>
+				<File Id="101130129" Language="SFX">
+					<ShortName>Block_5.wav</ShortName>
+					<Path>SFX\Block_5_F55B20ED.wem</Path>
+				</File>
+				<File Id="102530738" Language="SFX">
+					<ShortName>Light_Hit_13.wav</ShortName>
+					<Path>SFX\Light_Hit_13_1C9C67B2.wem</Path>
+				</File>
+				<File Id="114693948" Language="SFX">
+					<ShortName>Heavy_Hit_17.wav</ShortName>
+					<Path>SFX\Heavy_Hit_17_1C9C67B2.wem</Path>
+				</File>
+				<File Id="117851474" Language="SFX">
+					<ShortName>Heavy_Hit_19.wav</ShortName>
+					<Path>SFX\Heavy_Hit_19_1C9C67B2.wem</Path>
+				</File>
+				<File Id="151180453" Language="SFX">
+					<ShortName>whoosh_10.wav</ShortName>
+					<Path>SFX\whoosh_10_1C9C67B2.wem</Path>
+				</File>
+				<File Id="159642574" Language="SFX">
+					<ShortName>Heavy_Hit_18.wav</ShortName>
+					<Path>SFX\Heavy_Hit_18_1C9C67B2.wem</Path>
+				</File>
+				<File Id="163354976" Language="SFX">
+					<ShortName>Block_4.wav</ShortName>
+					<Path>SFX\Block_4_A80B1FC8.wem</Path>
+				</File>
+				<File Id="163545726" Language="SFX">
+					<ShortName>GuardBreak_24.wav</ShortName>
+					<Path>SFX\GuardBreak_24_1C9C67B2.wem</Path>
+				</File>
+				<File Id="213678330" Language="SFX">
+					<ShortName>Block_3.wav</ShortName>
+					<Path>SFX\Block_3_24F801C5.wem</Path>
+				</File>
+				<File Id="221207092" Language="SFX">
+					<ShortName>BigConfirm_23.wav</ShortName>
+					<Path>SFX\BigConfirm_23_1C9C67B2.wem</Path>
+				</File>
+				<File Id="235837559" Language="SFX">
+					<ShortName>Upper_kick_handpat_14.wav</ShortName>
+					<Path>SFX\Upper_kick_handpat_14_1C9C67B2.wem</Path>
+				</File>
+				<File Id="258088733" Language="SFX">
+					<ShortName>Upper_kick_15.wav</ShortName>
+					<Path>SFX\Upper_kick_15_1C9C67B2.wem</Path>
+				</File>
+				<File Id="263703645" Language="SFX">
+					<ShortName>Parry_11.wav</ShortName>
+					<Path>SFX\Parry_11_1C9C67B2.wem</Path>
+				</File>
+				<File Id="325661873" Language="SFX">
+					<ShortName>Jab_2.wav</ShortName>
+					<Path>SFX\Jab_2_1C9C67B2.wem</Path>
+				</File>
+				<File Id="499877410" Language="SFX">
+					<ShortName>Mid_Hit_8.wav</ShortName>
+					<Path>SFX\Mid_Hit_8_1C9C67B2.wem</Path>
+				</File>
+				<File Id="536961881" Language="SFX">
+					<ShortName>Jab_3.wav</ShortName>
+					<Path>SFX\Jab_3_1C9C67B2.wem</Path>
+				</File>
+				<File Id="578405811" Language="SFX">
+					<ShortName>Jab_1.wav</ShortName>
+					<Path>SFX\Jab_1_1C9C67B2.wem</Path>
+				</File>
+				<File Id="587562796" Language="SFX">
+					<ShortName>Forward_init_6.wav</ShortName>
+					<Path>SFX\Forward_init_6_1C9C67B2.wem</Path>
+				</File>
+				<File Id="624187274" Language="SFX">
+					<ShortName>Upper_kick_land_16.wav</ShortName>
+					<Path>SFX\Upper_kick_land_16_1C9C67B2.wem</Path>
+				</File>
+				<File Id="651451227" Language="SFX">
+					<ShortName>Jump_init_18.wav</ShortName>
+					<Path>SFX\Jump_init_18_1C9C67B2.wem</Path>
+				</File>
+				<File Id="687158397" Language="SFX">
+					<ShortName>Jab_4.wav</ShortName>
+					<Path>SFX\Jab_4_1C9C67B2.wem</Path>
+				</File>
+				<File Id="693939016" Language="SFX">
+					<ShortName>Jump_Land_19.wav</ShortName>
+					<Path>SFX\Jump_Land_19_1C9C67B2.wem</Path>
+				</File>
+				<File Id="705568950" Language="SFX">
+					<ShortName>Confirm_22.wav</ShortName>
+					<Path>SFX\Confirm_22_1C9C67B2.wem</Path>
+				</File>
+				<File Id="710699585" Language="SFX">
+					<ShortName>whoosh_7.wav</ShortName>
+					<Path>SFX\whoosh_7_1C9C67B2.wem</Path>
+				</File>
+				<File Id="813338728" Language="SFX">
+					<ShortName>dash_17.wav</ShortName>
+					<Path>SFX\dash_17_AC8B753B.wem</Path>
+				</File>
+				<File Id="814291953" Language="SFX">
+					<ShortName>Mid_Hit_6.wav</ShortName>
+					<Path>SFX\Mid_Hit_6_1C9C67B2.wem</Path>
+				</File>
+				<File Id="820487409" Language="SFX">
+					<ShortName>Mid_Hit_9.wav</ShortName>
+					<Path>SFX\Mid_Hit_9_1C9C67B2.wem</Path>
+				</File>
+				<File Id="823644025" Language="SFX">
+					<ShortName>Light_Hit_14.wav</ShortName>
+					<Path>SFX\Light_Hit_14_1C9C67B2.wem</Path>
+				</File>
+				<File Id="912721019" Language="SFX">
+					<ShortName>Low_Kick_13.wav</ShortName>
+					<Path>SFX\Low_Kick_13_1C9C67B2.wem</Path>
+				</File>
+				<File Id="920175747" Language="SFX">
+					<ShortName>GetUp_21.wav</ShortName>
+					<Path>SFX\GetUp_21_1C9C67B2.wem</Path>
+				</File>
+				<File Id="926227224" Language="SFX">
+					<ShortName>Block_2.wav</ShortName>
+					<Path>SFX\Block_2_A0E3EE5F.wem</Path>
+				</File>
+				<File Id="981827976" Language="SFX">
+					<ShortName>Back_Kick_whoosh_12.wav</ShortName>
+					<Path>SFX\Back_Kick_whoosh_12_1C9C67B2.wem</Path>
+				</File>
+				<File Id="1023173151" Language="SFX">
+					<ShortName>whoosh_9.wav</ShortName>
+					<Path>SFX\whoosh_9_1C9C67B2.wem</Path>
+				</File>
+				<File Id="1053299848" Language="SFX">
+					<ShortName>TeabagBreakerMusic.wav</ShortName>
+					<Path>SFX\TeabagBreakerMusic_F17FB28C.wem</Path>
+				</File>
+				<File Id="1063093944" Language="SFX">
+					<ShortName>Block_1.wav</ShortName>
+					<Path>SFX\Block_1_4057873C.wem</Path>
+				</File>
+				<File Id="1073021702" Language="SFX">
+					<ShortName>Light_Hit_16.wav</ShortName>
+					<Path>SFX\Light_Hit_16_1C9C67B2.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
+		</SoundBank>
+	</SoundBanks>
+</SoundBanksInfo>

@@ -58,7 +58,7 @@ public class LZFightPlayerEditor : Editor {
                         joystick2.Add(code.ToString());
                         if (pair.input.keyType == InputObject.KeyType.JOYSTICK2 && code == pair.input.code)
                         {
-                            selected = joystick1.Count - 1;
+                            selected = joystick2.Count - 1;
                         }
                     }
                 }
@@ -75,8 +75,8 @@ public class LZFightPlayerEditor : Editor {
                 }
                 else if (pair.input.keyType == InputObject.KeyType.JOYSTICK2)
                 {
-                    int newIndex = EditorGUILayout.Popup(selected, joystick1.ToArray());
-                    pair.input.code = (KeyCode)Enum.Parse(typeof(KeyCode), joystick1[newIndex]);
+                    int newIndex = EditorGUILayout.Popup(selected, joystick2.ToArray());
+                    pair.input.code = (KeyCode)Enum.Parse(typeof(KeyCode), joystick2[newIndex]);
                 }
                 GUI.color = Color.white;
                 EditorGUILayout.EndHorizontal();

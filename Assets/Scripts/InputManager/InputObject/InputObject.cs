@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using UnityEditor;
 
 [System.Serializable]
 public class InputObject {
@@ -21,13 +20,17 @@ public class InputObject {
     public KeyType keyType;
     public KeyCode code;
 
+    private float GetAxis()
+    {
+        return (invert ? -Input.GetAxis(axisName) : Input.GetAxis(axisName));
+    }
 
     public virtual bool Get() {
         switch (type) {
             case TYPE.KEY:
                 return Input.GetKey(code);
             case TYPE.AXIS:
-                return (invert?-Input.GetAxis(axisName):Input.GetAxis(axisName)) > axisThreshold;
+                return GetAxis() > axisThreshold;
         }
         return false;
     }
@@ -36,7 +39,7 @@ public class InputObject {
             case TYPE.KEY:
                 return Input.GetKeyDown(code);
             case TYPE.AXIS:
-                return Input.GetButtonDown(axisName);
+                return GetAxis() > axisThreshold;
         }
         return false;
     }
@@ -45,7 +48,7 @@ public class InputObject {
             case TYPE.KEY:
                 return Input.GetKeyUp(code);
             case TYPE.AXIS:
-                return Input.GetButtonUp(axisName);
+                return GetAxis() < axisThreshold;
         }
         return false;
     }
