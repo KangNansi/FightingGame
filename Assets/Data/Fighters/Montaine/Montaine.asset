@@ -25,15 +25,15 @@ MonoBehaviour:
       items:
       - nodeRect:
           serializedVersion: 2
-          x: 229
-          y: 206
+          x: 349
+          y: 183
           width: 150
           height: 40
         isDragged: 0
         name: Ground
         data: {fileID: 0}
         parent: -1
-        containedNodes: 01000000050000000e0000000f00000018000000190000001a0000001c000000
+        containedNodes: 01000000050000000e0000000f00000018000000190000001a0000001c00000025000000
         startState: 1
         loop: 0
         velocity: {x: 0, y: 0}
@@ -43,8 +43,8 @@ MonoBehaviour:
         targetState: 0
       - nodeRect:
           serializedVersion: 2
-          x: 50
-          y: 199
+          x: 323
+          y: 184
           width: 150
           height: 40
         isDragged: 0
@@ -115,8 +115,8 @@ MonoBehaviour:
         targetState: 0
       - nodeRect:
           serializedVersion: 2
-          x: 57
-          y: 396
+          x: 330
+          y: 381
           width: 150
           height: 40
         isDragged: 0
@@ -133,8 +133,8 @@ MonoBehaviour:
         targetState: 0
       - nodeRect:
           serializedVersion: 2
-          x: 477
-          y: 202
+          x: 597
+          y: 179
           width: 150
           height: 40
         isDragged: 0
@@ -260,8 +260,8 @@ MonoBehaviour:
         targetState: 7
       - nodeRect:
           serializedVersion: 2
-          x: 153
-          y: 368
+          x: 273
+          y: 345
           width: 150
           height: 40
         isDragged: 0
@@ -278,8 +278,8 @@ MonoBehaviour:
         targetState: 0
       - nodeRect:
           serializedVersion: 2
-          x: -154
-          y: 131
+          x: 119
+          y: 116
           width: 150
           height: 40
         isDragged: 0
@@ -296,8 +296,8 @@ MonoBehaviour:
         targetState: 0
       - nodeRect:
           serializedVersion: 2
-          x: -73
-          y: 69
+          x: 232
+          y: 65
           width: 150
           height: 40
         isDragged: 0
@@ -314,8 +314,8 @@ MonoBehaviour:
         targetState: 0
       - nodeRect:
           serializedVersion: 2
-          x: 326
-          y: 424
+          x: 446
+          y: 401
           width: 150
           height: 40
         isDragged: 0
@@ -327,7 +327,8 @@ MonoBehaviour:
         loop: 0
         velocity: {x: 0, y: 0}
         invert: 0
-        scripts: []
+        scripts:
+        - {fileID: 11400000, guid: 8f35923d3f8b25e4bbc5b88e94a345dc, type: 2}
         isShortcut: 0
         targetState: 0
       - nodeRect:
@@ -458,8 +459,8 @@ MonoBehaviour:
         targetState: 1
       - nodeRect:
           serializedVersion: 2
-          x: 323
-          y: 136
+          x: 596
+          y: 121
           width: 150
           height: 40
         isDragged: 0
@@ -476,8 +477,8 @@ MonoBehaviour:
         targetState: 0
       - nodeRect:
           serializedVersion: 2
-          x: 315
-          y: 305
+          x: 588
+          y: 290
           width: 150
           height: 40
         isDragged: 0
@@ -489,13 +490,15 @@ MonoBehaviour:
         loop: 0
         velocity: {x: 0, y: 0}
         invert: 0
-        scripts: []
+        scripts:
+        - {fileID: 11400000, guid: f921356333bb9834a8cda81fdc51de41, type: 2}
+        - {fileID: 11400000, guid: 7bcaf66628ed907449f7c4c706c666e7, type: 2}
         isShortcut: 0
         targetState: 0
       - nodeRect:
           serializedVersion: 2
-          x: 313
-          y: 401
+          x: 586
+          y: 386
           width: 150
           height: 40
         isDragged: 0
@@ -507,7 +510,9 @@ MonoBehaviour:
         loop: 0
         velocity: {x: 0, y: 0}
         invert: 0
-        scripts: []
+        scripts:
+        - {fileID: 11400000, guid: f921356333bb9834a8cda81fdc51de41, type: 2}
+        - {fileID: 11400000, guid: 251e33d3c482526479cc2e6e54786889, type: 2}
         isShortcut: 0
         targetState: 0
       - nodeRect:
@@ -530,8 +535,8 @@ MonoBehaviour:
         targetState: 25
       - nodeRect:
           serializedVersion: 2
-          x: 229
-          y: 52
+          x: 502
+          y: 37
           width: 150
           height: 40
         isDragged: 0
@@ -638,8 +643,8 @@ MonoBehaviour:
         targetState: 0
       - nodeRect:
           serializedVersion: 2
-          x: 22
-          y: 92
+          x: 142
+          y: 69
           width: 150
           height: 40
         isDragged: 0
@@ -651,13 +656,14 @@ MonoBehaviour:
         loop: 0
         velocity: {x: 0, y: 0}
         invert: 0
-        scripts: []
+        scripts:
+        - {fileID: 11400000, guid: 35ab18b05df48004c997e9d4c4f8c029, type: 2}
         isShortcut: 0
         targetState: 0
       - nodeRect:
           serializedVersion: 2
-          x: -85
-          y: 186
+          x: 35
+          y: 163
           width: 150
           height: 40
         isDragged: 0
@@ -667,6 +673,24 @@ MonoBehaviour:
         containedNodes: 
         startState: 0
         loop: 1
+        velocity: {x: 0, y: 0}
+        invert: 0
+        scripts: []
+        isShortcut: 0
+        targetState: 0
+      - nodeRect:
+          serializedVersion: 2
+          x: 124
+          y: 201
+          width: 150
+          height: 40
+        isDragged: 0
+        name: Hit2
+        data: {fileID: 11400000, guid: 2c32abd3e319bf0419f289582ccc43a2, type: 2}
+        parent: 0
+        containedNodes: 
+        startState: 0
+        loop: 0
         velocity: {x: 0, y: 0}
         invert: 0
         scripts: []
@@ -1206,6 +1230,24 @@ MonoBehaviour:
       scripts: []
     - source: 34
       target: 35
+      events: 
+      inputs: []
+      scriptedConditions: []
+      scripts: []
+    - source: 14
+      target: 36
+      events: 04000000
+      inputs: []
+      scriptedConditions: []
+      scripts: []
+    - source: 36
+      target: 14
+      events: 04000000
+      inputs: []
+      scriptedConditions: []
+      scripts: []
+    - source: 36
+      target: 1
       events: 
       inputs: []
       scriptedConditions: []

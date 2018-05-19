@@ -404,8 +404,6 @@ MonoBehaviour:
   - /Montaine The Game
   - /Montaine The Game/Events
   - /Montaine The Game/Events/Default Work Unit
-  - /Montaine The Game/Events/Default Work Unit/Attacks
-  - /Montaine The Game/Events/Default Work Unit/Hits
   language: English(US)
   lowerPoolSize: 2048
   m_lastPopulateTimePart2: 0

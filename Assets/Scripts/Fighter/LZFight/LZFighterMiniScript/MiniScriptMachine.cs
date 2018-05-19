@@ -12,8 +12,8 @@ namespace LZFight {
         }
 
         public void Update(float deltaTime) {
-            foreach(var s in toStart) {
-                s.OnStart();
+            for(int i = 0; i < toStart.Count; i++) {
+                toStart[i].OnStart();
             }
             toStart.Clear();
             for(int i = 0; i < scripts.Count; i++) {

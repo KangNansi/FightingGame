@@ -6,10 +6,11 @@ namespace LZFight.Scripting {
     public class TauntConfirm : MiniScript {
         public WWiseEventScriptable tauntWeak;
         public WWiseEventScriptable tauntStrong;
+        public float delay;
 
         public override void OnStart() {
             base.OnStart();
-            float value = fighter.GetComponent<Combo>().Confirm();
+            float value = fighter.GetComponent<Combo>().CurrentCombo;
             if(value > 30)
             {
                 fighter.AddScript(tauntWeak);
@@ -22,8 +23,13 @@ namespace LZFight.Scripting {
 
         public override bool OnUpdate() {
             base.OnUpdate();
-
-            return true;
+            if(timer.Time > delay)
+            {
+                fighter.GetComponent<Combo>().Confirm();
+                return true;
+            }
+            
+            return false;
         }
 
         public override void OnEnd() {

@@ -173,7 +173,7 @@ namespace FightingGame
             yield return new WaitForSeconds(1f);
             fight.MoveTo(Vector3.down * 5000, 0.3f);
 
-            yield return new WaitForSeconds(1.5f);
+            yield return new WaitForSeconds(0.5f);
             UnblockPlayers();
 
         }

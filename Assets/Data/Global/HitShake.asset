@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: HitShake
   m_EditorClassIdentifier: 
   priority: 102
-  strength: 5
+  strength: 2
   strengthCurve:
     serializedVersion: 2
     m_Curve:

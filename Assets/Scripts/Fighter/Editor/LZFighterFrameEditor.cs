@@ -9,7 +9,7 @@ using FightingGame;
 
 public class LZFighterFrameEditor {
 
-    private int inspectorWidth = 200;
+    private int inspectorWidth = 300;
     LZFighterFrame frame;
     LZFighterStateData fighterState;
     float editorZoom = 1f;
@@ -261,10 +261,7 @@ public class LZFighterFrameEditor {
                 selectedHitBox.guardDmg = EditorGUILayout.FloatField("GuardDmg:", selectedHitBox.guardDmg);
                 EditorGUILayout.EndVertical();
             }
-            GUITools.ListField(frame.scripts, (i) =>
-            {
-                frame.scripts[i] = (MiniScript)EditorGUILayout.ObjectField(frame.scripts[i], typeof(MiniScript), false);
-            });
+            GUITools.ScriptListField(frame.scripts, null);
         }
         EditorGUILayout.EndVertical();
         GUILayout.EndArea();

@@ -12,3 +12,6 @@ MonoBehaviour:
   m_Name: TauntConfirm
   m_EditorClassIdentifier: 
   lifeTime: -1
+  tauntWeak: {fileID: 11400000, guid: d8625b894c5799b40a1160190e359b99, type: 2}
+  tauntStrong: {fileID: 11400000, guid: 1d3ee67bf8b25a54b9a736644fbe2caa, type: 2}
+  delay: 1.5
