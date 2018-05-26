@@ -49,6 +49,8 @@ namespace LZFight {
 
         FrameTimer time = new FrameTimer();
 
+        ScriptHandle stateScriptHandle;
+
         public StateMachineNode(bool isShortcut = false, int target = 0) {
             if (isShortcut) {
                 this.isShortcut = true;
@@ -63,11 +65,16 @@ namespace LZFight {
         }
 
         public void OnStart(bool jump = false) {
+            // ADD SCRIPT
+            stateScriptHandle = fighter.Machine.AddScript(scripts);
+
+
             if (isShortcut) {
                 fighter.stateMachine.JumpToState(targetState);
                 return;
             }
-            fighter.AddScript(scripts);
+      
+
             time.Reset();
             if (containedNodes.Count <= 0) {
                 currentData = UnityEngine.Object.Instantiate(data);
@@ -91,7 +98,7 @@ namespace LZFight {
         }
 
         public void OnEnd() {
-
+            stateScriptHandle.Kill();
         }
     }
 }

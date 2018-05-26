@@ -20,6 +20,9 @@ public class UIMaterialSelector : MonoBehaviour {
 	bool stop = false;
 	bool ready = false;
     public bool active = false;
+    public GameObject pressToJoin;
+    public GameObject selectYourColor;
+    public GameObject playerReady;
 	public bool Ready {
         set
         {
@@ -36,6 +39,24 @@ public class UIMaterialSelector : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        if (!active)
+        {
+            pressToJoin.SetActive(true);
+            playerReady.SetActive(false);
+            selectYourColor.SetActive(false);
+        }
+        else if (ready)
+        {
+            pressToJoin.SetActive(false);
+            playerReady.SetActive(true);
+            selectYourColor.SetActive(false);
+        }
+        else if(!ready)
+        {
+            pressToJoin.SetActive(false);
+            playerReady.SetActive(false);
+            selectYourColor.SetActive(true);
+        }
         if (!active) return;
 		if (!stop && !ready){
 			if (controller.GetInput(LZFight.LZFIGHTERINPUTEVENT.LEFT).GetDown()) {

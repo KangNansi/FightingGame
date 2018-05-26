@@ -13,10 +13,14 @@ namespace FightingGame
         public class Player {
             public Life life;
             public Combo combo;
+            public Stun stun;
+            public GuardBreak guardBreak;
 
             public void Setup(LZFighterAnimator fighter) {
                 life = fighter.fighter.GetComponent<Life>();
                 combo = fighter.fighter.GetComponent<Combo>();
+                stun = fighter.fighter.GetComponent<Stun>();
+                guardBreak = fighter.fighter.GetComponent<GuardBreak>();
             }
 
             public int victoryCount = 0;
@@ -75,7 +79,7 @@ namespace FightingGame
             StartCoroutine(StartMatch());
             p1State.Setup(2);
             p2State.Setup(2);
-            Camera.main.LimitX(-3, 3);
+            Camera.main.LimitX(-5, 5);
             camFollow = Camera.main.FollowMultiple(player1.transform, player2.transform);
             player1.transform.ClampToCamera(Camera.main, camFollowThreshold);
             player2.transform.ClampToCamera(Camera.main, camFollowThreshold);
@@ -114,7 +118,11 @@ namespace FightingGame
             }
 
             p1State.SetLife(p1.life.NormalizedLife, p1.combo.NormalizedCombo);
+            p1State.SetStun(p1.stun.CurrentStun);
+            p1State.SetGuard(p1.guardBreak.CurrentGuard);
             p2State.SetLife(p2.life.NormalizedLife, p2.combo.NormalizedCombo);
+            p2State.SetStun(p2.stun.CurrentStun);
+            p2State.SetGuard(p2.guardBreak.CurrentGuard);
         }
 
         private IEnumerator RoundEnd(int player) {

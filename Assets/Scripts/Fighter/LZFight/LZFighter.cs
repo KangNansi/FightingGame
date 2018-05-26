@@ -43,8 +43,7 @@ namespace LZFight {
         /// </summary>
         [NonSerialized]
         public GameObject gameObject;
-
-        private MiniScriptMachine machine; 
+        public MiniScriptMachine Machine { get; private set; }
 
         public List<MiniScript> initScripts = new List<MiniScript>();
 
@@ -66,7 +65,7 @@ namespace LZFight {
         public bool blockInput = false;
 
         public void Awake() {
-            machine = new MiniScriptMachine(this);
+            Machine = new MiniScriptMachine(this);
             AddScript(initScripts);
             stateMachine.Initialize(this);
             stateMachine.Start();
@@ -80,13 +79,13 @@ namespace LZFight {
         public void AddScript(List<MiniScript> scripts) {
             foreach(var script in scripts) {
                 if(script != null)
-                    machine.AddScript(script);
+                    Machine.AddScript(script);
             }
         }
 
         public void AddScript(MiniScript script)
         {
-            machine.AddScript(script);
+            Machine.AddScript(script);
         }
 
         public LZFighterFrame CurrentFrame{
@@ -109,7 +108,7 @@ namespace LZFight {
 
         public bool Refresh(float deltaTime) {
             frameNumber++;
-            machine.Update(deltaTime);
+            Machine.Update(deltaTime);
 
             foreach(var input in controller.pairs) {
                 if (input.input.GetDown()) {
@@ -161,7 +160,7 @@ namespace LZFight {
         }
 
         public T GetComponent<T>() where T : MiniScript {
-            return machine.GetComponent<T>();
+            return Machine.GetComponent<T>();
         }
         
         public bool ValidateInput(LZFighterStateTransition.Input input) {

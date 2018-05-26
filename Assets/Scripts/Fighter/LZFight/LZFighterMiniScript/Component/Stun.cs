@@ -6,6 +6,11 @@ namespace LZFight.Scripting {
     public class Stun : MiniScript {
         public float maxStun = 10;
         private float currentStun;
+        public float CurrentStun {
+            get {
+                return currentStun / maxStun;
+            }
+        }
 
         public event System.Func<Vector3, bool> onReceiveDamage;
 

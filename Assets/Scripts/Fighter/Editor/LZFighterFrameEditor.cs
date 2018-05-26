@@ -262,6 +262,11 @@ public class LZFighterFrameEditor {
                 EditorGUILayout.EndVertical();
             }
             GUITools.ScriptListField(frame.scripts, null);
+            if(fighterState != null)
+            {
+                EditorUtility.SetDirty(fighterState); 
+            }
+
         }
         EditorGUILayout.EndVertical();
         GUILayout.EndArea();

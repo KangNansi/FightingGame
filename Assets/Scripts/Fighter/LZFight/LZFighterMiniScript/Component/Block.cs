@@ -12,6 +12,8 @@ namespace LZFight.Scripting {
 
         private FrameTimer blockTimer = new FrameTimer();
 
+        public WWiseEventScriptable block;
+
         private bool disabled = false;
         public bool Disabled {
             get {
@@ -48,6 +50,7 @@ namespace LZFight.Scripting {
                 if (fighter.ApplyEvent(LZFIGHTEREVENT.BLOCK)) {
                     Debug.Log("blocking");
                 }
+                fighter.AddScript(block);
                 GameObjectExtension.InstantiateParticleAndDestroy(blockParticle, position, fighter.invertHorizontal);
                 return true;
             }

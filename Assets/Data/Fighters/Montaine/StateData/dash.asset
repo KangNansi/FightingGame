@@ -26,7 +26,7 @@ MonoBehaviour:
     time: 0.08
     velocity: {x: 0, y: 0}
     scripts: []
-  - frameType: 1
+  - frameType: 2
     hitboxes:
     - _position: {x: -1.02, y: 0}
       _size: {x: 2.79, y: 3.13}

@@ -11,6 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 622c2851e25c65447a29f523a66b3e42, type: 3}
   m_Name: high kick
   m_EditorClassIdentifier: 
+  lifeTime: -1
   frames:
   - frameType: 0
     hitboxes:
@@ -24,6 +25,7 @@ MonoBehaviour:
     sprite: {fileID: 21300000, guid: f2746e7a8badbef4fb6b5a5648ed1817, type: 3}
     time: 0.04
     velocity: {x: 0, y: 0}
+    scripts: []
   - frameType: 1
     hitboxes:
     - _position: {x: -1.33, y: 0}
@@ -64,6 +66,8 @@ MonoBehaviour:
     sprite: {fileID: 21300002, guid: f2746e7a8badbef4fb6b5a5648ed1817, type: 3}
     time: 0.04
     velocity: {x: 4, y: 0}
+    scripts:
+    - {fileID: 11400000, guid: ce49504d4a934e24e86cc48f6a32e34c, type: 2}
   - frameType: 1
     hitboxes:
     - _position: {x: -1.18, y: 0}
@@ -104,6 +108,7 @@ MonoBehaviour:
     sprite: {fileID: 21300004, guid: f2746e7a8badbef4fb6b5a5648ed1817, type: 3}
     time: 0.12
     velocity: {x: 3, y: 0}
+    scripts: []
   - frameType: 1
     hitboxes:
     - _position: {x: -1.12, y: 0}
@@ -137,6 +142,7 @@ MonoBehaviour:
     sprite: {fileID: 21300006, guid: f2746e7a8badbef4fb6b5a5648ed1817, type: 3}
     time: 0.08
     velocity: {x: 0, y: 0}
+    scripts: []
   - frameType: 2
     hitboxes:
     - _position: {x: -1.18, y: 0}
@@ -156,6 +162,7 @@ MonoBehaviour:
     sprite: {fileID: 21300008, guid: f2746e7a8badbef4fb6b5a5648ed1817, type: 3}
     time: 0.08
     velocity: {x: 2, y: 0}
+    scripts: []
   - frameType: 2
     hitboxes:
     - _position: {x: -1.26, y: 0}
@@ -175,6 +182,7 @@ MonoBehaviour:
     sprite: {fileID: 21300010, guid: f2746e7a8badbef4fb6b5a5648ed1817, type: 3}
     time: 0.04
     velocity: {x: 2, y: 0}
+    scripts: []
   - frameType: 2
     hitboxes:
     - _position: {x: -0.67, y: 0.8}
@@ -201,6 +209,7 @@ MonoBehaviour:
     sprite: {fileID: 21300012, guid: f2746e7a8badbef4fb6b5a5648ed1817, type: 3}
     time: 0.04
     velocity: {x: 1, y: 0}
+    scripts: []
   - frameType: 2
     hitboxes:
     - _position: {x: -1.34, y: 0}
@@ -213,6 +222,8 @@ MonoBehaviour:
     sprite: {fileID: 21300014, guid: f2746e7a8badbef4fb6b5a5648ed1817, type: 3}
     time: 0.12
     velocity: {x: 0, y: 0}
+    scripts:
+    - {fileID: 11400000, guid: e91354218863c9f4bbf330909d252cd0, type: 2}
   - frameType: 2
     hitboxes:
     - _position: {x: -1.34, y: 0}
@@ -232,5 +243,5 @@ MonoBehaviour:
     sprite: {fileID: 21300016, guid: f2746e7a8badbef4fb6b5a5648ed1817, type: 3}
     time: 0.08
     velocity: {x: 0, y: 0}
+    scripts: []
   velocity: {x: 0, y: 0}
-  time: 0

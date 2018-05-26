@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2015
+# Visual Studio 15
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FightingGame", "FightingGame.csproj", "{DA3FD02F-E0B3-B8CE-5280-0AD28708783C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FightingGame.Plugins", "FightingGame.Plugins.csproj", "{65FB2FA5-FB69-40CA-B68B-0FA031F34861}"

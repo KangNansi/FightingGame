@@ -26,7 +26,7 @@ MonoBehaviour:
     time: 0.08
     velocity: {x: 0, y: 0}
     scripts: []
-  - frameType: 0
+  - frameType: 2
     hitboxes:
     - _position: {x: -0.45, y: 0.35}
       _size: {x: 1.5, y: 3}
@@ -39,7 +39,7 @@ MonoBehaviour:
     time: 0.08
     velocity: {x: 0, y: 0}
     scripts: []
-  - frameType: 0
+  - frameType: 2
     hitboxes:
     - _position: {x: -0.45, y: 0.35}
       _size: {x: 1.5, y: 3}
@@ -52,7 +52,7 @@ MonoBehaviour:
     time: 0.08
     velocity: {x: 0, y: 0}
     scripts: []
-  - frameType: 0
+  - frameType: 2
     hitboxes:
     - _position: {x: -0.45, y: 0.35}
       _size: {x: 1.5, y: 3}

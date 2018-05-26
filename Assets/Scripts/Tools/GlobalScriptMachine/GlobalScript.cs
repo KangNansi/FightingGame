@@ -3,7 +3,10 @@ using System.Collections;
 using System;
 
 public class GlobalScript : IScript {
-    FrameTimer timer = new FrameTimer();
+    FrameTimer timer = new FrameTimer()
+    {
+        absolute = true
+    };
     protected bool kill;
 
     public virtual void Start() {

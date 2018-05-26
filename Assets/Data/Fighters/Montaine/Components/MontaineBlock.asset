@@ -18,3 +18,4 @@ MonoBehaviour:
     no: 0
   blockParticle: {fileID: 1754127957196204, guid: 0e2daf9fa19d98f4cb3e15990b7b3275,
     type: 2}
+  block: {fileID: 11400000, guid: ab4213c0e3d23a944a4db618ce3d9a25, type: 2}

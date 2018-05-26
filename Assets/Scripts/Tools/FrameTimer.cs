@@ -8,9 +8,10 @@ public class FrameTimer {
             return time;
         }
     }
+    public bool absolute;
 
     public void Update() {
-        time += UnityEngine.Time.deltaTime;
+        time += (absolute ? UnityEngine.Time.unscaledDeltaTime : UnityEngine.Time.deltaTime);
     }
 
     public void Reset() {

@@ -13,3 +13,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lifeTime: -1
   particle: {fileID: 1842889166708966, guid: 2197fde14182de8489aae2167100c358, type: 2}
+  scripts:
+  - {fileID: 11400000, guid: 1c0d5d4a4db0d654aa86aec091c3493e, type: 2}

@@ -11,6 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 622c2851e25c65447a29f523a66b3e42, type: 3}
   m_Name: jab
   m_EditorClassIdentifier: 
+  lifeTime: -1
   frames:
   - frameType: 0
     hitboxes:
@@ -38,6 +39,7 @@ MonoBehaviour:
     sprite: {fileID: 21300034, guid: 59fb37fc39a7cf94cb7d564533cbb230, type: 3}
     time: 0.04
     velocity: {x: 0, y: 0}
+    scripts: []
   - frameType: 1
     hitboxes:
     - _position: {x: 1.67, y: 1.96}
@@ -71,6 +73,8 @@ MonoBehaviour:
     sprite: {fileID: 21300036, guid: 59fb37fc39a7cf94cb7d564533cbb230, type: 3}
     time: 0.16
     velocity: {x: 0, y: 0}
+    scripts:
+    - {fileID: 11400000, guid: 510b1978b2a58be4f9066518e6cdc0b7, type: 2}
   - frameType: 2
     hitboxes:
     - _position: {x: -1.15, y: 0}
@@ -97,5 +101,5 @@ MonoBehaviour:
     sprite: {fileID: 21300038, guid: 59fb37fc39a7cf94cb7d564533cbb230, type: 3}
     time: 0.04
     velocity: {x: 0, y: 0}
+    scripts: []
   velocity: {x: 0, y: 0}
-  time: 0

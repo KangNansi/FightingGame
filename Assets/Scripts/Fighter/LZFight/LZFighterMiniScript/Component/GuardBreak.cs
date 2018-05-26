@@ -6,13 +6,19 @@ namespace LZFight.Scripting {
     public class GuardBreak : MiniScript {
         public float maxGuard = 10;
         private float currentGuard;
-
+        public float CurrentGuard {
+            get {
+                return currentGuard / maxGuard;
+            }
+        }
         public float breakDuration = 2f;
         private FrameTimer breakTimer = new FrameTimer();
 
         private Block blockHandler;
 
         public event System.Func<Vector3, bool> onReceiveDamage;
+
+        public WWiseEventScriptable breakSound;
 
         public override void OnStart() {
             base.OnStart();
@@ -46,6 +52,7 @@ namespace LZFight.Scripting {
             currentGuard += guard;
 
             if(currentGuard > maxGuard) {
+                fighter.AddScript(breakSound);
                 blockHandler.Disabled = true;
                 breakTimer.Reset();
                 currentGuard = 0;

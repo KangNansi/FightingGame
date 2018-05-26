@@ -23,7 +23,7 @@ namespace InputManager {
             }
         }
 
-        public InputObject GetInput(LZFIGHTERINPUTEVENT ev) {
+        public virtual InputObject GetInput(LZFIGHTERINPUTEVENT ev) {
             return pairs.Find((p) => p.ev == ev).input;
         }
 

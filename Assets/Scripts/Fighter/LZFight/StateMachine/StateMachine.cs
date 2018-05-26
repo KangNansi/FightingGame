@@ -279,8 +279,7 @@ namespace LZFight {
         }
 
         public void JumpToState(int state) {
-            CurrentState.OnEnd();
-            stateStack.Clear();
+            Clear();
             int currentState = state;
             Stack<int> path = new Stack<int>();
             path.Push(state);
@@ -313,6 +312,11 @@ namespace LZFight {
             while(stateStack[stateStack.Count-1] != state) {
                 PopState();
             }
+        }
+
+        private void Clear()
+        {
+            while (stateStack.Count > 0) PopState();
         }
 
         public void RemoveState(int state) {

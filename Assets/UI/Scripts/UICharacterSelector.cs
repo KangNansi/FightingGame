@@ -22,7 +22,7 @@ public class UICharacterSelector : MonoBehaviour {
     // Update is called once per frame
     void Update() {
         GameConfiguration gconf = GameConfiguration.instance;
-        if (p1.Ready && (p2.Ready || gconf.p2isAI)) {
+        if (p1.Ready && p2.Ready){// || gconf.p2isAI)) {
             if (gconf.p2isAI)
             {
                 gconf.p2material = p2.materials[Random.Range(0, p2.materials.Count)];
@@ -48,13 +48,13 @@ public class UICharacterSelector : MonoBehaviour {
         }
         if (c2.GetInput(LZFight.LZFIGHTERINPUTEVENT.DASH).GetDown())
         {
-            if (!gconf.p2isAI)
-            {
-                gconf.p2isAI = true;
-            }
-            else if (p2.Ready)
+            if (p2.Ready)
             {
                 p2.Ready = false;
+            }
+            else if (!gconf.p2isAI)
+            {
+                gconf.p2isAI = true;
             }
             else
             {

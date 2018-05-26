@@ -14,3 +14,4 @@ MonoBehaviour:
   lifeTime: -1
   maxGuard: 100
   breakDuration: 2
+  breakSound: {fileID: 11400000, guid: 5d78cf42ba95d1941bfcee02c4935a9f, type: 2}

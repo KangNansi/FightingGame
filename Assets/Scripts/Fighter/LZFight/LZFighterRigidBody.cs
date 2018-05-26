@@ -24,6 +24,7 @@ public class LZFighterRigidBody : MonoBehaviour {
     void Update() {
         Vector2 velocity = animator.GetVelocity();
         body.velocity = velocity;
+        
         //transform.position += (new Vector3(velocity.x, velocity.y, 0))*Time.deltaTime;
     }
 

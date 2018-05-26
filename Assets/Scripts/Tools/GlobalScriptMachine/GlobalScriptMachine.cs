@@ -28,7 +28,6 @@ public class GlobalScriptMachine : MonoBehaviour {
         }
         starting.Clear();
 
-        Debug.Log(running.Count);
         for(int i = 0; i < running.Count; i++) {
             if (running[i].Update()) {
                 running[i].End();
@@ -61,7 +60,6 @@ public class GlobalScriptMachine : MonoBehaviour {
 
 
     private void Run(IScript script) {
-        Debug.Log("Adding");
         starting.Add(script);
         running.Add(script);
         running.Sort((a, b) => a.GetPriority() - b.GetPriority());
